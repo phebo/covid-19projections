@@ -19,7 +19,7 @@ library(shiny)
 library(tidyverse)
 library(RColorBrewer)
 
-df <- read_csv("output/model-out.csv") %>%
+df <- read_csv("model-out.csv") %>%
   mutate(Var = factor(Var, levels  = c("Death", "Reported case", "Infection")))
 vGeo2 <- read_csv("input/geo-sel.csv") %>% pull(Geo)
 
@@ -53,18 +53,19 @@ server <- function(input, output) {
         filter(between(Date, input$dates[1], input$dates[2]), Geo %in% vGeo2) %>% mutate(Geo = factor(Geo, levels = vGeo2)) %>%
         ggplot(aes(x=Date, y=CumEst, color=Var)) +
         geom_line(aes(y=CumLow), linetype = 2, size = linesize) + geom_line(aes(y=CumHigh), linetype = 2, size = linesize) +
-        geom_point(aes(y=Cum), size=dotsize) + geom_line(size = linesize) 
+        geom_point(aes(y=Cum), size=dotsize) + geom_line(size = linesize) +
+        ggtitle("Cumulative events", subtitle = "Dot = Reported data, Line = Model estimate, Dash = 95% interval")
     } else {
       ggOut <- df2 %>% 
         filter(between(Date, input$dates[1], input$dates[2]), Geo %in% vGeo2) %>% mutate(Geo = factor(Geo, levels = vGeo2)) %>%
         ggplot(aes(x=Date, y=NewEst, color=Var)) +
         geom_line(aes(y=NewLow), linetype = 2, size = linesize) + geom_line(aes(y=NewHigh), linetype = 2, size = linesize) +
-        geom_point(aes(y=New), size=dotsize) + geom_line(size = linesize) 
+        geom_point(aes(y=New), size=dotsize) + geom_line(size = linesize) +
+        ggtitle("New events per day", subtitle = "Dot = Reported data, Line = Model estimate, Dash = 95% interval")
     }
     ggOut <- ggOut + facet_wrap(~Geo, ncol = 5) +
       scale_x_date(labels = function(x) substr(format(x, format="%d %b"),2,10), date_breaks = "1 month") +
       scale_color_manual(values = brewer.pal(3,"Set1"), guide = guide_legend(reverse = TRUE)) +
-      ggtitle("Dot = Reported data, Line = Model estimate, Dash = 95% interval") + 
       xlab(element_blank()) + ylab(element_blank()) +
       theme(legend.title=element_blank(), legend.position="top", axis.text.x = element_text(angle = 45, hjust = 1))
       

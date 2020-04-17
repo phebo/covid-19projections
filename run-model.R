@@ -184,7 +184,7 @@ dfOut2 <- dfOut2 %>%
   mutate(Var = factor(Var, levels = c("Death", "Case", "Infection"), labels = c("Death", "Reported case", "Infection")),
          Cum = ifelse(Cum == 0, NA, Cum), New = ifelse(New == 0, NA, New)) %>%
   select(-c(change, Adj))
-write_csv(dfOut2, "output/model-out.csv")
+write_csv(dfOut2, "model-out.csv")
 
 muLag <- apply(extract(fit)$muLag, 2, median)
 sigLag <- apply(extract(fit)$sigLag, 2, median)
@@ -251,7 +251,6 @@ fig2 <- dfGeo %>%
                      breaks = seq(-0.2, 0.6, 0.2), minor_breaks = seq(-0.2, 0.6, 0.1)) +
   scale_color_manual(values = c("Grey40","blue","Orange","Red"), name = "Policy in place") +
   ylab("Growth rate of new infections per day (estimate and 95% interval)") +
-  ylab(element_blank()) +
   coord_flip() + xlab(element_blank())
 ggsave(paste0("fig-g-", time.now, filetype), plot = fig2, path = "output", width = 6, height = 5)
 
