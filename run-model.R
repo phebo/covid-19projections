@@ -27,7 +27,6 @@
 
 library(tidyverse)
 library(rstan)
-library(readxl)
 library(RColorBrewer)
 library(xtable)
 
