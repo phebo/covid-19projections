@@ -157,11 +157,11 @@ dfDates <- dfDates %>% mutate(Tmax = vTmax)
 dfOutRaw <- bind_rows(
   expand.grid(iter = 1:nIter, Geo = vGeo, Day=1:nT) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(extract(fit)$lir)),
   expand.grid(iter = 1:nIter, Var = c("Death", "Case"), Geo = vGeo, Day=(lagDeath[2]+1):nT) %>% as_tibble() %>% mutate(Log = as.vector(extract(fit)$lrr))
-) %>% full_join(dfDates %>% select(Geo, Tmax)) %>% filter(Day <= Tmax)
+) %>% full_join(dfDates %>% select(Geo, Tmax, End)) %>% filter(Day <= Tmax)
 dfOutPred <- bind_rows(
   expand.grid(iter = 1:nIter, Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(extract(fit)$lirPred)),
   expand.grid(iter = 1:nIter, Var = c("Death", "Case"), Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Log = as.vector(extract(fit)$lrrPred))
-) %>% full_join(dfDates %>% select(Geo, Tmax)) %>% mutate(Day = Tmax + Day2) %>% select(-Day2)
+) %>% full_join(dfDates %>% select(Geo, Tmax, End)) %>% mutate(Day = Tmax + Day2) %>% select(-Day2)
 
 dfOut <- bind_rows(dfOutRaw, dfOutPred) %>% mutate(New = exp(Log)) %>% arrange(Geo, Var, Day) %>% 
   group_by(Geo, Var, iter) %>% mutate(Cum = cumsum(New)) %>%
@@ -201,12 +201,24 @@ dfGeo <- dfGeoRaw %>% group_by(Geo, Var) %>%
   summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
   left_join(dfP %>% arrange(Geo, Date) %>% group_by(Geo) %>% summarize(Policy = last(Policy), PolName = substr(last(PolName),3,30))) %>%
   mutate(PolName = ifelse(Var == "g0", "No restrictions (g0)", PolName), Policy = ifelse(Var == "g0", 0, Policy))
+dfGeo2 <- dfOutRaw %>% filter(Var == "Infection", is.na(End), Day == Tmax) %>% select(-Var) %>%
+  left_join(dfGeoRaw %>% filter(Var == "g") %>% select(iter, Geo, g=x)) %>%
+  mutate(
+    DaysTo1 = ifelse(Log > 0, ifelse(g < 0,  -Log / log1p(g), Inf), 0),
+    DaysTo100 =  ifelse(Log > log(100), ifelse(g < 0,  -(Log - log(100)) / log1p(g), Inf), 0)) %>%
+  select(iter, Geo, DaysTo1, DaysTo100) %>% pivot_longer(c(DaysTo1, DaysTo100), names_to = "Var", values_to = "x") %>%
+  group_by(Geo, Var) %>% summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
+  arrange(Var, Geo)
+  #pivot_wider(id_cols = c(Geo, Var), names_from = Var, values_from = Estimate:High)
+write_csv(dfGeo2, paste0("output/table-days-", time.now, ".csv"))
 
 dfGRaw <- expand.grid(iter = 1:nIter, Policy = 0:nPol)  %>% as_tibble() %>% mutate(x = expm1(as.vector(extract(fit)$gDraw)))
 dfG <- dfGRaw %>% group_by(Policy) %>%
   summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
   left_join(dfP %>% group_by(Policy) %>% summarize(PolName = first(PolName))) %>%
   mutate(PolName = ifelse(is.na(PolName), "0 No restrictions", PolName))
+
+
 
 save(list = ls(), file = paste0("output/fit-model-", time.now, ".RData"))
 

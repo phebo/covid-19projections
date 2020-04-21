@@ -72,7 +72,7 @@ server <- function(input, output) {
     if(input$log) {
       ggOut <- ggOut + scale_y_continuous(labels = scales::comma, trans="log10", limits = if(input$cum) c(1,1e7) else c(1,3e5))
     } else {
-      ggOut <- ggOut + ylim(if(input$cum) c(0,3e6) else c(0,2e5))
+      ggOut <- ggOut + scale_y_continuous(labels = scales::comma, limits = if(input$cum) c(0,3e6) else c(0,2e5))
     }
     ggOut
   })}

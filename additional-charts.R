@@ -29,12 +29,40 @@ dfCo <- bind_rows(
   dfLastDate %>% inner_join(df %>% filter(Var == "Infection") %>% select(Geo, Date, Var, Cum = CumEst))
   ) %>%
   mutate(Var = fct_recode(Var, `Reported cases` = "Reported case", `Estimated infections` = "Infection"))
-dfCo <- dfCo %>% filter(Geo %in% (dfCo %>% filter(Var == "Estimated infections") %>% top_n(8, Cum) %>% pull(Geo)))
+vGeo <- dfCo %>% filter(Var == "Estimated infections") %>% top_n(8, Cum) %>% arrange(-Cum) %>% pull(Geo) 
 
-dfCo %>% ggplot(aes(x = Var, y = Cum, fill = reorder(Geo, Cum))) + geom_col() +
+# Reported cases vs actual infections
+dfCo %>% filter(Geo %in% vGeo) %>% ggplot(aes(x = Var, y = Cum, fill = reorder(Geo, Cum))) + geom_col() +
   scale_y_continuous(labels = scales::comma) + 
   scale_fill_manual(values = brewer.pal(8,"Set1")) +
   ylab(element_blank()) + xlab(element_blank()) +
   theme(legend.title = element_blank(), axis.text.x = element_text(angle = 45, hjust = 1))
 ggsave("output/fig-est-rep.png", width=4, height=5)
 dfCo %>% group_by(Var) %>% summarize(sum(Cum))
+
+# Projected cumulative infections
+df %>% filter(Geo %in% vGeo, Var == "Infection", between(Date, as.Date("2020-03-01"), as.Date("2020-06-01") )) %>%
+  mutate(Geo = fct_rev(factor(Geo, levels = vGeo))) %>%
+  ggplot(aes(x=Date, y=CumEst, fill=Geo)) +
+  geom_col(width = 1) +
+  scale_y_continuous(labels = scales::comma) + 
+  scale_fill_manual(values = brewer.pal(8,"Set1"), guide = guide_legend(ncol=2)) +
+  ylab(element_blank()) + xlab(element_blank()) +
+  theme(legend.title = element_blank(), legend.position = "bottom") +
+  ggtitle("Estimated cumulative infections")
+ggsave("output/fig-cum-infections.png", width=3.5, height=4)
+
+# 'Good' geographies
+Date1 <- as.Date("2020-03-01")
+Date2 <- as.Date("2020-05-01")
+vGeo3 <- c("Austria", "US - Florida", "US - Louisiana", "Switzerland", "US - Michigan", "Spain", "Norway", "Germany")
+df %>% filter(Date >= as.Date(Date1), Date < as.Date(Date2), Geo %in% vGeo3) %>%
+  ggplot(aes(x=Date, y=NewEst, color=Var)) +
+  geom_line(aes(y=NewLow), linetype = 2, size = 0.25) + geom_line(aes(y=NewHigh), linetype = 2, size = 0.25) +
+  geom_point(aes(y=New), size=0.25) + geom_line(size = 0.25) + facet_wrap(~Geo, ncol = 2) +
+  scale_x_date(breaks = "1 month", labels = function(x) substr(format(x, format="%d %b"),2,10)) +
+  scale_y_continuous(labels = scales::comma, trans="log10", limits = c(1,3e5)) +
+  scale_color_manual(values = brewer.pal(3,"Set1"), guide = guide_legend(reverse = TRUE)) +
+  xlab(element_blank()) + ylab("New events per day (logarithmic scale)") +
+  theme(legend.title=element_blank(), legend.position="top", axis.text.x = element_text(angle = 45, hjust = 1))
+ggsave("output/fig-good.png", width=3.5, height=8, dpi = 600)
