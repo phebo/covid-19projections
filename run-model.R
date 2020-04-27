@@ -38,10 +38,17 @@ print(time.now)
 set.seed(654321) # To make Bayesian estimates reproducable
 
 filetype <- ".png" # Filetype for output charts
+test <- F # Do a test run (much faster)?
 
 # Minimum and maximum lags between infection and resp. reported case and reported death:
-lagDeath <- c(10,30)
-lagCase <- c(5,20)
+if(test) {
+  lagDeath <- c(10,30)
+  lagCase <- c(5,20)
+} else {
+  lagDeath <- c(15,25)
+  lagCase <- c(8,17)
+}
+PolSel <- c(1,7,8,9) # Which policies to take into account in analysis
 nTPred <- 60 # Additional prediction days
 mortality <- 0.01; mortSig <- 0.5; # Parameters for log-normal distribution; mortSig = 0.5 means 95% interval ~0.3%-2.6%
 lr2 <- log(1e3); phi2 <- 1e-4 # Parameters for outlier negative binomial
@@ -114,40 +121,53 @@ nT <- max(vTmax)
 nGeo <- length(vGeo)
 
 # Make all policies unique, and lockdown policies cumulative
-dfP <- dfPRaw %>% select(-Source) %>% mutate(Date = as.Date(Date, format = "%d-%b-%y"))
-dfP <- bind_rows(dfP, dfP %>% filter(Policy %in% c(9)) %>% mutate(Policy = 8))
-dfP <- bind_rows(dfP, dfP %>% filter(Policy %in% c(8, 9)) %>% mutate(Policy = 7))
-dfP <- bind_rows(dfP, dfP %>% filter(Policy %in% c(7, 8, 9)) %>% mutate(Policy = 1))
+stopifnot(anyDuplicated(dfPRaw %>% select(Geo, Policy)) == 0)
+dfP <- dfPRaw %>% select(-c(SourceStart, SourceEnd)) %>%
+  mutate(PolStart = as.Date(PolStart, format = "%d-%b-%y"), PolEnd = as.Date(PolEnd, format = "%d-%b-%y"))
 dfP <- dfP %>%
-  group_by(Geo, Policy) %>% summarize(Date = min(Date)) %>% ungroup() %>%
   left_join(dfDates) %>% mutate(
-    Day = pmax(1, as.integer(Date - Start, units = "days") + 1 + lagDeath[2]),
-    Geo = factor(Geo, levels = vGeo)) %>%
+    DayStart = pmax(1, as.integer(PolStart - Start, units = "days") + 1 + lagDeath[2]),
+    DayEnd = pmax(1, as.integer(PolEnd - Start, units = "days") + 1 + lagDeath[2])) %>%
   select(-c(Start, End)) %>%
   left_join(dfPNames) %>% mutate(PolName = paste(Policy, PolName))
 dfPFull <- expand_grid(Geo = vGeo, Date = unique(dfE$Date), Policy = unique(dfP$Policy)) %>%
-  left_join(dfP %>% select(-c(Day, PolName)) %>% mutate(Val=1)) %>% arrange(Geo, Policy, Date) %>%
+  left_join(bind_rows(
+    dfP %>% select(Geo, Policy, Date = PolStart) %>% mutate(Val=1),
+    dfP %>% select(Geo, Policy, Date = PolEnd) %>% mutate(Val=0))) %>%
+  arrange(Geo, Policy, Date) %>%
   group_by(Geo, Policy) %>% fill(Val) %>% ungroup() %>%
   mutate(Val = ifelse(is.na(Val), 0, Val))  %>%
   left_join(dfPNames) %>% mutate(PolName = paste(Policy, PolName))
+stopifnot(with(dfPFull %>% select(-PolName) %>% pivot_wider(names_from = Policy, values_from = Val),
+               all(`1` >= `7`, `7` >= `8`, `8` >= `9`))) # Check that policies 1, 7, 8 and 9 are cumulative
+
 # Select most relevant policies:
-dfP <- bind_rows(
-  dfP %>% filter(Policy == 1),
-  dfP %>% filter(Policy %in% c(7,8,9)) %>% mutate(Policy = Policy - 5))
+nPol <- length(PolSel)
+dfP <- dfP %>%
+  filter(Policy %in% PolSel) %>%
+  left_join(tibble(Policy = PolSel, PolNew = 1:nPol)) %>%
+  select(-Policy) %>% rename(Policy = PolNew) %>%
+  mutate(Geo = factor(Geo, levels = vGeo))
 
-mPol <- xtabs(Day ~ Geo + Policy, dfP)
-mPol[mPol == 0] <- nT + 1
-nPol = max(dfP$Policy)
+mPolStart <- xtabs(DayStart ~ Geo + Policy, dfP)
+mPolStart[mPolStart == 0] <- nT + 1
+mPolEnd <- xtabs(DayEnd ~ Geo + Policy, dfP %>% mutate(Policy = factor(Policy)))
+mPolEnd[mPolEnd == 0 | mPolEnd > nT] <- nT + 1
 
-stopifnot(rownames(mPol) == vGeo, colnames(mPol) == 1:nPol)
+stopifnot(rownames(mPolStart) == vGeo, colnames(mPolStart) == 1:nPol)
+stopifnot(rownames(mPolEnd) == vGeo, colnames(mPolEnd) == 1:nPol)
 stopifnot(dimnames(mRep)$Day == (lagDeath[2]+1):nT, dimnames(mRep)$Geo == vGeo)
 
 lData <- list(nGeo = nGeo, nT = nT, nTPred = nTPred, nPol = nPol, nK = 2, lagMin = c(lagDeath[1], lagCase[1]), 
-              lagMax = c(lagDeath[2], lagCase[2]), vTmax = vTmax, mRep = mRep, mPol = mPol,
+              lagMax = c(lagDeath[2], lagCase[2]), vTmax = vTmax, mRep = mRep, mPolStart = mPolStart, mPolEnd = mPolEnd,
               lmaxDeath = lmaxDeath, mortality = mortality, mortSig = mortSig, lr2 = lr2, phi2 = phi2)
 
 m <- stan_model("model.stan")
-fit <- sampling(m, data = lData, chains=4, iter = 500, thin = 1, control = list(max_treedepth = 12, adapt_delta = 0.9))
+if(test){
+  fit <- sampling(m, data = lData, chains=2, iter = 200, thin = 1, control = list(max_treedepth = 10, adapt_delta = 0.8))
+} else {
+  fit <- sampling(m, data = lData, chains=4, iter = 500, thin = 1, control = list(max_treedepth = 12, adapt_delta = 0.9))
+}
 print(summary(fit, pars=c("dgMu", "dgSig", "g0Mu", "g0Sig", "gMu", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
 print(xtable(summary(fit, pars=c("g0Mu", "g0Sig", "dgMu", "gMu", "gSig", "phi", "p", "muLag", "sigLag"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
              digits=c(0,3,3,3,0,2)), type="html", file=paste0("output/table-", time.now, ".html"))
@@ -199,7 +219,7 @@ dfGeoRaw <- bind_rows(
   expand.grid(iter = 1:nIter, Geo = vGeo) %>% as_tibble() %>% mutate(x = expm1(as.vector(extract(fit)$g0)), Var = "g0"))
 dfGeo <- dfGeoRaw %>% group_by(Geo, Var) %>% 
   summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
-  left_join(dfP %>% arrange(Geo, Date) %>% group_by(Geo) %>% summarize(Policy = last(Policy), PolName = substr(last(PolName),3,30))) %>%
+  left_join(dfP %>% arrange(Geo, PolStart) %>% group_by(Geo) %>% summarize(Policy = last(Policy), PolName = substr(last(PolName),3,30))) %>%
   mutate(PolName = ifelse(Var == "g0", "No restrictions (g0)", PolName), Policy = ifelse(Var == "g0", 0, Policy))
 dfGeo2 <- dfOutRaw %>% filter(Var == "Infection", is.na(End), Day == Tmax) %>% select(-Var) %>%
   left_join(dfGeoRaw %>% filter(Var == "g") %>% select(iter, Geo, g=x)) %>%

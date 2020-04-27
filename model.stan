@@ -34,7 +34,8 @@ data {
   int<lower=0> lagMin[nK];
   int<lower=0> lagMax[nK];
   int<lower=0> mRep[nK, nGeo, nT-max(lagMax)];
-  int<lower=1,upper=nT+1> mPol[nGeo, nPol];
+  int<lower=1,upper=nT+1> mPolStart[nGeo, nPol];
+  int<lower=1,upper=nT+1> mPolEnd[nGeo, nPol];
   real lmaxDeath;
   real<lower=0,upper=1> mortality;
   real<lower=0> mortSig;
@@ -79,7 +80,7 @@ transformed parameters {
     for(t in 1:(nT-1)){
       lir[i,t+1] = lir[i,t] + g0[i];
       for(l in 1:nPol) {
-        if(t+1 >= mPol[i, l]) lir[i, t+1] += dg[i, l];
+        if(t+1 >= mPolStart[i, l] && t+1 < mPolEnd[i, l]) lir[i, t+1] += dg[i, l];
       }
     }
     for(t in 1:(nT-max(lagMax))) {
