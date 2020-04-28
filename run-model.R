@@ -219,7 +219,10 @@ dfGeoRaw <- bind_rows(
   expand.grid(iter = 1:nIter, Geo = vGeo) %>% as_tibble() %>% mutate(x = expm1(as.vector(extract(fit)$g0)), Var = "g0"))
 dfGeo <- dfGeoRaw %>% group_by(Geo, Var) %>% 
   summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
-  left_join(dfP %>% arrange(Geo, PolStart) %>% group_by(Geo) %>% summarize(Policy = last(Policy), PolName = substr(last(PolName),3,30))) %>%
+  
+  left_join(dfP %>% left_join(dfDates %>% select(Geo, DataEnd = End) %>% mutate(DataEnd = ifelse(is.na(DataEnd), max(dfE$Date), DataEnd))) %>%
+              filter(PolEnd >= DataEnd | is.na(PolEnd)) %>% arrange(Geo, PolStart) %>% group_by(Geo) %>%
+              summarize(Policy = last(Policy), PolName = substr(last(PolName),3,30))) %>%
   mutate(PolName = ifelse(Var == "g0", "No restrictions (g0)", PolName), Policy = ifelse(Var == "g0", 0, Policy))
 dfGeo2 <- dfOutRaw %>% filter(Var == "Infection", is.na(End), Day == Tmax) %>% select(-Var) %>%
   left_join(dfGeoRaw %>% filter(Var == "g") %>% select(iter, Geo, g=x)) %>%
@@ -247,7 +250,7 @@ save(list = ls(), file = paste0("output/fit-model-", time.now, ".RData"))
 Date1 <- as.Date("2020-01-15")
 Date2 <- as.Date("2020-06-01")
 
-fig1a <- dfOut2 %>%
+figCum <- dfOut2 %>%
   filter(Date >= as.Date(Date1), Date < as.Date(Date2), Geo %in% vGeo2) %>% mutate(Geo = factor(Geo, levels = vGeo2)) %>%
   ggplot(aes(x=Date, y=CumEst, color=Var)) +
   geom_line(aes(y=CumLow), linetype = 2, size = 0.25) + geom_line(aes(y=CumHigh), linetype = 2, size = 0.25) +
@@ -258,9 +261,9 @@ fig1a <- dfOut2 %>%
   scale_color_manual(values = brewer.pal(3,"Set1"), guide = guide_legend(reverse = TRUE)) +
   ggtitle("Cumulative events (logarithmic scale)", subtitle = "Dot = Reported data, Line = Model estimate, Dash = 95% interval") +
   xlab(element_blank()) + ylab(element_blank()) + theme(legend.title=element_blank(), legend.position="bottom")
-ggsave(paste0("fig-cumulative-", time.now, filetype), plot = fig1a, path = "output", width = 8, height = 10)
+ggsave(paste0("fig-cumulative-", time.now, filetype), plot = fig1Cum, path = "output", width = 8, height = 10)
 
-fig1b <- dfOut2 %>% 
+figNew <- dfOut2 %>% 
   filter(Date >= as.Date(Date1), Date < as.Date(Date2), Geo %in% vGeo2) %>% mutate(Geo = factor(Geo, levels = vGeo2)) %>%
   ggplot(aes(x=Date, y=NewEst, color=Var)) +
   geom_line(aes(y=NewLow), linetype = 2, size = 0.25) + geom_line(aes(y=NewHigh), linetype = 2, size = 0.25) +
@@ -271,19 +274,31 @@ fig1b <- dfOut2 %>%
   scale_color_manual(values = brewer.pal(3,"Set1"), guide = guide_legend(reverse = TRUE)) +
   ggtitle("New events per day (logarithmic scale)", subtitle = "Dot = Reported data, Line = Model estimate, Dash = 95% interval") +
   xlab(element_blank()) + ylab(element_blank()) + theme(legend.title=element_blank(), legend.position="bottom")
-ggsave(paste0("fig-new-", time.now, filetype), plot = fig1b, path = "output", width = 8, height = 10)
+ggsave(paste0("fig-new-", time.now, filetype), plot = figNew, path = "output", width = 8, height = 10)
 
-fig2 <- dfGeo %>%
+figG <- dfGeo %>% 
   ggplot(aes(x = factor(Geo, levels = dfGeo %>% filter(Var == "g") %>% arrange(Estimate) %>% pull(Geo)),
              y = Estimate, ymin = Low, ymax = High, color = fct_reorder(PolName, Policy))) +
   geom_hline(yintercept = 0, linetype=2) + 
-  geom_pointrange() + 
+  geom_pointrange(size=0.4) + 
   scale_y_continuous(labels = function(x) scales::percent(x, accuracy=1),
                      breaks = seq(-0.2, 0.6, 0.2), minor_breaks = seq(-0.2, 0.6, 0.1)) +
   scale_color_manual(values = c("Grey40","blue","Orange","Red"), name = "Policy in place") +
   ylab("Growth rate of new infections per day (estimate and 95% interval)") +
   coord_flip() + xlab(element_blank())
-ggsave(paste0("fig-g-", time.now, filetype), plot = fig2, path = "output", width = 6, height = 5)
+ggsave(paste0("fig-g-", time.now, filetype), plot = figG, path = "output", width = 6, height = 5)
+
+figG2 <- dfGeo %>% filter(Var != "g0") %>%
+  ggplot(aes(x = factor(Geo, levels = dfGeo %>% filter(Var == "g") %>% arrange(Estimate) %>% pull(Geo)),
+             y = Estimate, ymin = Low, ymax = High, color = fct_reorder(PolName, Policy))) +
+  geom_hline(yintercept = 0, linetype=2) + 
+  geom_pointrange(size=0.4) + 
+  scale_y_continuous(labels = function(x) scales::percent(x, accuracy=1),
+                     breaks = seq(-0.2, 0.6, 0.2), minor_breaks = seq(-0.2, 0.6, 0.1)) +
+  scale_color_manual(values = c("Blue","Orange","Red"), name = "Policy in place") +
+  ylab("Growth rate of new infections per day (estimate and 95% interval)") +
+  coord_flip() + xlab(element_blank())
+ggsave(paste0("fig-g2-", time.now, filetype), plot = figG2, path = "output", width = 6, height = 5)
 
 figPol <- dfPFull %>% ggplot(aes(x=Date, y=Val, fill = PolName)) + geom_col(width = 1) + facet_wrap(~Geo) +
   scale_x_date(date_breaks = "1 month", labels = function(x) format(x, format="%b")) +

@@ -52,6 +52,13 @@ df %>% filter(Geo %in% vGeo, Var == "Infection", between(Date, as.Date("2020-03-
   ggtitle("Estimated cumulative infections")
 ggsave("output/fig-cum-infections.png", width=3.5, height=4)
 
+df %>% filter(Geo %in% vGeo, Date %in% c(as.Date("2020-04-29"), as.Date("2020-05-31")), Var == "Infection") %>%
+  select(Geo, Date, CumEst, CumLow, CumHigh) %>% select(-Geo) %>% group_by(Date) %>% summarise_all(sum)
+df %>% filter(Geo %in% vGeo, Date %in% c(as.Date("2020-04-27")), Var == "Reported case") %>%
+  select(Geo, Date, Cum) %>% select(-Geo) %>% group_by(Date) %>% summarise_all(sum)
+
+
+
 # 'Good' geographies
 Date1 <- as.Date("2020-03-01")
 Date2 <- as.Date("2020-05-01")
