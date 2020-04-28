@@ -261,7 +261,7 @@ figCum <- dfOut2 %>%
   scale_color_manual(values = brewer.pal(3,"Set1"), guide = guide_legend(reverse = TRUE)) +
   ggtitle("Cumulative events (logarithmic scale)", subtitle = "Dot = Reported data, Line = Model estimate, Dash = 95% interval") +
   xlab(element_blank()) + ylab(element_blank()) + theme(legend.title=element_blank(), legend.position="bottom")
-ggsave(paste0("fig-cumulative-", time.now, filetype), plot = fig1Cum, path = "output", width = 8, height = 10)
+ggsave(paste0("fig-cumulative-", time.now, filetype), plot = figCum, path = "output", width = 8, height = 10)
 
 figNew <- dfOut2 %>% 
   filter(Date >= as.Date(Date1), Date < as.Date(Date2), Geo %in% vGeo2) %>% mutate(Geo = factor(Geo, levels = vGeo2)) %>%
