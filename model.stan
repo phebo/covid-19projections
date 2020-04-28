@@ -132,7 +132,7 @@ generated quantities{
   real lrrPred[nK, nGeo, nTPred]; // log reported event rate
   
   for(i in 1:nGeo) {
-    g[i] = lir[i, nT] - lir[i, nT - 1];
+    g[i] = lir[i, vTmax[i]] - lir[i, vTmax[i] - 1];
     lirPred[i, 1] = lir[i, vTmax[i]] + g[i];
     for (t in 1:(nTPred-1)) {
       lirPred[i, t + 1] = lirPred[i, t] + g[i];
