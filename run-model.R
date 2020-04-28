@@ -42,11 +42,11 @@ test <- F # Do a test run (much faster)?
 
 # Minimum and maximum lags between infection and resp. reported case and reported death:
 if(test) {
-  lagDeath <- c(10,30)
-  lagCase <- c(5,20)
-} else {
   lagDeath <- c(15,25)
   lagCase <- c(8,17)
+} else {
+  lagDeath <- c(10,30)
+  lagCase <- c(5,20)
 }
 PolSel <- c(1,7,8,9) # Which policies to take into account in analysis
 nTPred <- 60 # Additional prediction days
