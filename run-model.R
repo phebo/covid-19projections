@@ -288,17 +288,18 @@ figG <- dfGeo %>%
   coord_flip() + xlab(element_blank())
 ggsave(paste0("fig-g-", time.now, filetype), plot = figG, path = "output", width = 6, height = 5)
 
-figG2 <- dfGeo %>% filter(Var != "g0") %>%
+figG2 <- dfGeo %>% filter(Var != "g0", Geo != "China - Other mainland") %>%
   ggplot(aes(x = factor(Geo, levels = dfGeo %>% filter(Var == "g") %>% arrange(Estimate) %>% pull(Geo)),
              y = Estimate, ymin = Low, ymax = High, color = fct_reorder(PolName, Policy))) +
   geom_hline(yintercept = 0, linetype=2) + 
   geom_pointrange(size=0.4) + 
-  scale_y_continuous(labels = function(x) scales::percent(x, accuracy=1),
-                     breaks = seq(-0.2, 0.6, 0.2), minor_breaks = seq(-0.2, 0.6, 0.1)) +
-  scale_color_manual(values = c("Blue","Orange","Red"), name = "Policy in place") +
-  ylab("Growth rate of new infections per day (estimate and 95% interval)") +
-  coord_flip() + xlab(element_blank())
-ggsave(paste0("fig-g2-", time.now, filetype), plot = figG2, path = "output", width = 6, height = 5)
+  scale_y_continuous(labels = function(x) scales::percent(x, accuracy=1)) +
+  scale_color_manual(values = c("Blue","Orange","Red"), name = "Policy in place",
+                     guide = guide_legend(title.position = "top", ncol = 2)) +
+  ggtitle("Growth rate of new infections per day", subtitle = "(Estimate and 95% interval)") +
+  coord_flip() + xlab(element_blank()) + ylab(element_blank()) +
+  theme(legend.position="bottom", plot.title = element_text(size = 12))
+ggsave(paste0("fig-g2-", time.now, filetype), plot = figG2, path = "output", width = 4.2, height = 6)
 
 figPol <- dfPFull %>% ggplot(aes(x=Date, y=Val, fill = PolName)) + geom_col(width = 1) + facet_wrap(~Geo) +
   scale_x_date(date_breaks = "1 month", labels = function(x) format(x, format="%b")) +
