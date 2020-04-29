@@ -73,3 +73,40 @@ df %>% filter(Date >= as.Date(Date1), Date < as.Date(Date2), Geo %in% vGeo3) %>%
   xlab(element_blank()) + ylab("New events per day (logarithmic scale)") +
   theme(legend.title=element_blank(), legend.position="top", axis.text.x = element_text(angle = 45, hjust = 1))
 ggsave("output/fig-good.png", width=3.5, height=8, dpi = 600)
+
+
+# Georgia & Texas impact of lifting orders
+require(rstan)
+envBase <- envLift <- new.env()
+load("output/fit-model-200429-080952.RData", envir = envBase) # With current restrictions in place
+load("output/fit-model-200429-102953.RData", envir = envLift) # With restrictions lifted
+dfBaseRaw <- with(envBase,
+               bind_rows(
+                 expand.grid(iter = 1:nIter, Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(rstan::extract(fit)$lirPred)),
+                 expand.grid(iter = 1:nIter, Var = c("Death", "Case"), Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Log = as.vector(rstan::extract(fit)$lrrPred))
+               ) %>% full_join(dfDates %>% select(Geo, Tmax, End))
+               %>% mutate(Day = Tmax + Day2) %>% select(-Day2) %>%
+                 filter(Geo %in% c("US - Texas", "US - Georgia")))
+dfLiftRaw <- with(envLift,
+                  bind_rows(
+                    expand.grid(iter = 1:nIter, Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(rstan::extract(fit)$lirPred)),
+                    expand.grid(iter = 1:nIter, Var = c("Death", "Case"), Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Log = as.vector(rstan::extract(fit)$lrrPred))
+                  ) %>% full_join(dfDates %>% select(Geo, Tmax, End))
+                  %>% mutate(Day = Tmax + Day2) %>% select(-Day2) %>%
+                    filter(Geo %in% c("US - Texas", "US - Georgia")))
+dfBaseLift <- bind_rows(
+  dfBaseRaw %>% group_by(Geo, Var, iter) %>% summarize(Cum = sum(exp(Log))) %>%
+    group_by(Geo, Var) %>% summarize(CumEst = median(Cum), CumLow = quantile(Cum, probs=0.025), CumHigh = quantile(Cum, probs=0.975)) %>%
+    ungroup() %>% mutate(Case = "Current policy"),
+  dfLiftRaw %>% group_by(Geo, Var, iter) %>% summarize(Cum = sum(exp(Log))) %>%
+    group_by(Geo, Var) %>% summarize(CumEst = median(Cum), CumLow = quantile(Cum, probs=0.025), CumHigh = quantile(Cum, probs=0.975)) %>%
+    ungroup() %>% mutate(Case = "Eased policy"))
+dfBaseLift %>% filter(Var == "Death") %>%
+  ggplot(aes(x = Case, y = CumEst, fill = Geo)) +
+  geom_col() +
+  scale_y_continuous(labels = scales::comma) + ylab(element_blank()) + xlab(element_blank()) +
+  scale_fill_manual(values = brewer.pal(3,"Set1"), guide = guide_legend(position = "bottom", title = element_blank(), ncol=1)) +
+  ggtitle("Projected number of deaths in May and June") +
+  theme(legend.position = "bottom")
+ggsave("output/fig-texas-georgia.png", width = 3.5, height=4, dpi = 600)
+dfBaseLift %>% filter(Var == "Death")
