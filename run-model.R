@@ -221,7 +221,7 @@ dfGeo <- dfGeoRaw %>% group_by(Geo, Var) %>%
   summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
   
   left_join(dfP %>% left_join(dfDates %>% select(Geo, DataEnd = End) %>% mutate(DataEnd = ifelse(is.na(DataEnd), max(dfE$Date), DataEnd))) %>%
-              filter(PolEnd >= DataEnd | is.na(PolEnd)) %>% arrange(Geo, PolStart) %>% group_by(Geo) %>%
+              filter(PolEnd > DataEnd | is.na(PolEnd)) %>% arrange(Geo, PolStart) %>% group_by(Geo) %>%
               summarize(Policy = last(Policy), PolName = substr(last(PolName),3,30))) %>%
   mutate(PolName = ifelse(Var == "g0", "No restrictions (g0)", PolName), Policy = ifelse(Var == "g0", 0, Policy))
 dfGeo2 <- dfOutRaw %>% filter(Var == "Infection", is.na(End), Day == Tmax) %>% select(-Var) %>%
