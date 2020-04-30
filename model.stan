@@ -50,6 +50,7 @@ parameters {
   real g0Mu;
   real<lower=0> g0Sig;
   real g1Mu;
+  real g2Mu;
   vector<upper=0>[nPol-1] dg[nGeo];  // delta-growth rate due to additional policies
   vector<upper=0>[nPol-1] dgMu;
   cov_matrix[nPol] gSig;
@@ -106,6 +107,7 @@ model {
 
   for(i in 1:nGeo){
     append_row(g1[i], dg[i]) ~ multi_normal(append_row(g1Mu, dgMu), gSig);
+    g1[i] + sum(dg[i]) ~ normal(g2Mu, sqrt(gSig[1,1]));
 
     // Fit to data
     // Mixture model, see https://mc-stan.org/docs/2_22/stan-users-guide/summing-out-the-responsibility-parameter.html

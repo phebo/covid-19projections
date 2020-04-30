@@ -170,10 +170,10 @@ if(test){
 }
 save(list = ls(), file = paste0("output/fit-model-", time.now, ".RData"))
 
-print(summary(fit, pars=c("g1Mu", "dgMu", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
+print(summary(fit, pars=c("g0Mu", "g1Mu", "g2Mu", "dgMu", "g0Sig", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
 #print(summary(fit, pars=c("dgMu", "dgSig", "g0Mu", "g0Sig", "gMu", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
-print(xtable(summary(fit, pars=c("dgMu", "phi", "p", "muLag", "sigLag"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
-             digits=c(0,3,3,3,0,2)), type="html", file=paste0("output/table-", time.now, ".html"))
+#print(xtable(summary(fit, pars=c("dgMu", "phi", "p", "muLag", "sigLag"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
+#             digits=c(0,3,3,3,0,2)), type="html", file=paste0("output/table-", time.now, ".html"))
 
 nIter <- length(extract(fit)$p)
 dfDates <- dfDates %>% mutate(Tmax = vTmax)
@@ -206,7 +206,7 @@ dfOut2 <- dfOut2 %>%
   mutate(Var = factor(Var, levels = c("Death", "Case", "Infection"), labels = c("Death", "Reported case", "Infection")),
          Cum = ifelse(Cum == 0, NA, Cum), New = ifelse(New == 0, NA, New)) %>%
   select(-c(change, Adj))
-write_csv(dfOut2, "model-out.csv")
+#write_csv(dfOut2, "model-out.csv")
 
 muLag <- apply(extract(fit)$muLag, 2, median)
 sigLag <- apply(extract(fit)$sigLag, 2, median)
@@ -238,7 +238,7 @@ dfGeo2 <- dfOutRaw %>% filter(Var == "Infection", is.na(End), Day == Tmax) %>% s
   #pivot_wider(id_cols = c(Geo, Var), names_from = Var, values_from = Estimate:High)
 write_csv(dfGeo2, paste0("output/table-days-", time.now, ".csv"))
 
-dfGRaw <- expand.grid(iter = 1:nIter, Policy = 0:nPol)  %>% as_tibble() %>% mutate(x = expm1(as.vector(extract(fit)$gDraw)))
+dfGRaw <- expand.grid(iter = 1:nIter, Policy = 1:nPol)  %>% as_tibble() %>% mutate(x = expm1(as.vector(extract(fit)$gDraw)))
 dfG <- dfGRaw %>% group_by(Policy) %>%
   summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
   left_join(dfP %>% group_by(Policy) %>% summarize(PolName = first(PolName))) %>%
