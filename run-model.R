@@ -23,6 +23,7 @@
 
 # It takes one to several hours to estimate the model projections on a regular PC
 # For further information see: https://www.covid-19projections.com/
+# The first time the model is run useInit should be set to FALSE. It can be set to TRUE in next runs to speed up the model estimation.
 
 
 library(tidyverse)
@@ -39,6 +40,7 @@ set.seed(654321) # To make Bayesian estimates reproducable
 
 filetype <- ".png" # Filetype for output charts
 test <- F # Do a test run (much faster)?
+useInit <- T # Use initial value from previous run? Needs to be FALSE first time model is used
 
 # Minimum and maximum lags between infection and resp. reported case and reported death:
 if(test) {
@@ -163,24 +165,35 @@ lData <- list(nGeo = nGeo, nT = nT, nTPred = nTPred, nPol = nPol, nK = 2, lagMin
               lmaxDeath = lmaxDeath, mortality = mortality, mortSig = mortSig, lr2 = lr2, phi2 = phi2)
 
 m <- stan_model("model.stan")
+if(useInit) load("output/init.RData") else init <- "random"
 if(test){
-  fit <- sampling(m, data = lData, chains=2, iter = 200, thin = 1, control = list(max_treedepth = 10, adapt_delta = 0.8))
+  fit <- sampling(m, data = lData, chains=2, iter = 200, thin = 1, init = init[c(1,2)], control = list(max_treedepth = 10, adapt_delta = 0.8))
 } else {
-  fit <- sampling(m, data = lData, chains=4, iter = 500, thin = 1, control = list(max_treedepth = 12, adapt_delta = 0.9))
+  fit <- sampling(m, data = lData, chains=4, iter = 500, thin = 1, init = init, control = list(max_treedepth = 12, adapt_delta = 0.9))
 }
 print(summary(fit, pars=c("dgMu", "dgSig", "g0Mu", "g0Sig", "gMu", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
 print(xtable(summary(fit, pars=c("g0Mu", "g0Sig", "dgMu", "gMu", "gSig", "phi", "p", "muLag", "sigLag"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
              digits=c(0,3,3,3,0,2)), type="html", file=paste0("output/table-", time.now, ".html"))
 
-nIter <- length(extract(fit)$g0Mu)
+samples <- extract(fit)
+nIter <- length(samples$g0Mu)
+if(!test) {
+  iters <- sample(1:nIter, 4)
+  init <- lapply(iters, function(i)
+    lapply(samples[c("lir1", "g0", "g0Mu", "g0Sig", "gMu", "gSig", "dg", "dgMu", "dgSig", "phi", "p", "eventFrac", "muLag", "sigLag", "g0Draw", "dgDraw")],
+           function(x) if(length(dim(x)) == 3) x[i,,] else if(length(dim(x)) == 2) x[i,] else x[i]))
+  save(init, file = "output/init.RData")
+}
+
+
 dfDates <- dfDates %>% mutate(Tmax = vTmax)
 dfOutRaw <- bind_rows(
-  expand.grid(iter = 1:nIter, Geo = vGeo, Day=1:nT) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(extract(fit)$lir)),
-  expand.grid(iter = 1:nIter, Var = c("Death", "Case"), Geo = vGeo, Day=(lagDeath[2]+1):nT) %>% as_tibble() %>% mutate(Log = as.vector(extract(fit)$lrr))
+  expand.grid(iter = 1:nIter, Geo = vGeo, Day=1:nT) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(samples$lir)),
+  expand.grid(iter = 1:nIter, Var = c("Death", "Case"), Geo = vGeo, Day=(lagDeath[2]+1):nT) %>% as_tibble() %>% mutate(Log = as.vector(samples$lrr))
 ) %>% full_join(dfDates %>% select(Geo, Tmax, End)) %>% filter(Day <= Tmax)
 dfOutPred <- bind_rows(
-  expand.grid(iter = 1:nIter, Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(extract(fit)$lirPred)),
-  expand.grid(iter = 1:nIter, Var = c("Death", "Case"), Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Log = as.vector(extract(fit)$lrrPred))
+  expand.grid(iter = 1:nIter, Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(samples$lirPred)),
+  expand.grid(iter = 1:nIter, Var = c("Death", "Case"), Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Log = as.vector(samples$lrrPred))
 ) %>% full_join(dfDates %>% select(Geo, Tmax, End)) %>% mutate(Day = Tmax + Day2) %>% select(-Day2)
 
 dfOut <- bind_rows(dfOutRaw, dfOutPred) %>% mutate(New = exp(Log)) %>% arrange(Geo, Var, Day) %>% 
@@ -205,18 +218,18 @@ dfOut2 <- dfOut2 %>%
   select(-c(change, Adj))
 write_csv(dfOut2, "model-out.csv")
 
-muLag <- apply(extract(fit)$muLag, 2, median)
-sigLag <- apply(extract(fit)$sigLag, 2, median)
+muLag <- apply(samples$muLag, 2, median)
+sigLag <- apply(samples$sigLag, 2, median)
 dfLag <- bind_rows(
   tibble(Lag = lagCase[1]:lagCase[2], w = dnorm(Lag, muLag[2], sigLag[2]), Weight = w/sum(w), Var = "Case"),
   tibble(Lag = lagDeath[1]:lagDeath[2], w = dnorm(Lag, muLag[1], sigLag[1]), Weight = w/sum(w), Var = "Death")
 )
-dfTest <- t(apply(extract(fit)$eventFrac[,2,], 2, quantile, probs=c(0.025,0.5,0.975))) %>% as_tibble() %>%
+dfTest <- t(apply(samples$eventFrac[,2,], 2, quantile, probs=c(0.025,0.5,0.975))) %>% as_tibble() %>%
   mutate(Geo = vGeo)
 
 dfGeoRaw <- bind_rows(
-  expand.grid(iter = 1:nIter, Geo = vGeo) %>% as_tibble() %>% mutate(x = expm1(as.vector(extract(fit)$g)), Var = "g"),
-  expand.grid(iter = 1:nIter, Geo = vGeo) %>% as_tibble() %>% mutate(x = expm1(as.vector(extract(fit)$g0)), Var = "g0"))
+  expand.grid(iter = 1:nIter, Geo = vGeo) %>% as_tibble() %>% mutate(x = expm1(as.vector(samples$g)), Var = "g"),
+  expand.grid(iter = 1:nIter, Geo = vGeo) %>% as_tibble() %>% mutate(x = expm1(as.vector(samples$g0)), Var = "g0"))
 dfGeo <- dfGeoRaw %>% group_by(Geo, Var) %>% 
   summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
   
@@ -235,7 +248,7 @@ dfGeo2 <- dfOutRaw %>% filter(Var == "Infection", is.na(End), Day == Tmax) %>% s
   #pivot_wider(id_cols = c(Geo, Var), names_from = Var, values_from = Estimate:High)
 write_csv(dfGeo2, paste0("output/table-days-", time.now, ".csv"))
 
-dfGRaw <- expand.grid(iter = 1:nIter, Policy = 0:nPol)  %>% as_tibble() %>% mutate(x = expm1(as.vector(extract(fit)$gDraw)))
+dfGRaw <- expand.grid(iter = 1:nIter, Policy = 0:nPol)  %>% as_tibble() %>% mutate(x = expm1(as.vector(samples$gDraw)))
 dfG <- dfGRaw %>% group_by(Policy) %>%
   summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
   left_join(dfP %>% group_by(Policy) %>% summarize(PolName = first(PolName))) %>%
@@ -288,7 +301,7 @@ figG <- dfGeo %>%
   coord_flip() + xlab(element_blank())
 ggsave(paste0("fig-g-", time.now, filetype), plot = figG, path = "output", width = 6, height = 5)
 
-figG2 <- dfGeo %>% filter(Var != "g0", Geo != "China - Other mainland") %>%
+figG2 <- dfGeo %>% filter(Var != "g0") %>%
   ggplot(aes(x = factor(Geo, levels = dfGeo %>% filter(Var == "g") %>% arrange(Estimate) %>% pull(Geo)),
              y = Estimate, ymin = Low, ymax = High, color = fct_reorder(PolName, Policy))) +
   geom_hline(yintercept = 0, linetype=2) + 
