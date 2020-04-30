@@ -38,7 +38,7 @@ print(time.now)
 set.seed(654321) # To make Bayesian estimates reproducable
 
 filetype <- ".png" # Filetype for output charts
-test <- F # Do a test run (much faster)?
+test <- T # Do a test run (much faster)?
 
 # Minimum and maximum lags between infection and resp. reported case and reported death:
 if(test) {
@@ -168,11 +168,14 @@ if(test){
 } else {
   fit <- sampling(m, data = lData, chains=4, iter = 500, thin = 1, control = list(max_treedepth = 12, adapt_delta = 0.9))
 }
-print(summary(fit, pars=c("dgMu", "dgSig", "g0Mu", "g0Sig", "gMu", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
-print(xtable(summary(fit, pars=c("g0Mu", "g0Sig", "dgMu", "gMu", "gSig", "phi", "p", "muLag", "sigLag"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
+save(list = ls(), file = paste0("output/fit-model-", time.now, ".RData"))
+
+print(summary(fit, pars=c("g1Mu", "dgMu", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
+#print(summary(fit, pars=c("dgMu", "dgSig", "g0Mu", "g0Sig", "gMu", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
+print(xtable(summary(fit, pars=c("dgMu", "phi", "p", "muLag", "sigLag"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
              digits=c(0,3,3,3,0,2)), type="html", file=paste0("output/table-", time.now, ".html"))
 
-nIter <- length(extract(fit)$g0Mu)
+nIter <- length(extract(fit)$p)
 dfDates <- dfDates %>% mutate(Tmax = vTmax)
 dfOutRaw <- bind_rows(
   expand.grid(iter = 1:nIter, Geo = vGeo, Day=1:nT) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(extract(fit)$lir)),
