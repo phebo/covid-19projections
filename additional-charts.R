@@ -78,8 +78,8 @@ ggsave("output/fig-good.png", width=3.5, height=8, dpi = 600)
 # Georgia & Texas impact of lifting orders
 require(rstan)
 envBase <- envLift <- new.env()
-load("output/fit-model-200429-080952.RData", envir = envBase) # With current restrictions in place
-load("output/fit-model-200429-102953.RData", envir = envLift) # With restrictions lifted
+load("output/fit-model-200430-081533.RData", envir = envBase) # With current restrictions in place
+load("output/fit-model-200430-081419.RData", envir = envLift) # With restrictions lifted
 dfBaseRaw <- with(envBase,
                bind_rows(
                  expand.grid(iter = 1:nIter, Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(rstan::extract(fit)$lirPred)),
@@ -97,16 +97,19 @@ dfLiftRaw <- with(envLift,
 dfBaseLift <- bind_rows(
   dfBaseRaw %>% group_by(Geo, Var, iter) %>% summarize(Cum = sum(exp(Log))) %>%
     group_by(Geo, Var) %>% summarize(CumEst = median(Cum), CumLow = quantile(Cum, probs=0.025), CumHigh = quantile(Cum, probs=0.975)) %>%
-    ungroup() %>% mutate(Case = "Current policy"),
+    ungroup() %>% mutate(Case = "Old"),
   dfLiftRaw %>% group_by(Geo, Var, iter) %>% summarize(Cum = sum(exp(Log))) %>%
     group_by(Geo, Var) %>% summarize(CumEst = median(Cum), CumLow = quantile(Cum, probs=0.025), CumHigh = quantile(Cum, probs=0.975)) %>%
-    ungroup() %>% mutate(Case = "Eased policy"))
-dfBaseLift %>% filter(Var == "Death") %>%
+    ungroup() %>% mutate(Case = "New"))
+dfBaseLift %>% filter(Var == "Death") %>% mutate(Case = factor(Case, levels = c("Old", "New"), labels = c("Stay home order", "Eased policy"))) %>%
   ggplot(aes(x = Case, y = CumEst, fill = Geo)) +
   geom_col() +
   scale_y_continuous(labels = scales::comma) + ylab(element_blank()) + xlab(element_blank()) +
   scale_fill_manual(values = brewer.pal(3,"Set1"), guide = guide_legend(position = "bottom", title = element_blank(), ncol=1)) +
-  ggtitle("Projected number of deaths in May and June") +
+  ggtitle("Projected number of deaths", subtitle = "Total in May and June") +
   theme(legend.position = "bottom")
 ggsave("output/fig-texas-georgia.png", width = 3.5, height=4, dpi = 600)
 dfBaseLift %>% filter(Var == "Death")
+with(
+  dfBaseLift %>% filter(Var == "Death") %>% group_by(Case) %>% summarize(CumEst = sum(CumEst), CumLow = sum(CumLow)),
+  c(CumEst[Case == "New"] - CumEst[Case == "Old"], CumLow[Case == "New"] - CumLow[Case == "Old"]))
