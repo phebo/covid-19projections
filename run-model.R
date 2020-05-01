@@ -165,7 +165,7 @@ lData <- list(nGeo = nGeo, nT = nT, nTPred = nTPred, nPol = nPol, nK = 2, lagMin
               lmaxDeath = lmaxDeath, mortality = mortality, mortSig = mortSig, lr2 = lr2, phi2 = phi2)
 
 m <- stan_model("model.stan")
-if(useInit) load("output/init.RData") else init <- "random"
+if(useInit) load("init.RData") else init <- "random"
 if(test){
   fit <- sampling(m, data = lData, chains=2, iter = 200, thin = 1, init = init[c(1,2)], control = list(max_treedepth = 10, adapt_delta = 0.8))
 } else {
@@ -182,7 +182,7 @@ if(!test) {
   init <- lapply(iters, function(i)
     lapply(samples[c("lir1", "g0", "g0Mu", "g0Sig", "gMu", "gSig", "dg", "dgMu", "dgSig", "phi", "p", "eventFrac", "muLag", "sigLag", "g0Draw", "dgDraw")],
            function(x) if(length(dim(x)) == 3) x[i,,] else if(length(dim(x)) == 2) x[i,] else x[i]))
-  save(init, file = "output/init.RData")
+  save(init, file = "init.RData")
 }
 
 
@@ -212,7 +212,7 @@ dfOutUs <- dfOut2 %>% filter(substr(Geo,1,2) == "US") %>%
   mutate(Geo = "US - 12 states total")
 dfOut2 <- dfOut2 %>%
   bind_rows(dfOutUs) %>%
-  bind_rows(dfE %>% filter(Geo %in% c("Japan", "New Zealand", "Singapore", "Taiwan", "Korea, South"))) %>%
+  bind_rows(dfE %>% filter(Geo %in% c("Japan", "New Zealand", "Singapore", "Taiwan", "Korea, South", "China - Other mainland"))) %>%
   mutate(Var = factor(Var, levels = c("Death", "Case", "Infection"), labels = c("Death", "Reported case", "Infection")),
          Cum = ifelse(Cum == 0, NA, Cum), New = ifelse(New == 0, NA, New)) %>%
   select(-c(change, Adj))
