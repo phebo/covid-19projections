@@ -317,7 +317,7 @@ ggsave(paste0("fig-g2-", time.now, filetype), plot = figG2, path = "output", wid
 figPol <- dfPFull %>% ggplot(aes(x=Date, y=Val, fill = PolName)) + geom_col(width = 1) + facet_wrap(~Geo) +
   scale_x_date(date_breaks = "1 month", labels = function(x) format(x, format="%b")) +
   theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
-  scale_fill_manual(name = element_blank(), values = brewer.pal(9,"Set1"), guide = guide_legend(nrow = 3)) +
+  #scale_fill_manual(name = element_blank(), values = brewer.pal(9,"Set1"), guide = guide_legend(nrow = 3)) +
   theme(legend.title=element_blank(), legend.position="top") +
   xlab(element_blank())
 ggsave(paste0("fig-policies-", time.now, filetype), plot = figPol, path = "output", width = 8, height = 11)
