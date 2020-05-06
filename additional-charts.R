@@ -31,7 +31,7 @@ dfCo <- bind_rows(
   mutate(Var = fct_recode(Var, `Reported cases` = "Reported case", `Estimated infections` = "Infection"))
 vGeo <- dfCo %>% filter(Var == "Estimated infections") %>% top_n(8, Cum) %>% arrange(-Cum) %>% pull(Geo) 
 
-# Reported cases vs actual infections
+# Reported cases vs actual infections in top 8 geographies
 dfCo %>% filter(Geo %in% vGeo) %>% ggplot(aes(x = Var, y = Cum, fill = reorder(Geo, Cum))) + geom_col() +
   scale_y_continuous(labels = scales::comma) + 
   scale_fill_manual(values = brewer.pal(8,"Set1")) +
@@ -40,7 +40,7 @@ dfCo %>% filter(Geo %in% vGeo) %>% ggplot(aes(x = Var, y = Cum, fill = reorder(G
 ggsave("output/fig-est-rep.png", width=4, height=5)
 dfCo %>% group_by(Var) %>% summarize(sum(Cum))
 
-# Projected cumulative infections
+# Projected cumulative infections in top 8 geographies
 df %>% filter(Geo %in% vGeo, Var == "Infection", between(Date, as.Date("2020-03-01"), as.Date("2020-06-01") )) %>%
   mutate(Geo = fct_rev(factor(Geo, levels = vGeo))) %>%
   ggplot(aes(x=Date, y=CumEst, fill=Geo)) +
@@ -51,6 +51,19 @@ df %>% filter(Geo %in% vGeo, Var == "Infection", between(Date, as.Date("2020-03-
   theme(legend.title = element_blank(), legend.position = "bottom") +
   ggtitle("Estimated cumulative infections")
 ggsave("output/fig-cum-infections.png", width=3.5, height=4)
+
+# Bar chart new infections in top geographies
+df %>% filter(Geo %in% (dfCo %>% filter(Var == "Estimated infections") %>% top_n(10, Cum) %>% arrange(-Cum) %>% pull(Geo)),
+              Var == "Infection", between(Date, as.Date("2020-03-01"), as.Date("2020-06-01") )) %>%
+  ggplot(aes(x=Date, y=NewEst)) +
+  geom_col(width = 1) +
+  scale_y_continuous(labels = scales::comma) + 
+  facet_wrap(~Geo, ncol=2) +
+  ylab(element_blank()) + xlab(element_blank()) +
+  theme(legend.title = element_blank(), legend.position = "bottom") +
+  ggtitle("Estimated daily new infections")
+ggsave("output/fig-new-infections-bar.png", width=3.5, height=6)
+
 
 df %>% filter(Geo %in% vGeo, Date %in% c(as.Date("2020-04-29"), as.Date("2020-05-31")), Var == "Infection") %>%
   select(Geo, Date, CumEst, CumLow, CumHigh) %>% select(-Geo) %>% group_by(Date) %>% summarise_all(sum)

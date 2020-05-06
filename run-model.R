@@ -50,6 +50,7 @@ if(test) {
   lagDeath <- c(10,30)
   lagCase <- c(5,20)
 }
+#PolSel <- c(1,4,5.1,5.2,7,8,9) # Which policies to take into account in analysis
 PolSel <- c(1,7,8,9) # Which policies to take into account in analysis
 nTPred <- 60 # Additional prediction days
 mortality <- 0.01; mortSig <- 0.5; # Parameters for log-normal distribution; mortSig = 0.5 means 95% interval ~0.3%-2.6%
@@ -232,7 +233,6 @@ dfGeoRaw <- bind_rows(
   expand.grid(iter = 1:nIter, Geo = vGeo) %>% as_tibble() %>% mutate(x = expm1(as.vector(samples$g0)), Var = "g0"))
 dfGeo <- dfGeoRaw %>% group_by(Geo, Var) %>% 
   summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
-  
   left_join(dfP %>% left_join(dfDates %>% select(Geo, DataEnd = End) %>% mutate(DataEnd = ifelse(is.na(DataEnd), max(dfE$Date), DataEnd))) %>%
               filter(PolEnd > DataEnd | is.na(PolEnd)) %>% arrange(Geo, PolStart) %>% group_by(Geo) %>%
               summarize(Policy = last(Policy), PolName = substr(last(PolName),3,30))) %>%
@@ -314,10 +314,10 @@ figG2 <- dfGeo %>% filter(Var != "g0") %>%
   theme(legend.position="bottom", plot.title = element_text(size = 12))
 ggsave(paste0("fig-g2-", time.now, filetype), plot = figG2, path = "output", width = 4.2, height = 6)
 
-figPol <- dfPFull %>% ggplot(aes(x=Date, y=Val, fill = PolName)) + geom_col(width = 1) + facet_wrap(~Geo) +
+figPol <- dfPFull %>% filter(Policy != 5) %>% ggplot(aes(x=Date, y=Val, fill = PolName)) + geom_col(width = 1) + facet_wrap(~Geo) +
   scale_x_date(date_breaks = "1 month", labels = function(x) format(x, format="%b")) +
   theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
-  #scale_fill_manual(name = element_blank(), values = brewer.pal(9,"Set1"), guide = guide_legend(nrow = 3)) +
+  scale_fill_manual(name = element_blank(), values = brewer.pal(12,"Set3"), guide = guide_legend(nrow = 3)) +
   theme(legend.title=element_blank(), legend.position="top") +
   xlab(element_blank())
 ggsave(paste0("fig-policies-", time.now, filetype), plot = figPol, path = "output", width = 8, height = 11)
