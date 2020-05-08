@@ -87,12 +87,16 @@ df %>% filter(Date >= as.Date(Date1), Date < as.Date(Date2), Geo %in% vGeo3) %>%
   theme(legend.title=element_blank(), legend.position="top", axis.text.x = element_text(angle = 45, hjust = 1))
 ggsave("output/fig-good.png", width=3.5, height=8, dpi = 600)
 
+# France numbers
+df %>% filter(Geo == "France", Date == as.Date(Sys.time()) - 1)
+df %>% filter(Geo == "France", Date == as.Date("2020-03-23"))
+df %>% filter(Geo == "France", format(Date, "%m") == "05") %>% group_by(Var) %>% summarize(New = sum(NewEst))
 
 # Georgia & Texas impact of lifting orders
 require(rstan)
 envBase <- envLift <- new.env()
-load("output/fit-model-200430-081533.RData", envir = envBase) # With current restrictions in place
-load("output/fit-model-200430-081419.RData", envir = envLift) # With restrictions lifted
+load("output/old/fit-model-200430-081533.RData", envir = envBase) # With current restrictions in place
+load("output/old/fit-model-200430-081419.RData", envir = envLift) # With restrictions lifted
 dfBaseRaw <- with(envBase,
                bind_rows(
                  expand.grid(iter = 1:nIter, Geo = vGeo, Day2=1:nTPred) %>% as_tibble() %>% mutate(Var = "Infection", Log = as.vector(rstan::extract(fit)$lirPred)),

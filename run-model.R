@@ -186,6 +186,7 @@ if(!test) {
   save(init, file = "init.RData")
 }
 
+apply(samples$dg[,vGeo == "France",],2,function(x) quantile(x, probs=c(0.025,0.5,0.975)))
 
 dfDates <- dfDates %>% mutate(Tmax = vTmax)
 dfOutRaw <- bind_rows(
