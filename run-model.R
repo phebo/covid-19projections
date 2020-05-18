@@ -223,7 +223,7 @@ dfOut2 <- dfOut2 %>%
   mutate(Var = factor(Var, levels = c("Death", "Case", "Infection"), labels = c("Death", "Reported case", "Infection")),
          Cum = ifelse(Cum == 0, NA, Cum), New = ifelse(New == 0, NA, New)) %>%
   select(-c(change, Adj))
-#write_csv(dfOut2, "model-out.csv")
+write_csv(dfOut2, "model-out.csv")
 
 muLag <- apply(samples$muLag, 2, median)
 sigLag <- apply(samples$sigLag, 2, median)
@@ -321,10 +321,10 @@ figG2 <- dfGeo %>% filter(Var != "g0") %>%
   theme(legend.position="bottom", plot.title = element_text(size = 12))
 ggsave(paste0("fig-g2-", time.now, filetype), plot = figG2, path = "output", width = 4.2, height = 6)
 
-figPol <- dfPFull %>% filter(Policy != 5) %>% ggplot(aes(x=Date, y=Val, fill = PolName)) + geom_col(width = 1) + facet_wrap(~Geo) +
+figPol <- dfPFull %>% filter(Policy %in% PolSel) %>% ggplot(aes(x=Date, y=Val, fill = PolName)) + geom_col(width = 1) + facet_wrap(~Geo) +
   scale_x_date(date_breaks = "1 month", labels = function(x) format(x, format="%b")) +
   theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
-  scale_fill_manual(name = element_blank(), values = brewer.pal(12,"Set3"), guide = guide_legend(nrow = 3)) +
+  scale_fill_manual(name = element_blank(), values = brewer.pal(9,"Set1"), guide = guide_legend(nrow = 3)) +
   theme(legend.title=element_blank(), legend.position="top") +
   xlab(element_blank())
 ggsave(paste0("fig-policies-", time.now, filetype), plot = figPol, path = "output", width = 8, height = 11)
