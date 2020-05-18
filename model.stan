@@ -46,27 +46,25 @@ data {
 parameters {
   real lir1[nGeo]; // lir[i] at t=1
   real g0[nGeo];  // Base growth rate by geography
+  real g1[nGeo];  // Growth rate with congregation restrictions by geography
   real g0Mu;
   real<lower=0> g0Sig;
-  real gMu;
-  real<lower=0> gSig;
-  vector<upper=0>[nPol] dg[nGeo];  // delta-growth rate due to various policies
-  vector<upper=0>[nPol] dgMu;
-  cov_matrix[nPol] dgSig;
+  real g1Mu;
+  real g2Mu;
+  vector<upper=0>[nPol-1] dg[nGeo];  // delta-growth rate due to additional policies
+  vector<upper=0>[nPol-1] dgMu;
+  cov_matrix[nPol] gSig;
   real<lower=0> phi;
   real<lower=0,upper=1> p; // Probability of outlier (with rate r2, and dispersion phi2)
   real<lower=0,upper=1> eventFrac[nK, nGeo]; // death & test fraction of total infections
   real<lower=min(lagMin),upper=max(lagMax)> muLag[nK];
   real<lower=0, upper=to_real(max(lagMax) - min(lagMin))/4> sigLag[nK];
-  real g0Draw;
-  vector[nPol] dgDraw;
 }
 
 transformed parameters {
   real lir[nGeo, nT];  // log infection rate
   real lrr[nK, nGeo, nT-max(lagMax)]; // log reported event rate
   real lLagWeight[nK, max(lagMax)];
-  real gDraw[nPol + 1];
   
   for(k in 1:nK) {
     real x = log(total_lag_weight(lagMin[k], lagMax[k], muLag[k], sigLag[k]));
@@ -78,9 +76,13 @@ transformed parameters {
   for(i in 1:nGeo){
     lir[i, 1] = lir1[i];
     for(t in 1:(nT-1)){
-      lir[i,t+1] = lir[i,t] + g0[i];
-      for(l in 1:nPol) {
-        if(t+1 >= mPolStart[i, l] && t+1 < mPolEnd[i, l]) lir[i, t+1] += dg[i, l];
+      if(t+1 >= mPolStart[i, 1] && t+1 < mPolEnd[i, 1]){
+        lir[i,t+1] = lir[i,t] + g1[i];
+        for(l in 2:nPol) {
+          if(t+1 >= mPolStart[i, l] && t+1 < mPolEnd[i, l]) lir[i, t+1] += dg[i, l-1];
+        }
+      } else {
+        lir[i,t+1] = lir[i,t] + g0[i];
       }
     }
     for(t in 1:(nT-max(lagMax))) {
@@ -93,10 +95,6 @@ transformed parameters {
       }
     }
   }
-  for(l in 1:(nPol+1)) {
-    gDraw[l] = g0Draw;
-    for(l2 in 1:(l-1)) gDraw[l] += dgDraw[l2];
-  }
 }
 
 model {
@@ -108,8 +106,8 @@ model {
   p ~ beta(0.001,1);
 
   for(i in 1:nGeo){
-    dg[i] ~ multi_normal(dgMu, dgSig);
-    g0[i] + sum(dg[i]) ~ normal(gMu, gSig);
+    append_row(g1[i], dg[i]) ~ multi_normal(append_row(g1Mu, dgMu), gSig);
+    g1[i] + sum(dg[i]) ~ normal(g2Mu, sqrt(gSig[1,1]));
 
     // Fit to data
     // Mixture model, see https://mc-stan.org/docs/2_22/stan-users-guide/summing-out-the-responsibility-parameter.html
@@ -120,16 +118,16 @@ model {
       }
     }
   }
-  g0Draw ~ normal(g0Mu, g0Sig);
-  dgDraw ~ multi_normal(dgMu, dgSig);
-  g0Draw + sum(dgDraw) ~ normal(gMu, gSig);
-
 }
 
 generated quantities{
   real g[nGeo];
+  vector[nPol] gDraw;  // delta-growth rate due to additional policies
+
   real lirPred[nGeo, nTPred];  // log infection rate
   real lrrPred[nK, nGeo, nTPred]; // log reported event rate
+  
+  gDraw = multi_normal_rng(append_row(g1Mu, dgMu), gSig);
   
   for(i in 1:nGeo) {
     g[i] = lir[i, vTmax[i]] - lir[i, vTmax[i] - 1];

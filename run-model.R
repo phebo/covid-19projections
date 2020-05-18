@@ -174,9 +174,12 @@ if(test){
 } else {
   fit <- sampling(m, data = lData, chains=4, iter = 500, thin = 1, init = init, control = list(max_treedepth = 12, adapt_delta = 0.9))
 }
-print(summary(fit, pars=c("dgMu", "dgSig", "g0Mu", "g0Sig", "gMu", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
-print(xtable(summary(fit, pars=c("g0Mu", "g0Sig", "dgMu", "gMu", "gSig", "phi", "p", "muLag", "sigLag"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
-             digits=c(0,3,3,3,0,2)), type="html", file=paste0("output/table-", time.now, ".html"))
+save(list = ls(), file = paste0("output/fit-model-", time.now, ".RData"))
+
+print(summary(fit, pars=c("g0Mu", "g1Mu", "g2Mu", "dgMu", "g0Sig", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
+#print(summary(fit, pars=c("dgMu", "dgSig", "g0Mu", "g0Sig", "gMu", "gSig", "phi", "p", "muLag", "sigLag", "gDraw"))$summary)
+#print(xtable(summary(fit, pars=c("dgMu", "phi", "p", "muLag", "sigLag"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
+#             digits=c(0,3,3,3,0,2)), type="html", file=paste0("output/table-", time.now, ".html"))
 
 samples <- extract(fit)
 nIter <- length(samples$g0Mu)
@@ -220,7 +223,7 @@ dfOut2 <- dfOut2 %>%
   mutate(Var = factor(Var, levels = c("Death", "Case", "Infection"), labels = c("Death", "Reported case", "Infection")),
          Cum = ifelse(Cum == 0, NA, Cum), New = ifelse(New == 0, NA, New)) %>%
   select(-c(change, Adj))
-write_csv(dfOut2, "model-out.csv")
+#write_csv(dfOut2, "model-out.csv")
 
 muLag <- apply(samples$muLag, 2, median)
 sigLag <- apply(samples$sigLag, 2, median)
@@ -251,7 +254,7 @@ dfGeo2 <- dfOutRaw %>% filter(Var == "Infection", is.na(End), Day == Tmax) %>% s
   #pivot_wider(id_cols = c(Geo, Var), names_from = Var, values_from = Estimate:High)
 write_csv(dfGeo2, paste0("output/table-days-", time.now, ".csv"))
 
-dfGRaw <- expand.grid(iter = 1:nIter, Policy = 0:nPol)  %>% as_tibble() %>% mutate(x = expm1(as.vector(samples$gDraw)))
+dfGRaw <- expand.grid(iter = 1:nIter, Policy = 1:nPol)  %>% as_tibble() %>% mutate(x = expm1(as.vector(samples$gDraw)))
 dfG <- dfGRaw %>% group_by(Policy) %>%
   summarize(Estimate = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975)) %>% ungroup() %>%
   left_join(dfP %>% group_by(Policy) %>% summarize(PolName = first(PolName))) %>%
