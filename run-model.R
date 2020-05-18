@@ -40,7 +40,7 @@ set.seed(654321) # To make Bayesian estimates reproducable
 
 filetype <- ".png" # Filetype for output charts
 test <- F # Do a test run (much faster)?
-useInit <- T # Use initial value from previous run? Needs to be FALSE first time model is used
+useInit <- F # Use initial value from previous run? Needs to be FALSE first time model is used
 
 # Minimum and maximum lags between infection and resp. reported case and reported death:
 if(test) {
@@ -50,8 +50,8 @@ if(test) {
   lagDeath <- c(10,30)
   lagCase <- c(5,20)
 }
-#PolSel <- c(1,4,5.1,5.2,7,8,9) # Which policies to take into account in analysis
-PolSel <- c(1,7,8,9) # Which policies to take into account in analysis
+PolSel <- c(1,4,5.1,5.2,7,8,9) # Which policies to take into account in analysis
+#PolSel <- c(1,7,8,9) # Which policies to take into account in analysis
 nTPred <- 60 # Additional prediction days
 mortality <- 0.01; mortSig <- 0.5; # Parameters for log-normal distribution; mortSig = 0.5 means 95% interval ~0.3%-2.6%
 lr2 <- log(1e3); phi2 <- 1e-4 # Parameters for outlier negative binomial
@@ -91,6 +91,8 @@ dfE <- bind_rows(dfE1, dfE2) %>%
       `Country/Region` == "China" & `Province/State` == "Hubei" ~ "China - Hubei",
       `Country/Region` == "China" & `Province/State` == "Henan" ~ "China - Henan",
       `Country/Region` == "China" ~ "China - Other mainland",
+      `Country/Region` == "Canada" & `Province/State` == "Ontario" ~ "Canada - Ontario",
+      `Country/Region` == "Canada" & `Province/State` == "Quebec" ~ "Canada - Quebec",
       `Country/Region` == "Taiwan*" ~ "Taiwan",
       TRUE ~ `Country/Region`)) %>%
   select(-c(`Province/State`,`Country/Region`)) %>% filter(Geo != "US") %>%
@@ -142,7 +144,7 @@ dfPFull <- expand_grid(Geo = vGeo, Date = unique(dfE$Date), Policy = unique(dfP$
   mutate(Val = ifelse(is.na(Val), 0, Val))  %>%
   left_join(dfPNames) %>% mutate(PolName = paste(Policy, PolName))
 stopifnot(with(dfPFull %>% select(-PolName) %>% pivot_wider(names_from = Policy, values_from = Val),
-               all(`1` >= `7`, `7` >= `8`, `8` >= `9`))) # Check that policies 1, 7, 8 and 9 are cumulative
+              all(`1` >= `7`, `7` >= `8`, `8` >= `9`))) # Check that policies 1, 7, 8 and 9 are cumulative
 
 # Select most relevant policies:
 nPol <- length(PolSel)
@@ -290,26 +292,27 @@ figNew <- dfOut2 %>%
   xlab(element_blank()) + ylab(element_blank()) + theme(legend.title=element_blank(), legend.position="bottom")
 ggsave(paste0("fig-new-", time.now, filetype), plot = figNew, path = "output", width = 8, height = 10)
 
-figG <- dfGeo %>% 
-  ggplot(aes(x = factor(Geo, levels = dfGeo %>% filter(Var == "g") %>% arrange(Estimate) %>% pull(Geo)),
-             y = Estimate, ymin = Low, ymax = High, color = fct_reorder(PolName, Policy))) +
-  geom_hline(yintercept = 0, linetype=2) + 
-  geom_pointrange(size=0.4) + 
-  scale_y_continuous(labels = function(x) scales::percent(x, accuracy=1),
-                     breaks = seq(-0.2, 0.6, 0.2), minor_breaks = seq(-0.2, 0.6, 0.1)) +
-  scale_color_manual(values = c("Grey40","blue","Orange","Red"), name = "Policy in place") +
-  ylab("Growth rate of new infections per day (estimate and 95% interval)") +
-  coord_flip() + xlab(element_blank())
-ggsave(paste0("fig-g-", time.now, filetype), plot = figG, path = "output", width = 6, height = 5)
+# figG <- dfGeo %>% 
+#   ggplot(aes(x = factor(Geo, levels = dfGeo %>% filter(Var == "g") %>% arrange(Estimate) %>% pull(Geo)),
+#              y = Estimate, ymin = Low, ymax = High, color = fct_reorder(PolName, Policy))) +
+#   geom_hline(yintercept = 0, linetype=2) + 
+#   geom_pointrange(size=0.4) + 
+#   scale_y_continuous(labels = function(x) scales::percent(x, accuracy=1),
+#                      breaks = seq(-0.2, 0.6, 0.2), minor_breaks = seq(-0.2, 0.6, 0.1)) +
+#   scale_color_manual(values = c("Grey40","blue","Orange","Red"), name = "Policy in place") +
+#   ylab("Growth rate of new infections per day (estimate and 95% interval)") +
+#   coord_flip() + xlab(element_blank())
+# ggsave(paste0("fig-g-", time.now, filetype), plot = figG, path = "output", width = 6, height = 5)
 
 figG2 <- dfGeo %>% filter(Var != "g0") %>%
   ggplot(aes(x = factor(Geo, levels = dfGeo %>% filter(Var == "g") %>% arrange(Estimate) %>% pull(Geo)),
-             y = Estimate, ymin = Low, ymax = High, color = fct_reorder(PolName, Policy))) +
+#             color = fct_reorder(PolName, Policy),
+             y = Estimate, ymin = Low, ymax = High)) +
   geom_hline(yintercept = 0, linetype=2) + 
   geom_pointrange(size=0.4) + 
   scale_y_continuous(labels = function(x) scales::percent(x, accuracy=1)) +
-  scale_color_manual(values = c("Blue","Orange","Red"), name = "Policy in place",
-                     guide = guide_legend(title.position = "top", ncol = 2)) +
+#  scale_color_manual(values = c("Blue","Orange","Red"), name = "Policy in place",
+#                     guide = guide_legend(title.position = "top", ncol = 2)) +
   ggtitle("Growth rate of new infections per day", subtitle = "(Estimate and 95% interval)") +
   coord_flip() + xlab(element_blank()) + ylab(element_blank()) +
   theme(legend.position="bottom", plot.title = element_text(size = 12))
