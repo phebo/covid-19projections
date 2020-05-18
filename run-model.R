@@ -267,7 +267,7 @@ save(list = ls(), file = paste0("output/fit-model-", time.now, ".RData"))
 #### Charts ####
 
 Date1 <- as.Date("2020-01-15")
-Date2 <- as.Date("2020-06-01")
+Date2 <- as.Date("2020-07-01")
 
 figCum <- dfOut2 %>%
   filter(Date >= as.Date(Date1), Date < as.Date(Date2), Geo %in% vGeo2) %>% mutate(Geo = factor(Geo, levels = vGeo2)) %>%
@@ -275,7 +275,7 @@ figCum <- dfOut2 %>%
   geom_line(aes(y=CumLow), linetype = 2, size = 0.25) + geom_line(aes(y=CumHigh), linetype = 2, size = 0.25) +
   geom_point(aes(y=Cum), size=0.25) + geom_line(size = 0.25) + facet_wrap(~Geo, ncol = 5) +
   scale_x_date(breaks = c(as.Date("2020-02-01"), as.Date("2020-04-01"), as.Date("2020-06-01")), labels = function(x) substr(format(x, format="%d %b"),2,10),
-               date_minor_breaks = "1 month", limits = c(as.Date("2020-01-15"), as.Date("2020-06-05"))) +
+               date_minor_breaks = "1 month", limits = c(as.Date("2020-01-15"), Date2)) +
   scale_y_continuous(labels = scales::comma, trans="log10", limits = c(1,1e7)) +
   scale_color_manual(values = brewer.pal(3,"Set1"), guide = guide_legend(reverse = TRUE)) +
   ggtitle("Cumulative events (logarithmic scale)", subtitle = "Dot = Reported data, Line = Model estimate, Dash = 95% interval") +
@@ -283,12 +283,12 @@ figCum <- dfOut2 %>%
 ggsave(paste0("fig-cumulative-", time.now, filetype), plot = figCum, path = "output", width = 8, height = 10)
 
 figNew <- dfOut2 %>% 
-  filter(Date >= as.Date(Date1), Date < as.Date(Date2), Geo %in% vGeo2) %>% mutate(Geo = factor(Geo, levels = vGeo2)) %>%
+  filter(Date >= Date1, Date < Date2, Geo %in% vGeo2) %>% mutate(Geo = factor(Geo, levels = vGeo2)) %>%
   ggplot(aes(x=Date, y=NewEst, color=Var)) +
   geom_line(aes(y=NewLow), linetype = 2, size = 0.25) + geom_line(aes(y=NewHigh), linetype = 2, size = 0.25) +
   geom_point(aes(y=New), size=0.25) + geom_line(size = 0.25) + facet_wrap(~Geo, ncol = 5) +
   scale_x_date(breaks = c(as.Date("2020-02-01"), as.Date("2020-04-01"), as.Date("2020-06-01")), labels = function(x) substr(format(x, format="%d %b"),2,10),
-               date_minor_breaks = "1 month", limits = c(as.Date("2020-01-15"), as.Date("2020-06-05"))) +
+               date_minor_breaks = "1 month", limits = c(as.Date("2020-01-15"), Date2)) +
   scale_y_continuous(labels = scales::comma, trans="log10", limits = c(1,1e6)) +
   scale_color_manual(values = brewer.pal(3,"Set1"), guide = guide_legend(reverse = TRUE)) +
   ggtitle("New events per day (logarithmic scale)", subtitle = "Dot = Reported data, Line = Model estimate, Dash = 95% interval") +
