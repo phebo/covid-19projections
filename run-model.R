@@ -308,7 +308,7 @@ ggsave(paste0("fig-new-", time.now, filetype), plot = figNew, path = "output", w
 #   coord_flip() + xlab(element_blank())
 # ggsave(paste0("fig-g-", time.now, filetype), plot = figG, path = "output", width = 6, height = 5)
 
-figG2 <- dfGeo %>% filter(Var != "g0") %>%
+figG2 <- dfGeo %>% filter(Var != "g0", Geo != "China - Hubei") %>%
   ggplot(aes(x = factor(Geo, levels = dfGeo %>% filter(Var == "g") %>% arrange(Estimate) %>% pull(Geo)),
 #             color = fct_reorder(PolName, Policy),
              y = Estimate, ymin = Low, ymax = High)) +
