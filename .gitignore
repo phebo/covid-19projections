@@ -40,4 +40,4 @@ output/
 *.rds
 *.Rproj
 model-out.csv
-init.RData
+*.RData

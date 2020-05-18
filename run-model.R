@@ -263,6 +263,7 @@ dfG <- dfGRaw %>% group_by(Policy) %>%
 
 
 save(list = ls(), file = paste0("output/fit-model-", time.now, ".RData"))
+save(dfOut2, dfGeo, dfGeo2, vGeo2, file="data-app/fit-model-data.Rdata")
 
 #### Charts ####
 
