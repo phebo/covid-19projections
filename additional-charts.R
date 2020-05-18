@@ -39,6 +39,7 @@ dfCo %>% filter(Geo %in% vGeo) %>% ggplot(aes(x = Var, y = Cum, fill = reorder(G
   theme(legend.title = element_blank(), axis.text.x = element_text(angle = 45, hjust = 1))
 ggsave("output/fig-est-rep.png", width=4, height=5)
 dfCo %>% group_by(Var) %>% summarize(sum(Cum))
+#View(dfCo %>% group_by(Var, Geo) %>% summarize(sum(Cum)))
 
 # Projected cumulative infections in top 8 geographies
 df %>% filter(Geo %in% vGeo, Var == "Infection", between(Date, as.Date("2020-03-01"), as.Date("2020-06-01") )) %>%
@@ -87,10 +88,15 @@ df %>% filter(Date >= as.Date(Date1), Date < as.Date(Date2), Geo %in% vGeo3) %>%
   theme(legend.title=element_blank(), legend.position="top", axis.text.x = element_text(angle = 45, hjust = 1))
 ggsave("output/fig-good.png", width=3.5, height=8, dpi = 600)
 
-# France numbers
+# Country specific numbers
 df %>% filter(Geo == "France", Date == as.Date(Sys.time()) - 1)
 df %>% filter(Geo == "France", Date == as.Date("2020-03-23"))
-df %>% filter(Geo == "France", format(Date, "%m") == "05") %>% group_by(Var) %>% summarize(New = sum(NewEst))
+df %>% filter(Geo == "France", format(Date, "%m") == "05") %>% group_by(Var) %>% summarize(New = sum(NewEst), Low = sum(NewLow), High = sum(NewHigh))
+
+df %>% filter(Geo %in% c("United Kingdom", "Switzerland", "Germany"), Date == as.Date(Sys.time()) - 1)
+df %>% filter(Geo %in% c("United Kingdom", "Switzerland", "Germany"), Date == as.Date("2020-03-23"))
+df %>% filter(Geo %in% c("United Kingdom", "Switzerland", "Germany"), format(Date, "%m") == "05") %>% group_by(Var, Geo) %>% summarize(New = sum(NewEst), Low = sum(NewLow), High = sum(NewHigh))
+df %>% filter(Geo %in% c("United Kingdom", "Switzerland", "Germany"), format(Date, "%m") == "06") %>% group_by(Var, Geo) %>% summarize(New = sum(NewEst), Low = sum(NewLow), High = sum(NewHigh))
 
 # Georgia & Texas impact of lifting orders
 require(rstan)
