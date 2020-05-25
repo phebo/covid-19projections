@@ -260,7 +260,15 @@ dfG <- dfGRaw %>% group_by(Policy) %>%
   left_join(dfP %>% group_by(Policy) %>% summarize(PolName = first(PolName))) %>%
   mutate(PolName = ifelse(is.na(PolName), "0 No restrictions", PolName))
 
-
+dfG2Raw <- bind_rows(
+  expand.grid(iter = 1:nIter, Geo = vGeo, Var = "g0") %>% as_tibble() %>% mutate(x = samples$g0),
+  expand.grid(iter = 1:nIter, Geo = vGeo, Var = "g1") %>% as_tibble() %>% mutate(x = samples$g1),
+  expand.grid(iter = 1:nIter, Geo = vGeo, Var = paste0("dg", 2:nPol))  %>% as_tibble() %>% mutate(x = expm1(as.vector(samples$dg))))
+dfG2Raw <- bind_rows(dfG2Raw,
+                     dfG2Raw %>% filter(Var != "g0") %>% group_by(iter, Geo) %>% summarize(x = sum(x)) %>% ungroup() %>%
+                       mutate(Var = "g2"))
+dfG2 <- dfG2Raw %>% group_by(Geo, Var) %>%
+  summarize(Est = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975))
 
 save(list = ls(), file = paste0("output/fit-model-", time.now, ".RData"))
 save(dfOut2, dfGeo, dfGeo2, vGeo2, file="data-app/fit-model-data.Rdata")
@@ -347,3 +355,6 @@ figLag <- dfLag %>%
   xlab("Time lag (Days)")
 ggsave(paste0("fig-lag-", time.now, filetype), plot = figLag, path = "output", width = 7, height = 5)
 
+figGDetail <- ggplot(dfG2, aes(x=Geo, y=Est, ymin=Low, ymax=High)) + 
+  geom_pointrange() + coord_flip() + xlab(element_blank()) + facet_grid(~Var, scales = "free_x")
+ggsave(paste0("fig-g3-", time.now, filetype), plot = figGDetail, path = "output", width = 10, height = 5)
