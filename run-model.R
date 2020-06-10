@@ -145,6 +145,7 @@ dfPFull <- expand_grid(Geo = vGeo, Date = unique(dfE$Date), Policy = unique(dfP$
   left_join(dfPNames) %>% mutate(PolName = paste(Policy, PolName))
 stopifnot(with(dfPFull %>% select(-PolName) %>% pivot_wider(names_from = Policy, values_from = Val),
               all(`1` >= `7`, `7` >= `8`, `8` >= `9`))) # Check that policies 1, 7, 8 and 9 are cumulative
+dfTmp <- dfPFull %>% select(-PolName) %>% pivot_wider(names_from = Policy, values_from = Val); with(dfTmp, which(!(`1` >= `7` & `7` >= `8` &`8` >= `9`)))
 
 # Select most relevant policies:
 nPol <- length(PolSel)
