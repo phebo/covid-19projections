@@ -272,7 +272,7 @@ dfG2 <- dfG2Raw %>% group_by(Geo, Var) %>%
   summarize(Est = median(x), Low = quantile(x, probs=0.025), High = quantile(x, probs=0.975))
 
 save(list = ls(), file = paste0("output/fit-model-", time.now, ".RData"))
-save(dfOut2, dfGeo, dfGeo2, vGeo2, file="data-app/fit-model-data.Rdata")
+save(dfOut2, dfGeo, dfGeo2, vGeo2, file="data-app/fit-model-data.RData")
 
 #### Charts ####
 
