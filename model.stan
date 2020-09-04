@@ -14,137 +14,135 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 functions {
-  real to_real(int x) { return x; }
-  real total_lag_weight(int lag_min, int lag_max, real mu, real sig) {
-    real out = 0;
-    for(i in lag_min:lag_max) {
-      out += exp(normal_lpdf(to_real(i) | mu, sig));
-    }
-    return out;
+  real fLag(real[] lInf, vector lpLag, int t0) { // t0 in <lagMax + 1, nT + 1>
+    int lagMax = num_elements(lpLag);
+    vector[lagMax] out;
+    for(t in 1:lagMax) out[t] = lInf[t0 - t] + lpLag[t];
+    return log_sum_exp(out);
   }
 }
 
 data {
+  int<lower=1> lagCaseMax;
+  int<lower=1> lagDeathMax;
   int<lower=1> nGeo;
   int<lower=1> nT;
-  int<lower=1> nTPred;
   int<lower=1> nPol;
-  int<lower=1> nK; // Number of reported event types; k=1 is Death, k=2 is Case
-  int<lower=1> vTmax[nGeo];
-  int<lower=0> lagMin[nK];
-  int<lower=0> lagMax[nK];
-  int<lower=0> mRep[nK, nGeo, nT-max(lagMax)];
-  int<lower=1,upper=nT+1> mPolStart[nGeo, nPol];
-  int<lower=1,upper=nT+1> mPolEnd[nGeo, nPol];
-  real lmaxDeath;
-  real<lower=0,upper=1> mortality;
+  int<lower=1> nTest;
+  int<lower=0, upper=1> mPol[nGeo, nT, nPol];
+  int<lower=0, upper=1> mPolChange[nGeo, nT]; // did policy change vs. previous period?
+  int<lower=0, upper=1> mPolG1[nGeo, nT];
+  int<lower=1, upper=nTest> mTest[nGeo, nT];
+  int<lower=0> mCase[nGeo,nT];
+  int<lower=0> mDeathRep[nGeo,nT];
+  int<lower=-1> mDeathTot[nGeo,nT];
+  real<lower=-1> mDeathExp[nGeo,nT];
+  real<lower=0> outlCase[2];
+  real<lower=0> outlDeath[2];
+  real<lower=0,upper=1> mortMu;
   real<lower=0> mortSig;
-  real lr2;
-  real<lower=0> phi2;
+  real<lower=0, upper=1> pOutl; // probability of outlier for cases
+  real<lower=0> idgSig;
 }
 
 parameters {
-  real lir1[nGeo]; // lir[i] at t=1
-  real g0[nGeo];  // Base growth rate by geography
-  real g1[nGeo];  // Growth rate with congregation restrictions by geography
-  real g0Mu;
-  real<lower=0> g0Sig;
-  real g1Mu;
-  real g2Mu;
-  vector<upper=0>[nPol-1] dg[nGeo];  // delta-growth rate due to additional policies
-  vector<upper=0>[nPol-1] dgMu;
-  cov_matrix[nPol] gSig;
-  real<lower=0> phi;
-  real<lower=0,upper=1> p; // Probability of outlier (with rate r2, and dispersion phi2)
-  real<lower=0,upper=1> eventFrac[nK, nGeo]; // death & test fraction of total infections
-  real<lower=min(lagMin),upper=max(lagMax)> muLag[nK];
-  real<lower=0, upper=to_real(max(lagMax) - min(lagMin))/4> sigLag[nK];
+  real logy0[nGeo]; // log infection rate at t=1
+  real<lower=0,upper=3> g0[nGeo];  // Base weekly growth rate by geography (with continuous compounding)
+  real<lower=-1,upper=2> g1[nGeo];  
+  real<lower=0, upper=2> dg[nPol];
+  simplex[nTest + 1] caseP[nGeo];
+  simplex[nTest + 1] deathP[nGeo];
+  real<lower=0,upper=1> fracDeathMu[nTest];
+  real<lower=0,upper=1> fracCaseMu[nTest];
+  real<lower=0> fracCaseSig[nTest];
+  real<lower=0> fracDeathSig[nTest];
+  real<upper=0> lmortality;
+  real deathAdj[nGeo]; // Baseline death rate adjustment vs. historical trends
+  real<lower=0> phiCase;
+  real<lower=0> phiDeathRep;
+  real<lower=0> phiDeathTot;
+  simplex[lagCaseMax] pLagCase;
+  simplex[lagDeathMax] pLagDeath;
+  real<lower=-1,upper=1> idg[nGeo, nT-1];
+  real<lower=0,upper=1> idgLam1;
+  real<lower=0,upper=1> idgLam2f; // Defining idgLam2 as fraction of idgLam1, ensuring idgLam2 <= idgLam1
 }
 
-transformed parameters {
-  real lir[nGeo, nT];  // log infection rate
-  real lrr[nK, nGeo, nT-max(lagMax)]; // log reported event rate
-  real lLagWeight[nK, max(lagMax)];
-  
-  for(k in 1:nK) {
-    real x = log(total_lag_weight(lagMin[k], lagMax[k], muLag[k], sigLag[k]));
-    for(t in 1:max(lagMax)) {
-      lLagWeight[k,t] = normal_lpdf(to_real(t) | muLag[k], sigLag[k]) - x;
-    }
-  }
-  
-  for(i in 1:nGeo){
-    lir[i, 1] = lir1[i];
+transformed parameters{
+  real logy[nGeo, nT];  // log infection rate
+  real<lower=0,upper=1> fracCase[nGeo, nTest]; // Fraction of infections reported 
+  real<lower=0,upper=1> fracDeath[nGeo, nTest]; // Fraction of deaths reported 
+  real g[nGeo, nT-1];
+  real lCaseEst[nGeo, nT - lagCaseMax];
+  real lDeathEst[nGeo, nT - lagDeathMax];
+  real lDeathTotEst[nGeo, nT - lagDeathMax];
+  vector[lagCaseMax] lpLagCase;
+  vector[lagDeathMax] lpLagDeath;
+  real<lower=0,upper=1> idgLam2;
+  real idgPhi[2];
+
+  lpLagCase = log(pLagCase);
+  lpLagDeath = log(pLagDeath);
+  idgLam2 = idgLam2f * idgLam1;
+  idgPhi[1] = idgLam1 + idgLam2;
+  idgPhi[2] = -idgLam1 * idgLam2;
+
+  for(i in 1:nGeo) {
+    real dgTot;
+    logy[i, 1] = logy0[i];
     for(t in 1:(nT-1)){
-      if(t+1 >= mPolStart[i, 1] && t+1 < mPolEnd[i, 1]){
-        lir[i,t+1] = lir[i,t] + g1[i];
-        for(l in 2:nPol) {
-          if(t+1 >= mPolStart[i, l] && t+1 < mPolEnd[i, l]) lir[i, t+1] += dg[i, l-1];
-        }
-      } else {
-        lir[i,t+1] = lir[i,t] + g0[i];
+      if(mPolChange[i, t]  == 1) {
+        dgTot = 0;
+        for(p in 1:nPol) if(mPol[i, t, p] == 1) dgTot -= dg[p];
+      }
+      if(mPolG1[i, t] == 0) g[i, t] = g0[i];
+        else g[i, t] = g1[i];
+      g[i, t] += dgTot + idg[i, t];
+      logy[i, t + 1] = logy[i, t] + g[i, t];
+    }
+
+    // Fractions of infections reported from unit simplex (ensuring that fracCase[i, l-1] < fracCase[i, l])
+    for(l in 1:nTest) {
+      fracCase[i, l] = 0;
+      fracDeath[i, l] = 0;
+      for(l2 in 1:l) {
+        fracCase[i, l] += caseP[i, l2];
+        fracDeath[i, l] += deathP[i, l2];
       }
     }
-    for(t in 1:(nT-max(lagMax))) {
-      for(k in 1:nK){
-        real y[lagMax[k] - lagMin[k] + 1];
-        for(dt in lagMin[k]:lagMax[k]){
-          y[dt - lagMin[k] + 1] = lir[i, t - dt + max(lagMax)] + lLagWeight[k,dt];
-        }
-        lrr[k,i,t] = log_sum_exp(y) + log(eventFrac[k,i]);
-      }
+
+    for(t in 1:(nT-lagCaseMax)) lCaseEst[i, t] = log(fracCase[i, mTest[i, t + lagCaseMax]]) + fLag(logy[i], lpLagCase, t + lagCaseMax);
+    for(t in 1:(nT-lagDeathMax)) {
+      real lDeath = fLag(logy[i], lpLagDeath, t + lagDeathMax) + lmortality;
+      lDeathEst[i, t] = log(fracDeath[i, mTest[i, t + lagCaseMax]]) + lDeath;
+      if(mDeathExp[i, t + lagDeathMax] != -1) lDeathTotEst[i, t] = log(mDeathExp[i, t + lagDeathMax] + deathAdj[i] + exp(lDeath));
+        else lDeathTotEst[i,t] = 0;
     }
   }
 }
 
 model {
-  eventFrac[1] ~ lognormal(log(mortality), mortSig);
-  g0 ~ normal(g0Mu, g0Sig);
-
-  // Diffuse priors to aid convergence
-  phi ~ gamma(1,1);
-  p ~ beta(0.001,1);
-
-  for(i in 1:nGeo){
-    append_row(g1[i], dg[i]) ~ multi_normal(append_row(g1Mu, dgMu), gSig);
-    g1[i] + sum(dg[i]) ~ normal(g2Mu, sqrt(gSig[1,1]));
-
-    // Fit to data
-    // Mixture model, see https://mc-stan.org/docs/2_22/stan-users-guide/summing-out-the-responsibility-parameter.html
-    for(t in 1:(vTmax[i] - max(lagMax))) {
-      for(k in 1:nK){
-        target += log_sum_exp(log(1-p) + neg_binomial_2_log_lpmf(mRep[k, i, t] | lrr[k, i, t], phi),
-                              log(p) + neg_binomial_2_log_lpmf(mRep[k, i, t] | lr2, phi2));
-      }
-    }
-  }
-}
-
-generated quantities{
-  real g[nGeo];
-  vector[nPol] gDraw;  // delta-growth rate due to additional policies
-
-  real lirPred[nGeo, nTPred];  // log infection rate
-  real lrrPred[nK, nGeo, nTPred]; // log reported event rate
-  
-  gDraw = multi_normal_rng(append_row(g1Mu, dgMu), gSig);
-  
+  // Priors
+  lmortality ~ normal(log(mortMu), mortSig);
   for(i in 1:nGeo) {
-    g[i] = lir[i, vTmax[i]] - lir[i, vTmax[i] - 1];
-    lirPred[i, 1] = lir[i, vTmax[i]] + g[i];
-    for (t in 1:(nTPred-1)) {
-      lirPred[i, t + 1] = lirPred[i, t] + g[i];
+    fracCase[i] ~ normal(fracCaseMu, fracCaseSig);
+    fracDeath[i] ~ normal(fracDeathMu, fracDeathSig);
+  }
+  
+  // AR(2) model for idiosyncratic growth rate
+  for(i in 1:nGeo) for(t in 3:(nT-1)) idg[i, t] ~ normal(idgPhi[1] * idg[i, t-1] + idgPhi[2] * idg[i, t-2], idgSig);
+
+  // Likelihood for observations
+  for(i in 1:nGeo) {
+    for(t in (lagCaseMax + 1):nT) {
+      target += log_sum_exp(log(1-pOutl) + neg_binomial_2_log_lpmf(mCase[i, t] | lCaseEst[i,t - lagCaseMax], phiCase),
+                            log(pOutl) + neg_binomial_2_lpmf(mCase[i, t] | outlCase[1], outlCase[2]));
     }
-    for(t in 1:nTPred) {
-      for(k in 1:nK){
-        real y[lagMax[k] - lagMin[k] + 1];
-        for(dt in lagMin[k]:lagMax[k]){
-          if(t - dt <= 0)
-            y[dt - lagMin[k] + 1] = lir[i, t - dt + vTmax[i]] + lLagWeight[k,dt];
-          else
-            y[dt - lagMin[k] + 1] = lirPred[i, t - dt] + lLagWeight[k,dt];
-        }
-        lrrPred[k, i, t] = log_sum_exp(y) + log(eventFrac[k,i]);
+    for(t in (lagDeathMax + 1):nT) {
+      target += log_sum_exp(log(1-pOutl) + neg_binomial_2_log_lpmf(mDeathRep[i, t] | lDeathEst[i,t - lagDeathMax], phiDeathRep),
+                            log(pOutl) + neg_binomial_2_lpmf(mDeathRep[i, t] | outlDeath[1], outlDeath[2]));
+      if(mDeathTot[i, t] != -1 && mDeathExp[i, t] != -1) {
+        mDeathTot[i, t] ~ neg_binomial_2_log(lDeathTotEst[i, t - lagDeathMax], phiDeathTot);
       }
     }
   }
