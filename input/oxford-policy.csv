@@ -2,7 +2,6 @@ geo,geoCode,date,polCode,polName,level,flag
 Afghanistan,AFG,2020-01-01,C1,School closing,0,NA
 Afghanistan,AFG,2020-03-14,C1,School closing,3,1
 Afghanistan,AFG,2020-08-05,C1,School closing,2,1
-Afghanistan,AFG,2020-08-15,C1,School closing,1,1
 Afghanistan,AFG,2020-01-01,C2,Workplace closing,0,NA
 Afghanistan,AFG,2020-03-24,C2,Workplace closing,3,0
 Afghanistan,AFG,2020-08-04,C2,Workplace closing,2,0
@@ -10,7 +9,6 @@ Afghanistan,AFG,2020-08-18,C2,Workplace closing,2,1
 Afghanistan,AFG,2020-01-01,C3,Cancel public events,0,NA
 Afghanistan,AFG,2020-03-01,C3,Cancel public events,2,0
 Afghanistan,AFG,2020-03-18,C3,Cancel public events,2,1
-Afghanistan,AFG,2020-08-15,C3,Cancel public events,1,1
 Afghanistan,AFG,2020-01-01,C4,Restrictions on gatherings,0,NA
 Afghanistan,AFG,2020-04-05,C4,Restrictions on gatherings,4,1
 Afghanistan,AFG,2020-01-01,C5,Close public transport,0,NA
@@ -231,6 +229,7 @@ Aruba,ABW,2020-01-01,C3,Cancel public events,0,NA
 Aruba,ABW,2020-03-29,C3,Cancel public events,2,1
 Aruba,ABW,2020-01-01,C4,Restrictions on gatherings,0,NA
 Aruba,ABW,2020-03-29,C4,Restrictions on gatherings,4,1
+Aruba,ABW,2020-08-28,C4,Restrictions on gatherings,4,0
 Aruba,ABW,2020-01-01,C5,Close public transport,0,NA
 Aruba,ABW,2020-01-01,C6,Stay at home requirements,0,NA
 Aruba,ABW,2020-03-21,C6,Stay at home requirements,1,1
@@ -1395,7 +1394,7 @@ Cyprus,CYP,2020-06-24,C3,Cancel public events,1,1
 Cyprus,CYP,2020-01-01,C4,Restrictions on gatherings,0,NA
 Cyprus,CYP,2020-03-23,C4,Restrictions on gatherings,4,1
 Cyprus,CYP,2020-05-21,C4,Restrictions on gatherings,3,1
-Cyprus,CYP,2020-06-24,C4,Restrictions on gatherings,2,1
+Cyprus,CYP,2020-07-12,C4,Restrictions on gatherings,2,1
 Cyprus,CYP,2020-01-01,C5,Close public transport,0,NA
 Cyprus,CYP,2020-03-24,C5,Close public transport,2,1
 Cyprus,CYP,2020-06-09,C5,Close public transport,1,1
@@ -1607,10 +1606,12 @@ Dominican Republic,DOM,2020-01-01,H3,Contact tracing,0,NA
 Dominican Republic,DOM,2020-03-12,H3,Contact tracing,1,NA
 Ecuador,ECU,2020-01-01,C1,School closing,0,NA
 Ecuador,ECU,2020-03-13,C1,School closing,3,1
+Ecuador,ECU,2020-08-28,C1,School closing,3,0
 Ecuador,ECU,2020-01-01,C2,Workplace closing,0,NA
 Ecuador,ECU,2020-03-17,C2,Workplace closing,3,1
 Ecuador,ECU,2020-05-04,C2,Workplace closing,3,0
 Ecuador,ECU,2020-06-19,C2,Workplace closing,2,0
+Ecuador,ECU,2020-08-28,C2,Workplace closing,2,1
 Ecuador,ECU,2020-01-01,C3,Cancel public events,0,NA
 Ecuador,ECU,2020-03-13,C3,Cancel public events,2,1
 Ecuador,ECU,2020-01-01,C4,Restrictions on gatherings,0,NA
@@ -2201,6 +2202,7 @@ Greenland,GRL,2020-03-16,H3,Contact tracing,1,NA
 Greenland,GRL,2020-03-24,H3,Contact tracing,2,NA
 Guam,GUM,2020-01-01,C1,School closing,0,NA
 Guam,GUM,2020-03-16,C1,School closing,3,1
+Guam,GUM,2020-08-19,C1,School closing,2,1
 Guam,GUM,2020-01-01,C2,Workplace closing,0,NA
 Guam,GUM,2020-03-16,C2,Workplace closing,2,1
 Guam,GUM,2020-03-20,C2,Workplace closing,3,1
@@ -2758,12 +2760,14 @@ Jamaica,JAM,2020-01-01,C8,International travel controls,0,NA
 Jamaica,JAM,2020-01-31,C8,International travel controls,3,NA
 Jamaica,JAM,2020-03-21,C8,International travel controls,4,NA
 Jamaica,JAM,2020-06-15,C8,International travel controls,1,NA
+Jamaica,JAM,2020-08-07,C8,International travel controls,2,NA
 Jamaica,JAM,2020-01-01,H1,Public information campaigns,0,NA
 Jamaica,JAM,2020-02-05,H1,Public information campaigns,2,1
 Jamaica,JAM,2020-01-01,H2,Testing policy,0,NA
 Jamaica,JAM,2020-02-12,H2,Testing policy,1,NA
 Jamaica,JAM,2020-01-01,H3,Contact tracing,0,NA
 Jamaica,JAM,2020-01-31,H3,Contact tracing,1,NA
+Jamaica,JAM,2020-08-25,H3,Contact tracing,2,NA
 Japan,JPN,2020-01-01,C1,School closing,0,NA
 Japan,JPN,2020-03-02,C1,School closing,3,0
 Japan,JPN,2020-06-01,C1,School closing,1,0
@@ -3454,6 +3458,7 @@ Mexico,MEX,2020-01-01,C2,Workplace closing,0,NA
 Mexico,MEX,2020-03-26,C2,Workplace closing,3,1
 Mexico,MEX,2020-06-01,C2,Workplace closing,2,1
 Mexico,MEX,2020-06-12,C2,Workplace closing,2,0
+Mexico,MEX,2020-08-20,C2,Workplace closing,3,0
 Mexico,MEX,2020-01-01,C3,Cancel public events,0,NA
 Mexico,MEX,2020-03-24,C3,Cancel public events,2,1
 Mexico,MEX,2020-01-01,C4,Restrictions on gatherings,0,NA
@@ -3721,6 +3726,7 @@ Nepal,NPL,2020-01-16,H1,Public information campaigns,1,1
 Nepal,NPL,2020-01-28,H1,Public information campaigns,2,1
 Nepal,NPL,2020-01-01,H2,Testing policy,0,NA
 Nepal,NPL,2020-01-13,H2,Testing policy,1,NA
+Nepal,NPL,2020-07-29,H2,Testing policy,2,NA
 Nepal,NPL,2020-01-01,H3,Contact tracing,0,NA
 Nepal,NPL,2020-01-24,H3,Contact tracing,2,NA
 Netherlands,NLD,2020-01-01,C1,School closing,0,NA
@@ -3731,7 +3737,6 @@ Netherlands,NLD,2020-01-01,C2,Workplace closing,0,NA
 Netherlands,NLD,2020-03-12,C2,Workplace closing,1,1
 Netherlands,NLD,2020-03-15,C2,Workplace closing,3,1
 Netherlands,NLD,2020-05-11,C2,Workplace closing,2,1
-Netherlands,NLD,2020-08-18,C2,Workplace closing,2,0
 Netherlands,NLD,2020-01-01,C3,Cancel public events,0,NA
 Netherlands,NLD,2020-03-10,C3,Cancel public events,2,0
 Netherlands,NLD,2020-03-12,C3,Cancel public events,2,1
@@ -5670,6 +5675,7 @@ US - Alaska,US_AK,2020-03-16,C2,Workplace closing,2,0
 US - Alaska,US_AK,2020-03-18,C2,Workplace closing,2,1
 US - Alaska,US_AK,2020-03-22,C2,Workplace closing,3,0
 US - Alaska,US_AK,2020-03-28,C2,Workplace closing,3,1
+US - Alaska,US_AK,2020-08-31,C2,Workplace closing,1,0
 US - Alaska,US_AK,2020-01-01,C3,Cancel public events,0,NA
 US - Alaska,US_AK,2020-03-13,C3,Cancel public events,1,0
 US - Alaska,US_AK,2020-03-17,C3,Cancel public events,2,1
@@ -5743,6 +5749,7 @@ US - Arkansas,US_AR,2020-01-01,C1,School closing,0,NA
 US - Arkansas,US_AR,2020-03-12,C1,School closing,1,0
 US - Arkansas,US_AR,2020-03-16,C1,School closing,1,1
 US - Arkansas,US_AR,2020-03-17,C1,School closing,3,1
+US - Arkansas,US_AR,2020-08-24,C1,School closing,2,0
 US - Arkansas,US_AR,2020-01-01,C2,Workplace closing,0,NA
 US - Arkansas,US_AR,2020-03-12,C2,Workplace closing,1,1
 US - Arkansas,US_AR,2020-03-17,C2,Workplace closing,2,1
@@ -5789,6 +5796,7 @@ US - California,US_CA,2020-03-11,C3,Cancel public events,2,1
 US - California,US_CA,2020-01-01,C4,Restrictions on gatherings,0,NA
 US - California,US_CA,2020-03-11,C4,Restrictions on gatherings,2,1
 US - California,US_CA,2020-03-16,C4,Restrictions on gatherings,4,1
+US - California,US_CA,2020-08-28,C4,Restrictions on gatherings,4,0
 US - California,US_CA,2020-01-01,C5,Close public transport,0,NA
 US - California,US_CA,2020-01-01,C6,Stay at home requirements,0,NA
 US - California,US_CA,2020-03-11,C6,Stay at home requirements,1,1
@@ -5856,6 +5864,7 @@ US - Connecticut,US_CT,2020-01-01,C1,School closing,0,NA
 US - Connecticut,US_CT,2020-03-10,C1,School closing,2,0
 US - Connecticut,US_CT,2020-03-13,C1,School closing,3,0
 US - Connecticut,US_CT,2020-03-17,C1,School closing,3,1
+US - Connecticut,US_CT,2020-08-31,C1,School closing,2,1
 US - Connecticut,US_CT,2020-01-01,C2,Workplace closing,0,NA
 US - Connecticut,US_CT,2020-03-12,C2,Workplace closing,1,1
 US - Connecticut,US_CT,2020-03-16,C2,Workplace closing,2,1
@@ -5894,6 +5903,7 @@ US - Delaware,US_DE,2020-01-01,C1,School closing,0,NA
 US - Delaware,US_DE,2020-03-13,C1,School closing,1,1
 US - Delaware,US_DE,2020-03-16,C1,School closing,3,1
 US - Delaware,US_DE,2020-06-15,C1,School closing,3,0
+US - Delaware,US_DE,2020-08-28,C1,School closing,2,0
 US - Delaware,US_DE,2020-01-01,C2,Workplace closing,0,NA
 US - Delaware,US_DE,2020-03-12,C2,Workplace closing,1,1
 US - Delaware,US_DE,2020-03-16,C2,Workplace closing,2,1
@@ -5967,6 +5977,7 @@ US - Georgia,US_GA,2020-03-12,C1,School closing,1,1
 US - Georgia,US_GA,2020-03-18,C1,School closing,3,1
 US - Georgia,US_GA,2020-07-13,C1,School closing,3,0
 US - Georgia,US_GA,2020-08-17,C1,School closing,2,1
+US - Georgia,US_GA,2020-08-24,C1,School closing,2,0
 US - Georgia,US_GA,2020-01-01,C2,Workplace closing,0,NA
 US - Georgia,US_GA,2020-03-12,C2,Workplace closing,1,1
 US - Georgia,US_GA,2020-03-23,C2,Workplace closing,2,1
@@ -6000,6 +6011,7 @@ US - Hawaii,US_HI,2020-01-01,C1,School closing,0,NA
 US - Hawaii,US_HI,2020-03-13,C1,School closing,1,1
 US - Hawaii,US_HI,2020-03-30,C1,School closing,3,1
 US - Hawaii,US_HI,2020-06-01,C1,School closing,3,0
+US - Hawaii,US_HI,2020-08-24,C1,School closing,2,1
 US - Hawaii,US_HI,2020-01-01,C2,Workplace closing,0,NA
 US - Hawaii,US_HI,2020-03-12,C2,Workplace closing,1,1
 US - Hawaii,US_HI,2020-03-20,C2,Workplace closing,2,0
@@ -6025,12 +6037,14 @@ US - Hawaii,US_HI,2020-01-01,H1,Public information campaigns,0,NA
 US - Hawaii,US_HI,2020-02-21,H1,Public information campaigns,2,1
 US - Hawaii,US_HI,2020-01-01,H2,Testing policy,0,NA
 US - Hawaii,US_HI,2020-01-21,H2,Testing policy,1,NA
+US - Hawaii,US_HI,2020-09-01,H2,Testing policy,3,NA
 US - Hawaii,US_HI,2020-01-01,H3,Contact tracing,0,NA
 US - Hawaii,US_HI,2020-01-21,H3,Contact tracing,1,NA
 US - Hawaii,US_HI,2020-04-15,H3,Contact tracing,2,NA
 US - Idaho,US_ID,2020-01-01,C1,School closing,0,NA
 US - Idaho,US_ID,2020-03-13,C1,School closing,1,1
 US - Idaho,US_ID,2020-03-23,C1,School closing,3,1
+US - Idaho,US_ID,2020-05-04,C1,School closing,3,0
 US - Idaho,US_ID,2020-08-17,C1,School closing,2,0
 US - Idaho,US_ID,2020-01-01,C2,Workplace closing,0,NA
 US - Idaho,US_ID,2020-03-12,C2,Workplace closing,1,1
@@ -6148,9 +6162,11 @@ US - Iowa,US_IA,2020-01-01,C1,School closing,0,NA
 US - Iowa,US_IA,2020-03-13,C1,School closing,1,1
 US - Iowa,US_IA,2020-04-02,C1,School closing,3,1
 US - Iowa,US_IA,2020-06-01,C1,School closing,3,0
+US - Iowa,US_IA,2020-08-24,C1,School closing,2,1
 US - Iowa,US_IA,2020-01-01,C2,Workplace closing,0,NA
 US - Iowa,US_IA,2020-03-12,C2,Workplace closing,1,1
 US - Iowa,US_IA,2020-03-17,C2,Workplace closing,2,1
+US - Iowa,US_IA,2020-08-26,C2,Workplace closing,2,0
 US - Iowa,US_IA,2020-01-01,C3,Cancel public events,0,NA
 US - Iowa,US_IA,2020-03-15,C3,Cancel public events,1,1
 US - Iowa,US_IA,2020-03-17,C3,Cancel public events,2,1
@@ -6179,6 +6195,7 @@ US - Kansas,US_KS,2020-01-01,C1,School closing,0,NA
 US - Kansas,US_KS,2020-03-13,C1,School closing,1,1
 US - Kansas,US_KS,2020-03-17,C1,School closing,3,1
 US - Kansas,US_KS,2020-07-22,C1,School closing,3,0
+US - Kansas,US_KS,2020-08-24,C1,School closing,2,0
 US - Kansas,US_KS,2020-01-01,C2,Workplace closing,0,NA
 US - Kansas,US_KS,2020-03-12,C2,Workplace closing,1,1
 US - Kansas,US_KS,2020-03-24,C2,Workplace closing,3,1
@@ -6252,6 +6269,7 @@ US - Louisiana,US_LA,2020-03-13,C1,School closing,1,1
 US - Louisiana,US_LA,2020-03-16,C1,School closing,2,1
 US - Louisiana,US_LA,2020-03-21,C1,School closing,3,1
 US - Louisiana,US_LA,2020-08-10,C1,School closing,3,0
+US - Louisiana,US_LA,2020-08-24,C1,School closing,2,0
 US - Louisiana,US_LA,2020-01-01,C2,Workplace closing,0,NA
 US - Louisiana,US_LA,2020-03-12,C2,Workplace closing,1,1
 US - Louisiana,US_LA,2020-03-14,C2,Workplace closing,2,1
@@ -6345,6 +6363,7 @@ US - Maryland,US_MD,2020-01-01,C6,Stay at home requirements,0,NA
 US - Maryland,US_MD,2020-03-30,C6,Stay at home requirements,2,1
 US - Maryland,US_MD,2020-05-14,C6,Stay at home requirements,2,0
 US - Maryland,US_MD,2020-06-01,C6,Stay at home requirements,1,1
+US - Maryland,US_MD,2020-08-21,C6,Stay at home requirements,1,0
 US - Maryland,US_MD,2020-01-01,C7,Restrictions on internal movement,0,NA
 US - Maryland,US_MD,2020-03-16,C7,Restrictions on internal movement,1,1
 US - Maryland,US_MD,2020-03-30,C7,Restrictions on internal movement,2,1
@@ -6399,6 +6418,7 @@ US - Massachusetts,US_MA,2020-04-12,H3,Contact tracing,2,NA
 US - Michigan,US_MI,2020-01-01,C1,School closing,0,NA
 US - Michigan,US_MI,2020-03-13,C1,School closing,1,1
 US - Michigan,US_MI,2020-03-16,C1,School closing,3,1
+US - Michigan,US_MI,2020-08-31,C1,School closing,2,1
 US - Michigan,US_MI,2020-01-01,C2,Workplace closing,0,NA
 US - Michigan,US_MI,2020-03-12,C2,Workplace closing,1,1
 US - Michigan,US_MI,2020-03-16,C2,Workplace closing,2,1
@@ -6438,7 +6458,7 @@ US - Michigan,US_MI,2020-01-21,H3,Contact tracing,1,NA
 US - Minnesota,US_MN,2020-01-01,C1,School closing,0,NA
 US - Minnesota,US_MN,2020-03-13,C1,School closing,1,1
 US - Minnesota,US_MN,2020-03-18,C1,School closing,3,1
-US - Minnesota,US_MN,2020-05-12,C1,School closing,2,1
+US - Minnesota,US_MN,2020-05-12,C1,School closing,3,0
 US - Minnesota,US_MN,2020-01-01,C2,Workplace closing,0,NA
 US - Minnesota,US_MN,2020-03-12,C2,Workplace closing,1,1
 US - Minnesota,US_MN,2020-03-17,C2,Workplace closing,2,1
@@ -6474,6 +6494,7 @@ US - Mississippi,US_MS,2020-01-01,C1,School closing,0,NA
 US - Mississippi,US_MS,2020-03-13,C1,School closing,1,1
 US - Mississippi,US_MS,2020-03-19,C1,School closing,3,1
 US - Mississippi,US_MS,2020-08-04,C1,School closing,3,0
+US - Mississippi,US_MS,2020-08-24,C1,School closing,2,0
 US - Mississippi,US_MS,2020-01-01,C2,Workplace closing,0,NA
 US - Mississippi,US_MS,2020-03-12,C2,Workplace closing,1,1
 US - Mississippi,US_MS,2020-04-24,C2,Workplace closing,2,1
@@ -6507,6 +6528,7 @@ US - Missouri,US_MO,2020-01-01,C1,School closing,0,NA
 US - Missouri,US_MO,2020-03-13,C1,School closing,1,1
 US - Missouri,US_MO,2020-03-17,C1,School closing,3,0
 US - Missouri,US_MO,2020-03-24,C1,School closing,3,1
+US - Missouri,US_MO,2020-08-24,C1,School closing,2,0
 US - Missouri,US_MO,2020-01-01,C2,Workplace closing,0,NA
 US - Missouri,US_MO,2020-03-12,C2,Workplace closing,1,1
 US - Missouri,US_MO,2020-04-06,C2,Workplace closing,3,1
@@ -6584,7 +6606,6 @@ US - Nebraska,US_NE,2020-03-13,C1,School closing,1,0
 US - Nebraska,US_NE,2020-03-14,C1,School closing,2,0
 US - Nebraska,US_NE,2020-04-01,C1,School closing,2,1
 US - Nebraska,US_NE,2020-04-08,C1,School closing,3,0
-US - Nebraska,US_NE,2020-08-10,C1,School closing,1,1
 US - Nebraska,US_NE,2020-01-01,C2,Workplace closing,0,NA
 US - Nebraska,US_NE,2020-03-12,C2,Workplace closing,1,1
 US - Nebraska,US_NE,2020-03-19,C2,Workplace closing,2,0
@@ -6693,7 +6714,9 @@ US - New Hampshire,US_NH,2020-03-02,H3,Contact tracing,2,NA
 US - New Jersey,US_NJ,2020-01-01,C1,School closing,0,NA
 US - New Jersey,US_NJ,2020-03-13,C1,School closing,1,1
 US - New Jersey,US_NJ,2020-03-18,C1,School closing,3,1
-US - New Jersey,US_NJ,2020-07-06,C1,School closing,2,1
+US - New Jersey,US_NJ,2020-07-06,C1,School closing,3,0
+US - New Jersey,US_NJ,2020-09-01,C1,School closing,2,1
+US - New Jersey,US_NJ,2020-09-02,C1,School closing,2,0
 US - New Jersey,US_NJ,2020-01-01,C2,Workplace closing,0,NA
 US - New Jersey,US_NJ,2020-03-12,C2,Workplace closing,1,1
 US - New Jersey,US_NJ,2020-03-16,C2,Workplace closing,2,1
@@ -6841,6 +6864,7 @@ US - North Dakota,US_ND,2020-03-13,C1,School closing,1,1
 US - North Dakota,US_ND,2020-03-16,C1,School closing,2,1
 US - North Dakota,US_ND,2020-03-23,C1,School closing,3,1
 US - North Dakota,US_ND,2020-06-01,C1,School closing,3,0
+US - North Dakota,US_ND,2020-08-24,C1,School closing,2,0
 US - North Dakota,US_ND,2020-01-01,C2,Workplace closing,0,NA
 US - North Dakota,US_ND,2020-03-12,C2,Workplace closing,1,1
 US - North Dakota,US_ND,2020-03-20,C2,Workplace closing,2,1
@@ -6905,6 +6929,7 @@ US - Oklahoma,US_OK,2020-01-01,C1,School closing,0,NA
 US - Oklahoma,US_OK,2020-03-13,C1,School closing,1,1
 US - Oklahoma,US_OK,2020-03-17,C1,School closing,3,1
 US - Oklahoma,US_OK,2020-05-08,C1,School closing,3,0
+US - Oklahoma,US_OK,2020-08-24,C1,School closing,2,0
 US - Oklahoma,US_OK,2020-01-01,C2,Workplace closing,0,NA
 US - Oklahoma,US_OK,2020-03-12,C2,Workplace closing,1,1
 US - Oklahoma,US_OK,2020-03-21,C2,Workplace closing,2,0
@@ -7006,6 +7031,7 @@ US - Pennsylvania,US_PA,2020-02-26,H1,Public information campaigns,2,1
 US - Pennsylvania,US_PA,2020-01-01,H2,Testing policy,0,NA
 US - Pennsylvania,US_PA,2020-01-21,H2,Testing policy,1,NA
 US - Pennsylvania,US_PA,2020-06-03,H2,Testing policy,2,NA
+US - Pennsylvania,US_PA,2020-08-21,H2,Testing policy,3,NA
 US - Pennsylvania,US_PA,2020-01-01,H3,Contact tracing,0,NA
 US - Pennsylvania,US_PA,2020-01-21,H3,Contact tracing,1,NA
 US - Rhode Island,US_RI,2020-01-01,C1,School closing,0,NA
@@ -7076,6 +7102,7 @@ US - South Carolina,US_SC,2020-02-26,H1,Public information campaigns,2,1
 US - South Carolina,US_SC,2020-01-01,H2,Testing policy,0,NA
 US - South Carolina,US_SC,2020-01-21,H2,Testing policy,1,NA
 US - South Carolina,US_SC,2020-04-28,H2,Testing policy,2,NA
+US - South Carolina,US_SC,2020-08-30,H2,Testing policy,3,NA
 US - South Carolina,US_SC,2020-01-01,H3,Contact tracing,0,NA
 US - South Carolina,US_SC,2020-01-21,H3,Contact tracing,1,NA
 US - South Carolina,US_SC,2020-05-11,H3,Contact tracing,2,NA
@@ -7426,6 +7453,7 @@ US - Wisconsin,US_WI,2020-01-01,C1,School closing,0,NA
 US - Wisconsin,US_WI,2020-03-13,C1,School closing,1,1
 US - Wisconsin,US_WI,2020-03-18,C1,School closing,3,1
 US - Wisconsin,US_WI,2020-05-13,C1,School closing,3,0
+US - Wisconsin,US_WI,2020-09-02,C1,School closing,2,0
 US - Wisconsin,US_WI,2020-01-01,C2,Workplace closing,0,NA
 US - Wisconsin,US_WI,2020-03-12,C2,Workplace closing,1,1
 US - Wisconsin,US_WI,2020-03-17,C2,Workplace closing,2,1
@@ -7469,6 +7497,7 @@ US - Wyoming,US_WY,2020-01-01,C1,School closing,0,NA
 US - Wyoming,US_WY,2020-03-13,C1,School closing,1,1
 US - Wyoming,US_WY,2020-03-19,C1,School closing,3,1
 US - Wyoming,US_WY,2020-06-15,C1,School closing,3,0
+US - Wyoming,US_WY,2020-08-24,C1,School closing,2,0
 US - Wyoming,US_WY,2020-01-01,C2,Workplace closing,0,NA
 US - Wyoming,US_WY,2020-03-12,C2,Workplace closing,1,1
 US - Wyoming,US_WY,2020-03-16,C2,Workplace closing,2,0

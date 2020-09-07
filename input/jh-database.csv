@@ -225,6 +225,9 @@ Afghanistan,case,2020-08-31,38165
 Afghanistan,case,2020-09-01,38196
 Afghanistan,case,2020-09-02,38243
 Afghanistan,case,2020-09-03,38288
+Afghanistan,case,2020-09-04,38304
+Afghanistan,case,2020-09-05,38324
+Afghanistan,case,2020-09-06,38398
 Afghanistan,death,2020-01-22,0
 Afghanistan,death,2020-01-23,0
 Afghanistan,death,2020-01-24,0
@@ -451,6 +454,9 @@ Afghanistan,death,2020-08-31,1402
 Afghanistan,death,2020-09-01,1406
 Afghanistan,death,2020-09-02,1409
 Afghanistan,death,2020-09-03,1409
+Afghanistan,death,2020-09-04,1409
+Afghanistan,death,2020-09-05,1409
+Afghanistan,death,2020-09-06,1412
 Albania,case,2020-01-22,0
 Albania,case,2020-01-23,0
 Albania,case,2020-01-24,0
@@ -677,6 +683,9 @@ Albania,case,2020-08-31,9513
 Albania,case,2020-09-01,9606
 Albania,case,2020-09-02,9728
 Albania,case,2020-09-03,9844
+Albania,case,2020-09-04,9967
+Albania,case,2020-09-05,10102
+Albania,case,2020-09-06,10255
 Albania,death,2020-01-22,0
 Albania,death,2020-01-23,0
 Albania,death,2020-01-24,0
@@ -903,6 +912,9 @@ Albania,death,2020-08-31,284
 Albania,death,2020-09-01,290
 Albania,death,2020-09-02,296
 Albania,death,2020-09-03,301
+Albania,death,2020-09-04,306
+Albania,death,2020-09-05,312
+Albania,death,2020-09-06,316
 Algeria,case,2020-01-22,0
 Algeria,case,2020-01-23,0
 Algeria,case,2020-01-24,0
@@ -1129,6 +1141,9 @@ Algeria,case,2020-08-31,44494
 Algeria,case,2020-09-01,44833
 Algeria,case,2020-09-02,45158
 Algeria,case,2020-09-03,45469
+Algeria,case,2020-09-04,45773
+Algeria,case,2020-09-05,46071
+Algeria,case,2020-09-06,46364
 Algeria,death,2020-01-22,0
 Algeria,death,2020-01-23,0
 Algeria,death,2020-01-24,0
@@ -1355,6 +1370,9 @@ Algeria,death,2020-08-31,1510
 Algeria,death,2020-09-01,1518
 Algeria,death,2020-09-02,1523
 Algeria,death,2020-09-03,1529
+Algeria,death,2020-09-04,1539
+Algeria,death,2020-09-05,1549
+Algeria,death,2020-09-06,1556
 Andorra,case,2020-01-22,0
 Andorra,case,2020-01-23,0
 Andorra,case,2020-01-24,0
@@ -1581,6 +1599,9 @@ Andorra,case,2020-08-31,1176
 Andorra,case,2020-09-01,1184
 Andorra,case,2020-09-02,1199
 Andorra,case,2020-09-03,1199
+Andorra,case,2020-09-04,1215
+Andorra,case,2020-09-05,1215
+Andorra,case,2020-09-06,1215
 Andorra,death,2020-01-22,0
 Andorra,death,2020-01-23,0
 Andorra,death,2020-01-24,0
@@ -1807,6 +1828,9 @@ Andorra,death,2020-08-31,53
 Andorra,death,2020-09-01,53
 Andorra,death,2020-09-02,53
 Andorra,death,2020-09-03,53
+Andorra,death,2020-09-04,53
+Andorra,death,2020-09-05,53
+Andorra,death,2020-09-06,53
 Angola,case,2020-01-22,0
 Angola,case,2020-01-23,0
 Angola,case,2020-01-24,0
@@ -2033,6 +2057,9 @@ Angola,case,2020-08-31,2654
 Angola,case,2020-09-01,2729
 Angola,case,2020-09-02,2777
 Angola,case,2020-09-03,2805
+Angola,case,2020-09-04,2876
+Angola,case,2020-09-05,2935
+Angola,case,2020-09-06,2965
 Angola,death,2020-01-22,0
 Angola,death,2020-01-23,0
 Angola,death,2020-01-24,0
@@ -2259,6 +2286,9 @@ Angola,death,2020-08-31,108
 Angola,death,2020-09-01,109
 Angola,death,2020-09-02,112
 Angola,death,2020-09-03,113
+Angola,death,2020-09-04,115
+Angola,death,2020-09-05,117
+Angola,death,2020-09-06,117
 Antigua and Barbuda,case,2020-01-22,0
 Antigua and Barbuda,case,2020-01-23,0
 Antigua and Barbuda,case,2020-01-24,0
@@ -2485,6 +2515,9 @@ Antigua and Barbuda,case,2020-08-31,94
 Antigua and Barbuda,case,2020-09-01,94
 Antigua and Barbuda,case,2020-09-02,94
 Antigua and Barbuda,case,2020-09-03,95
+Antigua and Barbuda,case,2020-09-04,95
+Antigua and Barbuda,case,2020-09-05,95
+Antigua and Barbuda,case,2020-09-06,95
 Antigua and Barbuda,death,2020-01-22,0
 Antigua and Barbuda,death,2020-01-23,0
 Antigua and Barbuda,death,2020-01-24,0
@@ -2711,6 +2744,9 @@ Antigua and Barbuda,death,2020-08-31,3
 Antigua and Barbuda,death,2020-09-01,3
 Antigua and Barbuda,death,2020-09-02,3
 Antigua and Barbuda,death,2020-09-03,3
+Antigua and Barbuda,death,2020-09-04,3
+Antigua and Barbuda,death,2020-09-05,3
+Antigua and Barbuda,death,2020-09-06,3
 Argentina,case,2020-01-22,0
 Argentina,case,2020-01-23,0
 Argentina,case,2020-01-24,0
@@ -2937,6 +2973,9 @@ Argentina,case,2020-08-31,417735
 Argentina,case,2020-09-01,428239
 Argentina,case,2020-09-02,439172
 Argentina,case,2020-09-03,451198
+Argentina,case,2020-09-04,461882
+Argentina,case,2020-09-05,471806
+Argentina,case,2020-09-06,478792
 Argentina,death,2020-01-22,0
 Argentina,death,2020-01-23,0
 Argentina,death,2020-01-24,0
@@ -3163,6 +3202,9 @@ Argentina,death,2020-08-31,8660
 Argentina,death,2020-09-01,8919
 Argentina,death,2020-09-02,9118
 Argentina,death,2020-09-03,9361
+Argentina,death,2020-09-04,9623
+Argentina,death,2020-09-05,9739
+Argentina,death,2020-09-06,9859
 Armenia,case,2020-01-22,0
 Armenia,case,2020-01-23,0
 Armenia,case,2020-01-24,0
@@ -3389,6 +3431,9 @@ Armenia,case,2020-08-31,43781
 Armenia,case,2020-09-01,43878
 Armenia,case,2020-09-02,44075
 Armenia,case,2020-09-03,44271
+Armenia,case,2020-09-04,44461
+Armenia,case,2020-09-05,44649
+Armenia,case,2020-09-06,44783
 Armenia,death,2020-01-22,0
 Armenia,death,2020-01-23,0
 Armenia,death,2020-01-24,0
@@ -3615,6 +3660,9 @@ Armenia,death,2020-08-31,879
 Armenia,death,2020-09-01,881
 Armenia,death,2020-09-02,884
 Armenia,death,2020-09-03,887
+Armenia,death,2020-09-04,891
+Armenia,death,2020-09-05,895
+Armenia,death,2020-09-06,897
 Australia,case,2020-01-22,0
 Australia,case,2020-01-23,0
 Australia,case,2020-01-24,0
@@ -3841,6 +3889,9 @@ Australia,case,2020-08-31,25819
 Australia,case,2020-09-01,25923
 Australia,case,2020-09-02,26049
 Australia,case,2020-09-03,26136
+Australia,case,2020-09-04,26207
+Australia,case,2020-09-05,26278
+Australia,case,2020-09-06,26321
 Australia,death,2020-01-22,0
 Australia,death,2020-01-23,0
 Australia,death,2020-01-24,0
@@ -4067,6 +4118,9 @@ Australia,death,2020-08-31,657
 Australia,death,2020-09-01,663
 Australia,death,2020-09-02,678
 Australia,death,2020-09-03,737
+Australia,death,2020-09-04,748
+Australia,death,2020-09-05,753
+Australia,death,2020-09-06,762
 Austria,case,2020-01-22,0
 Austria,case,2020-01-23,0
 Austria,case,2020-01-24,0
@@ -4293,6 +4347,9 @@ Austria,case,2020-08-31,27438
 Austria,case,2020-09-01,27642
 Austria,case,2020-09-02,27969
 Austria,case,2020-09-03,28372
+Austria,case,2020-09-04,28729
+Austria,case,2020-09-05,29087
+Austria,case,2020-09-06,29271
 Austria,death,2020-01-22,0
 Austria,death,2020-01-23,0
 Austria,death,2020-01-24,0
@@ -4519,6 +4576,9 @@ Austria,death,2020-08-31,733
 Austria,death,2020-09-01,734
 Austria,death,2020-09-02,734
 Austria,death,2020-09-03,735
+Austria,death,2020-09-04,735
+Austria,death,2020-09-05,735
+Austria,death,2020-09-06,736
 Azerbaijan,case,2020-01-22,0
 Azerbaijan,case,2020-01-23,0
 Azerbaijan,case,2020-01-24,0
@@ -4745,6 +4805,9 @@ Azerbaijan,case,2020-08-31,36435
 Azerbaijan,case,2020-09-01,36578
 Azerbaijan,case,2020-09-02,36732
 Azerbaijan,case,2020-09-03,36899
+Azerbaijan,case,2020-09-04,37031
+Azerbaijan,case,2020-09-05,37192
+Azerbaijan,case,2020-09-06,37329
 Azerbaijan,death,2020-01-22,0
 Azerbaijan,death,2020-01-23,0
 Azerbaijan,death,2020-01-24,0
@@ -4971,6 +5034,9 @@ Azerbaijan,death,2020-08-31,534
 Azerbaijan,death,2020-09-01,536
 Azerbaijan,death,2020-09-02,538
 Azerbaijan,death,2020-09-03,541
+Azerbaijan,death,2020-09-04,543
+Azerbaijan,death,2020-09-05,545
+Azerbaijan,death,2020-09-06,548
 Bahamas,case,2020-01-22,0
 Bahamas,case,2020-01-23,0
 Bahamas,case,2020-01-24,0
@@ -5184,12 +5250,12 @@ Bahamas,case,2020-08-18,1424
 Bahamas,case,2020-08-19,1531
 Bahamas,case,2020-08-20,1610
 Bahamas,case,2020-08-21,1703
-Bahamas,case,2020-08-22,1703
-Bahamas,case,2020-08-23,1765
-Bahamas,case,2020-08-24,1765
-Bahamas,case,2020-08-25,1765
-Bahamas,case,2020-08-26,1765
-Bahamas,case,2020-08-27,1765
+Bahamas,case,2020-08-22,1765
+Bahamas,case,2020-08-23,1784
+Bahamas,case,2020-08-24,1798
+Bahamas,case,2020-08-25,1813
+Bahamas,case,2020-08-26,1923
+Bahamas,case,2020-08-27,2020
 Bahamas,case,2020-08-28,2057
 Bahamas,case,2020-08-29,2135
 Bahamas,case,2020-08-30,2167
@@ -5197,6 +5263,9 @@ Bahamas,case,2020-08-31,2217
 Bahamas,case,2020-09-01,2276
 Bahamas,case,2020-09-02,2337
 Bahamas,case,2020-09-03,2386
+Bahamas,case,2020-09-04,2386
+Bahamas,case,2020-09-05,2476
+Bahamas,case,2020-09-06,2506
 Bahamas,death,2020-01-22,0
 Bahamas,death,2020-01-23,0
 Bahamas,death,2020-01-24,0
@@ -5412,10 +5481,10 @@ Bahamas,death,2020-08-20,23
 Bahamas,death,2020-08-21,27
 Bahamas,death,2020-08-22,27
 Bahamas,death,2020-08-23,29
-Bahamas,death,2020-08-24,29
-Bahamas,death,2020-08-25,29
-Bahamas,death,2020-08-26,29
-Bahamas,death,2020-08-27,29
+Bahamas,death,2020-08-24,44
+Bahamas,death,2020-08-25,46
+Bahamas,death,2020-08-26,48
+Bahamas,death,2020-08-27,48
 Bahamas,death,2020-08-28,50
 Bahamas,death,2020-08-29,50
 Bahamas,death,2020-08-30,50
@@ -5423,6 +5492,9 @@ Bahamas,death,2020-08-31,50
 Bahamas,death,2020-09-01,50
 Bahamas,death,2020-09-02,50
 Bahamas,death,2020-09-03,50
+Bahamas,death,2020-09-04,50
+Bahamas,death,2020-09-05,55
+Bahamas,death,2020-09-06,56
 Bahrain,case,2020-01-22,0
 Bahrain,case,2020-01-23,0
 Bahrain,case,2020-01-24,0
@@ -5649,6 +5721,9 @@ Bahrain,case,2020-08-31,51972
 Bahrain,case,2020-09-01,52440
 Bahrain,case,2020-09-02,52807
 Bahrain,case,2020-09-03,53433
+Bahrain,case,2020-09-04,54095
+Bahrain,case,2020-09-05,54771
+Bahrain,case,2020-09-06,55415
 Bahrain,death,2020-01-22,0
 Bahrain,death,2020-01-23,0
 Bahrain,death,2020-01-24,0
@@ -5875,6 +5950,9 @@ Bahrain,death,2020-08-31,190
 Bahrain,death,2020-09-01,190
 Bahrain,death,2020-09-02,190
 Bahrain,death,2020-09-03,190
+Bahrain,death,2020-09-04,195
+Bahrain,death,2020-09-05,196
+Bahrain,death,2020-09-06,199
 Bangladesh,case,2020-01-22,0
 Bangladesh,case,2020-01-23,0
 Bangladesh,case,2020-01-24,0
@@ -6101,6 +6179,9 @@ Bangladesh,case,2020-08-31,312996
 Bangladesh,case,2020-09-01,314946
 Bangladesh,case,2020-09-02,317528
 Bangladesh,case,2020-09-03,319686
+Bangladesh,case,2020-09-04,321615
+Bangladesh,case,2020-09-05,323565
+Bangladesh,case,2020-09-06,325157
 Bangladesh,death,2020-01-22,0
 Bangladesh,death,2020-01-23,0
 Bangladesh,death,2020-01-24,0
@@ -6327,6 +6408,9 @@ Bangladesh,death,2020-08-31,4281
 Bangladesh,death,2020-09-01,4316
 Bangladesh,death,2020-09-02,4351
 Bangladesh,death,2020-09-03,4383
+Bangladesh,death,2020-09-04,4412
+Bangladesh,death,2020-09-05,4447
+Bangladesh,death,2020-09-06,4479
 Barbados,case,2020-01-22,0
 Barbados,case,2020-01-23,0
 Barbados,case,2020-01-24,0
@@ -6553,6 +6637,9 @@ Barbados,case,2020-08-31,174
 Barbados,case,2020-09-01,176
 Barbados,case,2020-09-02,176
 Barbados,case,2020-09-03,177
+Barbados,case,2020-09-04,178
+Barbados,case,2020-09-05,178
+Barbados,case,2020-09-06,178
 Barbados,death,2020-01-22,0
 Barbados,death,2020-01-23,0
 Barbados,death,2020-01-24,0
@@ -6779,6 +6866,9 @@ Barbados,death,2020-08-31,7
 Barbados,death,2020-09-01,7
 Barbados,death,2020-09-02,7
 Barbados,death,2020-09-03,7
+Barbados,death,2020-09-04,7
+Barbados,death,2020-09-05,7
+Barbados,death,2020-09-06,7
 Belarus,case,2020-01-22,0
 Belarus,case,2020-01-23,0
 Belarus,case,2020-01-24,0
@@ -7005,6 +7095,9 @@ Belarus,case,2020-08-31,71843
 Belarus,case,2020-09-01,71962
 Belarus,case,2020-09-02,72141
 Belarus,case,2020-09-03,72302
+Belarus,case,2020-09-04,72485
+Belarus,case,2020-09-05,72663
+Belarus,case,2020-09-06,72859
 Belarus,death,2020-01-22,0
 Belarus,death,2020-01-23,0
 Belarus,death,2020-01-24,0
@@ -7231,6 +7324,9 @@ Belarus,death,2020-08-31,681
 Belarus,death,2020-09-01,686
 Belarus,death,2020-09-02,691
 Belarus,death,2020-09-03,696
+Belarus,death,2020-09-04,701
+Belarus,death,2020-09-05,705
+Belarus,death,2020-09-06,711
 Belgium,case,2020-01-22,0
 Belgium,case,2020-01-23,0
 Belgium,case,2020-01-24,0
@@ -7457,6 +7553,9 @@ Belgium,case,2020-08-31,85236
 Belgium,case,2020-09-01,85487
 Belgium,case,2020-09-02,85911
 Belgium,case,2020-09-03,86544
+Belgium,case,2020-09-04,87174
+Belgium,case,2020-09-05,87825
+Belgium,case,2020-09-06,88367
 Belgium,death,2020-01-22,0
 Belgium,death,2020-01-23,0
 Belgium,death,2020-01-24,0
@@ -7683,6 +7782,9 @@ Belgium,death,2020-08-31,9895
 Belgium,death,2020-09-01,9897
 Belgium,death,2020-09-02,9898
 Belgium,death,2020-09-03,9899
+Belgium,death,2020-09-04,9901
+Belgium,death,2020-09-05,9906
+Belgium,death,2020-09-06,9907
 Belize,case,2020-01-22,0
 Belize,case,2020-01-23,0
 Belize,case,2020-01-24,0
@@ -7909,6 +8011,9 @@ Belize,case,2020-08-31,1007
 Belize,case,2020-09-01,1050
 Belize,case,2020-09-02,1101
 Belize,case,2020-09-03,1101
+Belize,case,2020-09-04,1152
+Belize,case,2020-09-05,1194
+Belize,case,2020-09-06,1194
 Belize,death,2020-01-22,0
 Belize,death,2020-01-23,0
 Belize,death,2020-01-24,0
@@ -8135,6 +8240,9 @@ Belize,death,2020-08-31,13
 Belize,death,2020-09-01,13
 Belize,death,2020-09-02,13
 Belize,death,2020-09-03,13
+Belize,death,2020-09-04,15
+Belize,death,2020-09-05,15
+Belize,death,2020-09-06,15
 Benin,case,2020-01-22,0
 Benin,case,2020-01-23,0
 Benin,case,2020-01-24,0
@@ -8361,6 +8469,9 @@ Benin,case,2020-08-31,2145
 Benin,case,2020-09-01,2145
 Benin,case,2020-09-02,2194
 Benin,case,2020-09-03,2194
+Benin,case,2020-09-04,2194
+Benin,case,2020-09-05,2213
+Benin,case,2020-09-06,2213
 Benin,death,2020-01-22,0
 Benin,death,2020-01-23,0
 Benin,death,2020-01-24,0
@@ -8587,6 +8698,9 @@ Benin,death,2020-08-31,40
 Benin,death,2020-09-01,40
 Benin,death,2020-09-02,40
 Benin,death,2020-09-03,40
+Benin,death,2020-09-04,40
+Benin,death,2020-09-05,40
+Benin,death,2020-09-06,40
 Bhutan,case,2020-01-22,0
 Bhutan,case,2020-01-23,0
 Bhutan,case,2020-01-24,0
@@ -8813,6 +8927,9 @@ Bhutan,case,2020-08-31,225
 Bhutan,case,2020-09-01,227
 Bhutan,case,2020-09-02,227
 Bhutan,case,2020-09-03,227
+Bhutan,case,2020-09-04,228
+Bhutan,case,2020-09-05,228
+Bhutan,case,2020-09-06,228
 Bhutan,death,2020-01-22,0
 Bhutan,death,2020-01-23,0
 Bhutan,death,2020-01-24,0
@@ -9039,6 +9156,9 @@ Bhutan,death,2020-08-31,0
 Bhutan,death,2020-09-01,0
 Bhutan,death,2020-09-02,0
 Bhutan,death,2020-09-03,0
+Bhutan,death,2020-09-04,0
+Bhutan,death,2020-09-05,0
+Bhutan,death,2020-09-06,0
 Bolivia,case,2020-01-22,0
 Bolivia,case,2020-01-23,0
 Bolivia,case,2020-01-24,0
@@ -9265,6 +9385,9 @@ Bolivia,case,2020-08-31,116598
 Bolivia,case,2020-09-01,117267
 Bolivia,case,2020-09-02,117928
 Bolivia,case,2020-09-03,118781
+Bolivia,case,2020-09-04,119580
+Bolivia,case,2020-09-05,120241
+Bolivia,case,2020-09-06,120769
 Bolivia,death,2020-01-22,0
 Bolivia,death,2020-01-23,0
 Bolivia,death,2020-01-24,0
@@ -9491,6 +9614,9 @@ Bolivia,death,2020-08-31,5027
 Bolivia,death,2020-09-01,5101
 Bolivia,death,2020-09-02,5203
 Bolivia,death,2020-09-03,5288
+Bolivia,death,2020-09-04,5343
+Bolivia,death,2020-09-05,5398
+Bolivia,death,2020-09-06,5398
 Bosnia and Herzegovina,case,2020-01-22,0
 Bosnia and Herzegovina,case,2020-01-23,0
 Bosnia and Herzegovina,case,2020-01-24,0
@@ -9717,6 +9843,9 @@ Bosnia and Herzegovina,case,2020-08-31,19964
 Bosnia and Herzegovina,case,2020-09-01,20234
 Bosnia and Herzegovina,case,2020-09-02,20517
 Bosnia and Herzegovina,case,2020-09-03,20804
+Bosnia and Herzegovina,case,2020-09-04,21142
+Bosnia and Herzegovina,case,2020-09-05,21439
+Bosnia and Herzegovina,case,2020-09-06,21560
 Bosnia and Herzegovina,death,2020-01-22,0
 Bosnia and Herzegovina,death,2020-01-23,0
 Bosnia and Herzegovina,death,2020-01-24,0
@@ -9943,6 +10072,9 @@ Bosnia and Herzegovina,death,2020-08-31,609
 Bosnia and Herzegovina,death,2020-09-01,620
 Bosnia and Herzegovina,death,2020-09-02,627
 Bosnia and Herzegovina,death,2020-09-03,636
+Bosnia and Herzegovina,death,2020-09-04,639
+Bosnia and Herzegovina,death,2020-09-05,651
+Bosnia and Herzegovina,death,2020-09-06,655
 Botswana,case,2020-01-22,0
 Botswana,case,2020-01-23,0
 Botswana,case,2020-01-24,0
@@ -10169,6 +10301,9 @@ Botswana,case,2020-08-31,1633
 Botswana,case,2020-09-01,1724
 Botswana,case,2020-09-02,1724
 Botswana,case,2020-09-03,1724
+Botswana,case,2020-09-04,2002
+Botswana,case,2020-09-05,2002
+Botswana,case,2020-09-06,2002
 Botswana,death,2020-01-22,0
 Botswana,death,2020-01-23,0
 Botswana,death,2020-01-24,0
@@ -10395,6 +10530,9 @@ Botswana,death,2020-08-31,6
 Botswana,death,2020-09-01,6
 Botswana,death,2020-09-02,6
 Botswana,death,2020-09-03,6
+Botswana,death,2020-09-04,8
+Botswana,death,2020-09-05,8
+Botswana,death,2020-09-06,8
 Brazil,case,2020-01-22,0
 Brazil,case,2020-01-23,0
 Brazil,case,2020-01-24,0
@@ -10621,6 +10759,9 @@ Brazil,case,2020-08-31,3908272
 Brazil,case,2020-09-01,3950931
 Brazil,case,2020-09-02,3997865
 Brazil,case,2020-09-03,4041638
+Brazil,case,2020-09-04,4091801
+Brazil,case,2020-09-05,4123000
+Brazil,case,2020-09-06,4137521
 Brazil,death,2020-01-22,0
 Brazil,death,2020-01-23,0
 Brazil,death,2020-01-24,0
@@ -10847,6 +10988,9 @@ Brazil,death,2020-08-31,121381
 Brazil,death,2020-09-01,122596
 Brazil,death,2020-09-02,123780
 Brazil,death,2020-09-03,124614
+Brazil,death,2020-09-04,125502
+Brazil,death,2020-09-05,126203
+Brazil,death,2020-09-06,126650
 Brunei,case,2020-01-22,0
 Brunei,case,2020-01-23,0
 Brunei,case,2020-01-24,0
@@ -11073,6 +11217,9 @@ Brunei,case,2020-08-31,144
 Brunei,case,2020-09-01,144
 Brunei,case,2020-09-02,144
 Brunei,case,2020-09-03,145
+Brunei,case,2020-09-04,145
+Brunei,case,2020-09-05,145
+Brunei,case,2020-09-06,145
 Brunei,death,2020-01-22,0
 Brunei,death,2020-01-23,0
 Brunei,death,2020-01-24,0
@@ -11299,6 +11446,9 @@ Brunei,death,2020-08-31,3
 Brunei,death,2020-09-01,3
 Brunei,death,2020-09-02,3
 Brunei,death,2020-09-03,3
+Brunei,death,2020-09-04,3
+Brunei,death,2020-09-05,3
+Brunei,death,2020-09-06,3
 Bulgaria,case,2020-01-22,0
 Bulgaria,case,2020-01-23,0
 Bulgaria,case,2020-01-24,0
@@ -11525,6 +11675,9 @@ Bulgaria,case,2020-08-31,16266
 Bulgaria,case,2020-09-01,16454
 Bulgaria,case,2020-09-02,16617
 Bulgaria,case,2020-09-03,16775
+Bulgaria,case,2020-09-04,16954
+Bulgaria,case,2020-09-05,17050
+Bulgaria,case,2020-09-06,17089
 Bulgaria,death,2020-01-22,0
 Bulgaria,death,2020-01-23,0
 Bulgaria,death,2020-01-24,0
@@ -11751,6 +11904,9 @@ Bulgaria,death,2020-08-31,629
 Bulgaria,death,2020-09-01,642
 Bulgaria,death,2020-09-02,648
 Bulgaria,death,2020-09-03,658
+Bulgaria,death,2020-09-04,665
+Bulgaria,death,2020-09-05,671
+Bulgaria,death,2020-09-06,676
 Burkina Faso,case,2020-01-22,0
 Burkina Faso,case,2020-01-23,0
 Burkina Faso,case,2020-01-24,0
@@ -11977,6 +12133,9 @@ Burkina Faso,case,2020-08-31,1368
 Burkina Faso,case,2020-09-01,1370
 Burkina Faso,case,2020-09-02,1370
 Burkina Faso,case,2020-09-03,1375
+Burkina Faso,case,2020-09-04,1408
+Burkina Faso,case,2020-09-05,1408
+Burkina Faso,case,2020-09-06,1452
 Burkina Faso,death,2020-01-22,0
 Burkina Faso,death,2020-01-23,0
 Burkina Faso,death,2020-01-24,0
@@ -12203,6 +12362,9 @@ Burkina Faso,death,2020-08-31,55
 Burkina Faso,death,2020-09-01,55
 Burkina Faso,death,2020-09-02,55
 Burkina Faso,death,2020-09-03,55
+Burkina Faso,death,2020-09-04,55
+Burkina Faso,death,2020-09-05,55
+Burkina Faso,death,2020-09-06,55
 Burma,case,2020-01-22,0
 Burma,case,2020-01-23,0
 Burma,case,2020-01-24,0
@@ -12429,6 +12591,9 @@ Burma,case,2020-08-31,882
 Burma,case,2020-09-01,919
 Burma,case,2020-09-02,995
 Burma,case,2020-09-03,1111
+Burma,case,2020-09-04,1171
+Burma,case,2020-09-05,1319
+Burma,case,2020-09-06,1419
 Burma,death,2020-01-22,0
 Burma,death,2020-01-23,0
 Burma,death,2020-01-24,0
@@ -12655,6 +12820,9 @@ Burma,death,2020-08-31,6
 Burma,death,2020-09-01,6
 Burma,death,2020-09-02,6
 Burma,death,2020-09-03,6
+Burma,death,2020-09-04,7
+Burma,death,2020-09-05,8
+Burma,death,2020-09-06,8
 Burundi,case,2020-01-22,0
 Burundi,case,2020-01-23,0
 Burundi,case,2020-01-24,0
@@ -12881,6 +13049,9 @@ Burundi,case,2020-08-31,445
 Burundi,case,2020-09-01,445
 Burundi,case,2020-09-02,448
 Burundi,case,2020-09-03,448
+Burundi,case,2020-09-04,451
+Burundi,case,2020-09-05,460
+Burundi,case,2020-09-06,462
 Burundi,death,2020-01-22,0
 Burundi,death,2020-01-23,0
 Burundi,death,2020-01-24,0
@@ -13107,6 +13278,9 @@ Burundi,death,2020-08-31,1
 Burundi,death,2020-09-01,1
 Burundi,death,2020-09-02,1
 Burundi,death,2020-09-03,1
+Burundi,death,2020-09-04,1
+Burundi,death,2020-09-05,1
+Burundi,death,2020-09-06,1
 Cabo Verde,case,2020-01-22,0
 Cabo Verde,case,2020-01-23,0
 Cabo Verde,case,2020-01-24,0
@@ -13333,6 +13507,9 @@ Cabo Verde,case,2020-08-31,3884
 Cabo Verde,case,2020-09-01,3970
 Cabo Verde,case,2020-09-02,4048
 Cabo Verde,case,2020-09-03,4125
+Cabo Verde,case,2020-09-04,4200
+Cabo Verde,case,2020-09-05,4275
+Cabo Verde,case,2020-09-06,4330
 Cabo Verde,death,2020-01-22,0
 Cabo Verde,death,2020-01-23,0
 Cabo Verde,death,2020-01-24,0
@@ -13559,6 +13736,9 @@ Cabo Verde,death,2020-08-31,40
 Cabo Verde,death,2020-09-01,40
 Cabo Verde,death,2020-09-02,41
 Cabo Verde,death,2020-09-03,41
+Cabo Verde,death,2020-09-04,41
+Cabo Verde,death,2020-09-05,42
+Cabo Verde,death,2020-09-06,42
 Cambodia,case,2020-01-22,0
 Cambodia,case,2020-01-23,0
 Cambodia,case,2020-01-24,0
@@ -13785,6 +13965,9 @@ Cambodia,case,2020-08-31,274
 Cambodia,case,2020-09-01,274
 Cambodia,case,2020-09-02,274
 Cambodia,case,2020-09-03,274
+Cambodia,case,2020-09-04,274
+Cambodia,case,2020-09-05,274
+Cambodia,case,2020-09-06,274
 Cambodia,death,2020-01-22,0
 Cambodia,death,2020-01-23,0
 Cambodia,death,2020-01-24,0
@@ -14011,6 +14194,9 @@ Cambodia,death,2020-08-31,0
 Cambodia,death,2020-09-01,0
 Cambodia,death,2020-09-02,0
 Cambodia,death,2020-09-03,0
+Cambodia,death,2020-09-04,0
+Cambodia,death,2020-09-05,0
+Cambodia,death,2020-09-06,0
 Cameroon,case,2020-01-22,0
 Cameroon,case,2020-01-23,0
 Cameroon,case,2020-01-24,0
@@ -14237,6 +14423,9 @@ Cameroon,case,2020-08-31,19142
 Cameroon,case,2020-09-01,19409
 Cameroon,case,2020-09-02,19460
 Cameroon,case,2020-09-03,19604
+Cameroon,case,2020-09-04,19604
+Cameroon,case,2020-09-05,19604
+Cameroon,case,2020-09-06,19604
 Cameroon,death,2020-01-22,0
 Cameroon,death,2020-01-23,0
 Cameroon,death,2020-01-24,0
@@ -14463,6 +14652,9 @@ Cameroon,death,2020-08-31,411
 Cameroon,death,2020-09-01,414
 Cameroon,death,2020-09-02,415
 Cameroon,death,2020-09-03,415
+Cameroon,death,2020-09-04,415
+Cameroon,death,2020-09-05,415
+Cameroon,death,2020-09-06,415
 Canada,case,2020-01-22,0
 Canada,case,2020-01-23,0
 Canada,case,2020-01-24,0
@@ -14689,6 +14881,9 @@ Canada,case,2020-08-31,130918
 Canada,case,2020-09-01,131422
 Canada,case,2020-09-02,131941
 Canada,case,2020-09-03,132527
+Canada,case,2020-09-04,133141
+Canada,case,2020-09-05,133511
+Canada,case,2020-09-06,133890
 Canada,death,2020-01-22,0
 Canada,death,2020-01-23,0
 Canada,death,2020-01-24,0
@@ -14915,6 +15110,9 @@ Canada,death,2020-08-31,9173
 Canada,death,2020-09-01,9179
 Canada,death,2020-09-02,9182
 Canada,death,2020-09-03,9189
+Canada,death,2020-09-04,9190
+Canada,death,2020-09-05,9192
+Canada,death,2020-09-06,9194
 Central African Republic,case,2020-01-22,0
 Central African Republic,case,2020-01-23,0
 Central African Republic,case,2020-01-24,0
@@ -15141,6 +15339,9 @@ Central African Republic,case,2020-08-31,4711
 Central African Republic,case,2020-09-01,4711
 Central African Republic,case,2020-09-02,4712
 Central African Republic,case,2020-09-03,4729
+Central African Republic,case,2020-09-04,4729
+Central African Republic,case,2020-09-05,4729
+Central African Republic,case,2020-09-06,4729
 Central African Republic,death,2020-01-22,0
 Central African Republic,death,2020-01-23,0
 Central African Republic,death,2020-01-24,0
@@ -15367,6 +15568,9 @@ Central African Republic,death,2020-08-31,62
 Central African Republic,death,2020-09-01,62
 Central African Republic,death,2020-09-02,62
 Central African Republic,death,2020-09-03,62
+Central African Republic,death,2020-09-04,62
+Central African Republic,death,2020-09-05,62
+Central African Republic,death,2020-09-06,62
 Chad,case,2020-01-22,0
 Chad,case,2020-01-23,0
 Chad,case,2020-01-24,0
@@ -15593,6 +15797,9 @@ Chad,case,2020-08-31,1013
 Chad,case,2020-09-01,1017
 Chad,case,2020-09-02,1017
 Chad,case,2020-09-03,1018
+Chad,case,2020-09-04,1023
+Chad,case,2020-09-05,1034
+Chad,case,2020-09-06,1039
 Chad,death,2020-01-22,0
 Chad,death,2020-01-23,0
 Chad,death,2020-01-24,0
@@ -15819,6 +16026,9 @@ Chad,death,2020-08-31,77
 Chad,death,2020-09-01,77
 Chad,death,2020-09-02,77
 Chad,death,2020-09-03,77
+Chad,death,2020-09-04,77
+Chad,death,2020-09-05,77
+Chad,death,2020-09-06,79
 Chile,case,2020-01-22,0
 Chile,case,2020-01-23,0
 Chile,case,2020-01-24,0
@@ -16045,6 +16255,9 @@ Chile,case,2020-08-31,411726
 Chile,case,2020-09-01,413145
 Chile,case,2020-09-02,414739
 Chile,case,2020-09-03,416501
+Chile,case,2020-09-04,418469
+Chile,case,2020-09-05,420434
+Chile,case,2020-09-06,422510
 Chile,death,2020-01-22,0
 Chile,death,2020-01-23,0
 Chile,death,2020-01-24,0
@@ -16271,6 +16484,9 @@ Chile,death,2020-08-31,11289
 Chile,death,2020-09-01,11321
 Chile,death,2020-09-02,11344
 Chile,death,2020-09-03,11422
+Chile,death,2020-09-04,11494
+Chile,death,2020-09-05,11551
+Chile,death,2020-09-06,11592
 China,case,2020-01-22,548
 China,case,2020-01-23,643
 China,case,2020-01-24,920
@@ -16497,6 +16713,9 @@ China,case,2020-08-31,89914
 China,case,2020-09-01,89933
 China,case,2020-09-02,89953
 China,case,2020-09-03,89986
+China,case,2020-09-04,90008
+China,case,2020-09-05,90025
+China,case,2020-09-06,90058
 China,death,2020-01-22,17
 China,death,2020-01-23,18
 China,death,2020-01-24,26
@@ -16723,6 +16942,9 @@ China,death,2020-08-31,4723
 China,death,2020-09-01,4724
 China,death,2020-09-02,4727
 China,death,2020-09-03,4728
+China,death,2020-09-04,4728
+China,death,2020-09-05,4728
+China,death,2020-09-06,4730
 Colombia,case,2020-01-22,0
 Colombia,case,2020-01-23,0
 Colombia,case,2020-01-24,0
@@ -16949,6 +17171,9 @@ Colombia,case,2020-08-31,615094
 Colombia,case,2020-09-01,624026
 Colombia,case,2020-09-02,633321
 Colombia,case,2020-09-03,641574
+Colombia,case,2020-09-04,641574
+Colombia,case,2020-09-05,650055
+Colombia,case,2020-09-06,666521
 Colombia,death,2020-01-22,0
 Colombia,death,2020-01-23,0
 Colombia,death,2020-01-24,0
@@ -17175,6 +17400,9 @@ Colombia,death,2020-08-31,19662
 Colombia,death,2020-09-01,20050
 Colombia,death,2020-09-02,20345
 Colombia,death,2020-09-03,20618
+Colombia,death,2020-09-04,20618
+Colombia,death,2020-09-05,20886
+Colombia,death,2020-09-06,21412
 Comoros,case,2020-01-22,0
 Comoros,case,2020-01-23,0
 Comoros,case,2020-01-24,0
@@ -17401,6 +17629,9 @@ Comoros,case,2020-08-31,423
 Comoros,case,2020-09-01,427
 Comoros,case,2020-09-02,427
 Comoros,case,2020-09-03,448
+Comoros,case,2020-09-04,448
+Comoros,case,2020-09-05,452
+Comoros,case,2020-09-06,452
 Comoros,death,2020-01-22,0
 Comoros,death,2020-01-23,0
 Comoros,death,2020-01-24,0
@@ -17627,6 +17858,9 @@ Comoros,death,2020-08-31,7
 Comoros,death,2020-09-01,7
 Comoros,death,2020-09-02,7
 Comoros,death,2020-09-03,7
+Comoros,death,2020-09-04,7
+Comoros,death,2020-09-05,7
+Comoros,death,2020-09-06,7
 Congo (Brazzaville),case,2020-01-22,0
 Congo (Brazzaville),case,2020-01-23,0
 Congo (Brazzaville),case,2020-01-24,0
@@ -17853,6 +18087,9 @@ Congo (Brazzaville),case,2020-08-31,3979
 Congo (Brazzaville),case,2020-09-01,3979
 Congo (Brazzaville),case,2020-09-02,4628
 Congo (Brazzaville),case,2020-09-03,4628
+Congo (Brazzaville),case,2020-09-04,4628
+Congo (Brazzaville),case,2020-09-05,4628
+Congo (Brazzaville),case,2020-09-06,4628
 Congo (Brazzaville),death,2020-01-22,0
 Congo (Brazzaville),death,2020-01-23,0
 Congo (Brazzaville),death,2020-01-24,0
@@ -18079,6 +18316,9 @@ Congo (Brazzaville),death,2020-08-31,78
 Congo (Brazzaville),death,2020-09-01,78
 Congo (Brazzaville),death,2020-09-02,102
 Congo (Brazzaville),death,2020-09-03,102
+Congo (Brazzaville),death,2020-09-04,102
+Congo (Brazzaville),death,2020-09-05,102
+Congo (Brazzaville),death,2020-09-06,102
 Congo (Kinshasa),case,2020-01-22,0
 Congo (Kinshasa),case,2020-01-23,0
 Congo (Kinshasa),case,2020-01-24,0
@@ -18305,6 +18545,9 @@ Congo (Kinshasa),case,2020-08-31,10097
 Congo (Kinshasa),case,2020-09-01,10104
 Congo (Kinshasa),case,2020-09-02,10114
 Congo (Kinshasa),case,2020-09-03,10125
+Congo (Kinshasa),case,2020-09-04,10149
+Congo (Kinshasa),case,2020-09-05,10178
+Congo (Kinshasa),case,2020-09-06,10210
 Congo (Kinshasa),death,2020-01-22,0
 Congo (Kinshasa),death,2020-01-23,0
 Congo (Kinshasa),death,2020-01-24,0
@@ -18531,6 +18774,9 @@ Congo (Kinshasa),death,2020-08-31,258
 Congo (Kinshasa),death,2020-09-01,259
 Congo (Kinshasa),death,2020-09-02,259
 Congo (Kinshasa),death,2020-09-03,259
+Congo (Kinshasa),death,2020-09-04,259
+Congo (Kinshasa),death,2020-09-05,259
+Congo (Kinshasa),death,2020-09-06,260
 Costa Rica,case,2020-01-22,0
 Costa Rica,case,2020-01-23,0
 Costa Rica,case,2020-01-24,0
@@ -18757,6 +19003,9 @@ Costa Rica,case,2020-08-31,41287
 Costa Rica,case,2020-09-01,42184
 Costa Rica,case,2020-09-02,43305
 Costa Rica,case,2020-09-03,44458
+Costa Rica,case,2020-09-04,45680
+Costa Rica,case,2020-09-05,46920
+Costa Rica,case,2020-09-06,46920
 Costa Rica,death,2020-01-22,0
 Costa Rica,death,2020-01-23,0
 Costa Rica,death,2020-01-24,0
@@ -18983,6 +19232,9 @@ Costa Rica,death,2020-08-31,436
 Costa Rica,death,2020-09-01,443
 Costa Rica,death,2020-09-02,453
 Costa Rica,death,2020-09-03,460
+Costa Rica,death,2020-09-04,469
+Costa Rica,death,2020-09-05,478
+Costa Rica,death,2020-09-06,478
 Cote d'Ivoire,case,2020-01-22,0
 Cote d'Ivoire,case,2020-01-23,0
 Cote d'Ivoire,case,2020-01-24,0
@@ -19209,6 +19461,9 @@ Cote d'Ivoire,case,2020-08-31,18067
 Cote d'Ivoire,case,2020-09-01,18103
 Cote d'Ivoire,case,2020-09-02,18161
 Cote d'Ivoire,case,2020-09-03,18208
+Cote d'Ivoire,case,2020-09-04,18269
+Cote d'Ivoire,case,2020-09-05,18472
+Cote d'Ivoire,case,2020-09-06,18588
 Cote d'Ivoire,death,2020-01-22,0
 Cote d'Ivoire,death,2020-01-23,0
 Cote d'Ivoire,death,2020-01-24,0
@@ -19435,6 +19690,9 @@ Cote d'Ivoire,death,2020-08-31,117
 Cote d'Ivoire,death,2020-09-01,117
 Cote d'Ivoire,death,2020-09-02,117
 Cote d'Ivoire,death,2020-09-03,119
+Cote d'Ivoire,death,2020-09-04,119
+Cote d'Ivoire,death,2020-09-05,119
+Cote d'Ivoire,death,2020-09-06,119
 Croatia,case,2020-01-22,0
 Croatia,case,2020-01-23,0
 Croatia,case,2020-01-24,0
@@ -19661,6 +19919,9 @@ Croatia,case,2020-08-31,10269
 Croatia,case,2020-09-01,10414
 Croatia,case,2020-09-02,10725
 Croatia,case,2020-09-03,11094
+Croatia,case,2020-09-04,11428
+Croatia,case,2020-09-05,11739
+Croatia,case,2020-09-06,11964
 Croatia,death,2020-01-22,0
 Croatia,death,2020-01-23,0
 Croatia,death,2020-01-24,0
@@ -19887,6 +20148,9 @@ Croatia,death,2020-08-31,186
 Croatia,death,2020-09-01,187
 Croatia,death,2020-09-02,191
 Croatia,death,2020-09-03,194
+Croatia,death,2020-09-04,195
+Croatia,death,2020-09-05,197
+Croatia,death,2020-09-06,198
 Cuba,case,2020-01-22,0
 Cuba,case,2020-01-23,0
 Cuba,case,2020-01-24,0
@@ -20113,6 +20377,9 @@ Cuba,case,2020-08-31,4032
 Cuba,case,2020-09-01,4065
 Cuba,case,2020-09-02,4126
 Cuba,case,2020-09-03,4214
+Cuba,case,2020-09-04,4266
+Cuba,case,2020-09-05,4298
+Cuba,case,2020-09-06,4309
 Cuba,death,2020-01-22,0
 Cuba,death,2020-01-23,0
 Cuba,death,2020-01-24,0
@@ -20339,6 +20606,9 @@ Cuba,death,2020-08-31,94
 Cuba,death,2020-09-01,95
 Cuba,death,2020-09-02,98
 Cuba,death,2020-09-03,100
+Cuba,death,2020-09-04,100
+Cuba,death,2020-09-05,100
+Cuba,death,2020-09-06,101
 Cyprus,case,2020-01-22,0
 Cyprus,case,2020-01-23,0
 Cyprus,case,2020-01-24,0
@@ -20565,6 +20835,9 @@ Cyprus,case,2020-08-31,1488
 Cyprus,case,2020-09-01,1490
 Cyprus,case,2020-09-02,1495
 Cyprus,case,2020-09-03,1498
+Cyprus,case,2020-09-04,1502
+Cyprus,case,2020-09-05,1507
+Cyprus,case,2020-09-06,1509
 Cyprus,death,2020-01-22,0
 Cyprus,death,2020-01-23,0
 Cyprus,death,2020-01-24,0
@@ -20791,6 +21064,9 @@ Cyprus,death,2020-08-31,20
 Cyprus,death,2020-09-01,21
 Cyprus,death,2020-09-02,21
 Cyprus,death,2020-09-03,21
+Cyprus,death,2020-09-04,21
+Cyprus,death,2020-09-05,21
+Cyprus,death,2020-09-06,21
 Czechia,case,2020-01-22,0
 Czechia,case,2020-01-23,0
 Czechia,case,2020-01-24,0
@@ -21017,6 +21293,9 @@ Czechia,case,2020-08-31,24618
 Czechia,case,2020-09-01,25117
 Czechia,case,2020-09-02,25773
 Czechia,case,2020-09-03,26452
+Czechia,case,2020-09-04,27249
+Czechia,case,2020-09-05,27752
+Czechia,case,2020-09-06,28156
 Czechia,death,2020-01-22,0
 Czechia,death,2020-01-23,0
 Czechia,death,2020-01-24,0
@@ -21243,6 +21522,9 @@ Czechia,death,2020-08-31,424
 Czechia,death,2020-09-01,425
 Czechia,death,2020-09-02,425
 Czechia,death,2020-09-03,426
+Czechia,death,2020-09-04,429
+Czechia,death,2020-09-05,431
+Czechia,death,2020-09-06,436
 Denmark,case,2020-01-22,0
 Denmark,case,2020-01-23,0
 Denmark,case,2020-01-24,0
@@ -21469,6 +21751,9 @@ Denmark,case,2020-08-31,17410
 Denmark,case,2020-09-01,17509
 Denmark,case,2020-09-02,17620
 Denmark,case,2020-09-03,17800
+Denmark,case,2020-09-04,17974
+Denmark,case,2020-09-05,18163
+Denmark,case,2020-09-06,18310
 Denmark,death,2020-01-22,0
 Denmark,death,2020-01-23,0
 Denmark,death,2020-01-24,0
@@ -21695,6 +21980,9 @@ Denmark,death,2020-08-31,624
 Denmark,death,2020-09-01,625
 Denmark,death,2020-09-02,626
 Denmark,death,2020-09-03,626
+Denmark,death,2020-09-04,627
+Denmark,death,2020-09-05,627
+Denmark,death,2020-09-06,627
 Diamond Princess,case,2020-01-22,0
 Diamond Princess,case,2020-01-23,0
 Diamond Princess,case,2020-01-24,0
@@ -21921,6 +22209,9 @@ Diamond Princess,case,2020-08-31,712
 Diamond Princess,case,2020-09-01,712
 Diamond Princess,case,2020-09-02,712
 Diamond Princess,case,2020-09-03,712
+Diamond Princess,case,2020-09-04,712
+Diamond Princess,case,2020-09-05,712
+Diamond Princess,case,2020-09-06,712
 Diamond Princess,death,2020-01-22,0
 Diamond Princess,death,2020-01-23,0
 Diamond Princess,death,2020-01-24,0
@@ -22147,6 +22438,9 @@ Diamond Princess,death,2020-08-31,13
 Diamond Princess,death,2020-09-01,13
 Diamond Princess,death,2020-09-02,13
 Diamond Princess,death,2020-09-03,13
+Diamond Princess,death,2020-09-04,13
+Diamond Princess,death,2020-09-05,13
+Diamond Princess,death,2020-09-06,13
 Djibouti,case,2020-01-22,0
 Djibouti,case,2020-01-23,0
 Djibouti,case,2020-01-24,0
@@ -22373,6 +22667,9 @@ Djibouti,case,2020-08-31,5387
 Djibouti,case,2020-09-01,5387
 Djibouti,case,2020-09-02,5387
 Djibouti,case,2020-09-03,5387
+Djibouti,case,2020-09-04,5387
+Djibouti,case,2020-09-05,5387
+Djibouti,case,2020-09-06,5388
 Djibouti,death,2020-01-22,0
 Djibouti,death,2020-01-23,0
 Djibouti,death,2020-01-24,0
@@ -22599,6 +22896,9 @@ Djibouti,death,2020-08-31,60
 Djibouti,death,2020-09-01,60
 Djibouti,death,2020-09-02,60
 Djibouti,death,2020-09-03,60
+Djibouti,death,2020-09-04,60
+Djibouti,death,2020-09-05,60
+Djibouti,death,2020-09-06,61
 Dominica,case,2020-01-22,0
 Dominica,case,2020-01-23,0
 Dominica,case,2020-01-24,0
@@ -22825,6 +23125,9 @@ Dominica,case,2020-08-31,20
 Dominica,case,2020-09-01,20
 Dominica,case,2020-09-02,20
 Dominica,case,2020-09-03,20
+Dominica,case,2020-09-04,20
+Dominica,case,2020-09-05,22
+Dominica,case,2020-09-06,22
 Dominica,death,2020-01-22,0
 Dominica,death,2020-01-23,0
 Dominica,death,2020-01-24,0
@@ -23051,6 +23354,9 @@ Dominica,death,2020-08-31,0
 Dominica,death,2020-09-01,0
 Dominica,death,2020-09-02,0
 Dominica,death,2020-09-03,0
+Dominica,death,2020-09-04,0
+Dominica,death,2020-09-05,0
+Dominica,death,2020-09-06,0
 Dominican Republic,case,2020-01-22,0
 Dominican Republic,case,2020-01-23,0
 Dominican Republic,case,2020-01-24,0
@@ -23277,6 +23583,9 @@ Dominican Republic,case,2020-08-31,94715
 Dominican Republic,case,2020-09-01,94979
 Dominican Republic,case,2020-09-02,95627
 Dominican Republic,case,2020-09-03,96629
+Dominican Republic,case,2020-09-04,96629
+Dominican Republic,case,2020-09-05,98776
+Dominican Republic,case,2020-09-06,99333
 Dominican Republic,death,2020-01-22,0
 Dominican Republic,death,2020-01-23,0
 Dominican Republic,death,2020-01-24,0
@@ -23503,6 +23812,9 @@ Dominican Republic,death,2020-08-31,1710
 Dominican Republic,death,2020-09-01,1738
 Dominican Republic,death,2020-09-02,1765
 Dominican Republic,death,2020-09-03,1801
+Dominican Republic,death,2020-09-04,1801
+Dominican Republic,death,2020-09-05,1840
+Dominican Republic,death,2020-09-06,1845
 Ecuador,case,2020-01-22,0
 Ecuador,case,2020-01-23,0
 Ecuador,case,2020-01-24,0
@@ -23729,6 +24041,9 @@ Ecuador,case,2020-08-31,113767
 Ecuador,case,2020-09-01,114309
 Ecuador,case,2020-09-02,115457
 Ecuador,case,2020-09-03,116360
+Ecuador,case,2020-09-04,117175
+Ecuador,case,2020-09-05,118045
+Ecuador,case,2020-09-06,118045
 Ecuador,death,2020-01-22,0
 Ecuador,death,2020-01-23,0
 Ecuador,death,2020-01-24,0
@@ -23955,6 +24270,9 @@ Ecuador,death,2020-08-31,6556
 Ecuador,death,2020-09-01,6571
 Ecuador,death,2020-09-02,6619
 Ecuador,death,2020-09-03,6648
+Ecuador,death,2020-09-04,6674
+Ecuador,death,2020-09-05,6724
+Ecuador,death,2020-09-06,6724
 Egypt,case,2020-01-22,0
 Egypt,case,2020-01-23,0
 Egypt,case,2020-01-24,0
@@ -24181,6 +24499,9 @@ Egypt,case,2020-08-31,98939
 Egypt,case,2020-09-01,99115
 Egypt,case,2020-09-02,99280
 Egypt,case,2020-09-03,99425
+Egypt,case,2020-09-04,99582
+Egypt,case,2020-09-05,99712
+Egypt,case,2020-09-06,99863
 Egypt,death,2020-01-22,0
 Egypt,death,2020-01-23,0
 Egypt,death,2020-01-24,0
@@ -24407,6 +24728,9 @@ Egypt,death,2020-08-31,5421
 Egypt,death,2020-09-01,5440
 Egypt,death,2020-09-02,5461
 Egypt,death,2020-09-03,5479
+Egypt,death,2020-09-04,5495
+Egypt,death,2020-09-05,5511
+Egypt,death,2020-09-06,5530
 El Salvador,case,2020-01-22,0
 El Salvador,case,2020-01-23,0
 El Salvador,case,2020-01-24,0
@@ -24633,6 +24957,9 @@ El Salvador,case,2020-08-31,25729
 El Salvador,case,2020-09-01,25820
 El Salvador,case,2020-09-02,25904
 El Salvador,case,2020-09-03,26000
+El Salvador,case,2020-09-04,26099
+El Salvador,case,2020-09-05,26206
+El Salvador,case,2020-09-06,26308
 El Salvador,death,2020-01-22,0
 El Salvador,death,2020-01-23,0
 El Salvador,death,2020-01-24,0
@@ -24859,6 +25186,9 @@ El Salvador,death,2020-08-31,717
 El Salvador,death,2020-09-01,724
 El Salvador,death,2020-09-02,731
 El Salvador,death,2020-09-03,739
+El Salvador,death,2020-09-04,744
+El Salvador,death,2020-09-05,752
+El Salvador,death,2020-09-06,759
 Equatorial Guinea,case,2020-01-22,0
 Equatorial Guinea,case,2020-01-23,0
 Equatorial Guinea,case,2020-01-24,0
@@ -25085,6 +25415,9 @@ Equatorial Guinea,case,2020-08-31,4941
 Equatorial Guinea,case,2020-09-01,4965
 Equatorial Guinea,case,2020-09-02,4965
 Equatorial Guinea,case,2020-09-03,4965
+Equatorial Guinea,case,2020-09-04,4972
+Equatorial Guinea,case,2020-09-05,4972
+Equatorial Guinea,case,2020-09-06,4972
 Equatorial Guinea,death,2020-01-22,0
 Equatorial Guinea,death,2020-01-23,0
 Equatorial Guinea,death,2020-01-24,0
@@ -25311,6 +25644,9 @@ Equatorial Guinea,death,2020-08-31,83
 Equatorial Guinea,death,2020-09-01,83
 Equatorial Guinea,death,2020-09-02,83
 Equatorial Guinea,death,2020-09-03,83
+Equatorial Guinea,death,2020-09-04,83
+Equatorial Guinea,death,2020-09-05,83
+Equatorial Guinea,death,2020-09-06,83
 Eritrea,case,2020-01-22,0
 Eritrea,case,2020-01-23,0
 Eritrea,case,2020-01-24,0
@@ -25537,6 +25873,9 @@ Eritrea,case,2020-08-31,319
 Eritrea,case,2020-09-01,319
 Eritrea,case,2020-09-02,319
 Eritrea,case,2020-09-03,330
+Eritrea,case,2020-09-04,330
+Eritrea,case,2020-09-05,330
+Eritrea,case,2020-09-06,330
 Eritrea,death,2020-01-22,0
 Eritrea,death,2020-01-23,0
 Eritrea,death,2020-01-24,0
@@ -25763,6 +26102,9 @@ Eritrea,death,2020-08-31,0
 Eritrea,death,2020-09-01,0
 Eritrea,death,2020-09-02,0
 Eritrea,death,2020-09-03,0
+Eritrea,death,2020-09-04,0
+Eritrea,death,2020-09-05,0
+Eritrea,death,2020-09-06,0
 Estonia,case,2020-01-22,0
 Estonia,case,2020-01-23,0
 Estonia,case,2020-01-24,0
@@ -25989,6 +26331,9 @@ Estonia,case,2020-08-31,2375
 Estonia,case,2020-09-01,2395
 Estonia,case,2020-09-02,2415
 Estonia,case,2020-09-03,2441
+Estonia,case,2020-09-04,2456
+Estonia,case,2020-09-05,2491
+Estonia,case,2020-09-06,2516
 Estonia,death,2020-01-22,0
 Estonia,death,2020-01-23,0
 Estonia,death,2020-01-24,0
@@ -26215,6 +26560,9 @@ Estonia,death,2020-08-31,64
 Estonia,death,2020-09-01,64
 Estonia,death,2020-09-02,64
 Estonia,death,2020-09-03,64
+Estonia,death,2020-09-04,64
+Estonia,death,2020-09-05,64
+Estonia,death,2020-09-06,64
 Eswatini,case,2020-01-22,0
 Eswatini,case,2020-01-23,0
 Eswatini,case,2020-01-24,0
@@ -26441,6 +26789,9 @@ Eswatini,case,2020-08-31,4577
 Eswatini,case,2020-09-01,4618
 Eswatini,case,2020-09-02,4668
 Eswatini,case,2020-09-03,4720
+Eswatini,case,2020-09-04,4780
+Eswatini,case,2020-09-05,4819
+Eswatini,case,2020-09-06,4853
 Eswatini,death,2020-01-22,0
 Eswatini,death,2020-01-23,0
 Eswatini,death,2020-01-24,0
@@ -26667,6 +27018,9 @@ Eswatini,death,2020-08-31,91
 Eswatini,death,2020-09-01,94
 Eswatini,death,2020-09-02,94
 Eswatini,death,2020-09-03,94
+Eswatini,death,2020-09-04,94
+Eswatini,death,2020-09-05,94
+Eswatini,death,2020-09-06,94
 Ethiopia,case,2020-01-22,0
 Ethiopia,case,2020-01-23,0
 Ethiopia,case,2020-01-24,0
@@ -26893,6 +27247,9 @@ Ethiopia,case,2020-08-31,52131
 Ethiopia,case,2020-09-01,53304
 Ethiopia,case,2020-09-02,54409
 Ethiopia,case,2020-09-03,55213
+Ethiopia,case,2020-09-04,56516
+Ethiopia,case,2020-09-05,57466
+Ethiopia,case,2020-09-06,58672
 Ethiopia,death,2020-01-22,0
 Ethiopia,death,2020-01-23,0
 Ethiopia,death,2020-01-24,0
@@ -27119,6 +27476,9 @@ Ethiopia,death,2020-08-31,809
 Ethiopia,death,2020-09-01,828
 Ethiopia,death,2020-09-02,846
 Ethiopia,death,2020-09-03,856
+Ethiopia,death,2020-09-04,880
+Ethiopia,death,2020-09-05,897
+Ethiopia,death,2020-09-06,918
 Fiji,case,2020-01-22,0
 Fiji,case,2020-01-23,0
 Fiji,case,2020-01-24,0
@@ -27345,6 +27705,9 @@ Fiji,case,2020-08-31,28
 Fiji,case,2020-09-01,29
 Fiji,case,2020-09-02,29
 Fiji,case,2020-09-03,29
+Fiji,case,2020-09-04,29
+Fiji,case,2020-09-05,31
+Fiji,case,2020-09-06,31
 Fiji,death,2020-01-22,0
 Fiji,death,2020-01-23,0
 Fiji,death,2020-01-24,0
@@ -27571,6 +27934,9 @@ Fiji,death,2020-08-31,2
 Fiji,death,2020-09-01,2
 Fiji,death,2020-09-02,2
 Fiji,death,2020-09-03,2
+Fiji,death,2020-09-04,2
+Fiji,death,2020-09-05,2
+Fiji,death,2020-09-06,2
 Finland,case,2020-01-22,0
 Finland,case,2020-01-23,0
 Finland,case,2020-01-24,0
@@ -27797,6 +28163,9 @@ Finland,case,2020-08-31,8086
 Finland,case,2020-09-01,8142
 Finland,case,2020-09-02,8161
 Finland,case,2020-09-03,8200
+Finland,case,2020-09-04,8225
+Finland,case,2020-09-05,8261
+Finland,case,2020-09-06,8291
 Finland,death,2020-01-22,0
 Finland,death,2020-01-23,0
 Finland,death,2020-01-24,0
@@ -28023,6 +28392,9 @@ Finland,death,2020-08-31,336
 Finland,death,2020-09-01,336
 Finland,death,2020-09-02,336
 Finland,death,2020-09-03,336
+Finland,death,2020-09-04,336
+Finland,death,2020-09-05,336
+Finland,death,2020-09-06,336
 France,case,2020-01-22,0
 France,case,2020-01-23,0
 France,case,2020-01-24,2
@@ -28249,6 +28621,9 @@ France,case,2020-08-31,318986
 France,case,2020-09-01,323968
 France,case,2020-09-02,331060
 France,case,2020-09-03,338220
+France,case,2020-09-04,347267
+France,case,2020-09-05,347267
+France,case,2020-09-06,347268
 France,death,2020-01-22,0
 France,death,2020-01-23,0
 France,death,2020-01-24,0
@@ -28475,6 +28850,9 @@ France,death,2020-08-31,30640
 France,death,2020-09-01,30666
 France,death,2020-09-02,30692
 France,death,2020-09-03,30712
+France,death,2020-09-04,30730
+France,death,2020-09-05,30730
+France,death,2020-09-06,30730
 Gabon,case,2020-01-22,0
 Gabon,case,2020-01-23,0
 Gabon,case,2020-01-24,0
@@ -28701,6 +29079,9 @@ Gabon,case,2020-08-31,8533
 Gabon,case,2020-09-01,8533
 Gabon,case,2020-09-02,8538
 Gabon,case,2020-09-03,8538
+Gabon,case,2020-09-04,8601
+Gabon,case,2020-09-05,8601
+Gabon,case,2020-09-06,8601
 Gabon,death,2020-01-22,0
 Gabon,death,2020-01-23,0
 Gabon,death,2020-01-24,0
@@ -28927,6 +29308,9 @@ Gabon,death,2020-08-31,53
 Gabon,death,2020-09-01,53
 Gabon,death,2020-09-02,53
 Gabon,death,2020-09-03,53
+Gabon,death,2020-09-04,53
+Gabon,death,2020-09-05,53
+Gabon,death,2020-09-06,53
 Gambia,case,2020-01-22,0
 Gambia,case,2020-01-23,0
 Gambia,case,2020-01-24,0
@@ -29153,6 +29537,9 @@ Gambia,case,2020-08-31,2963
 Gambia,case,2020-09-01,3029
 Gambia,case,2020-09-02,3067
 Gambia,case,2020-09-03,3101
+Gambia,case,2020-09-04,3120
+Gambia,case,2020-09-05,3150
+Gambia,case,2020-09-06,3197
 Gambia,death,2020-01-22,0
 Gambia,death,2020-01-23,0
 Gambia,death,2020-01-24,0
@@ -29379,6 +29766,9 @@ Gambia,death,2020-08-31,96
 Gambia,death,2020-09-01,96
 Gambia,death,2020-09-02,97
 Gambia,death,2020-09-03,99
+Gambia,death,2020-09-04,99
+Gambia,death,2020-09-05,99
+Gambia,death,2020-09-06,99
 Georgia,case,2020-01-22,0
 Georgia,case,2020-01-23,0
 Georgia,case,2020-01-24,0
@@ -29605,6 +29995,9 @@ Georgia,case,2020-08-31,1487
 Georgia,case,2020-09-01,1510
 Georgia,case,2020-09-02,1548
 Georgia,case,2020-09-03,1568
+Georgia,case,2020-09-04,1596
+Georgia,case,2020-09-05,1621
+Georgia,case,2020-09-06,1650
 Georgia,death,2020-01-22,0
 Georgia,death,2020-01-23,0
 Georgia,death,2020-01-24,0
@@ -29831,6 +30224,9 @@ Georgia,death,2020-08-31,19
 Georgia,death,2020-09-01,19
 Georgia,death,2020-09-02,19
 Georgia,death,2020-09-03,19
+Georgia,death,2020-09-04,19
+Georgia,death,2020-09-05,19
+Georgia,death,2020-09-06,19
 Germany,case,2020-01-22,0
 Germany,case,2020-01-23,0
 Germany,case,2020-01-24,0
@@ -30057,6 +30453,9 @@ Germany,case,2020-08-31,244802
 Germany,case,2020-09-01,246015
 Germany,case,2020-09-02,247411
 Germany,case,2020-09-03,248840
+Germany,case,2020-09-04,250283
+Germany,case,2020-09-05,251058
+Germany,case,2020-09-06,251728
 Germany,death,2020-01-22,0
 Germany,death,2020-01-23,0
 Germany,death,2020-01-24,0
@@ -30283,6 +30682,9 @@ Germany,death,2020-08-31,9303
 Germany,death,2020-09-01,9307
 Germany,death,2020-09-02,9322
 Germany,death,2020-09-03,9322
+Germany,death,2020-09-04,9327
+Germany,death,2020-09-05,9329
+Germany,death,2020-09-06,9330
 Ghana,case,2020-01-22,0
 Ghana,case,2020-01-23,0
 Ghana,case,2020-01-24,0
@@ -30509,6 +30911,9 @@ Ghana,case,2020-08-31,44298
 Ghana,case,2020-09-01,44460
 Ghana,case,2020-09-02,44658
 Ghana,case,2020-09-03,44713
+Ghana,case,2020-09-04,44777
+Ghana,case,2020-09-05,44777
+Ghana,case,2020-09-06,44777
 Ghana,death,2020-01-22,0
 Ghana,death,2020-01-23,0
 Ghana,death,2020-01-24,0
@@ -30735,6 +31140,9 @@ Ghana,death,2020-08-31,276
 Ghana,death,2020-09-01,276
 Ghana,death,2020-09-02,276
 Ghana,death,2020-09-03,280
+Ghana,death,2020-09-04,283
+Ghana,death,2020-09-05,283
+Ghana,death,2020-09-06,283
 Greece,case,2020-01-22,0
 Greece,case,2020-01-23,0
 Greece,case,2020-01-24,0
@@ -30961,6 +31369,9 @@ Greece,case,2020-08-31,10317
 Greece,case,2020-09-01,10524
 Greece,case,2020-09-02,10757
 Greece,case,2020-09-03,10998
+Greece,case,2020-09-04,11200
+Greece,case,2020-09-05,11386
+Greece,case,2020-09-06,11524
 Greece,death,2020-01-22,0
 Greece,death,2020-01-23,0
 Greece,death,2020-01-24,0
@@ -31187,6 +31598,9 @@ Greece,death,2020-08-31,266
 Greece,death,2020-09-01,271
 Greece,death,2020-09-02,273
 Greece,death,2020-09-03,278
+Greece,death,2020-09-04,279
+Greece,death,2020-09-05,280
+Greece,death,2020-09-06,284
 Grenada,case,2020-01-22,0
 Grenada,case,2020-01-23,0
 Grenada,case,2020-01-24,0
@@ -31413,6 +31827,9 @@ Grenada,case,2020-08-31,24
 Grenada,case,2020-09-01,24
 Grenada,case,2020-09-02,24
 Grenada,case,2020-09-03,24
+Grenada,case,2020-09-04,24
+Grenada,case,2020-09-05,24
+Grenada,case,2020-09-06,24
 Grenada,death,2020-01-22,0
 Grenada,death,2020-01-23,0
 Grenada,death,2020-01-24,0
@@ -31639,6 +32056,9 @@ Grenada,death,2020-08-31,0
 Grenada,death,2020-09-01,0
 Grenada,death,2020-09-02,0
 Grenada,death,2020-09-03,0
+Grenada,death,2020-09-04,0
+Grenada,death,2020-09-05,0
+Grenada,death,2020-09-06,0
 Guatemala,case,2020-01-22,0
 Guatemala,case,2020-01-23,0
 Guatemala,case,2020-01-24,0
@@ -31865,6 +32285,9 @@ Guatemala,case,2020-08-31,74074
 Guatemala,case,2020-09-01,74893
 Guatemala,case,2020-09-02,75644
 Guatemala,case,2020-09-03,76358
+Guatemala,case,2020-09-04,77040
+Guatemala,case,2020-09-05,77481
+Guatemala,case,2020-09-06,77683
 Guatemala,death,2020-01-22,0
 Guatemala,death,2020-01-23,0
 Guatemala,death,2020-01-24,0
@@ -32091,6 +32514,9 @@ Guatemala,death,2020-08-31,2760
 Guatemala,death,2020-09-01,2778
 Guatemala,death,2020-09-02,2790
 Guatemala,death,2020-09-03,2804
+Guatemala,death,2020-09-04,2825
+Guatemala,death,2020-09-05,2845
+Guatemala,death,2020-09-06,2852
 Guinea,case,2020-01-22,0
 Guinea,case,2020-01-23,0
 Guinea,case,2020-01-24,0
@@ -32317,6 +32743,9 @@ Guinea,case,2020-08-31,9409
 Guinea,case,2020-09-01,9479
 Guinea,case,2020-09-02,9479
 Guinea,case,2020-09-03,9579
+Guinea,case,2020-09-04,9649
+Guinea,case,2020-09-05,9649
+Guinea,case,2020-09-06,9798
 Guinea,death,2020-01-22,0
 Guinea,death,2020-01-23,0
 Guinea,death,2020-01-24,0
@@ -32543,6 +32972,9 @@ Guinea,death,2020-08-31,59
 Guinea,death,2020-09-01,59
 Guinea,death,2020-09-02,59
 Guinea,death,2020-09-03,61
+Guinea,death,2020-09-04,61
+Guinea,death,2020-09-05,61
+Guinea,death,2020-09-06,61
 Guinea-Bissau,case,2020-01-22,0
 Guinea-Bissau,case,2020-01-23,0
 Guinea-Bissau,case,2020-01-24,0
@@ -32769,6 +33201,9 @@ Guinea-Bissau,case,2020-08-31,2205
 Guinea-Bissau,case,2020-09-01,2205
 Guinea-Bissau,case,2020-09-02,2205
 Guinea-Bissau,case,2020-09-03,2205
+Guinea-Bissau,case,2020-09-04,2245
+Guinea-Bissau,case,2020-09-05,2245
+Guinea-Bissau,case,2020-09-06,2245
 Guinea-Bissau,death,2020-01-22,0
 Guinea-Bissau,death,2020-01-23,0
 Guinea-Bissau,death,2020-01-24,0
@@ -32995,6 +33430,9 @@ Guinea-Bissau,death,2020-08-31,34
 Guinea-Bissau,death,2020-09-01,34
 Guinea-Bissau,death,2020-09-02,34
 Guinea-Bissau,death,2020-09-03,34
+Guinea-Bissau,death,2020-09-04,38
+Guinea-Bissau,death,2020-09-05,38
+Guinea-Bissau,death,2020-09-06,38
 Guyana,case,2020-01-22,0
 Guyana,case,2020-01-23,0
 Guyana,case,2020-01-24,0
@@ -33221,6 +33659,9 @@ Guyana,case,2020-08-31,1306
 Guyana,case,2020-09-01,1373
 Guyana,case,2020-09-02,1382
 Guyana,case,2020-09-03,1401
+Guyana,case,2020-09-04,1401
+Guyana,case,2020-09-05,1459
+Guyana,case,2020-09-06,1468
 Guyana,death,2020-01-22,0
 Guyana,death,2020-01-23,0
 Guyana,death,2020-01-24,0
@@ -33447,6 +33888,9 @@ Guyana,death,2020-08-31,39
 Guyana,death,2020-09-01,41
 Guyana,death,2020-09-02,41
 Guyana,death,2020-09-03,44
+Guyana,death,2020-09-04,44
+Guyana,death,2020-09-05,46
+Guyana,death,2020-09-06,46
 Haiti,case,2020-01-22,0
 Haiti,case,2020-01-23,0
 Haiti,case,2020-01-24,0
@@ -33673,6 +34117,9 @@ Haiti,case,2020-08-31,8224
 Haiti,case,2020-09-01,8230
 Haiti,case,2020-09-02,8258
 Haiti,case,2020-09-03,8301
+Haiti,case,2020-09-04,8326
+Haiti,case,2020-09-05,8336
+Haiti,case,2020-09-06,8360
 Haiti,death,2020-01-22,0
 Haiti,death,2020-01-23,0
 Haiti,death,2020-01-24,0
@@ -33899,6 +34346,9 @@ Haiti,death,2020-08-31,201
 Haiti,death,2020-09-01,203
 Haiti,death,2020-09-02,206
 Haiti,death,2020-09-03,210
+Haiti,death,2020-09-04,212
+Haiti,death,2020-09-05,212
+Haiti,death,2020-09-06,214
 Holy See,case,2020-01-22,0
 Holy See,case,2020-01-23,0
 Holy See,case,2020-01-24,0
@@ -34125,6 +34575,9 @@ Holy See,case,2020-08-31,12
 Holy See,case,2020-09-01,12
 Holy See,case,2020-09-02,12
 Holy See,case,2020-09-03,12
+Holy See,case,2020-09-04,12
+Holy See,case,2020-09-05,12
+Holy See,case,2020-09-06,12
 Holy See,death,2020-01-22,0
 Holy See,death,2020-01-23,0
 Holy See,death,2020-01-24,0
@@ -34351,6 +34804,9 @@ Holy See,death,2020-08-31,0
 Holy See,death,2020-09-01,0
 Holy See,death,2020-09-02,0
 Holy See,death,2020-09-03,0
+Holy See,death,2020-09-04,0
+Holy See,death,2020-09-05,0
+Holy See,death,2020-09-06,0
 Honduras,case,2020-01-22,0
 Honduras,case,2020-01-23,0
 Honduras,case,2020-01-24,0
@@ -34577,6 +35033,9 @@ Honduras,case,2020-08-31,61014
 Honduras,case,2020-09-01,61769
 Honduras,case,2020-09-02,62526
 Honduras,case,2020-09-03,63158
+Honduras,case,2020-09-04,63798
+Honduras,case,2020-09-05,64352
+Honduras,case,2020-09-06,64764
 Honduras,death,2020-01-22,0
 Honduras,death,2020-01-23,0
 Honduras,death,2020-01-24,0
@@ -34803,6 +35262,9 @@ Honduras,death,2020-08-31,1873
 Honduras,death,2020-09-01,1888
 Honduras,death,2020-09-02,1924
 Honduras,death,2020-09-03,1954
+Honduras,death,2020-09-04,1984
+Honduras,death,2020-09-05,2006
+Honduras,death,2020-09-06,2007
 Hungary,case,2020-01-22,0
 Hungary,case,2020-01-23,0
 Hungary,case,2020-01-24,0
@@ -35029,6 +35491,9 @@ Hungary,case,2020-08-31,6139
 Hungary,case,2020-09-01,6257
 Hungary,case,2020-09-02,6622
 Hungary,case,2020-09-03,6923
+Hungary,case,2020-09-04,7382
+Hungary,case,2020-09-05,7892
+Hungary,case,2020-09-06,8387
 Hungary,death,2020-01-22,0
 Hungary,death,2020-01-23,0
 Hungary,death,2020-01-24,0
@@ -35255,6 +35720,9 @@ Hungary,death,2020-08-31,615
 Hungary,death,2020-09-01,616
 Hungary,death,2020-09-02,619
 Hungary,death,2020-09-03,620
+Hungary,death,2020-09-04,621
+Hungary,death,2020-09-05,624
+Hungary,death,2020-09-06,624
 Iceland,case,2020-01-22,0
 Iceland,case,2020-01-23,0
 Iceland,case,2020-01-24,0
@@ -35481,6 +35949,9 @@ Iceland,case,2020-08-31,2107
 Iceland,case,2020-09-01,2116
 Iceland,case,2020-09-02,2121
 Iceland,case,2020-09-03,2128
+Iceland,case,2020-09-04,2135
+Iceland,case,2020-09-05,2136
+Iceland,case,2020-09-06,2141
 Iceland,death,2020-01-22,0
 Iceland,death,2020-01-23,0
 Iceland,death,2020-01-24,0
@@ -35707,6 +36178,9 @@ Iceland,death,2020-08-31,10
 Iceland,death,2020-09-01,10
 Iceland,death,2020-09-02,10
 Iceland,death,2020-09-03,10
+Iceland,death,2020-09-04,10
+Iceland,death,2020-09-05,10
+Iceland,death,2020-09-06,10
 India,case,2020-01-22,0
 India,case,2020-01-23,0
 India,case,2020-01-24,0
@@ -35933,6 +36407,9 @@ India,case,2020-08-31,3691166
 India,case,2020-09-01,3769523
 India,case,2020-09-02,3853406
 India,case,2020-09-03,3936747
+India,case,2020-09-04,4023179
+India,case,2020-09-05,4113811
+India,case,2020-09-06,4204613
 India,death,2020-01-22,0
 India,death,2020-01-23,0
 India,death,2020-01-24,0
@@ -36159,6 +36636,9 @@ India,death,2020-08-31,65288
 India,death,2020-09-01,66333
 India,death,2020-09-02,67376
 India,death,2020-09-03,68472
+India,death,2020-09-04,69561
+India,death,2020-09-05,70626
+India,death,2020-09-06,71642
 Indonesia,case,2020-01-22,0
 Indonesia,case,2020-01-23,0
 Indonesia,case,2020-01-24,0
@@ -36385,6 +36865,9 @@ Indonesia,case,2020-08-31,174796
 Indonesia,case,2020-09-01,177571
 Indonesia,case,2020-09-02,180646
 Indonesia,case,2020-09-03,184268
+Indonesia,case,2020-09-04,187537
+Indonesia,case,2020-09-05,190665
+Indonesia,case,2020-09-06,194109
 Indonesia,death,2020-01-22,0
 Indonesia,death,2020-01-23,0
 Indonesia,death,2020-01-24,0
@@ -36611,6 +37094,9 @@ Indonesia,death,2020-08-31,7417
 Indonesia,death,2020-09-01,7505
 Indonesia,death,2020-09-02,7616
 Indonesia,death,2020-09-03,7750
+Indonesia,death,2020-09-04,7832
+Indonesia,death,2020-09-05,7940
+Indonesia,death,2020-09-06,8025
 Iran,case,2020-01-22,0
 Iran,case,2020-01-23,0
 Iran,case,2020-01-24,0
@@ -36837,6 +37323,9 @@ Iran,case,2020-08-31,375212
 Iran,case,2020-09-01,376894
 Iran,case,2020-09-02,378752
 Iran,case,2020-09-03,380746
+Iran,case,2020-09-04,382772
+Iran,case,2020-09-05,384666
+Iran,case,2020-09-06,386658
 Iran,death,2020-01-22,0
 Iran,death,2020-01-23,0
 Iran,death,2020-01-24,0
@@ -37063,6 +37552,9 @@ Iran,death,2020-08-31,21571
 Iran,death,2020-09-01,21672
 Iran,death,2020-09-02,21797
 Iran,death,2020-09-03,21926
+Iran,death,2020-09-04,22044
+Iran,death,2020-09-05,22154
+Iran,death,2020-09-06,22293
 Iraq,case,2020-01-22,0
 Iraq,case,2020-01-23,0
 Iraq,case,2020-01-24,0
@@ -37289,6 +37781,9 @@ Iraq,case,2020-08-31,234934
 Iraq,case,2020-09-01,238338
 Iraq,case,2020-09-02,242284
 Iraq,case,2020-09-03,247039
+Iraq,case,2020-09-04,252075
+Iraq,case,2020-09-05,256719
+Iraq,case,2020-09-06,260370
 Iraq,death,2020-01-22,0
 Iraq,death,2020-01-23,0
 Iraq,death,2020-01-24,0
@@ -37515,6 +38010,9 @@ Iraq,death,2020-08-31,7042
 Iraq,death,2020-09-01,7123
 Iraq,death,2020-09-02,7201
 Iraq,death,2020-09-03,7275
+Iraq,death,2020-09-04,7359
+Iraq,death,2020-09-05,7422
+Iraq,death,2020-09-06,7512
 Ireland,case,2020-01-22,0
 Ireland,case,2020-01-23,0
 Ireland,case,2020-01-24,0
@@ -37741,6 +38239,9 @@ Ireland,case,2020-08-31,28811
 Ireland,case,2020-09-01,29025
 Ireland,case,2020-09-02,29114
 Ireland,case,2020-09-03,29206
+Ireland,case,2020-09-04,29303
+Ireland,case,2020-09-05,29534
+Ireland,case,2020-09-06,29672
 Ireland,death,2020-01-22,0
 Ireland,death,2020-01-23,0
 Ireland,death,2020-01-24,0
@@ -37967,6 +38468,9 @@ Ireland,death,2020-08-31,1777
 Ireland,death,2020-09-01,1777
 Ireland,death,2020-09-02,1777
 Ireland,death,2020-09-03,1777
+Ireland,death,2020-09-04,1777
+Ireland,death,2020-09-05,1777
+Ireland,death,2020-09-06,1777
 Israel,case,2020-01-22,0
 Israel,case,2020-01-23,0
 Israel,case,2020-01-24,0
@@ -38193,6 +38697,9 @@ Israel,case,2020-08-31,116596
 Israel,case,2020-09-01,118538
 Israel,case,2020-09-02,121464
 Israel,case,2020-09-03,124455
+Israel,case,2020-09-04,126419
+Israel,case,2020-09-05,128936
+Israel,case,2020-09-06,130644
 Israel,death,2020-01-22,0
 Israel,death,2020-01-23,0
 Israel,death,2020-01-24,0
@@ -38419,6 +38926,9 @@ Israel,death,2020-08-31,939
 Israel,death,2020-09-01,957
 Israel,death,2020-09-02,969
 Israel,death,2020-09-03,985
+Israel,death,2020-09-04,993
+Israel,death,2020-09-05,1007
+Israel,death,2020-09-06,1019
 Italy,case,2020-01-22,0
 Italy,case,2020-01-23,0
 Italy,case,2020-01-24,0
@@ -38645,6 +39155,9 @@ Italy,case,2020-08-31,269214
 Italy,case,2020-09-01,270189
 Italy,case,2020-09-02,271515
 Italy,case,2020-09-03,272912
+Italy,case,2020-09-04,274644
+Italy,case,2020-09-05,276338
+Italy,case,2020-09-06,277634
 Italy,death,2020-01-22,0
 Italy,death,2020-01-23,0
 Italy,death,2020-01-24,0
@@ -38871,6 +39384,9 @@ Italy,death,2020-08-31,35483
 Italy,death,2020-09-01,35491
 Italy,death,2020-09-02,35497
 Italy,death,2020-09-03,35507
+Italy,death,2020-09-04,35518
+Italy,death,2020-09-05,35534
+Italy,death,2020-09-06,35541
 Jamaica,case,2020-01-22,0
 Jamaica,case,2020-01-23,0
 Jamaica,case,2020-01-24,0
@@ -39097,6 +39613,9 @@ Jamaica,case,2020-08-31,2459
 Jamaica,case,2020-09-01,2459
 Jamaica,case,2020-09-02,2683
 Jamaica,case,2020-09-03,2896
+Jamaica,case,2020-09-04,2964
+Jamaica,case,2020-09-05,3024
+Jamaica,case,2020-09-06,3103
 Jamaica,death,2020-01-22,0
 Jamaica,death,2020-01-23,0
 Jamaica,death,2020-01-24,0
@@ -39323,6 +39842,9 @@ Jamaica,death,2020-08-31,21
 Jamaica,death,2020-09-01,21
 Jamaica,death,2020-09-02,24
 Jamaica,death,2020-09-03,29
+Jamaica,death,2020-09-04,30
+Jamaica,death,2020-09-05,32
+Jamaica,death,2020-09-06,33
 Japan,case,2020-01-22,2
 Japan,case,2020-01-23,2
 Japan,case,2020-01-24,2
@@ -39549,6 +40071,9 @@ Japan,case,2020-08-31,68396
 Japan,case,2020-09-01,69023
 Japan,case,2020-09-02,69619
 Japan,case,2020-09-03,70278
+Japan,case,2020-09-04,70866
+Japan,case,2020-09-05,71467
+Japan,case,2020-09-06,71918
 Japan,death,2020-01-22,0
 Japan,death,2020-01-23,0
 Japan,death,2020-01-24,0
@@ -39775,6 +40300,9 @@ Japan,death,2020-08-31,1298
 Japan,death,2020-09-01,1313
 Japan,death,2020-09-02,1327
 Japan,death,2020-09-03,1334
+Japan,death,2020-09-04,1352
+Japan,death,2020-09-05,1361
+Japan,death,2020-09-06,1366
 Jordan,case,2020-01-22,0
 Jordan,case,2020-01-23,0
 Jordan,case,2020-01-24,0
@@ -40001,6 +40529,9 @@ Jordan,case,2020-08-31,2034
 Jordan,case,2020-09-01,2097
 Jordan,case,2020-09-02,2161
 Jordan,case,2020-09-03,2233
+Jordan,case,2020-09-04,2301
+Jordan,case,2020-09-05,2353
+Jordan,case,2020-09-06,2411
 Jordan,death,2020-01-22,0
 Jordan,death,2020-01-23,0
 Jordan,death,2020-01-24,0
@@ -40227,6 +40758,9 @@ Jordan,death,2020-08-31,15
 Jordan,death,2020-09-01,15
 Jordan,death,2020-09-02,15
 Jordan,death,2020-09-03,15
+Jordan,death,2020-09-04,16
+Jordan,death,2020-09-05,16
+Jordan,death,2020-09-06,16
 Kazakhstan,case,2020-01-22,0
 Kazakhstan,case,2020-01-23,0
 Kazakhstan,case,2020-01-24,0
@@ -40453,6 +40987,9 @@ Kazakhstan,case,2020-08-31,105872
 Kazakhstan,case,2020-09-01,105944
 Kazakhstan,case,2020-09-02,106032
 Kazakhstan,case,2020-09-03,106121
+Kazakhstan,case,2020-09-04,106225
+Kazakhstan,case,2020-09-05,106301
+Kazakhstan,case,2020-09-06,106361
 Kazakhstan,death,2020-01-22,0
 Kazakhstan,death,2020-01-23,0
 Kazakhstan,death,2020-01-24,0
@@ -40679,6 +41216,9 @@ Kazakhstan,death,2020-08-31,1523
 Kazakhstan,death,2020-09-01,1588
 Kazakhstan,death,2020-09-02,1588
 Kazakhstan,death,2020-09-03,1588
+Kazakhstan,death,2020-09-04,1588
+Kazakhstan,death,2020-09-05,1588
+Kazakhstan,death,2020-09-06,1588
 Kenya,case,2020-01-22,0
 Kenya,case,2020-01-23,0
 Kenya,case,2020-01-24,0
@@ -40905,6 +41445,9 @@ Kenya,case,2020-08-31,34201
 Kenya,case,2020-09-01,34315
 Kenya,case,2020-09-02,34493
 Kenya,case,2020-09-03,34705
+Kenya,case,2020-09-04,34884
+Kenya,case,2020-09-05,35020
+Kenya,case,2020-09-06,35103
 Kenya,death,2020-01-22,0
 Kenya,death,2020-01-23,0
 Kenya,death,2020-01-24,0
@@ -41131,6 +41674,9 @@ Kenya,death,2020-08-31,577
 Kenya,death,2020-09-01,577
 Kenya,death,2020-09-02,581
 Kenya,death,2020-09-03,585
+Kenya,death,2020-09-04,589
+Kenya,death,2020-09-05,594
+Kenya,death,2020-09-06,597
 "Korea, South",case,2020-01-22,1
 "Korea, South",case,2020-01-23,1
 "Korea, South",case,2020-01-24,2
@@ -41357,6 +41903,9 @@ Kenya,death,2020-09-03,585
 "Korea, South",case,2020-09-01,20449
 "Korea, South",case,2020-09-02,20644
 "Korea, South",case,2020-09-03,20842
+"Korea, South",case,2020-09-04,21010
+"Korea, South",case,2020-09-05,21177
+"Korea, South",case,2020-09-06,21296
 "Korea, South",death,2020-01-22,0
 "Korea, South",death,2020-01-23,0
 "Korea, South",death,2020-01-24,0
@@ -41583,6 +42132,9 @@ Kenya,death,2020-09-03,585
 "Korea, South",death,2020-09-01,326
 "Korea, South",death,2020-09-02,329
 "Korea, South",death,2020-09-03,331
+"Korea, South",death,2020-09-04,333
+"Korea, South",death,2020-09-05,334
+"Korea, South",death,2020-09-06,336
 Kosovo,case,2020-01-22,0
 Kosovo,case,2020-01-23,0
 Kosovo,case,2020-01-24,0
@@ -41809,6 +42361,9 @@ Kosovo,case,2020-08-31,12683
 Kosovo,case,2020-09-01,12683
 Kosovo,case,2020-09-02,12683
 Kosovo,case,2020-09-03,12683
+Kosovo,case,2020-09-04,12683
+Kosovo,case,2020-09-05,12683
+Kosovo,case,2020-09-06,12683
 Kosovo,death,2020-01-22,0
 Kosovo,death,2020-01-23,0
 Kosovo,death,2020-01-24,0
@@ -42035,6 +42590,9 @@ Kosovo,death,2020-08-31,488
 Kosovo,death,2020-09-01,488
 Kosovo,death,2020-09-02,488
 Kosovo,death,2020-09-03,488
+Kosovo,death,2020-09-04,488
+Kosovo,death,2020-09-05,488
+Kosovo,death,2020-09-06,488
 Kuwait,case,2020-01-22,0
 Kuwait,case,2020-01-23,0
 Kuwait,case,2020-01-24,0
@@ -42261,6 +42819,9 @@ Kuwait,case,2020-08-31,85109
 Kuwait,case,2020-09-01,85811
 Kuwait,case,2020-09-02,86478
 Kuwait,case,2020-09-03,87378
+Kuwait,case,2020-09-04,88243
+Kuwait,case,2020-09-05,88963
+Kuwait,case,2020-09-06,89582
 Kuwait,death,2020-01-22,0
 Kuwait,death,2020-01-23,0
 Kuwait,death,2020-01-24,0
@@ -42487,6 +43048,9 @@ Kuwait,death,2020-08-31,531
 Kuwait,death,2020-09-01,534
 Kuwait,death,2020-09-02,535
 Kuwait,death,2020-09-03,536
+Kuwait,death,2020-09-04,537
+Kuwait,death,2020-09-05,540
+Kuwait,death,2020-09-06,544
 Kyrgyzstan,case,2020-01-22,0
 Kyrgyzstan,case,2020-01-23,0
 Kyrgyzstan,case,2020-01-24,0
@@ -42713,6 +43277,9 @@ Kyrgyzstan,case,2020-08-31,43898
 Kyrgyzstan,case,2020-09-01,43958
 Kyrgyzstan,case,2020-09-02,44036
 Kyrgyzstan,case,2020-09-03,44135
+Kyrgyzstan,case,2020-09-04,44199
+Kyrgyzstan,case,2020-09-05,44293
+Kyrgyzstan,case,2020-09-06,44403
 Kyrgyzstan,death,2020-01-22,0
 Kyrgyzstan,death,2020-01-23,0
 Kyrgyzstan,death,2020-01-24,0
@@ -42939,6 +43506,9 @@ Kyrgyzstan,death,2020-08-31,1058
 Kyrgyzstan,death,2020-09-01,1059
 Kyrgyzstan,death,2020-09-02,1059
 Kyrgyzstan,death,2020-09-03,1059
+Kyrgyzstan,death,2020-09-04,1060
+Kyrgyzstan,death,2020-09-05,1060
+Kyrgyzstan,death,2020-09-06,1060
 Laos,case,2020-01-22,0
 Laos,case,2020-01-23,0
 Laos,case,2020-01-24,0
@@ -43165,6 +43735,9 @@ Laos,case,2020-08-31,22
 Laos,case,2020-09-01,22
 Laos,case,2020-09-02,22
 Laos,case,2020-09-03,22
+Laos,case,2020-09-04,22
+Laos,case,2020-09-05,22
+Laos,case,2020-09-06,22
 Laos,death,2020-01-22,0
 Laos,death,2020-01-23,0
 Laos,death,2020-01-24,0
@@ -43391,6 +43964,9 @@ Laos,death,2020-08-31,0
 Laos,death,2020-09-01,0
 Laos,death,2020-09-02,0
 Laos,death,2020-09-03,0
+Laos,death,2020-09-04,0
+Laos,death,2020-09-05,0
+Laos,death,2020-09-06,0
 Latvia,case,2020-01-22,0
 Latvia,case,2020-01-23,0
 Latvia,case,2020-01-24,0
@@ -43617,6 +44193,9 @@ Latvia,case,2020-08-31,1396
 Latvia,case,2020-09-01,1404
 Latvia,case,2020-09-02,1406
 Latvia,case,2020-09-03,1410
+Latvia,case,2020-09-04,1416
+Latvia,case,2020-09-05,1425
+Latvia,case,2020-09-06,1428
 Latvia,death,2020-01-22,0
 Latvia,death,2020-01-23,0
 Latvia,death,2020-01-24,0
@@ -43843,6 +44422,9 @@ Latvia,death,2020-08-31,34
 Latvia,death,2020-09-01,34
 Latvia,death,2020-09-02,34
 Latvia,death,2020-09-03,34
+Latvia,death,2020-09-04,35
+Latvia,death,2020-09-05,35
+Latvia,death,2020-09-06,35
 Lebanon,case,2020-01-22,0
 Lebanon,case,2020-01-23,0
 Lebanon,case,2020-01-24,0
@@ -44069,6 +44651,9 @@ Lebanon,case,2020-08-31,17308
 Lebanon,case,2020-09-01,17777
 Lebanon,case,2020-09-02,18375
 Lebanon,case,2020-09-03,18963
+Lebanon,case,2020-09-04,19490
+Lebanon,case,2020-09-05,20011
+Lebanon,case,2020-09-06,20426
 Lebanon,death,2020-01-22,0
 Lebanon,death,2020-01-23,0
 Lebanon,death,2020-01-24,0
@@ -44295,6 +44880,9 @@ Lebanon,death,2020-08-31,167
 Lebanon,death,2020-09-01,171
 Lebanon,death,2020-09-02,177
 Lebanon,death,2020-09-03,179
+Lebanon,death,2020-09-04,183
+Lebanon,death,2020-09-05,187
+Lebanon,death,2020-09-06,191
 Lesotho,case,2020-01-22,0
 Lesotho,case,2020-01-23,0
 Lesotho,case,2020-01-24,0
@@ -44521,6 +45109,9 @@ Lesotho,case,2020-08-31,1085
 Lesotho,case,2020-09-01,1085
 Lesotho,case,2020-09-02,1085
 Lesotho,case,2020-09-03,1085
+Lesotho,case,2020-09-04,1148
+Lesotho,case,2020-09-05,1148
+Lesotho,case,2020-09-06,1148
 Lesotho,death,2020-01-22,0
 Lesotho,death,2020-01-23,0
 Lesotho,death,2020-01-24,0
@@ -44747,6 +45338,9 @@ Lesotho,death,2020-08-31,31
 Lesotho,death,2020-09-01,31
 Lesotho,death,2020-09-02,31
 Lesotho,death,2020-09-03,31
+Lesotho,death,2020-09-04,31
+Lesotho,death,2020-09-05,31
+Lesotho,death,2020-09-06,31
 Liberia,case,2020-01-22,0
 Liberia,case,2020-01-23,0
 Liberia,case,2020-01-24,0
@@ -44973,6 +45567,9 @@ Liberia,case,2020-08-31,1304
 Liberia,case,2020-09-01,1305
 Liberia,case,2020-09-02,1305
 Liberia,case,2020-09-03,1306
+Liberia,case,2020-09-04,1306
+Liberia,case,2020-09-05,1306
+Liberia,case,2020-09-06,1307
 Liberia,death,2020-01-22,0
 Liberia,death,2020-01-23,0
 Liberia,death,2020-01-24,0
@@ -45199,6 +45796,9 @@ Liberia,death,2020-08-31,82
 Liberia,death,2020-09-01,82
 Liberia,death,2020-09-02,82
 Liberia,death,2020-09-03,82
+Liberia,death,2020-09-04,82
+Liberia,death,2020-09-05,82
+Liberia,death,2020-09-06,82
 Libya,case,2020-01-22,0
 Libya,case,2020-01-23,0
 Libya,case,2020-01-24,0
@@ -45425,6 +46025,9 @@ Libya,case,2020-08-31,13966
 Libya,case,2020-09-01,14624
 Libya,case,2020-09-02,15156
 Libya,case,2020-09-03,15773
+Libya,case,2020-09-04,16445
+Libya,case,2020-09-05,17094
+Libya,case,2020-09-06,17749
 Libya,death,2020-01-22,0
 Libya,death,2020-01-23,0
 Libya,death,2020-01-24,0
@@ -45651,6 +46254,9 @@ Libya,death,2020-08-31,237
 Libya,death,2020-09-01,242
 Libya,death,2020-09-02,250
 Libya,death,2020-09-03,254
+Libya,death,2020-09-04,262
+Libya,death,2020-09-05,272
+Libya,death,2020-09-06,285
 Liechtenstein,case,2020-01-22,0
 Liechtenstein,case,2020-01-23,0
 Liechtenstein,case,2020-01-24,0
@@ -45877,6 +46483,9 @@ Liechtenstein,case,2020-08-31,107
 Liechtenstein,case,2020-09-01,107
 Liechtenstein,case,2020-09-02,107
 Liechtenstein,case,2020-09-03,107
+Liechtenstein,case,2020-09-04,107
+Liechtenstein,case,2020-09-05,107
+Liechtenstein,case,2020-09-06,107
 Liechtenstein,death,2020-01-22,0
 Liechtenstein,death,2020-01-23,0
 Liechtenstein,death,2020-01-24,0
@@ -46103,6 +46712,9 @@ Liechtenstein,death,2020-08-31,1
 Liechtenstein,death,2020-09-01,1
 Liechtenstein,death,2020-09-02,1
 Liechtenstein,death,2020-09-03,1
+Liechtenstein,death,2020-09-04,1
+Liechtenstein,death,2020-09-05,1
+Liechtenstein,death,2020-09-06,1
 Lithuania,case,2020-01-22,0
 Lithuania,case,2020-01-23,0
 Lithuania,case,2020-01-24,0
@@ -46329,6 +46941,9 @@ Lithuania,case,2020-08-31,2906
 Lithuania,case,2020-09-01,2929
 Lithuania,case,2020-09-02,2958
 Lithuania,case,2020-09-03,2978
+Lithuania,case,2020-09-04,3004
+Lithuania,case,2020-09-05,3040
+Lithuania,case,2020-09-06,3083
 Lithuania,death,2020-01-22,0
 Lithuania,death,2020-01-23,0
 Lithuania,death,2020-01-24,0
@@ -46555,6 +47170,9 @@ Lithuania,death,2020-08-31,86
 Lithuania,death,2020-09-01,86
 Lithuania,death,2020-09-02,86
 Lithuania,death,2020-09-03,86
+Lithuania,death,2020-09-04,86
+Lithuania,death,2020-09-05,86
+Lithuania,death,2020-09-06,86
 Luxembourg,case,2020-01-22,0
 Luxembourg,case,2020-01-23,0
 Luxembourg,case,2020-01-24,0
@@ -46781,6 +47399,9 @@ Luxembourg,case,2020-08-31,6625
 Luxembourg,case,2020-09-01,6625
 Luxembourg,case,2020-09-02,6745
 Luxembourg,case,2020-09-03,6811
+Luxembourg,case,2020-09-04,6854
+Luxembourg,case,2020-09-05,6896
+Luxembourg,case,2020-09-06,6950
 Luxembourg,death,2020-01-22,0
 Luxembourg,death,2020-01-23,0
 Luxembourg,death,2020-01-24,0
@@ -47007,6 +47628,9 @@ Luxembourg,death,2020-08-31,124
 Luxembourg,death,2020-09-01,124
 Luxembourg,death,2020-09-02,124
 Luxembourg,death,2020-09-03,124
+Luxembourg,death,2020-09-04,124
+Luxembourg,death,2020-09-05,124
+Luxembourg,death,2020-09-06,124
 Madagascar,case,2020-01-22,0
 Madagascar,case,2020-01-23,0
 Madagascar,case,2020-01-24,0
@@ -47233,6 +47857,9 @@ Madagascar,case,2020-08-31,14863
 Madagascar,case,2020-09-01,14957
 Madagascar,case,2020-09-02,15023
 Madagascar,case,2020-09-03,15106
+Madagascar,case,2020-09-04,15187
+Madagascar,case,2020-09-05,15269
+Madagascar,case,2020-09-06,15319
 Madagascar,death,2020-01-22,0
 Madagascar,death,2020-01-23,0
 Madagascar,death,2020-01-24,0
@@ -47459,6 +48086,9 @@ Madagascar,death,2020-08-31,192
 Madagascar,death,2020-09-01,195
 Madagascar,death,2020-09-02,196
 Madagascar,death,2020-09-03,197
+Madagascar,death,2020-09-04,198
+Madagascar,death,2020-09-05,199
+Madagascar,death,2020-09-06,200
 Malawi,case,2020-01-22,0
 Malawi,case,2020-01-23,0
 Malawi,case,2020-01-24,0
@@ -47685,6 +48315,9 @@ Malawi,case,2020-08-31,5566
 Malawi,case,2020-09-01,5576
 Malawi,case,2020-09-02,5579
 Malawi,case,2020-09-03,5593
+Malawi,case,2020-09-04,5608
+Malawi,case,2020-09-05,5611
+Malawi,case,2020-09-06,5614
 Malawi,death,2020-01-22,0
 Malawi,death,2020-01-23,0
 Malawi,death,2020-01-24,0
@@ -47911,6 +48544,9 @@ Malawi,death,2020-08-31,175
 Malawi,death,2020-09-01,175
 Malawi,death,2020-09-02,175
 Malawi,death,2020-09-03,175
+Malawi,death,2020-09-04,175
+Malawi,death,2020-09-05,175
+Malawi,death,2020-09-06,175
 Malaysia,case,2020-01-22,0
 Malaysia,case,2020-01-23,0
 Malaysia,case,2020-01-24,0
@@ -48137,6 +48773,9 @@ Malaysia,case,2020-08-31,9340
 Malaysia,case,2020-09-01,9354
 Malaysia,case,2020-09-02,9360
 Malaysia,case,2020-09-03,9374
+Malaysia,case,2020-09-04,9385
+Malaysia,case,2020-09-05,9391
+Malaysia,case,2020-09-06,9397
 Malaysia,death,2020-01-22,0
 Malaysia,death,2020-01-23,0
 Malaysia,death,2020-01-24,0
@@ -48363,6 +49002,9 @@ Malaysia,death,2020-08-31,127
 Malaysia,death,2020-09-01,128
 Malaysia,death,2020-09-02,128
 Malaysia,death,2020-09-03,128
+Malaysia,death,2020-09-04,128
+Malaysia,death,2020-09-05,128
+Malaysia,death,2020-09-06,128
 Maldives,case,2020-01-22,0
 Maldives,case,2020-01-23,0
 Maldives,case,2020-01-24,0
@@ -48589,6 +49231,9 @@ Maldives,case,2020-08-31,7804
 Maldives,case,2020-09-01,8003
 Maldives,case,2020-09-02,8140
 Maldives,case,2020-09-03,8281
+Maldives,case,2020-09-04,8361
+Maldives,case,2020-09-05,8486
+Maldives,case,2020-09-06,8584
 Maldives,death,2020-01-22,0
 Maldives,death,2020-01-23,0
 Maldives,death,2020-01-24,0
@@ -48815,6 +49460,9 @@ Maldives,death,2020-08-31,28
 Maldives,death,2020-09-01,29
 Maldives,death,2020-09-02,29
 Maldives,death,2020-09-03,29
+Maldives,death,2020-09-04,29
+Maldives,death,2020-09-05,29
+Maldives,death,2020-09-06,29
 Mali,case,2020-01-22,0
 Mali,case,2020-01-23,0
 Mali,case,2020-01-24,0
@@ -49041,6 +49689,9 @@ Mali,case,2020-08-31,2776
 Mali,case,2020-09-01,2777
 Mali,case,2020-09-02,2802
 Mali,case,2020-09-03,2807
+Mali,case,2020-09-04,2814
+Mali,case,2020-09-05,2833
+Mali,case,2020-09-06,2842
 Mali,death,2020-01-22,0
 Mali,death,2020-01-23,0
 Mali,death,2020-01-24,0
@@ -49267,6 +49918,9 @@ Mali,death,2020-08-31,126
 Mali,death,2020-09-01,126
 Mali,death,2020-09-02,126
 Mali,death,2020-09-03,126
+Mali,death,2020-09-04,126
+Mali,death,2020-09-05,126
+Mali,death,2020-09-06,127
 Malta,case,2020-01-22,0
 Malta,case,2020-01-23,0
 Malta,case,2020-01-24,0
@@ -49493,6 +50147,9 @@ Malta,case,2020-08-31,1883
 Malta,case,2020-09-01,1909
 Malta,case,2020-09-02,1931
 Malta,case,2020-09-03,1965
+Malta,case,2020-09-04,1984
+Malta,case,2020-09-05,2014
+Malta,case,2020-09-06,2039
 Malta,death,2020-01-22,0
 Malta,death,2020-01-23,0
 Malta,death,2020-01-24,0
@@ -49719,6 +50376,9 @@ Malta,death,2020-08-31,12
 Malta,death,2020-09-01,12
 Malta,death,2020-09-02,13
 Malta,death,2020-09-03,13
+Malta,death,2020-09-04,13
+Malta,death,2020-09-05,14
+Malta,death,2020-09-06,14
 Mauritania,case,2020-01-22,0
 Mauritania,case,2020-01-23,0
 Mauritania,case,2020-01-24,0
@@ -49945,6 +50605,9 @@ Mauritania,case,2020-08-31,7048
 Mauritania,case,2020-09-01,7075
 Mauritania,case,2020-09-02,7089
 Mauritania,case,2020-09-03,7106
+Mauritania,case,2020-09-04,7126
+Mauritania,case,2020-09-05,7134
+Mauritania,case,2020-09-06,7142
 Mauritania,death,2020-01-22,0
 Mauritania,death,2020-01-23,0
 Mauritania,death,2020-01-24,0
@@ -50171,6 +50834,9 @@ Mauritania,death,2020-08-31,159
 Mauritania,death,2020-09-01,159
 Mauritania,death,2020-09-02,160
 Mauritania,death,2020-09-03,160
+Mauritania,death,2020-09-04,160
+Mauritania,death,2020-09-05,160
+Mauritania,death,2020-09-06,160
 Mauritius,case,2020-01-22,0
 Mauritius,case,2020-01-23,0
 Mauritius,case,2020-01-24,0
@@ -50397,6 +51063,9 @@ Mauritius,case,2020-08-31,356
 Mauritius,case,2020-09-01,356
 Mauritius,case,2020-09-02,356
 Mauritius,case,2020-09-03,356
+Mauritius,case,2020-09-04,356
+Mauritius,case,2020-09-05,356
+Mauritius,case,2020-09-06,356
 Mauritius,death,2020-01-22,0
 Mauritius,death,2020-01-23,0
 Mauritius,death,2020-01-24,0
@@ -50623,6 +51292,9 @@ Mauritius,death,2020-08-31,10
 Mauritius,death,2020-09-01,10
 Mauritius,death,2020-09-02,10
 Mauritius,death,2020-09-03,10
+Mauritius,death,2020-09-04,10
+Mauritius,death,2020-09-05,10
+Mauritius,death,2020-09-06,10
 Mexico,case,2020-01-22,0
 Mexico,case,2020-01-23,0
 Mexico,case,2020-01-24,0
@@ -50849,6 +51521,9 @@ Mexico,case,2020-08-31,599560
 Mexico,case,2020-09-01,606036
 Mexico,case,2020-09-02,610957
 Mexico,case,2020-09-03,616894
+Mexico,case,2020-09-04,623090
+Mexico,case,2020-09-05,629409
+Mexico,case,2020-09-06,634023
 Mexico,death,2020-01-22,0
 Mexico,death,2020-01-23,0
 Mexico,death,2020-01-24,0
@@ -51075,6 +51750,9 @@ Mexico,death,2020-08-31,64414
 Mexico,death,2020-09-01,65241
 Mexico,death,2020-09-02,65816
 Mexico,death,2020-09-03,66329
+Mexico,death,2020-09-04,66851
+Mexico,death,2020-09-05,67326
+Mexico,death,2020-09-06,67558
 Moldova,case,2020-01-22,0
 Moldova,case,2020-01-23,0
 Moldova,case,2020-01-24,0
@@ -51301,6 +51979,9 @@ Moldova,case,2020-08-31,36920
 Moldova,case,2020-09-01,37208
 Moldova,case,2020-09-02,37740
 Moldova,case,2020-09-03,38372
+Moldova,case,2020-09-04,38906
+Moldova,case,2020-09-05,39473
+Moldova,case,2020-09-06,39797
 Moldova,death,2020-01-22,0
 Moldova,death,2020-01-23,0
 Moldova,death,2020-01-24,0
@@ -51527,6 +52208,9 @@ Moldova,death,2020-08-31,995
 Moldova,death,2020-09-01,1008
 Moldova,death,2020-09-02,1024
 Moldova,death,2020-09-03,1036
+Moldova,death,2020-09-04,1047
+Moldova,death,2020-09-05,1063
+Moldova,death,2020-09-06,1063
 Monaco,case,2020-01-22,0
 Monaco,case,2020-01-23,0
 Monaco,case,2020-01-24,0
@@ -51753,6 +52437,9 @@ Monaco,case,2020-08-31,154
 Monaco,case,2020-09-01,154
 Monaco,case,2020-09-02,142
 Monaco,case,2020-09-03,143
+Monaco,case,2020-09-04,147
+Monaco,case,2020-09-05,147
+Monaco,case,2020-09-06,147
 Monaco,death,2020-01-22,0
 Monaco,death,2020-01-23,0
 Monaco,death,2020-01-24,0
@@ -51979,6 +52666,9 @@ Monaco,death,2020-08-31,4
 Monaco,death,2020-09-01,4
 Monaco,death,2020-09-02,1
 Monaco,death,2020-09-03,1
+Monaco,death,2020-09-04,1
+Monaco,death,2020-09-05,1
+Monaco,death,2020-09-06,1
 Mongolia,case,2020-01-22,0
 Mongolia,case,2020-01-23,0
 Mongolia,case,2020-01-24,0
@@ -52205,6 +52895,9 @@ Mongolia,case,2020-08-31,304
 Mongolia,case,2020-09-01,306
 Mongolia,case,2020-09-02,306
 Mongolia,case,2020-09-03,310
+Mongolia,case,2020-09-04,310
+Mongolia,case,2020-09-05,310
+Mongolia,case,2020-09-06,310
 Mongolia,death,2020-01-22,0
 Mongolia,death,2020-01-23,0
 Mongolia,death,2020-01-24,0
@@ -52431,6 +53124,9 @@ Mongolia,death,2020-08-31,0
 Mongolia,death,2020-09-01,0
 Mongolia,death,2020-09-02,0
 Mongolia,death,2020-09-03,0
+Mongolia,death,2020-09-04,0
+Mongolia,death,2020-09-05,0
+Mongolia,death,2020-09-06,0
 Montenegro,case,2020-01-22,0
 Montenegro,case,2020-01-23,0
 Montenegro,case,2020-01-24,0
@@ -52657,6 +53353,9 @@ Montenegro,case,2020-08-31,4835
 Montenegro,case,2020-09-01,4917
 Montenegro,case,2020-09-02,5019
 Montenegro,case,2020-09-03,5165
+Montenegro,case,2020-09-04,5275
+Montenegro,case,2020-09-05,5422
+Montenegro,case,2020-09-06,5553
 Montenegro,death,2020-01-22,0
 Montenegro,death,2020-01-23,0
 Montenegro,death,2020-01-24,0
@@ -52883,6 +53582,9 @@ Montenegro,death,2020-08-31,100
 Montenegro,death,2020-09-01,102
 Montenegro,death,2020-09-02,104
 Montenegro,death,2020-09-03,104
+Montenegro,death,2020-09-04,106
+Montenegro,death,2020-09-05,107
+Montenegro,death,2020-09-06,108
 Morocco,case,2020-01-22,0
 Morocco,case,2020-01-23,0
 Morocco,case,2020-01-24,0
@@ -53109,6 +53811,9 @@ Morocco,case,2020-08-31,62590
 Morocco,case,2020-09-01,63781
 Morocco,case,2020-09-02,65453
 Morocco,case,2020-09-03,66855
+Morocco,case,2020-09-04,68605
+Morocco,case,2020-09-05,70160
+Morocco,case,2020-09-06,72394
 Morocco,death,2020-01-22,0
 Morocco,death,2020-01-23,0
 Morocco,death,2020-01-24,0
@@ -53335,6 +54040,9 @@ Morocco,death,2020-08-31,1141
 Morocco,death,2020-09-01,1184
 Morocco,death,2020-09-02,1216
 Morocco,death,2020-09-03,1253
+Morocco,death,2020-09-04,1292
+Morocco,death,2020-09-05,1329
+Morocco,death,2020-09-06,1361
 Mozambique,case,2020-01-22,0
 Mozambique,case,2020-01-23,0
 Mozambique,case,2020-01-24,0
@@ -53561,6 +54269,9 @@ Mozambique,case,2020-08-31,3916
 Mozambique,case,2020-09-01,4039
 Mozambique,case,2020-09-02,4117
 Mozambique,case,2020-09-03,4207
+Mozambique,case,2020-09-04,4265
+Mozambique,case,2020-09-05,4341
+Mozambique,case,2020-09-06,4444
 Mozambique,death,2020-01-22,0
 Mozambique,death,2020-01-23,0
 Mozambique,death,2020-01-24,0
@@ -53787,6 +54498,9 @@ Mozambique,death,2020-08-31,23
 Mozambique,death,2020-09-01,23
 Mozambique,death,2020-09-02,25
 Mozambique,death,2020-09-03,26
+Mozambique,death,2020-09-04,26
+Mozambique,death,2020-09-05,26
+Mozambique,death,2020-09-06,27
 MS Zaandam,case,2020-01-22,0
 MS Zaandam,case,2020-01-23,0
 MS Zaandam,case,2020-01-24,0
@@ -54013,6 +54727,9 @@ MS Zaandam,case,2020-08-31,9
 MS Zaandam,case,2020-09-01,9
 MS Zaandam,case,2020-09-02,9
 MS Zaandam,case,2020-09-03,9
+MS Zaandam,case,2020-09-04,9
+MS Zaandam,case,2020-09-05,9
+MS Zaandam,case,2020-09-06,9
 MS Zaandam,death,2020-01-22,0
 MS Zaandam,death,2020-01-23,0
 MS Zaandam,death,2020-01-24,0
@@ -54239,6 +54956,9 @@ MS Zaandam,death,2020-08-31,2
 MS Zaandam,death,2020-09-01,2
 MS Zaandam,death,2020-09-02,2
 MS Zaandam,death,2020-09-03,2
+MS Zaandam,death,2020-09-04,2
+MS Zaandam,death,2020-09-05,2
+MS Zaandam,death,2020-09-06,2
 Namibia,case,2020-01-22,0
 Namibia,case,2020-01-23,0
 Namibia,case,2020-01-24,0
@@ -54465,6 +55185,9 @@ Namibia,case,2020-08-31,7550
 Namibia,case,2020-09-01,7692
 Namibia,case,2020-09-02,7844
 Namibia,case,2020-09-03,8082
+Namibia,case,2020-09-04,8323
+Namibia,case,2020-09-05,8514
+Namibia,case,2020-09-06,8685
 Namibia,death,2020-01-22,0
 Namibia,death,2020-01-23,0
 Namibia,death,2020-01-24,0
@@ -54691,6 +55414,9 @@ Namibia,death,2020-08-31,75
 Namibia,death,2020-09-01,81
 Namibia,death,2020-09-02,82
 Namibia,death,2020-09-03,86
+Namibia,death,2020-09-04,87
+Namibia,death,2020-09-05,87
+Namibia,death,2020-09-06,89
 Nepal,case,2020-01-22,0
 Nepal,case,2020-01-23,0
 Nepal,case,2020-01-24,0
@@ -54917,6 +55643,9 @@ Nepal,case,2020-08-31,39460
 Nepal,case,2020-09-01,40529
 Nepal,case,2020-09-02,41649
 Nepal,case,2020-09-03,42877
+Nepal,case,2020-09-04,44236
+Nepal,case,2020-09-05,45277
+Nepal,case,2020-09-06,46257
 Nepal,death,2020-01-22,0
 Nepal,death,2020-01-23,0
 Nepal,death,2020-01-24,0
@@ -55143,6 +55872,9 @@ Nepal,death,2020-08-31,228
 Nepal,death,2020-09-01,239
 Nepal,death,2020-09-02,251
 Nepal,death,2020-09-03,257
+Nepal,death,2020-09-04,271
+Nepal,death,2020-09-05,280
+Nepal,death,2020-09-06,289
 Netherlands,case,2020-01-22,0
 Netherlands,case,2020-01-23,0
 Netherlands,case,2020-01-24,0
@@ -55369,6 +56101,9 @@ Netherlands,case,2020-08-31,73232
 Netherlands,case,2020-09-01,73802
 Netherlands,case,2020-09-02,74660
 Netherlands,case,2020-09-03,75356
+Netherlands,case,2020-09-04,76173
+Netherlands,case,2020-09-05,76907
+Netherlands,case,2020-09-06,77857
 Netherlands,death,2020-01-22,0
 Netherlands,death,2020-01-23,0
 Netherlands,death,2020-01-24,0
@@ -55595,6 +56330,9 @@ Netherlands,death,2020-08-31,6252
 Netherlands,death,2020-09-01,6260
 Netherlands,death,2020-09-02,6267
 Netherlands,death,2020-09-03,6268
+Netherlands,death,2020-09-04,6270
+Netherlands,death,2020-09-05,6275
+Netherlands,death,2020-09-06,6277
 New Zealand,case,2020-01-22,0
 New Zealand,case,2020-01-23,0
 New Zealand,case,2020-01-24,0
@@ -55821,6 +56559,9 @@ New Zealand,case,2020-08-31,1752
 New Zealand,case,2020-09-01,1757
 New Zealand,case,2020-09-02,1759
 New Zealand,case,2020-09-03,1764
+New Zealand,case,2020-09-04,1767
+New Zealand,case,2020-09-05,1772
+New Zealand,case,2020-09-06,1776
 New Zealand,death,2020-01-22,0
 New Zealand,death,2020-01-23,0
 New Zealand,death,2020-01-24,0
@@ -56047,6 +56788,9 @@ New Zealand,death,2020-08-31,22
 New Zealand,death,2020-09-01,22
 New Zealand,death,2020-09-02,22
 New Zealand,death,2020-09-03,22
+New Zealand,death,2020-09-04,24
+New Zealand,death,2020-09-05,24
+New Zealand,death,2020-09-06,24
 Nicaragua,case,2020-01-22,0
 Nicaragua,case,2020-01-23,0
 Nicaragua,case,2020-01-24,0
@@ -56273,6 +57017,9 @@ Nicaragua,case,2020-08-31,4494
 Nicaragua,case,2020-09-01,4668
 Nicaragua,case,2020-09-02,4668
 Nicaragua,case,2020-09-03,4668
+Nicaragua,case,2020-09-04,4668
+Nicaragua,case,2020-09-05,4668
+Nicaragua,case,2020-09-06,4668
 Nicaragua,death,2020-01-22,0
 Nicaragua,death,2020-01-23,0
 Nicaragua,death,2020-01-24,0
@@ -56499,6 +57246,9 @@ Nicaragua,death,2020-08-31,137
 Nicaragua,death,2020-09-01,141
 Nicaragua,death,2020-09-02,141
 Nicaragua,death,2020-09-03,141
+Nicaragua,death,2020-09-04,141
+Nicaragua,death,2020-09-05,141
+Nicaragua,death,2020-09-06,141
 Niger,case,2020-01-22,0
 Niger,case,2020-01-23,0
 Niger,case,2020-01-24,0
@@ -56725,6 +57475,9 @@ Niger,case,2020-08-31,1176
 Niger,case,2020-09-01,1176
 Niger,case,2020-09-02,1176
 Niger,case,2020-09-03,1177
+Niger,case,2020-09-04,1177
+Niger,case,2020-09-05,1177
+Niger,case,2020-09-06,1177
 Niger,death,2020-01-22,0
 Niger,death,2020-01-23,0
 Niger,death,2020-01-24,0
@@ -56951,6 +57704,9 @@ Niger,death,2020-08-31,69
 Niger,death,2020-09-01,69
 Niger,death,2020-09-02,69
 Niger,death,2020-09-03,69
+Niger,death,2020-09-04,69
+Niger,death,2020-09-05,69
+Niger,death,2020-09-06,69
 Nigeria,case,2020-01-22,0
 Nigeria,case,2020-01-23,0
 Nigeria,case,2020-01-24,0
@@ -57177,6 +57933,9 @@ Nigeria,case,2020-08-31,54008
 Nigeria,case,2020-09-01,54247
 Nigeria,case,2020-09-02,54463
 Nigeria,case,2020-09-03,54588
+Nigeria,case,2020-09-04,54743
+Nigeria,case,2020-09-05,54905
+Nigeria,case,2020-09-06,55005
 Nigeria,death,2020-01-22,0
 Nigeria,death,2020-01-23,0
 Nigeria,death,2020-01-24,0
@@ -57403,6 +58162,9 @@ Nigeria,death,2020-08-31,1013
 Nigeria,death,2020-09-01,1023
 Nigeria,death,2020-09-02,1027
 Nigeria,death,2020-09-03,1048
+Nigeria,death,2020-09-04,1051
+Nigeria,death,2020-09-05,1054
+Nigeria,death,2020-09-06,1057
 North Macedonia,case,2020-01-22,0
 North Macedonia,case,2020-01-23,0
 North Macedonia,case,2020-01-24,0
@@ -57629,6 +58391,9 @@ North Macedonia,case,2020-08-31,14341
 North Macedonia,case,2020-09-01,14455
 North Macedonia,case,2020-09-02,14600
 North Macedonia,case,2020-09-03,14762
+North Macedonia,case,2020-09-04,14871
+North Macedonia,case,2020-09-05,14998
+North Macedonia,case,2020-09-06,15090
 North Macedonia,death,2020-01-22,0
 North Macedonia,death,2020-01-23,0
 North Macedonia,death,2020-01-24,0
@@ -57855,6 +58620,9 @@ North Macedonia,death,2020-08-31,603
 North Macedonia,death,2020-09-01,604
 North Macedonia,death,2020-09-02,606
 North Macedonia,death,2020-09-03,606
+North Macedonia,death,2020-09-04,609
+North Macedonia,death,2020-09-05,614
+North Macedonia,death,2020-09-06,617
 Norway,case,2020-01-22,0
 Norway,case,2020-01-23,0
 Norway,case,2020-01-24,0
@@ -58081,6 +58849,9 @@ Norway,case,2020-08-31,10782
 Norway,case,2020-09-01,10871
 Norway,case,2020-09-02,11034
 Norway,case,2020-09-03,11120
+Norway,case,2020-09-04,11231
+Norway,case,2020-09-05,11296
+Norway,case,2020-09-06,11388
 Norway,death,2020-01-22,0
 Norway,death,2020-01-23,0
 Norway,death,2020-01-24,0
@@ -58307,6 +59078,9 @@ Norway,death,2020-08-31,264
 Norway,death,2020-09-01,264
 Norway,death,2020-09-02,264
 Norway,death,2020-09-03,264
+Norway,death,2020-09-04,264
+Norway,death,2020-09-05,264
+Norway,death,2020-09-06,264
 Oman,case,2020-01-22,0
 Oman,case,2020-01-23,0
 Oman,case,2020-01-24,0
@@ -58533,6 +59307,9 @@ Oman,case,2020-08-31,85722
 Oman,case,2020-09-01,85928
 Oman,case,2020-09-02,85928
 Oman,case,2020-09-03,86380
+Oman,case,2020-09-04,86380
+Oman,case,2020-09-05,86380
+Oman,case,2020-09-06,87072
 Oman,death,2020-01-22,0
 Oman,death,2020-01-23,0
 Oman,death,2020-01-24,0
@@ -58759,6 +59536,9 @@ Oman,death,2020-08-31,685
 Oman,death,2020-09-01,689
 Oman,death,2020-09-02,689
 Oman,death,2020-09-03,705
+Oman,death,2020-09-04,705
+Oman,death,2020-09-05,705
+Oman,death,2020-09-06,728
 Pakistan,case,2020-01-22,0
 Pakistan,case,2020-01-23,0
 Pakistan,case,2020-01-24,0
@@ -58985,6 +59765,9 @@ Pakistan,case,2020-08-31,295849
 Pakistan,case,2020-09-01,296149
 Pakistan,case,2020-09-02,297014
 Pakistan,case,2020-09-03,297512
+Pakistan,case,2020-09-04,298025
+Pakistan,case,2020-09-05,298025
+Pakistan,case,2020-09-06,298903
 Pakistan,death,2020-01-22,0
 Pakistan,death,2020-01-23,0
 Pakistan,death,2020-01-24,0
@@ -59211,6 +59994,9 @@ Pakistan,death,2020-08-31,6294
 Pakistan,death,2020-09-01,6298
 Pakistan,death,2020-09-02,6328
 Pakistan,death,2020-09-03,6335
+Pakistan,death,2020-09-04,6340
+Pakistan,death,2020-09-05,6340
+Pakistan,death,2020-09-06,6345
 Panama,case,2020-01-22,0
 Panama,case,2020-01-23,0
 Panama,case,2020-01-24,0
@@ -59437,6 +60223,9 @@ Panama,case,2020-08-31,92982
 Panama,case,2020-09-01,93552
 Panama,case,2020-09-02,94084
 Panama,case,2020-09-03,94914
+Panama,case,2020-09-04,95596
+Panama,case,2020-09-05,96305
+Panama,case,2020-09-06,97043
 Panama,death,2020-01-22,0
 Panama,death,2020-01-23,0
 Panama,death,2020-01-24,0
@@ -59663,6 +60452,9 @@ Panama,death,2020-08-31,2002
 Panama,death,2020-09-01,2018
 Panama,death,2020-09-02,2030
 Panama,death,2020-09-03,2046
+Panama,death,2020-09-04,2063
+Panama,death,2020-09-05,2075
+Panama,death,2020-09-06,2086
 Papua New Guinea,case,2020-01-22,0
 Papua New Guinea,case,2020-01-23,0
 Papua New Guinea,case,2020-01-24,0
@@ -59889,6 +60681,9 @@ Papua New Guinea,case,2020-08-31,459
 Papua New Guinea,case,2020-09-01,460
 Papua New Guinea,case,2020-09-02,471
 Papua New Guinea,case,2020-09-03,471
+Papua New Guinea,case,2020-09-04,479
+Papua New Guinea,case,2020-09-05,488
+Papua New Guinea,case,2020-09-06,497
 Papua New Guinea,death,2020-01-22,0
 Papua New Guinea,death,2020-01-23,0
 Papua New Guinea,death,2020-01-24,0
@@ -60115,6 +60910,9 @@ Papua New Guinea,death,2020-08-31,5
 Papua New Guinea,death,2020-09-01,5
 Papua New Guinea,death,2020-09-02,5
 Papua New Guinea,death,2020-09-03,5
+Papua New Guinea,death,2020-09-04,5
+Papua New Guinea,death,2020-09-05,5
+Papua New Guinea,death,2020-09-06,5
 Paraguay,case,2020-01-22,0
 Paraguay,case,2020-01-23,0
 Paraguay,case,2020-01-24,0
@@ -60341,6 +61139,9 @@ Paraguay,case,2020-08-31,17662
 Paraguay,case,2020-09-01,18338
 Paraguay,case,2020-09-02,19138
 Paraguay,case,2020-09-03,19959
+Paraguay,case,2020-09-04,20654
+Paraguay,case,2020-09-05,21871
+Paraguay,case,2020-09-06,22486
 Paraguay,death,2020-01-22,0
 Paraguay,death,2020-01-23,0
 Paraguay,death,2020-01-24,0
@@ -60567,6 +61368,9 @@ Paraguay,death,2020-08-31,326
 Paraguay,death,2020-09-01,348
 Paraguay,death,2020-09-02,358
 Paraguay,death,2020-09-03,373
+Paraguay,death,2020-09-04,398
+Paraguay,death,2020-09-05,412
+Paraguay,death,2020-09-06,435
 Peru,case,2020-01-22,0
 Peru,case,2020-01-23,0
 Peru,case,2020-01-24,0
@@ -60793,6 +61597,9 @@ Peru,case,2020-08-31,647166
 Peru,case,2020-09-01,652037
 Peru,case,2020-09-02,657129
 Peru,case,2020-09-03,657129
+Peru,case,2020-09-04,670145
+Peru,case,2020-09-05,676848
+Peru,case,2020-09-06,683702
 Peru,death,2020-01-22,0
 Peru,death,2020-01-23,0
 Peru,death,2020-01-24,0
@@ -61019,6 +61826,9 @@ Peru,death,2020-08-31,28788
 Peru,death,2020-09-01,28944
 Peru,death,2020-09-02,29068
 Peru,death,2020-09-03,29068
+Peru,death,2020-09-04,29405
+Peru,death,2020-09-05,29554
+Peru,death,2020-09-06,29687
 Philippines,case,2020-01-22,0
 Philippines,case,2020-01-23,0
 Philippines,case,2020-01-24,0
@@ -61245,6 +62055,9 @@ Philippines,case,2020-08-31,220819
 Philippines,case,2020-09-01,224264
 Philippines,case,2020-09-02,226440
 Philippines,case,2020-09-03,228403
+Philippines,case,2020-09-04,232072
+Philippines,case,2020-09-05,234570
+Philippines,case,2020-09-06,237365
 Philippines,death,2020-01-22,0
 Philippines,death,2020-01-23,0
 Philippines,death,2020-01-24,0
@@ -61471,6 +62284,9 @@ Philippines,death,2020-08-31,3558
 Philippines,death,2020-09-01,3597
 Philippines,death,2020-09-02,3623
 Philippines,death,2020-09-03,3688
+Philippines,death,2020-09-04,3737
+Philippines,death,2020-09-05,3790
+Philippines,death,2020-09-06,3875
 Poland,case,2020-01-22,0
 Poland,case,2020-01-23,0
 Poland,case,2020-01-24,0
@@ -61697,6 +62513,9 @@ Poland,case,2020-08-31,67372
 Poland,case,2020-09-01,67922
 Poland,case,2020-09-02,68517
 Poland,case,2020-09-03,69129
+Poland,case,2020-09-04,69820
+Poland,case,2020-09-05,70387
+Poland,case,2020-09-06,70824
 Poland,death,2020-01-22,0
 Poland,death,2020-01-23,0
 Poland,death,2020-01-24,0
@@ -61923,6 +62742,9 @@ Poland,death,2020-08-31,2039
 Poland,death,2020-09-01,2058
 Poland,death,2020-09-02,2078
 Poland,death,2020-09-03,2092
+Poland,death,2020-09-04,2100
+Poland,death,2020-09-05,2113
+Poland,death,2020-09-06,2120
 Portugal,case,2020-01-22,0
 Portugal,case,2020-01-23,0
 Portugal,case,2020-01-24,0
@@ -62149,6 +62971,9 @@ Portugal,case,2020-08-31,58012
 Portugal,case,2020-09-01,58243
 Portugal,case,2020-09-02,58633
 Portugal,case,2020-09-03,59051
+Portugal,case,2020-09-04,59457
+Portugal,case,2020-09-05,59943
+Portugal,case,2020-09-06,60258
 Portugal,death,2020-01-22,0
 Portugal,death,2020-01-23,0
 Portugal,death,2020-01-24,0
@@ -62375,6 +63200,9 @@ Portugal,death,2020-08-31,1822
 Portugal,death,2020-09-01,1824
 Portugal,death,2020-09-02,1827
 Portugal,death,2020-09-03,1829
+Portugal,death,2020-09-04,1833
+Portugal,death,2020-09-05,1838
+Portugal,death,2020-09-06,1840
 Qatar,case,2020-01-22,0
 Qatar,case,2020-01-23,0
 Qatar,case,2020-01-24,0
@@ -62601,6 +63429,9 @@ Qatar,case,2020-08-31,118778
 Qatar,case,2020-09-01,118994
 Qatar,case,2020-09-02,119206
 Qatar,case,2020-09-03,119420
+Qatar,case,2020-09-04,119637
+Qatar,case,2020-09-05,119864
+Qatar,case,2020-09-06,120095
 Qatar,death,2020-01-22,0
 Qatar,death,2020-01-23,0
 Qatar,death,2020-01-24,0
@@ -62827,6 +63658,9 @@ Qatar,death,2020-08-31,197
 Qatar,death,2020-09-01,198
 Qatar,death,2020-09-02,199
 Qatar,death,2020-09-03,201
+Qatar,death,2020-09-04,201
+Qatar,death,2020-09-05,202
+Qatar,death,2020-09-06,203
 Romania,case,2020-01-22,0
 Romania,case,2020-01-23,0
 Romania,case,2020-01-24,0
@@ -63053,6 +63887,9 @@ Romania,case,2020-08-31,87540
 Romania,case,2020-09-01,88593
 Romania,case,2020-09-02,89891
 Romania,case,2020-09-03,91256
+Romania,case,2020-09-04,92595
+Romania,case,2020-09-05,93864
+Romania,case,2020-09-06,95014
 Romania,death,2020-01-22,0
 Romania,death,2020-01-23,0
 Romania,death,2020-01-24,0
@@ -63279,6 +64116,9 @@ Romania,death,2020-08-31,3621
 Romania,death,2020-09-01,3681
 Romania,death,2020-09-02,3721
 Romania,death,2020-09-03,3765
+Romania,death,2020-09-04,3812
+Romania,death,2020-09-05,3850
+Romania,death,2020-09-06,3893
 Russia,case,2020-01-22,0
 Russia,case,2020-01-23,0
 Russia,case,2020-01-24,0
@@ -63505,6 +64345,9 @@ Russia,case,2020-08-31,992402
 Russia,case,2020-09-01,997072
 Russia,case,2020-09-02,1001965
 Russia,case,2020-09-03,1006923
+Russia,case,2020-09-04,1011987
+Russia,case,2020-09-05,1017131
+Russia,case,2020-09-06,1022228
 Russia,death,2020-01-22,0
 Russia,death,2020-01-23,0
 Russia,death,2020-01-24,0
@@ -63731,6 +64574,9 @@ Russia,death,2020-08-31,17128
 Russia,death,2020-09-01,17250
 Russia,death,2020-09-02,17365
 Russia,death,2020-09-03,17479
+Russia,death,2020-09-04,17598
+Russia,death,2020-09-05,17707
+Russia,death,2020-09-06,17768
 Rwanda,case,2020-01-22,0
 Rwanda,case,2020-01-23,0
 Rwanda,case,2020-01-24,0
@@ -63957,6 +64803,9 @@ Rwanda,case,2020-08-31,4063
 Rwanda,case,2020-09-01,4142
 Rwanda,case,2020-09-02,4218
 Rwanda,case,2020-09-03,4255
+Rwanda,case,2020-09-04,4304
+Rwanda,case,2020-09-05,4349
+Rwanda,case,2020-09-06,4374
 Rwanda,death,2020-01-22,0
 Rwanda,death,2020-01-23,0
 Rwanda,death,2020-01-24,0
@@ -64183,6 +65032,9 @@ Rwanda,death,2020-08-31,16
 Rwanda,death,2020-09-01,16
 Rwanda,death,2020-09-02,17
 Rwanda,death,2020-09-03,18
+Rwanda,death,2020-09-04,18
+Rwanda,death,2020-09-05,18
+Rwanda,death,2020-09-06,19
 Saint Kitts and Nevis,case,2020-01-22,0
 Saint Kitts and Nevis,case,2020-01-23,0
 Saint Kitts and Nevis,case,2020-01-24,0
@@ -64409,6 +65261,9 @@ Saint Kitts and Nevis,case,2020-08-31,17
 Saint Kitts and Nevis,case,2020-09-01,17
 Saint Kitts and Nevis,case,2020-09-02,17
 Saint Kitts and Nevis,case,2020-09-03,17
+Saint Kitts and Nevis,case,2020-09-04,17
+Saint Kitts and Nevis,case,2020-09-05,17
+Saint Kitts and Nevis,case,2020-09-06,17
 Saint Kitts and Nevis,death,2020-01-22,0
 Saint Kitts and Nevis,death,2020-01-23,0
 Saint Kitts and Nevis,death,2020-01-24,0
@@ -64635,6 +65490,9 @@ Saint Kitts and Nevis,death,2020-08-31,0
 Saint Kitts and Nevis,death,2020-09-01,0
 Saint Kitts and Nevis,death,2020-09-02,0
 Saint Kitts and Nevis,death,2020-09-03,0
+Saint Kitts and Nevis,death,2020-09-04,0
+Saint Kitts and Nevis,death,2020-09-05,0
+Saint Kitts and Nevis,death,2020-09-06,0
 Saint Lucia,case,2020-01-22,0
 Saint Lucia,case,2020-01-23,0
 Saint Lucia,case,2020-01-24,0
@@ -64861,6 +65719,9 @@ Saint Lucia,case,2020-08-31,26
 Saint Lucia,case,2020-09-01,26
 Saint Lucia,case,2020-09-02,26
 Saint Lucia,case,2020-09-03,26
+Saint Lucia,case,2020-09-04,26
+Saint Lucia,case,2020-09-05,26
+Saint Lucia,case,2020-09-06,26
 Saint Lucia,death,2020-01-22,0
 Saint Lucia,death,2020-01-23,0
 Saint Lucia,death,2020-01-24,0
@@ -65087,6 +65948,9 @@ Saint Lucia,death,2020-08-31,0
 Saint Lucia,death,2020-09-01,0
 Saint Lucia,death,2020-09-02,0
 Saint Lucia,death,2020-09-03,0
+Saint Lucia,death,2020-09-04,0
+Saint Lucia,death,2020-09-05,0
+Saint Lucia,death,2020-09-06,0
 Saint Vincent and the Grenadines,case,2020-01-22,0
 Saint Vincent and the Grenadines,case,2020-01-23,0
 Saint Vincent and the Grenadines,case,2020-01-24,0
@@ -65313,6 +66177,9 @@ Saint Vincent and the Grenadines,case,2020-08-31,60
 Saint Vincent and the Grenadines,case,2020-09-01,61
 Saint Vincent and the Grenadines,case,2020-09-02,61
 Saint Vincent and the Grenadines,case,2020-09-03,61
+Saint Vincent and the Grenadines,case,2020-09-04,61
+Saint Vincent and the Grenadines,case,2020-09-05,61
+Saint Vincent and the Grenadines,case,2020-09-06,61
 Saint Vincent and the Grenadines,death,2020-01-22,0
 Saint Vincent and the Grenadines,death,2020-01-23,0
 Saint Vincent and the Grenadines,death,2020-01-24,0
@@ -65539,6 +66406,9 @@ Saint Vincent and the Grenadines,death,2020-08-31,0
 Saint Vincent and the Grenadines,death,2020-09-01,0
 Saint Vincent and the Grenadines,death,2020-09-02,0
 Saint Vincent and the Grenadines,death,2020-09-03,0
+Saint Vincent and the Grenadines,death,2020-09-04,0
+Saint Vincent and the Grenadines,death,2020-09-05,0
+Saint Vincent and the Grenadines,death,2020-09-06,0
 San Marino,case,2020-01-22,0
 San Marino,case,2020-01-23,0
 San Marino,case,2020-01-24,0
@@ -65765,6 +66635,9 @@ San Marino,case,2020-08-31,715
 San Marino,case,2020-09-01,715
 San Marino,case,2020-09-02,735
 San Marino,case,2020-09-03,735
+San Marino,case,2020-09-04,735
+San Marino,case,2020-09-05,716
+San Marino,case,2020-09-06,716
 San Marino,death,2020-01-22,0
 San Marino,death,2020-01-23,0
 San Marino,death,2020-01-24,0
@@ -65991,6 +66864,9 @@ San Marino,death,2020-08-31,42
 San Marino,death,2020-09-01,42
 San Marino,death,2020-09-02,42
 San Marino,death,2020-09-03,42
+San Marino,death,2020-09-04,42
+San Marino,death,2020-09-05,42
+San Marino,death,2020-09-06,42
 Sao Tome and Principe,case,2020-01-22,0
 Sao Tome and Principe,case,2020-01-23,0
 Sao Tome and Principe,case,2020-01-24,0
@@ -66217,6 +67093,9 @@ Sao Tome and Principe,case,2020-08-31,896
 Sao Tome and Principe,case,2020-09-01,896
 Sao Tome and Principe,case,2020-09-02,896
 Sao Tome and Principe,case,2020-09-03,897
+Sao Tome and Principe,case,2020-09-04,897
+Sao Tome and Principe,case,2020-09-05,898
+Sao Tome and Principe,case,2020-09-06,898
 Sao Tome and Principe,death,2020-01-22,0
 Sao Tome and Principe,death,2020-01-23,0
 Sao Tome and Principe,death,2020-01-24,0
@@ -66443,6 +67322,9 @@ Sao Tome and Principe,death,2020-08-31,15
 Sao Tome and Principe,death,2020-09-01,15
 Sao Tome and Principe,death,2020-09-02,15
 Sao Tome and Principe,death,2020-09-03,15
+Sao Tome and Principe,death,2020-09-04,15
+Sao Tome and Principe,death,2020-09-05,15
+Sao Tome and Principe,death,2020-09-06,15
 Saudi Arabia,case,2020-01-22,0
 Saudi Arabia,case,2020-01-23,0
 Saudi Arabia,case,2020-01-24,0
@@ -66669,6 +67551,9 @@ Saudi Arabia,case,2020-08-31,315772
 Saudi Arabia,case,2020-09-01,316670
 Saudi Arabia,case,2020-09-02,317486
 Saudi Arabia,case,2020-09-03,318319
+Saudi Arabia,case,2020-09-04,319141
+Saudi Arabia,case,2020-09-05,319932
+Saudi Arabia,case,2020-09-06,320688
 Saudi Arabia,death,2020-01-22,0
 Saudi Arabia,death,2020-01-23,0
 Saudi Arabia,death,2020-01-24,0
@@ -66895,6 +67780,9 @@ Saudi Arabia,death,2020-08-31,3897
 Saudi Arabia,death,2020-09-01,3929
 Saudi Arabia,death,2020-09-02,3956
 Saudi Arabia,death,2020-09-03,3982
+Saudi Arabia,death,2020-09-04,4015
+Saudi Arabia,death,2020-09-05,4049
+Saudi Arabia,death,2020-09-06,4081
 Senegal,case,2020-01-22,0
 Senegal,case,2020-01-23,0
 Senegal,case,2020-01-24,0
@@ -67121,6 +68009,9 @@ Senegal,case,2020-08-31,13611
 Senegal,case,2020-09-01,13655
 Senegal,case,2020-09-02,13743
 Senegal,case,2020-09-03,13826
+Senegal,case,2020-09-04,13881
+Senegal,case,2020-09-05,13948
+Senegal,case,2020-09-06,13987
 Senegal,death,2020-01-22,0
 Senegal,death,2020-01-23,0
 Senegal,death,2020-01-24,0
@@ -67347,6 +68238,9 @@ Senegal,death,2020-08-31,284
 Senegal,death,2020-09-01,284
 Senegal,death,2020-09-02,287
 Senegal,death,2020-09-03,287
+Senegal,death,2020-09-04,289
+Senegal,death,2020-09-05,290
+Senegal,death,2020-09-06,290
 Serbia,case,2020-01-22,0
 Serbia,case,2020-01-23,0
 Serbia,case,2020-01-24,0
@@ -67573,6 +68467,9 @@ Serbia,case,2020-08-31,31406
 Serbia,case,2020-09-01,31482
 Serbia,case,2020-09-02,31581
 Serbia,case,2020-09-03,31676
+Serbia,case,2020-09-04,31772
+Serbia,case,2020-09-05,31849
+Serbia,case,2020-09-06,31905
 Serbia,death,2020-01-22,0
 Serbia,death,2020-01-23,0
 Serbia,death,2020-01-24,0
@@ -67799,6 +68696,9 @@ Serbia,death,2020-08-31,713
 Serbia,death,2020-09-01,715
 Serbia,death,2020-09-02,716
 Serbia,death,2020-09-03,718
+Serbia,death,2020-09-04,721
+Serbia,death,2020-09-05,723
+Serbia,death,2020-09-06,724
 Seychelles,case,2020-01-22,0
 Seychelles,case,2020-01-23,0
 Seychelles,case,2020-01-24,0
@@ -68025,6 +68925,9 @@ Seychelles,case,2020-08-31,136
 Seychelles,case,2020-09-01,136
 Seychelles,case,2020-09-02,136
 Seychelles,case,2020-09-03,136
+Seychelles,case,2020-09-04,136
+Seychelles,case,2020-09-05,136
+Seychelles,case,2020-09-06,136
 Seychelles,death,2020-01-22,0
 Seychelles,death,2020-01-23,0
 Seychelles,death,2020-01-24,0
@@ -68251,6 +69154,9 @@ Seychelles,death,2020-08-31,0
 Seychelles,death,2020-09-01,0
 Seychelles,death,2020-09-02,0
 Seychelles,death,2020-09-03,0
+Seychelles,death,2020-09-04,0
+Seychelles,death,2020-09-05,0
+Seychelles,death,2020-09-06,0
 Sierra Leone,case,2020-01-22,0
 Sierra Leone,case,2020-01-23,0
 Sierra Leone,case,2020-01-24,0
@@ -68477,6 +69383,9 @@ Sierra Leone,case,2020-08-31,2022
 Sierra Leone,case,2020-09-01,2028
 Sierra Leone,case,2020-09-02,2029
 Sierra Leone,case,2020-09-03,2035
+Sierra Leone,case,2020-09-04,2041
+Sierra Leone,case,2020-09-05,2041
+Sierra Leone,case,2020-09-06,2054
 Sierra Leone,death,2020-01-22,0
 Sierra Leone,death,2020-01-23,0
 Sierra Leone,death,2020-01-24,0
@@ -68703,6 +69612,9 @@ Sierra Leone,death,2020-08-31,70
 Sierra Leone,death,2020-09-01,71
 Sierra Leone,death,2020-09-02,71
 Sierra Leone,death,2020-09-03,71
+Sierra Leone,death,2020-09-04,71
+Sierra Leone,death,2020-09-05,71
+Sierra Leone,death,2020-09-06,71
 Singapore,case,2020-01-22,0
 Singapore,case,2020-01-23,1
 Singapore,case,2020-01-24,3
@@ -68929,6 +69841,9 @@ Singapore,case,2020-08-31,56812
 Singapore,case,2020-09-01,56852
 Singapore,case,2020-09-02,56860
 Singapore,case,2020-09-03,56908
+Singapore,case,2020-09-04,56948
+Singapore,case,2020-09-05,56982
+Singapore,case,2020-09-06,57022
 Singapore,death,2020-01-22,0
 Singapore,death,2020-01-23,0
 Singapore,death,2020-01-24,0
@@ -69155,6 +70070,9 @@ Singapore,death,2020-08-31,27
 Singapore,death,2020-09-01,27
 Singapore,death,2020-09-02,27
 Singapore,death,2020-09-03,27
+Singapore,death,2020-09-04,27
+Singapore,death,2020-09-05,27
+Singapore,death,2020-09-06,27
 Slovakia,case,2020-01-22,0
 Slovakia,case,2020-01-23,0
 Slovakia,case,2020-01-24,0
@@ -69381,6 +70299,9 @@ Slovakia,case,2020-08-31,3917
 Slovakia,case,2020-09-01,3989
 Slovakia,case,2020-09-02,4042
 Slovakia,case,2020-09-03,4163
+Slovakia,case,2020-09-04,4300
+Slovakia,case,2020-09-05,4526
+Slovakia,case,2020-09-06,4614
 Slovakia,death,2020-01-22,0
 Slovakia,death,2020-01-23,0
 Slovakia,death,2020-01-24,0
@@ -69607,6 +70528,9 @@ Slovakia,death,2020-08-31,33
 Slovakia,death,2020-09-01,33
 Slovakia,death,2020-09-02,33
 Slovakia,death,2020-09-03,37
+Slovakia,death,2020-09-04,37
+Slovakia,death,2020-09-05,37
+Slovakia,death,2020-09-06,37
 Slovenia,case,2020-01-22,0
 Slovenia,case,2020-01-23,0
 Slovenia,case,2020-01-24,0
@@ -69833,6 +70757,9 @@ Slovenia,case,2020-08-31,2883
 Slovenia,case,2020-09-01,2924
 Slovenia,case,2020-09-02,2979
 Slovenia,case,2020-09-03,3032
+Slovenia,case,2020-09-04,3079
+Slovenia,case,2020-09-05,3122
+Slovenia,case,2020-09-06,3165
 Slovenia,death,2020-01-22,0
 Slovenia,death,2020-01-23,0
 Slovenia,death,2020-01-24,0
@@ -70059,6 +70986,9 @@ Slovenia,death,2020-08-31,133
 Slovenia,death,2020-09-01,133
 Slovenia,death,2020-09-02,134
 Slovenia,death,2020-09-03,134
+Slovenia,death,2020-09-04,134
+Slovenia,death,2020-09-05,135
+Slovenia,death,2020-09-06,135
 Somalia,case,2020-01-22,0
 Somalia,case,2020-01-23,0
 Somalia,case,2020-01-24,0
@@ -70285,6 +71215,9 @@ Somalia,case,2020-08-31,3310
 Somalia,case,2020-09-01,3310
 Somalia,case,2020-09-02,3310
 Somalia,case,2020-09-03,3310
+Somalia,case,2020-09-04,3332
+Somalia,case,2020-09-05,3332
+Somalia,case,2020-09-06,3362
 Somalia,death,2020-01-22,0
 Somalia,death,2020-01-23,0
 Somalia,death,2020-01-24,0
@@ -70511,6 +71444,9 @@ Somalia,death,2020-08-31,98
 Somalia,death,2020-09-01,98
 Somalia,death,2020-09-02,98
 Somalia,death,2020-09-03,98
+Somalia,death,2020-09-04,97
+Somalia,death,2020-09-05,97
+Somalia,death,2020-09-06,97
 South Africa,case,2020-01-22,0
 South Africa,case,2020-01-23,0
 South Africa,case,2020-01-24,0
@@ -70737,6 +71673,9 @@ South Africa,case,2020-08-31,627041
 South Africa,case,2020-09-01,628259
 South Africa,case,2020-09-02,630595
 South Africa,case,2020-09-03,633015
+South Africa,case,2020-09-04,635078
+South Africa,case,2020-09-05,636884
+South Africa,case,2020-09-06,638517
 South Africa,death,2020-01-22,0
 South Africa,death,2020-01-23,0
 South Africa,death,2020-01-24,0
@@ -70963,6 +71902,9 @@ South Africa,death,2020-08-31,14149
 South Africa,death,2020-09-01,14263
 South Africa,death,2020-09-02,14389
 South Africa,death,2020-09-03,14563
+South Africa,death,2020-09-04,14678
+South Africa,death,2020-09-05,14779
+South Africa,death,2020-09-06,14889
 South Sudan,case,2020-01-22,0
 South Sudan,case,2020-01-23,0
 South Sudan,case,2020-01-24,0
@@ -71189,6 +72131,9 @@ South Sudan,case,2020-08-31,2527
 South Sudan,case,2020-09-01,2527
 South Sudan,case,2020-09-02,2532
 South Sudan,case,2020-09-03,2533
+South Sudan,case,2020-09-04,2536
+South Sudan,case,2020-09-05,2544
+South Sudan,case,2020-09-06,2544
 South Sudan,death,2020-01-22,0
 South Sudan,death,2020-01-23,0
 South Sudan,death,2020-01-24,0
@@ -71415,6 +72360,9 @@ South Sudan,death,2020-08-31,47
 South Sudan,death,2020-09-01,47
 South Sudan,death,2020-09-02,47
 South Sudan,death,2020-09-03,47
+South Sudan,death,2020-09-04,47
+South Sudan,death,2020-09-05,48
+South Sudan,death,2020-09-06,48
 Spain,case,2020-01-22,0
 Spain,case,2020-01-23,0
 Spain,case,2020-01-24,0
@@ -71641,6 +72589,9 @@ Spain,case,2020-08-31,462858
 Spain,case,2020-09-01,470973
 Spain,case,2020-09-02,479554
 Spain,case,2020-09-03,488513
+Spain,case,2020-09-04,498989
+Spain,case,2020-09-05,498989
+Spain,case,2020-09-06,498989
 Spain,death,2020-01-22,0
 Spain,death,2020-01-23,0
 Spain,death,2020-01-24,0
@@ -71867,6 +72818,9 @@ Spain,death,2020-08-31,29094
 Spain,death,2020-09-01,29152
 Spain,death,2020-09-02,29194
 Spain,death,2020-09-03,29234
+Spain,death,2020-09-04,29418
+Spain,death,2020-09-05,29418
+Spain,death,2020-09-06,29418
 Sri Lanka,case,2020-01-22,0
 Sri Lanka,case,2020-01-23,0
 Sri Lanka,case,2020-01-24,0
@@ -72093,6 +73047,9 @@ Sri Lanka,case,2020-08-31,3049
 Sri Lanka,case,2020-09-01,3092
 Sri Lanka,case,2020-09-02,3101
 Sri Lanka,case,2020-09-03,3111
+Sri Lanka,case,2020-09-04,3115
+Sri Lanka,case,2020-09-05,3121
+Sri Lanka,case,2020-09-06,3123
 Sri Lanka,death,2020-01-22,0
 Sri Lanka,death,2020-01-23,0
 Sri Lanka,death,2020-01-24,0
@@ -72319,6 +73276,9 @@ Sri Lanka,death,2020-08-31,12
 Sri Lanka,death,2020-09-01,12
 Sri Lanka,death,2020-09-02,12
 Sri Lanka,death,2020-09-03,12
+Sri Lanka,death,2020-09-04,12
+Sri Lanka,death,2020-09-05,12
+Sri Lanka,death,2020-09-06,12
 Sudan,case,2020-01-22,0
 Sudan,case,2020-01-23,0
 Sudan,case,2020-01-24,0
@@ -72545,6 +73505,9 @@ Sudan,case,2020-08-31,13189
 Sudan,case,2020-09-01,13189
 Sudan,case,2020-09-02,13189
 Sudan,case,2020-09-03,13189
+Sudan,case,2020-09-04,13189
+Sudan,case,2020-09-05,13407
+Sudan,case,2020-09-06,13437
 Sudan,death,2020-01-22,0
 Sudan,death,2020-01-23,0
 Sudan,death,2020-01-24,0
@@ -72771,6 +73734,9 @@ Sudan,death,2020-08-31,823
 Sudan,death,2020-09-01,823
 Sudan,death,2020-09-02,823
 Sudan,death,2020-09-03,823
+Sudan,death,2020-09-04,823
+Sudan,death,2020-09-05,832
+Sudan,death,2020-09-06,833
 Suriname,case,2020-01-22,0
 Suriname,case,2020-01-23,0
 Suriname,case,2020-01-24,0
@@ -72997,6 +73963,9 @@ Suriname,case,2020-08-31,4034
 Suriname,case,2020-09-01,4089
 Suriname,case,2020-09-02,4149
 Suriname,case,2020-09-03,4215
+Suriname,case,2020-09-04,4252
+Suriname,case,2020-09-05,4320
+Suriname,case,2020-09-06,4346
 Suriname,death,2020-01-22,0
 Suriname,death,2020-01-23,0
 Suriname,death,2020-01-24,0
@@ -73223,6 +74192,9 @@ Suriname,death,2020-08-31,71
 Suriname,death,2020-09-01,72
 Suriname,death,2020-09-02,72
 Suriname,death,2020-09-03,73
+Suriname,death,2020-09-04,75
+Suriname,death,2020-09-05,76
+Suriname,death,2020-09-06,85
 Sweden,case,2020-01-22,0
 Sweden,case,2020-01-23,0
 Sweden,case,2020-01-24,0
@@ -73449,6 +74421,9 @@ Sweden,case,2020-08-31,84379
 Sweden,case,2020-09-01,84521
 Sweden,case,2020-09-02,84532
 Sweden,case,2020-09-03,84729
+Sweden,case,2020-09-04,84985
+Sweden,case,2020-09-05,84985
+Sweden,case,2020-09-06,84985
 Sweden,death,2020-01-22,0
 Sweden,death,2020-01-23,0
 Sweden,death,2020-01-24,0
@@ -73675,6 +74650,9 @@ Sweden,death,2020-08-31,5808
 Sweden,death,2020-09-01,5813
 Sweden,death,2020-09-02,5820
 Sweden,death,2020-09-03,5832
+Sweden,death,2020-09-04,5835
+Sweden,death,2020-09-05,5835
+Sweden,death,2020-09-06,5835
 Switzerland,case,2020-01-22,0
 Switzerland,case,2020-01-23,0
 Switzerland,case,2020-01-24,0
@@ -73901,6 +74879,9 @@ Switzerland,case,2020-08-31,42177
 Switzerland,case,2020-09-01,42393
 Switzerland,case,2020-09-02,42763
 Switzerland,case,2020-09-03,43127
+Switzerland,case,2020-09-04,43532
+Switzerland,case,2020-09-05,43957
+Switzerland,case,2020-09-06,44401
 Switzerland,death,2020-01-22,0
 Switzerland,death,2020-01-23,0
 Switzerland,death,2020-01-24,0
@@ -74127,6 +75108,9 @@ Switzerland,death,2020-08-31,2006
 Switzerland,death,2020-09-01,2011
 Switzerland,death,2020-09-02,2011
 Switzerland,death,2020-09-03,2013
+Switzerland,death,2020-09-04,2013
+Switzerland,death,2020-09-05,2013
+Switzerland,death,2020-09-06,2013
 Syria,case,2020-01-22,0
 Syria,case,2020-01-23,0
 Syria,case,2020-01-24,0
@@ -74353,6 +75337,9 @@ Syria,case,2020-08-31,2765
 Syria,case,2020-09-01,2830
 Syria,case,2020-09-02,2898
 Syria,case,2020-09-03,2973
+Syria,case,2020-09-04,3041
+Syria,case,2020-09-05,3104
+Syria,case,2020-09-06,3171
 Syria,death,2020-01-22,0
 Syria,death,2020-01-23,0
 Syria,death,2020-01-24,0
@@ -74579,6 +75566,9 @@ Syria,death,2020-08-31,112
 Syria,death,2020-09-01,116
 Syria,death,2020-09-02,120
 Syria,death,2020-09-03,124
+Syria,death,2020-09-04,127
+Syria,death,2020-09-05,130
+Syria,death,2020-09-06,134
 Taiwan*,case,2020-01-22,1
 Taiwan*,case,2020-01-23,1
 Taiwan*,case,2020-01-24,3
@@ -74805,6 +75795,9 @@ Taiwan*,case,2020-08-31,488
 Taiwan*,case,2020-09-01,488
 Taiwan*,case,2020-09-02,489
 Taiwan*,case,2020-09-03,489
+Taiwan*,case,2020-09-04,490
+Taiwan*,case,2020-09-05,492
+Taiwan*,case,2020-09-06,493
 Taiwan*,death,2020-01-22,0
 Taiwan*,death,2020-01-23,0
 Taiwan*,death,2020-01-24,0
@@ -75031,6 +76024,9 @@ Taiwan*,death,2020-08-31,7
 Taiwan*,death,2020-09-01,7
 Taiwan*,death,2020-09-02,7
 Taiwan*,death,2020-09-03,7
+Taiwan*,death,2020-09-04,7
+Taiwan*,death,2020-09-05,7
+Taiwan*,death,2020-09-06,7
 Tajikistan,case,2020-01-22,0
 Tajikistan,case,2020-01-23,0
 Tajikistan,case,2020-01-24,0
@@ -75257,6 +76253,9 @@ Tajikistan,case,2020-08-31,8583
 Tajikistan,case,2020-09-01,8619
 Tajikistan,case,2020-09-02,8654
 Tajikistan,case,2020-09-03,8690
+Tajikistan,case,2020-09-04,8724
+Tajikistan,case,2020-09-05,8757
+Tajikistan,case,2020-09-06,8792
 Tajikistan,death,2020-01-22,0
 Tajikistan,death,2020-01-23,0
 Tajikistan,death,2020-01-24,0
@@ -75483,6 +76482,9 @@ Tajikistan,death,2020-08-31,68
 Tajikistan,death,2020-09-01,68
 Tajikistan,death,2020-09-02,69
 Tajikistan,death,2020-09-03,69
+Tajikistan,death,2020-09-04,69
+Tajikistan,death,2020-09-05,70
+Tajikistan,death,2020-09-06,70
 Tanzania,case,2020-01-22,0
 Tanzania,case,2020-01-23,0
 Tanzania,case,2020-01-24,0
@@ -75709,6 +76711,9 @@ Tanzania,case,2020-08-31,509
 Tanzania,case,2020-09-01,509
 Tanzania,case,2020-09-02,509
 Tanzania,case,2020-09-03,509
+Tanzania,case,2020-09-04,509
+Tanzania,case,2020-09-05,509
+Tanzania,case,2020-09-06,509
 Tanzania,death,2020-01-22,0
 Tanzania,death,2020-01-23,0
 Tanzania,death,2020-01-24,0
@@ -75935,6 +76940,9 @@ Tanzania,death,2020-08-31,21
 Tanzania,death,2020-09-01,21
 Tanzania,death,2020-09-02,21
 Tanzania,death,2020-09-03,21
+Tanzania,death,2020-09-04,21
+Tanzania,death,2020-09-05,21
+Tanzania,death,2020-09-06,21
 Thailand,case,2020-01-22,2
 Thailand,case,2020-01-23,3
 Thailand,case,2020-01-24,5
@@ -76161,6 +77169,9 @@ Thailand,case,2020-08-31,3417
 Thailand,case,2020-09-01,3425
 Thailand,case,2020-09-02,3427
 Thailand,case,2020-09-03,3431
+Thailand,case,2020-09-04,3431
+Thailand,case,2020-09-05,3444
+Thailand,case,2020-09-06,3445
 Thailand,death,2020-01-22,0
 Thailand,death,2020-01-23,0
 Thailand,death,2020-01-24,0
@@ -76387,6 +77398,9 @@ Thailand,death,2020-08-31,58
 Thailand,death,2020-09-01,58
 Thailand,death,2020-09-02,58
 Thailand,death,2020-09-03,58
+Thailand,death,2020-09-04,58
+Thailand,death,2020-09-05,58
+Thailand,death,2020-09-06,58
 Timor-Leste,case,2020-01-22,0
 Timor-Leste,case,2020-01-23,0
 Timor-Leste,case,2020-01-24,0
@@ -76613,6 +77627,9 @@ Timor-Leste,case,2020-08-31,27
 Timor-Leste,case,2020-09-01,27
 Timor-Leste,case,2020-09-02,27
 Timor-Leste,case,2020-09-03,27
+Timor-Leste,case,2020-09-04,27
+Timor-Leste,case,2020-09-05,27
+Timor-Leste,case,2020-09-06,27
 Timor-Leste,death,2020-01-22,0
 Timor-Leste,death,2020-01-23,0
 Timor-Leste,death,2020-01-24,0
@@ -76839,6 +77856,9 @@ Timor-Leste,death,2020-08-31,0
 Timor-Leste,death,2020-09-01,0
 Timor-Leste,death,2020-09-02,0
 Timor-Leste,death,2020-09-03,0
+Timor-Leste,death,2020-09-04,0
+Timor-Leste,death,2020-09-05,0
+Timor-Leste,death,2020-09-06,0
 Togo,case,2020-01-22,0
 Togo,case,2020-01-23,0
 Togo,case,2020-01-24,0
@@ -77065,6 +78085,9 @@ Togo,case,2020-08-31,1400
 Togo,case,2020-09-01,1416
 Togo,case,2020-09-02,1434
 Togo,case,2020-09-03,1443
+Togo,case,2020-09-04,1457
+Togo,case,2020-09-05,1477
+Togo,case,2020-09-06,1488
 Togo,death,2020-01-22,0
 Togo,death,2020-01-23,0
 Togo,death,2020-01-24,0
@@ -77291,6 +78314,9 @@ Togo,death,2020-08-31,28
 Togo,death,2020-09-01,28
 Togo,death,2020-09-02,30
 Togo,death,2020-09-03,31
+Togo,death,2020-09-04,31
+Togo,death,2020-09-05,32
+Togo,death,2020-09-06,32
 Trinidad and Tobago,case,2020-01-22,0
 Trinidad and Tobago,case,2020-01-23,0
 Trinidad and Tobago,case,2020-01-24,0
@@ -77517,6 +78543,9 @@ Trinidad and Tobago,case,2020-08-31,1759
 Trinidad and Tobago,case,2020-09-01,1797
 Trinidad and Tobago,case,2020-09-02,1920
 Trinidad and Tobago,case,2020-09-03,1984
+Trinidad and Tobago,case,2020-09-04,2040
+Trinidad and Tobago,case,2020-09-05,2230
+Trinidad and Tobago,case,2020-09-06,2250
 Trinidad and Tobago,death,2020-01-22,0
 Trinidad and Tobago,death,2020-01-23,0
 Trinidad and Tobago,death,2020-01-24,0
@@ -77743,6 +78772,9 @@ Trinidad and Tobago,death,2020-08-31,22
 Trinidad and Tobago,death,2020-09-01,27
 Trinidad and Tobago,death,2020-09-02,28
 Trinidad and Tobago,death,2020-09-03,29
+Trinidad and Tobago,death,2020-09-04,31
+Trinidad and Tobago,death,2020-09-05,33
+Trinidad and Tobago,death,2020-09-06,34
 Tunisia,case,2020-01-22,0
 Tunisia,case,2020-01-23,0
 Tunisia,case,2020-01-24,0
@@ -77969,6 +79001,9 @@ Tunisia,case,2020-08-31,3803
 Tunisia,case,2020-09-01,3963
 Tunisia,case,2020-09-02,4196
 Tunisia,case,2020-09-03,4394
+Tunisia,case,2020-09-04,4542
+Tunisia,case,2020-09-05,4776
+Tunisia,case,2020-09-06,5041
 Tunisia,death,2020-01-22,0
 Tunisia,death,2020-01-23,0
 Tunisia,death,2020-01-24,0
@@ -78195,6 +79230,9 @@ Tunisia,death,2020-08-31,77
 Tunisia,death,2020-09-01,80
 Tunisia,death,2020-09-02,81
 Tunisia,death,2020-09-03,84
+Tunisia,death,2020-09-04,87
+Tunisia,death,2020-09-05,93
+Tunisia,death,2020-09-06,93
 Turkey,case,2020-01-22,0
 Turkey,case,2020-01-23,0
 Turkey,case,2020-01-24,0
@@ -78421,6 +79459,9 @@ Turkey,case,2020-08-31,270133
 Turkey,case,2020-09-01,271705
 Turkey,case,2020-09-02,273301
 Turkey,case,2020-09-03,274943
+Turkey,case,2020-09-04,276555
+Turkey,case,2020-09-05,278228
+Turkey,case,2020-09-06,279806
 Turkey,death,2020-01-22,0
 Turkey,death,2020-01-23,0
 Turkey,death,2020-01-24,0
@@ -78647,6 +79688,9 @@ Turkey,death,2020-08-31,6370
 Turkey,death,2020-09-01,6417
 Turkey,death,2020-09-02,6462
 Turkey,death,2020-09-03,6511
+Turkey,death,2020-09-04,6564
+Turkey,death,2020-09-05,6620
+Turkey,death,2020-09-06,6673
 Uganda,case,2020-01-22,0
 Uganda,case,2020-01-23,0
 Uganda,case,2020-01-24,0
@@ -78873,6 +79917,9 @@ Uganda,case,2020-08-31,2972
 Uganda,case,2020-09-01,3037
 Uganda,case,2020-09-02,3112
 Uganda,case,2020-09-03,3288
+Uganda,case,2020-09-04,3353
+Uganda,case,2020-09-05,3539
+Uganda,case,2020-09-06,3667
 Uganda,death,2020-01-22,0
 Uganda,death,2020-01-23,0
 Uganda,death,2020-01-24,0
@@ -79099,6 +80146,9 @@ Uganda,death,2020-08-31,32
 Uganda,death,2020-09-01,32
 Uganda,death,2020-09-02,32
 Uganda,death,2020-09-03,33
+Uganda,death,2020-09-04,35
+Uganda,death,2020-09-05,39
+Uganda,death,2020-09-06,41
 Ukraine,case,2020-01-22,0
 Ukraine,case,2020-01-23,0
 Ukraine,case,2020-01-24,0
@@ -79325,6 +80375,9 @@ Ukraine,case,2020-08-31,124132
 Ukraine,case,2020-09-01,126279
 Ukraine,case,2020-09-02,128833
 Ukraine,case,2020-09-03,131300
+Ukraine,case,2020-09-04,134069
+Ukraine,case,2020-09-05,136966
+Ukraine,case,2020-09-06,139171
 Ukraine,death,2020-01-22,0
 Ukraine,death,2020-01-23,0
 Ukraine,death,2020-01-24,0
@@ -79551,6 +80604,9 @@ Ukraine,death,2020-08-31,2605
 Ukraine,death,2020-09-01,2654
 Ukraine,death,2020-09-02,2705
 Ukraine,death,2020-09-03,2759
+Ukraine,death,2020-09-04,2812
+Ukraine,death,2020-09-05,2863
+Ukraine,death,2020-09-06,2898
 United Arab Emirates,case,2020-01-22,0
 United Arab Emirates,case,2020-01-23,0
 United Arab Emirates,case,2020-01-24,0
@@ -79777,6 +80833,9 @@ United Arab Emirates,case,2020-08-31,70231
 United Arab Emirates,case,2020-09-01,70805
 United Arab Emirates,case,2020-09-02,71540
 United Arab Emirates,case,2020-09-03,72154
+United Arab Emirates,case,2020-09-04,72766
+United Arab Emirates,case,2020-09-05,73471
+United Arab Emirates,case,2020-09-06,73984
 United Arab Emirates,death,2020-01-22,0
 United Arab Emirates,death,2020-01-23,0
 United Arab Emirates,death,2020-01-24,0
@@ -80003,6 +81062,9 @@ United Arab Emirates,death,2020-08-31,384
 United Arab Emirates,death,2020-09-01,384
 United Arab Emirates,death,2020-09-02,387
 United Arab Emirates,death,2020-09-03,387
+United Arab Emirates,death,2020-09-04,387
+United Arab Emirates,death,2020-09-05,388
+United Arab Emirates,death,2020-09-06,388
 United Kingdom,case,2020-01-22,0
 United Kingdom,case,2020-01-23,0
 United Kingdom,case,2020-01-24,0
@@ -80229,6 +81291,9 @@ United Kingdom,case,2020-08-31,338083
 United Kingdom,case,2020-09-01,339415
 United Kingdom,case,2020-09-02,340929
 United Kingdom,case,2020-09-03,342708
+United Kingdom,case,2020-09-04,344686
+United Kingdom,case,2020-09-05,346513
+United Kingdom,case,2020-09-06,349500
 United Kingdom,death,2020-01-22,0
 United Kingdom,death,2020-01-23,0
 United Kingdom,death,2020-01-24,0
@@ -80455,6 +81520,9 @@ United Kingdom,death,2020-08-31,41589
 United Kingdom,death,2020-09-01,41592
 United Kingdom,death,2020-09-02,41602
 United Kingdom,death,2020-09-03,41616
+United Kingdom,death,2020-09-04,41626
+United Kingdom,death,2020-09-05,41638
+United Kingdom,death,2020-09-06,41640
 Uruguay,case,2020-01-22,0
 Uruguay,case,2020-01-23,0
 Uruguay,case,2020-01-24,0
@@ -80681,6 +81749,9 @@ Uruguay,case,2020-08-31,1595
 Uruguay,case,2020-09-01,1611
 Uruguay,case,2020-09-02,1626
 Uruguay,case,2020-09-03,1636
+Uruguay,case,2020-09-04,1653
+Uruguay,case,2020-09-05,1669
+Uruguay,case,2020-09-06,1679
 Uruguay,death,2020-01-22,0
 Uruguay,death,2020-01-23,0
 Uruguay,death,2020-01-24,0
@@ -80907,6 +81978,9 @@ Uruguay,death,2020-08-31,44
 Uruguay,death,2020-09-01,44
 Uruguay,death,2020-09-02,44
 Uruguay,death,2020-09-03,44
+Uruguay,death,2020-09-04,45
+Uruguay,death,2020-09-05,45
+Uruguay,death,2020-09-06,45
 US,case,2020-01-22,1
 US,case,2020-01-23,1
 US,case,2020-01-24,2
@@ -81133,6 +82207,9 @@ US,case,2020-08-31,6030587
 US,case,2020-09-01,6073840
 US,case,2020-09-02,6113510
 US,case,2020-09-03,6150016
+US,case,2020-09-04,6200518
+US,case,2020-09-05,6244970
+US,case,2020-09-06,6276365
 US,death,2020-01-22,0
 US,death,2020-01-23,0
 US,death,2020-01-24,0
@@ -81359,6 +82436,9 @@ US,death,2020-08-31,183597
 US,death,2020-09-01,184664
 US,death,2020-09-02,185720
 US,death,2020-09-03,186790
+US,death,2020-09-04,187755
+US,death,2020-09-05,188538
+US,death,2020-09-06,188941
 US - Alabama,case,2020-01-22,0
 US - Alabama,case,2020-01-23,0
 US - Alabama,case,2020-01-24,0
@@ -81585,6 +82665,9 @@ US - Alabama,case,2020-08-31,126058
 US - Alabama,case,2020-09-01,127616
 US - Alabama,case,2020-09-02,128239
 US - Alabama,case,2020-09-03,129285
+US - Alabama,case,2020-09-04,130393
+US - Alabama,case,2020-09-05,131803
+US - Alabama,case,2020-09-06,132314
 US - Alabama,death,2020-01-22,0
 US - Alabama,death,2020-01-23,0
 US - Alabama,death,2020-01-24,0
@@ -81811,6 +82894,9 @@ US - Alabama,death,2020-08-31,2182
 US - Alabama,death,2020-09-01,2200
 US - Alabama,death,2020-09-02,2217
 US - Alabama,death,2020-09-03,2233
+US - Alabama,death,2020-09-04,2266
+US - Alabama,death,2020-09-05,2275
+US - Alabama,death,2020-09-06,2276
 US - Alaska,case,2020-01-22,0
 US - Alaska,case,2020-01-23,0
 US - Alaska,case,2020-01-24,0
@@ -82037,6 +83123,9 @@ US - Alaska,case,2020-08-31,5263
 US - Alaska,case,2020-09-01,5297
 US - Alaska,case,2020-09-02,5362
 US - Alaska,case,2020-09-03,5464
+US - Alaska,case,2020-09-04,5584
+US - Alaska,case,2020-09-05,5677
+US - Alaska,case,2020-09-06,5760
 US - Alaska,death,2020-01-22,0
 US - Alaska,death,2020-01-23,0
 US - Alaska,death,2020-01-24,0
@@ -82263,6 +83352,9 @@ US - Alaska,death,2020-08-31,37
 US - Alaska,death,2020-09-01,39
 US - Alaska,death,2020-09-02,39
 US - Alaska,death,2020-09-03,40
+US - Alaska,death,2020-09-04,40
+US - Alaska,death,2020-09-05,42
+US - Alaska,death,2020-09-06,42
 US - American Samoa,case,2020-01-22,0
 US - American Samoa,case,2020-01-23,0
 US - American Samoa,case,2020-01-24,0
@@ -82489,6 +83581,9 @@ US - American Samoa,case,2020-08-31,0
 US - American Samoa,case,2020-09-01,0
 US - American Samoa,case,2020-09-02,0
 US - American Samoa,case,2020-09-03,0
+US - American Samoa,case,2020-09-04,0
+US - American Samoa,case,2020-09-05,0
+US - American Samoa,case,2020-09-06,0
 US - American Samoa,death,2020-01-22,0
 US - American Samoa,death,2020-01-23,0
 US - American Samoa,death,2020-01-24,0
@@ -82715,6 +83810,9 @@ US - American Samoa,death,2020-08-31,0
 US - American Samoa,death,2020-09-01,0
 US - American Samoa,death,2020-09-02,0
 US - American Samoa,death,2020-09-03,0
+US - American Samoa,death,2020-09-04,0
+US - American Samoa,death,2020-09-05,0
+US - American Samoa,death,2020-09-06,0
 US - Arizona,case,2020-01-22,0
 US - Arizona,case,2020-01-23,0
 US - Arizona,case,2020-01-24,0
@@ -82941,6 +84039,9 @@ US - Arizona,case,2020-08-31,201835
 US - Arizona,case,2020-09-01,202342
 US - Arizona,case,2020-09-02,202861
 US - Arizona,case,2020-09-03,203953
+US - Arizona,case,2020-09-04,204681
+US - Arizona,case,2020-09-05,205517
+US - Arizona,case,2020-09-06,205767
 US - Arizona,death,2020-01-22,0
 US - Arizona,death,2020-01-23,0
 US - Arizona,death,2020-01-24,0
@@ -83167,6 +84268,9 @@ US - Arizona,death,2020-08-31,5029
 US - Arizona,death,2020-09-01,5044
 US - Arizona,death,2020-09-02,5065
 US - Arizona,death,2020-09-03,5130
+US - Arizona,death,2020-09-04,5171
+US - Arizona,death,2020-09-05,5207
+US - Arizona,death,2020-09-06,5221
 US - Arkansas,case,2020-01-22,0
 US - Arkansas,case,2020-01-23,0
 US - Arkansas,case,2020-01-24,0
@@ -83393,6 +84497,9 @@ US - Arkansas,case,2020-08-31,61224
 US - Arkansas,case,2020-09-01,61497
 US - Arkansas,case,2020-09-02,62112
 US - Arkansas,case,2020-09-03,63081
+US - Arkansas,case,2020-09-04,64175
+US - Arkansas,case,2020-09-05,64690
+US - Arkansas,case,2020-09-06,65377
 US - Arkansas,death,2020-01-22,0
 US - Arkansas,death,2020-01-23,0
 US - Arkansas,death,2020-01-24,0
@@ -83619,6 +84726,9 @@ US - Arkansas,death,2020-08-31,797
 US - Arkansas,death,2020-09-01,814
 US - Arkansas,death,2020-09-02,841
 US - Arkansas,death,2020-09-03,861
+US - Arkansas,death,2020-09-04,873
+US - Arkansas,death,2020-09-05,882
+US - Arkansas,death,2020-09-06,894
 US - California,case,2020-01-22,0
 US - California,case,2020-01-23,0
 US - California,case,2020-01-24,0
@@ -83845,6 +84955,9 @@ US - California,case,2020-08-31,712475
 US - California,case,2020-09-01,715617
 US - California,case,2020-09-02,721281
 US - California,case,2020-09-03,726018
+US - California,case,2020-09-04,730662
+US - California,case,2020-09-05,735314
+US - California,case,2020-09-06,738856
 US - California,death,2020-01-22,0
 US - California,death,2020-01-23,0
 US - California,death,2020-01-24,0
@@ -84071,6 +85184,9 @@ US - California,death,2020-08-31,13022
 US - California,death,2020-09-01,13150
 US - California,death,2020-09-02,13317
 US - California,death,2020-09-03,13493
+US - California,death,2020-09-04,13638
+US - California,death,2020-09-05,13709
+US - California,death,2020-09-06,13731
 US - Colorado,case,2020-01-22,0
 US - Colorado,case,2020-01-23,0
 US - Colorado,case,2020-01-24,0
@@ -84297,6 +85413,9 @@ US - Colorado,case,2020-08-31,57404
 US - Colorado,case,2020-09-01,57755
 US - Colorado,case,2020-09-02,57999
 US - Colorado,case,2020-09-03,58267
+US - Colorado,case,2020-09-04,58267
+US - Colorado,case,2020-09-05,58966
+US - Colorado,case,2020-09-06,59251
 US - Colorado,death,2020-01-22,0
 US - Colorado,death,2020-01-23,0
 US - Colorado,death,2020-01-24,0
@@ -84523,6 +85642,9 @@ US - Colorado,death,2020-08-31,1945
 US - Colorado,death,2020-09-01,1946
 US - Colorado,death,2020-09-02,1952
 US - Colorado,death,2020-09-03,1955
+US - Colorado,death,2020-09-04,1955
+US - Colorado,death,2020-09-05,1971
+US - Colorado,death,2020-09-06,1972
 US - Connecticut,case,2020-01-22,0
 US - Connecticut,case,2020-01-23,0
 US - Connecticut,case,2020-01-24,0
@@ -84749,6 +85871,9 @@ US - Connecticut,case,2020-08-31,52879
 US - Connecticut,case,2020-09-01,53006
 US - Connecticut,case,2020-09-02,53108
 US - Connecticut,case,2020-09-03,53209
+US - Connecticut,case,2020-09-04,53365
+US - Connecticut,case,2020-09-05,53365
+US - Connecticut,case,2020-09-06,53365
 US - Connecticut,death,2020-01-22,0
 US - Connecticut,death,2020-01-23,0
 US - Connecticut,death,2020-01-24,0
@@ -84975,6 +86100,9 @@ US - Connecticut,death,2020-08-31,4465
 US - Connecticut,death,2020-09-01,4466
 US - Connecticut,death,2020-09-02,4467
 US - Connecticut,death,2020-09-03,4468
+US - Connecticut,death,2020-09-04,4468
+US - Connecticut,death,2020-09-05,4468
+US - Connecticut,death,2020-09-06,4468
 US - Delaware,case,2020-01-22,0
 US - Delaware,case,2020-01-23,0
 US - Delaware,case,2020-01-24,0
@@ -85201,6 +86329,9 @@ US - Delaware,case,2020-08-31,17429
 US - Delaware,case,2020-09-01,17535
 US - Delaware,case,2020-09-02,17549
 US - Delaware,case,2020-09-03,17653
+US - Delaware,case,2020-09-04,17752
+US - Delaware,case,2020-09-05,17892
+US - Delaware,case,2020-09-06,18043
 US - Delaware,death,2020-01-22,0
 US - Delaware,death,2020-01-23,0
 US - Delaware,death,2020-01-24,0
@@ -85427,6 +86558,9 @@ US - Delaware,death,2020-08-31,605
 US - Delaware,death,2020-09-01,605
 US - Delaware,death,2020-09-02,606
 US - Delaware,death,2020-09-03,606
+US - Delaware,death,2020-09-04,606
+US - Delaware,death,2020-09-05,608
+US - Delaware,death,2020-09-06,609
 US - Diamond Princess,case,2020-01-22,0
 US - Diamond Princess,case,2020-01-23,0
 US - Diamond Princess,case,2020-01-24,0
@@ -85653,6 +86787,9 @@ US - Diamond Princess,case,2020-08-31,49
 US - Diamond Princess,case,2020-09-01,49
 US - Diamond Princess,case,2020-09-02,49
 US - Diamond Princess,case,2020-09-03,49
+US - Diamond Princess,case,2020-09-04,49
+US - Diamond Princess,case,2020-09-05,49
+US - Diamond Princess,case,2020-09-06,49
 US - Diamond Princess,death,2020-01-22,0
 US - Diamond Princess,death,2020-01-23,0
 US - Diamond Princess,death,2020-01-24,0
@@ -85879,6 +87016,9 @@ US - Diamond Princess,death,2020-08-31,0
 US - Diamond Princess,death,2020-09-01,0
 US - Diamond Princess,death,2020-09-02,0
 US - Diamond Princess,death,2020-09-03,0
+US - Diamond Princess,death,2020-09-04,0
+US - Diamond Princess,death,2020-09-05,0
+US - Diamond Princess,death,2020-09-06,0
 US - District of Columbia,case,2020-01-22,0
 US - District of Columbia,case,2020-01-23,0
 US - District of Columbia,case,2020-01-24,0
@@ -86105,6 +87245,9 @@ US - District of Columbia,case,2020-08-31,13992
 US - District of Columbia,case,2020-09-01,14049
 US - District of Columbia,case,2020-09-02,14077
 US - District of Columbia,case,2020-09-03,14135
+US - District of Columbia,case,2020-09-04,14186
+US - District of Columbia,case,2020-09-05,14238
+US - District of Columbia,case,2020-09-06,14279
 US - District of Columbia,death,2020-01-22,0
 US - District of Columbia,death,2020-01-23,0
 US - District of Columbia,death,2020-01-24,0
@@ -86331,6 +87474,9 @@ US - District of Columbia,death,2020-08-31,607
 US - District of Columbia,death,2020-09-01,607
 US - District of Columbia,death,2020-09-02,608
 US - District of Columbia,death,2020-09-03,609
+US - District of Columbia,death,2020-09-04,611
+US - District of Columbia,death,2020-09-05,611
+US - District of Columbia,death,2020-09-06,611
 US - Florida,case,2020-01-22,0
 US - Florida,case,2020-01-23,0
 US - Florida,case,2020-01-24,0
@@ -86557,6 +87703,9 @@ US - Florida,case,2020-08-31,623471
 US - Florida,case,2020-09-01,631040
 US - Florida,case,2020-09-02,633442
 US - Florida,case,2020-09-03,637013
+US - Florida,case,2020-09-04,640211
+US - Florida,case,2020-09-05,643867
+US - Florida,case,2020-09-06,646431
 US - Florida,death,2020-01-22,0
 US - Florida,death,2020-01-23,0
 US - Florida,death,2020-01-24,0
@@ -86783,6 +87932,9 @@ US - Florida,death,2020-08-31,11187
 US - Florida,death,2020-09-01,11374
 US - Florida,death,2020-09-02,11501
 US - Florida,death,2020-09-03,11650
+US - Florida,death,2020-09-04,11750
+US - Florida,death,2020-09-05,11811
+US - Florida,death,2020-09-06,11849
 US - Georgia,case,2020-01-22,0
 US - Georgia,case,2020-01-23,0
 US - Georgia,case,2020-01-24,0
@@ -87009,6 +88161,9 @@ US - Georgia,case,2020-08-31,270471
 US - Georgia,case,2020-09-01,272697
 US - Georgia,case,2020-09-02,274613
 US - Georgia,case,2020-09-03,277288
+US - Georgia,case,2020-09-04,279354
+US - Georgia,case,2020-09-05,281548
+US - Georgia,case,2020-09-06,283199
 US - Georgia,death,2020-01-22,0
 US - Georgia,death,2020-01-23,0
 US - Georgia,death,2020-01-24,0
@@ -87235,6 +88390,9 @@ US - Georgia,death,2020-08-31,5633
 US - Georgia,death,2020-09-01,5733
 US - Georgia,death,2020-09-02,5795
 US - Georgia,death,2020-09-03,5868
+US - Georgia,death,2020-09-04,5931
+US - Georgia,death,2020-09-05,5977
+US - Georgia,death,2020-09-06,6037
 US - Grand Princess,case,2020-01-22,0
 US - Grand Princess,case,2020-01-23,0
 US - Grand Princess,case,2020-01-24,0
@@ -87461,6 +88619,9 @@ US - Grand Princess,case,2020-08-31,103
 US - Grand Princess,case,2020-09-01,103
 US - Grand Princess,case,2020-09-02,103
 US - Grand Princess,case,2020-09-03,103
+US - Grand Princess,case,2020-09-04,103
+US - Grand Princess,case,2020-09-05,103
+US - Grand Princess,case,2020-09-06,103
 US - Grand Princess,death,2020-01-22,0
 US - Grand Princess,death,2020-01-23,0
 US - Grand Princess,death,2020-01-24,0
@@ -87687,6 +88848,9 @@ US - Grand Princess,death,2020-08-31,3
 US - Grand Princess,death,2020-09-01,3
 US - Grand Princess,death,2020-09-02,3
 US - Grand Princess,death,2020-09-03,3
+US - Grand Princess,death,2020-09-04,3
+US - Grand Princess,death,2020-09-05,3
+US - Grand Princess,death,2020-09-06,3
 US - Guam,case,2020-01-22,0
 US - Guam,case,2020-01-23,0
 US - Guam,case,2020-01-24,0
@@ -87913,6 +89077,9 @@ US - Guam,case,2020-08-31,1395
 US - Guam,case,2020-09-01,1447
 US - Guam,case,2020-09-02,1494
 US - Guam,case,2020-09-03,1560
+US - Guam,case,2020-09-04,1619
+US - Guam,case,2020-09-05,1619
+US - Guam,case,2020-09-06,1619
 US - Guam,death,2020-01-22,0
 US - Guam,death,2020-01-23,0
 US - Guam,death,2020-01-24,0
@@ -88139,6 +89306,9 @@ US - Guam,death,2020-08-31,10
 US - Guam,death,2020-09-01,13
 US - Guam,death,2020-09-02,13
 US - Guam,death,2020-09-03,13
+US - Guam,death,2020-09-04,14
+US - Guam,death,2020-09-05,14
+US - Guam,death,2020-09-06,14
 US - Hawaii,case,2020-01-22,0
 US - Hawaii,case,2020-01-23,0
 US - Hawaii,case,2020-01-24,0
@@ -88365,6 +89535,9 @@ US - Hawaii,case,2020-08-31,8472
 US - Hawaii,case,2020-09-01,8653
 US - Hawaii,case,2020-09-02,8991
 US - Hawaii,case,2020-09-03,9202
+US - Hawaii,case,2020-09-04,9473
+US - Hawaii,case,2020-09-05,9693
+US - Hawaii,case,2020-09-06,9855
 US - Hawaii,death,2020-01-22,0
 US - Hawaii,death,2020-01-23,0
 US - Hawaii,death,2020-01-24,0
@@ -88591,6 +89764,9 @@ US - Hawaii,death,2020-08-31,70
 US - Hawaii,death,2020-09-01,74
 US - Hawaii,death,2020-09-02,75
 US - Hawaii,death,2020-09-03,79
+US - Hawaii,death,2020-09-04,81
+US - Hawaii,death,2020-09-05,84
+US - Hawaii,death,2020-09-06,85
 US - Idaho,case,2020-01-22,0
 US - Idaho,case,2020-01-23,0
 US - Idaho,case,2020-01-24,0
@@ -88817,6 +89993,9 @@ US - Idaho,case,2020-08-31,32081
 US - Idaho,case,2020-09-01,32353
 US - Idaho,case,2020-09-02,32664
 US - Idaho,case,2020-09-03,32927
+US - Idaho,case,2020-09-04,33193
+US - Idaho,case,2020-09-05,33474
+US - Idaho,case,2020-09-06,33664
 US - Idaho,death,2020-01-22,0
 US - Idaho,death,2020-01-23,0
 US - Idaho,death,2020-01-24,0
@@ -89043,6 +90222,9 @@ US - Idaho,death,2020-08-31,361
 US - Idaho,death,2020-09-01,367
 US - Idaho,death,2020-09-02,372
 US - Idaho,death,2020-09-03,372
+US - Idaho,death,2020-09-04,382
+US - Idaho,death,2020-09-05,384
+US - Idaho,death,2020-09-06,385
 US - Illinois,case,2020-01-22,0
 US - Illinois,case,2020-01-23,0
 US - Illinois,case,2020-01-24,1
@@ -89269,6 +90451,9 @@ US - Illinois,case,2020-08-31,236724
 US - Illinois,case,2020-09-01,238216
 US - Illinois,case,2020-09-02,240344
 US - Illinois,case,2020-09-03,241704
+US - Illinois,case,2020-09-04,247298
+US - Illinois,case,2020-09-05,250102
+US - Illinois,case,2020-09-06,251515
 US - Illinois,death,2020-01-22,0
 US - Illinois,death,2020-01-23,0
 US - Illinois,death,2020-01-24,0
@@ -89495,6 +90680,9 @@ US - Illinois,death,2020-08-31,8235
 US - Illinois,death,2020-09-01,8273
 US - Illinois,death,2020-09-02,8300
 US - Illinois,death,2020-09-03,8324
+US - Illinois,death,2020-09-04,8362
+US - Illinois,death,2020-09-05,8385
+US - Illinois,death,2020-09-06,8390
 US - Indiana,case,2020-01-22,0
 US - Indiana,case,2020-01-23,0
 US - Indiana,case,2020-01-24,0
@@ -89721,6 +90909,9 @@ US - Indiana,case,2020-08-31,94196
 US - Indiana,case,2020-09-01,94891
 US - Indiana,case,2020-09-02,95750
 US - Indiana,case,2020-09-03,96854
+US - Indiana,case,2020-09-04,97884
+US - Indiana,case,2020-09-05,98961
+US - Indiana,case,2020-09-06,99804
 US - Indiana,death,2020-01-22,0
 US - Indiana,death,2020-01-23,0
 US - Indiana,death,2020-01-24,0
@@ -89947,6 +91138,9 @@ US - Indiana,death,2020-08-31,3296
 US - Indiana,death,2020-09-01,3312
 US - Indiana,death,2020-09-02,3325
 US - Indiana,death,2020-09-03,3332
+US - Indiana,death,2020-09-04,3350
+US - Indiana,death,2020-09-05,3362
+US - Indiana,death,2020-09-06,3364
 US - Iowa,case,2020-01-22,0
 US - Iowa,case,2020-01-23,0
 US - Iowa,case,2020-01-24,0
@@ -90173,6 +91367,9 @@ US - Iowa,case,2020-08-31,65139
 US - Iowa,case,2020-09-01,65847
 US - Iowa,case,2020-09-02,66463
 US - Iowa,case,2020-09-03,67691
+US - Iowa,case,2020-09-04,68744
+US - Iowa,case,2020-09-05,69690
+US - Iowa,case,2020-09-06,70215
 US - Iowa,death,2020-01-22,0
 US - Iowa,death,2020-01-23,0
 US - Iowa,death,2020-01-24,0
@@ -90399,6 +91596,9 @@ US - Iowa,death,2020-08-31,1120
 US - Iowa,death,2020-09-01,1125
 US - Iowa,death,2020-09-02,1133
 US - Iowa,death,2020-09-03,1136
+US - Iowa,death,2020-09-04,1158
+US - Iowa,death,2020-09-05,1164
+US - Iowa,death,2020-09-06,1167
 US - Kansas,case,2020-01-22,0
 US - Kansas,case,2020-01-23,0
 US - Kansas,case,2020-01-24,0
@@ -90625,6 +91825,9 @@ US - Kansas,case,2020-08-31,42599
 US - Kansas,case,2020-09-01,42962
 US - Kansas,case,2020-09-02,43847
 US - Kansas,case,2020-09-03,44394
+US - Kansas,case,2020-09-04,45365
+US - Kansas,case,2020-09-05,45656
+US - Kansas,case,2020-09-06,45830
 US - Kansas,death,2020-01-22,0
 US - Kansas,death,2020-01-23,0
 US - Kansas,death,2020-01-24,0
@@ -90851,6 +92054,9 @@ US - Kansas,death,2020-08-31,451
 US - Kansas,death,2020-09-01,456
 US - Kansas,death,2020-09-02,461
 US - Kansas,death,2020-09-03,471
+US - Kansas,death,2020-09-04,478
+US - Kansas,death,2020-09-05,480
+US - Kansas,death,2020-09-06,481
 US - Kentucky,case,2020-01-22,0
 US - Kentucky,case,2020-01-23,0
 US - Kentucky,case,2020-01-24,0
@@ -91077,6 +92283,9 @@ US - Kentucky,case,2020-08-31,48396
 US - Kentucky,case,2020-09-01,49185
 US - Kentucky,case,2020-09-02,49991
 US - Kentucky,case,2020-09-03,50885
+US - Kentucky,case,2020-09-04,51677
+US - Kentucky,case,2020-09-05,52464
+US - Kentucky,case,2020-09-06,52774
 US - Kentucky,death,2020-01-22,0
 US - Kentucky,death,2020-01-23,0
 US - Kentucky,death,2020-01-24,0
@@ -91303,6 +92512,9 @@ US - Kentucky,death,2020-08-31,933
 US - Kentucky,death,2020-09-01,948
 US - Kentucky,death,2020-09-02,966
 US - Kentucky,death,2020-09-03,976
+US - Kentucky,death,2020-09-04,987
+US - Kentucky,death,2020-09-05,993
+US - Kentucky,death,2020-09-06,996
 US - Louisiana,case,2020-01-22,0
 US - Louisiana,case,2020-01-23,0
 US - Louisiana,case,2020-01-24,0
@@ -91529,6 +92741,9 @@ US - Louisiana,case,2020-08-31,148193
 US - Louisiana,case,2020-09-01,148882
 US - Louisiana,case,2020-09-02,149838
 US - Louisiana,case,2020-09-03,150651
+US - Louisiana,case,2020-09-04,151473
+US - Louisiana,case,2020-09-05,151473
+US - Louisiana,case,2020-09-06,152868
 US - Louisiana,death,2020-01-22,0
 US - Louisiana,death,2020-01-23,0
 US - Louisiana,death,2020-01-24,0
@@ -91755,6 +92970,9 @@ US - Louisiana,death,2020-08-31,4950
 US - Louisiana,death,2020-09-01,4984
 US - Louisiana,death,2020-09-02,5004
 US - Louisiana,death,2020-09-03,5021
+US - Louisiana,death,2020-09-04,5035
+US - Louisiana,death,2020-09-05,5035
+US - Louisiana,death,2020-09-06,5093
 US - Maine,case,2020-01-22,0
 US - Maine,case,2020-01-23,0
 US - Maine,case,2020-01-24,0
@@ -91981,6 +93199,9 @@ US - Maine,case,2020-08-31,4529
 US - Maine,case,2020-09-01,4549
 US - Maine,case,2020-09-02,4568
 US - Maine,case,2020-09-03,4618
+US - Maine,case,2020-09-04,4633
+US - Maine,case,2020-09-05,4633
+US - Maine,case,2020-09-06,4683
 US - Maine,death,2020-01-22,0
 US - Maine,death,2020-01-23,0
 US - Maine,death,2020-01-24,0
@@ -92207,6 +93428,9 @@ US - Maine,death,2020-08-31,132
 US - Maine,death,2020-09-01,132
 US - Maine,death,2020-09-02,133
 US - Maine,death,2020-09-03,133
+US - Maine,death,2020-09-04,134
+US - Maine,death,2020-09-05,134
+US - Maine,death,2020-09-06,134
 US - Maryland,case,2020-01-22,0
 US - Maryland,case,2020-01-23,0
 US - Maryland,case,2020-01-24,0
@@ -92433,6 +93657,9 @@ US - Maryland,case,2020-08-31,108249
 US - Maryland,case,2020-09-01,108863
 US - Maryland,case,2020-09-02,109319
 US - Maryland,case,2020-09-03,110012
+US - Maryland,case,2020-09-04,110831
+US - Maryland,case,2020-09-05,111607
+US - Maryland,case,2020-09-06,112119
 US - Maryland,death,2020-01-22,0
 US - Maryland,death,2020-01-23,0
 US - Maryland,death,2020-01-24,0
@@ -92659,6 +93886,9 @@ US - Maryland,death,2020-08-31,3755
 US - Maryland,death,2020-09-01,3761
 US - Maryland,death,2020-09-02,3766
 US - Maryland,death,2020-09-03,3778
+US - Maryland,death,2020-09-04,3789
+US - Maryland,death,2020-09-05,3796
+US - Maryland,death,2020-09-06,3799
 US - Massachusetts,case,2020-01-22,0
 US - Massachusetts,case,2020-01-23,0
 US - Massachusetts,case,2020-01-24,0
@@ -92885,6 +94115,9 @@ US - Massachusetts,case,2020-08-31,128533
 US - Massachusetts,case,2020-09-01,128888
 US - Massachusetts,case,2020-09-02,129182
 US - Massachusetts,case,2020-09-03,121546
+US - Massachusetts,case,2020-09-04,121758
+US - Massachusetts,case,2020-09-05,122196
+US - Massachusetts,case,2020-09-06,122562
 US - Massachusetts,death,2020-01-22,0
 US - Massachusetts,death,2020-01-23,0
 US - Massachusetts,death,2020-01-24,0
@@ -93111,6 +94344,9 @@ US - Massachusetts,death,2020-08-31,9060
 US - Massachusetts,death,2020-09-01,9064
 US - Massachusetts,death,2020-09-02,9060
 US - Massachusetts,death,2020-09-03,9077
+US - Massachusetts,death,2020-09-04,9100
+US - Massachusetts,death,2020-09-05,9116
+US - Massachusetts,death,2020-09-06,9125
 US - Michigan,case,2020-01-22,0
 US - Michigan,case,2020-01-23,0
 US - Michigan,case,2020-01-24,0
@@ -93337,6 +94573,9 @@ US - Michigan,case,2020-08-31,113025
 US - Michigan,case,2020-09-01,113820
 US - Michigan,case,2020-09-02,114468
 US - Michigan,case,2020-09-03,115242
+US - Michigan,case,2020-09-04,116295
+US - Michigan,case,2020-09-05,117191
+US - Michigan,case,2020-09-06,117191
 US - Michigan,death,2020-01-22,0
 US - Michigan,death,2020-01-23,0
 US - Michigan,death,2020-01-24,0
@@ -93563,6 +94802,9 @@ US - Michigan,death,2020-08-31,6753
 US - Michigan,death,2020-09-01,6767
 US - Michigan,death,2020-09-02,6781
 US - Michigan,death,2020-09-03,6791
+US - Michigan,death,2020-09-04,6798
+US - Michigan,death,2020-09-05,6806
+US - Michigan,death,2020-09-06,6806
 US - Minnesota,case,2020-01-22,0
 US - Minnesota,case,2020-01-23,0
 US - Minnesota,case,2020-01-24,0
@@ -93789,6 +95031,9 @@ US - Minnesota,case,2020-08-31,75864
 US - Minnesota,case,2020-09-01,76355
 US - Minnesota,case,2020-09-02,77085
 US - Minnesota,case,2020-09-03,78123
+US - Minnesota,case,2020-09-04,78966
+US - Minnesota,case,2020-09-05,79880
+US - Minnesota,case,2020-09-06,80587
 US - Minnesota,death,2020-01-22,0
 US - Minnesota,death,2020-01-23,0
 US - Minnesota,death,2020-01-24,0
@@ -94015,6 +95260,9 @@ US - Minnesota,death,2020-08-31,1866
 US - Minnesota,death,2020-09-01,1871
 US - Minnesota,death,2020-09-02,1882
 US - Minnesota,death,2020-09-03,1889
+US - Minnesota,death,2020-09-04,1899
+US - Minnesota,death,2020-09-05,1903
+US - Minnesota,death,2020-09-06,1909
 US - Mississippi,case,2020-01-22,0
 US - Mississippi,case,2020-01-23,0
 US - Mississippi,case,2020-01-24,0
@@ -94241,6 +95489,9 @@ US - Mississippi,case,2020-08-31,82950
 US - Mississippi,case,2020-09-01,83584
 US - Mississippi,case,2020-09-02,84365
 US - Mississippi,case,2020-09-03,85116
+US - Mississippi,case,2020-09-04,85939
+US - Mississippi,case,2020-09-05,86478
+US - Mississippi,case,2020-09-06,86888
 US - Mississippi,death,2020-01-22,0
 US - Mississippi,death,2020-01-23,0
 US - Mississippi,death,2020-01-24,0
@@ -94467,6 +95718,9 @@ US - Mississippi,death,2020-08-31,2473
 US - Mississippi,death,2020-09-01,2493
 US - Mississippi,death,2020-09-02,2526
 US - Mississippi,death,2020-09-03,2536
+US - Mississippi,death,2020-09-04,2558
+US - Mississippi,death,2020-09-05,2569
+US - Mississippi,death,2020-09-06,2584
 US - Missouri,case,2020-01-22,0
 US - Missouri,case,2020-01-23,0
 US - Missouri,case,2020-01-24,0
@@ -94693,6 +95947,9 @@ US - Missouri,case,2020-08-31,85635
 US - Missouri,case,2020-09-01,86738
 US - Missouri,case,2020-09-02,88216
 US - Missouri,case,2020-09-03,89639
+US - Missouri,case,2020-09-04,91228
+US - Missouri,case,2020-09-05,93171
+US - Missouri,case,2020-09-06,94492
 US - Missouri,death,2020-01-22,0
 US - Missouri,death,2020-01-23,0
 US - Missouri,death,2020-01-24,0
@@ -94919,6 +96176,9 @@ US - Missouri,death,2020-08-31,1547
 US - Missouri,death,2020-09-01,1562
 US - Missouri,death,2020-09-02,1578
 US - Missouri,death,2020-09-03,1586
+US - Missouri,death,2020-09-04,1607
+US - Missouri,death,2020-09-05,1668
+US - Missouri,death,2020-09-06,1685
 US - Montana,case,2020-01-22,0
 US - Montana,case,2020-01-23,0
 US - Montana,case,2020-01-24,0
@@ -95145,6 +96405,9 @@ US - Montana,case,2020-08-31,7421
 US - Montana,case,2020-09-01,7509
 US - Montana,case,2020-09-02,7691
 US - Montana,case,2020-09-03,7871
+US - Montana,case,2020-09-04,8019
+US - Montana,case,2020-09-05,8164
+US - Montana,case,2020-09-06,8264
 US - Montana,death,2020-01-22,0
 US - Montana,death,2020-01-23,0
 US - Montana,death,2020-01-24,0
@@ -95371,6 +96634,9 @@ US - Montana,death,2020-08-31,104
 US - Montana,death,2020-09-01,105
 US - Montana,death,2020-09-02,109
 US - Montana,death,2020-09-03,111
+US - Montana,death,2020-09-04,114
+US - Montana,death,2020-09-05,116
+US - Montana,death,2020-09-06,117
 US - Nebraska,case,2020-01-22,0
 US - Nebraska,case,2020-01-23,0
 US - Nebraska,case,2020-01-24,0
@@ -95597,6 +96863,9 @@ US - Nebraska,case,2020-08-31,34287
 US - Nebraska,case,2020-09-01,34574
 US - Nebraska,case,2020-09-02,34995
 US - Nebraska,case,2020-09-03,35469
+US - Nebraska,case,2020-09-04,35661
+US - Nebraska,case,2020-09-05,35805
+US - Nebraska,case,2020-09-06,35886
 US - Nebraska,death,2020-01-22,0
 US - Nebraska,death,2020-01-23,0
 US - Nebraska,death,2020-01-24,0
@@ -95823,6 +97092,9 @@ US - Nebraska,death,2020-08-31,397
 US - Nebraska,death,2020-09-01,399
 US - Nebraska,death,2020-09-02,399
 US - Nebraska,death,2020-09-03,404
+US - Nebraska,death,2020-09-04,404
+US - Nebraska,death,2020-09-05,404
+US - Nebraska,death,2020-09-06,404
 US - Nevada,case,2020-01-22,0
 US - Nevada,case,2020-01-23,0
 US - Nevada,case,2020-01-24,0
@@ -96049,6 +97321,9 @@ US - Nevada,case,2020-08-31,69228
 US - Nevada,case,2020-09-01,69633
 US - Nevada,case,2020-09-02,69872
 US - Nevada,case,2020-09-03,70223
+US - Nevada,case,2020-09-04,70712
+US - Nevada,case,2020-09-05,71102
+US - Nevada,case,2020-09-06,71610
 US - Nevada,death,2020-01-22,0
 US - Nevada,death,2020-01-23,0
 US - Nevada,death,2020-01-24,0
@@ -96275,6 +97550,9 @@ US - Nevada,death,2020-08-31,1305
 US - Nevada,death,2020-09-01,1313
 US - Nevada,death,2020-09-02,1336
 US - Nevada,death,2020-09-03,1363
+US - Nevada,death,2020-09-04,1375
+US - Nevada,death,2020-09-05,1388
+US - Nevada,death,2020-09-06,1389
 US - New Hampshire,case,2020-01-22,0
 US - New Hampshire,case,2020-01-23,0
 US - New Hampshire,case,2020-01-24,0
@@ -96501,6 +97779,9 @@ US - New Hampshire,case,2020-08-31,7275
 US - New Hampshire,case,2020-09-01,7297
 US - New Hampshire,case,2020-09-02,7309
 US - New Hampshire,case,2020-09-03,7347
+US - New Hampshire,case,2020-09-04,7368
+US - New Hampshire,case,2020-09-05,7424
+US - New Hampshire,case,2020-09-06,7447
 US - New Hampshire,death,2020-01-22,0
 US - New Hampshire,death,2020-01-23,0
 US - New Hampshire,death,2020-01-24,0
@@ -96727,6 +98008,9 @@ US - New Hampshire,death,2020-08-31,432
 US - New Hampshire,death,2020-09-01,432
 US - New Hampshire,death,2020-09-02,432
 US - New Hampshire,death,2020-09-03,432
+US - New Hampshire,death,2020-09-04,432
+US - New Hampshire,death,2020-09-05,432
+US - New Hampshire,death,2020-09-06,433
 US - New Jersey,case,2020-01-22,0
 US - New Jersey,case,2020-01-23,0
 US - New Jersey,case,2020-01-24,0
@@ -96953,6 +98237,9 @@ US - New Jersey,case,2020-08-31,191960
 US - New Jersey,case,2020-09-01,192290
 US - New Jersey,case,2020-09-02,192595
 US - New Jersey,case,2020-09-03,192973
+US - New Jersey,case,2020-09-04,193422
+US - New Jersey,case,2020-09-05,193747
+US - New Jersey,case,2020-09-06,194058
 US - New Jersey,death,2020-01-22,0
 US - New Jersey,death,2020-01-23,0
 US - New Jersey,death,2020-01-24,0
@@ -97179,6 +98466,9 @@ US - New Jersey,death,2020-08-31,15945
 US - New Jersey,death,2020-09-01,15950
 US - New Jersey,death,2020-09-02,15964
 US - New Jersey,death,2020-09-03,15971
+US - New Jersey,death,2020-09-04,15978
+US - New Jersey,death,2020-09-05,15985
+US - New Jersey,death,2020-09-06,15989
 US - New Mexico,case,2020-01-22,0
 US - New Mexico,case,2020-01-23,0
 US - New Mexico,case,2020-01-24,0
@@ -97405,6 +98695,9 @@ US - New Mexico,case,2020-08-31,25352
 US - New Mexico,case,2020-09-01,25460
 US - New Mexico,case,2020-09-02,25612
 US - New Mexico,case,2020-09-03,25812
+US - New Mexico,case,2020-09-04,25902
+US - New Mexico,case,2020-09-05,26048
+US - New Mexico,case,2020-09-06,26107
 US - New Mexico,death,2020-01-22,0
 US - New Mexico,death,2020-01-23,0
 US - New Mexico,death,2020-01-24,0
@@ -97631,6 +98924,9 @@ US - New Mexico,death,2020-08-31,779
 US - New Mexico,death,2020-09-01,787
 US - New Mexico,death,2020-09-02,790
 US - New Mexico,death,2020-09-03,791
+US - New Mexico,death,2020-09-04,794
+US - New Mexico,death,2020-09-05,800
+US - New Mexico,death,2020-09-06,803
 US - New York,case,2020-01-22,0
 US - New York,case,2020-01-23,0
 US - New York,case,2020-01-24,0
@@ -97857,6 +99153,9 @@ US - New York,case,2020-08-31,434756
 US - New York,case,2020-09-01,435510
 US - New York,case,2020-09-02,436218
 US - New York,case,2020-09-03,437107
+US - New York,case,2020-09-04,437971
+US - New York,case,2020-09-05,438772
+US - New York,case,2020-09-06,439501
 US - New York,death,2020-01-22,0
 US - New York,death,2020-01-23,0
 US - New York,death,2020-01-24,0
@@ -98083,6 +99382,9 @@ US - New York,death,2020-08-31,32957
 US - New York,death,2020-09-01,32966
 US - New York,death,2020-09-02,32972
 US - New York,death,2020-09-03,32976
+US - New York,death,2020-09-04,32982
+US - New York,death,2020-09-05,32987
+US - New York,death,2020-09-06,32987
 US - North Carolina,case,2020-01-22,0
 US - North Carolina,case,2020-01-23,0
 US - North Carolina,case,2020-01-24,0
@@ -98309,6 +99611,9 @@ US - North Carolina,case,2020-08-31,167309
 US - North Carolina,case,2020-09-01,169424
 US - North Carolina,case,2020-09-02,170553
 US - North Carolina,case,2020-09-03,172201
+US - North Carolina,case,2020-09-04,174253
+US - North Carolina,case,2020-09-05,175815
+US - North Carolina,case,2020-09-06,176901
 US - North Carolina,death,2020-01-22,0
 US - North Carolina,death,2020-01-23,0
 US - North Carolina,death,2020-01-24,0
@@ -98535,6 +99840,9 @@ US - North Carolina,death,2020-08-31,2702
 US - North Carolina,death,2020-09-01,2741
 US - North Carolina,death,2020-09-02,2779
 US - North Carolina,death,2020-09-03,2803
+US - North Carolina,death,2020-09-04,2839
+US - North Carolina,death,2020-09-05,2889
+US - North Carolina,death,2020-09-06,2890
 US - North Dakota,case,2020-01-22,0
 US - North Dakota,case,2020-01-23,0
 US - North Dakota,case,2020-01-24,0
@@ -98761,6 +100069,9 @@ US - North Dakota,case,2020-08-31,11816
 US - North Dakota,case,2020-09-01,12000
 US - North Dakota,case,2020-09-02,12267
 US - North Dakota,case,2020-09-03,12629
+US - North Dakota,case,2020-09-04,12973
+US - North Dakota,case,2020-09-05,13334
+US - North Dakota,case,2020-09-06,13631
 US - North Dakota,death,2020-01-22,0
 US - North Dakota,death,2020-01-23,0
 US - North Dakota,death,2020-01-24,0
@@ -98987,6 +100298,9 @@ US - North Dakota,death,2020-08-31,143
 US - North Dakota,death,2020-09-01,145
 US - North Dakota,death,2020-09-02,148
 US - North Dakota,death,2020-09-03,150
+US - North Dakota,death,2020-09-04,150
+US - North Dakota,death,2020-09-05,155
+US - North Dakota,death,2020-09-06,156
 US - Northern Mariana Islands,case,2020-01-22,0
 US - Northern Mariana Islands,case,2020-01-23,0
 US - Northern Mariana Islands,case,2020-01-24,0
@@ -99213,6 +100527,9 @@ US - Northern Mariana Islands,case,2020-08-31,56
 US - Northern Mariana Islands,case,2020-09-01,57
 US - Northern Mariana Islands,case,2020-09-02,57
 US - Northern Mariana Islands,case,2020-09-03,57
+US - Northern Mariana Islands,case,2020-09-04,57
+US - Northern Mariana Islands,case,2020-09-05,58
+US - Northern Mariana Islands,case,2020-09-06,58
 US - Northern Mariana Islands,death,2020-01-22,0
 US - Northern Mariana Islands,death,2020-01-23,0
 US - Northern Mariana Islands,death,2020-01-24,0
@@ -99439,6 +100756,9 @@ US - Northern Mariana Islands,death,2020-08-31,2
 US - Northern Mariana Islands,death,2020-09-01,2
 US - Northern Mariana Islands,death,2020-09-02,2
 US - Northern Mariana Islands,death,2020-09-03,2
+US - Northern Mariana Islands,death,2020-09-04,2
+US - Northern Mariana Islands,death,2020-09-05,2
+US - Northern Mariana Islands,death,2020-09-06,2
 US - Ohio,case,2020-01-22,0
 US - Ohio,case,2020-01-23,0
 US - Ohio,case,2020-01-24,0
@@ -99665,6 +100985,9 @@ US - Ohio,case,2020-08-31,123155
 US - Ohio,case,2020-09-01,124606
 US - Ohio,case,2020-09-02,125767
 US - Ohio,case,2020-09-03,127112
+US - Ohio,case,2020-09-04,128444
+US - Ohio,case,2020-09-05,129785
+US - Ohio,case,2020-09-06,130558
 US - Ohio,death,2020-01-22,0
 US - Ohio,death,2020-01-23,0
 US - Ohio,death,2020-01-24,0
@@ -99891,6 +101214,9 @@ US - Ohio,death,2020-08-31,4139
 US - Ohio,death,2020-09-01,4166
 US - Ohio,death,2020-09-02,4176
 US - Ohio,death,2020-09-03,4226
+US - Ohio,death,2020-09-04,4248
+US - Ohio,death,2020-09-05,4256
+US - Ohio,death,2020-09-06,4259
 US - Oklahoma,case,2020-01-22,0
 US - Oklahoma,case,2020-01-23,0
 US - Oklahoma,case,2020-01-24,0
@@ -100117,6 +101443,9 @@ US - Oklahoma,case,2020-08-31,58733
 US - Oklahoma,case,2020-09-01,59398
 US - Oklahoma,case,2020-09-02,60118
 US - Oklahoma,case,2020-09-03,61027
+US - Oklahoma,case,2020-09-04,62040
+US - Oklahoma,case,2020-09-05,63187
+US - Oklahoma,case,2020-09-06,63607
 US - Oklahoma,death,2020-01-22,0
 US - Oklahoma,death,2020-01-23,0
 US - Oklahoma,death,2020-01-24,0
@@ -100343,6 +101672,9 @@ US - Oklahoma,death,2020-08-31,800
 US - Oklahoma,death,2020-09-01,808
 US - Oklahoma,death,2020-09-02,821
 US - Oklahoma,death,2020-09-03,835
+US - Oklahoma,death,2020-09-04,846
+US - Oklahoma,death,2020-09-05,850
+US - Oklahoma,death,2020-09-06,853
 US - Oregon,case,2020-01-22,0
 US - Oregon,case,2020-01-23,0
 US - Oregon,case,2020-01-24,0
@@ -100569,6 +101901,9 @@ US - Oregon,case,2020-08-31,26713
 US - Oregon,case,2020-09-01,26946
 US - Oregon,case,2020-09-02,27075
 US - Oregon,case,2020-09-03,27336
+US - Oregon,case,2020-09-04,27601
+US - Oregon,case,2020-09-05,27856
+US - Oregon,case,2020-09-06,28044
 US - Oregon,death,2020-01-22,0
 US - Oregon,death,2020-01-23,0
 US - Oregon,death,2020-01-24,0
@@ -100795,6 +102130,9 @@ US - Oregon,death,2020-08-31,459
 US - Oregon,death,2020-09-01,464
 US - Oregon,death,2020-09-02,468
 US - Oregon,death,2020-09-03,470
+US - Oregon,death,2020-09-04,475
+US - Oregon,death,2020-09-05,480
+US - Oregon,death,2020-09-06,481
 US - Pennsylvania,case,2020-01-22,0
 US - Pennsylvania,case,2020-01-23,0
 US - Pennsylvania,case,2020-01-24,0
@@ -101021,6 +102359,9 @@ US - Pennsylvania,case,2020-08-31,138795
 US - Pennsylvania,case,2020-09-01,139548
 US - Pennsylvania,case,2020-09-02,140532
 US - Pennsylvania,case,2020-09-03,141570
+US - Pennsylvania,case,2020-09-04,142495
+US - Pennsylvania,case,2020-09-05,143280
+US - Pennsylvania,case,2020-09-06,143824
 US - Pennsylvania,death,2020-01-22,0
 US - Pennsylvania,death,2020-01-23,0
 US - Pennsylvania,death,2020-01-24,0
@@ -101247,6 +102588,9 @@ US - Pennsylvania,death,2020-08-31,7659
 US - Pennsylvania,death,2020-09-01,7678
 US - Pennsylvania,death,2020-09-02,7705
 US - Pennsylvania,death,2020-09-03,7724
+US - Pennsylvania,death,2020-09-04,7735
+US - Pennsylvania,death,2020-09-05,7750
+US - Pennsylvania,death,2020-09-06,7750
 US - Puerto Rico,case,2020-01-22,0
 US - Puerto Rico,case,2020-01-23,0
 US - Puerto Rico,case,2020-01-24,0
@@ -101473,6 +102817,9 @@ US - Puerto Rico,case,2020-08-31,33199
 US - Puerto Rico,case,2020-09-01,33421
 US - Puerto Rico,case,2020-09-02,34003
 US - Puerto Rico,case,2020-09-03,34198
+US - Puerto Rico,case,2020-09-04,34241
+US - Puerto Rico,case,2020-09-05,34492
+US - Puerto Rico,case,2020-09-06,34533
 US - Puerto Rico,death,2020-01-22,0
 US - Puerto Rico,death,2020-01-23,0
 US - Puerto Rico,death,2020-01-24,0
@@ -101699,6 +103046,9 @@ US - Puerto Rico,death,2020-08-31,434
 US - Puerto Rico,death,2020-09-01,435
 US - Puerto Rico,death,2020-09-02,443
 US - Puerto Rico,death,2020-09-03,448
+US - Puerto Rico,death,2020-09-04,455
+US - Puerto Rico,death,2020-09-05,464
+US - Puerto Rico,death,2020-09-06,477
 US - Rhode Island,case,2020-01-22,0
 US - Rhode Island,case,2020-01-23,0
 US - Rhode Island,case,2020-01-24,0
@@ -101925,6 +103275,9 @@ US - Rhode Island,case,2020-08-31,21949
 US - Rhode Island,case,2020-09-01,22002
 US - Rhode Island,case,2020-09-02,22078
 US - Rhode Island,case,2020-09-03,22143
+US - Rhode Island,case,2020-09-04,22243
+US - Rhode Island,case,2020-09-05,22243
+US - Rhode Island,case,2020-09-06,22243
 US - Rhode Island,death,2020-01-22,0
 US - Rhode Island,death,2020-01-23,0
 US - Rhode Island,death,2020-01-24,0
@@ -102151,6 +103504,9 @@ US - Rhode Island,death,2020-08-31,1048
 US - Rhode Island,death,2020-09-01,1050
 US - Rhode Island,death,2020-09-02,1051
 US - Rhode Island,death,2020-09-03,1055
+US - Rhode Island,death,2020-09-04,1055
+US - Rhode Island,death,2020-09-05,1055
+US - Rhode Island,death,2020-09-06,1055
 US - South Carolina,case,2020-01-22,0
 US - South Carolina,case,2020-01-23,0
 US - South Carolina,case,2020-01-24,0
@@ -102377,6 +103733,9 @@ US - South Carolina,case,2020-08-31,118992
 US - South Carolina,case,2020-09-01,119846
 US - South Carolina,case,2020-09-02,120503
 US - South Carolina,case,2020-09-03,121696
+US - South Carolina,case,2020-09-04,123325
+US - South Carolina,case,2020-09-05,124289
+US - South Carolina,case,2020-09-06,124952
 US - South Carolina,death,2020-01-22,0
 US - South Carolina,death,2020-01-23,0
 US - South Carolina,death,2020-01-24,0
@@ -102603,6 +103962,9 @@ US - South Carolina,death,2020-08-31,2720
 US - South Carolina,death,2020-09-01,2757
 US - South Carolina,death,2020-09-02,2794
 US - South Carolina,death,2020-09-03,2807
+US - South Carolina,death,2020-09-04,2846
+US - South Carolina,death,2020-09-05,2877
+US - South Carolina,death,2020-09-06,2887
 US - South Dakota,case,2020-01-22,0
 US - South Dakota,case,2020-01-23,0
 US - South Dakota,case,2020-01-24,0
@@ -102829,6 +104191,9 @@ US - South Dakota,case,2020-08-31,13509
 US - South Dakota,case,2020-09-01,13749
 US - South Dakota,case,2020-09-02,14003
 US - South Dakota,case,2020-09-03,14337
+US - South Dakota,case,2020-09-04,14596
+US - South Dakota,case,2020-09-05,14889
+US - South Dakota,case,2020-09-06,15109
 US - South Dakota,death,2020-01-22,0
 US - South Dakota,death,2020-01-23,0
 US - South Dakota,death,2020-01-24,0
@@ -103055,6 +104420,9 @@ US - South Dakota,death,2020-08-31,167
 US - South Dakota,death,2020-09-01,167
 US - South Dakota,death,2020-09-02,169
 US - South Dakota,death,2020-09-03,169
+US - South Dakota,death,2020-09-04,170
+US - South Dakota,death,2020-09-05,173
+US - South Dakota,death,2020-09-06,173
 US - Tennessee,case,2020-01-22,0
 US - Tennessee,case,2020-01-23,0
 US - Tennessee,case,2020-01-24,0
@@ -103281,6 +104649,9 @@ US - Tennessee,case,2020-08-31,154933
 US - Tennessee,case,2020-09-01,156329
 US - Tennessee,case,2020-09-02,157831
 US - Tennessee,case,2020-09-03,159546
+US - Tennessee,case,2020-09-04,160597
+US - Tennessee,case,2020-09-05,162362
+US - Tennessee,case,2020-09-06,164126
 US - Tennessee,death,2020-01-22,0
 US - Tennessee,death,2020-01-23,0
 US - Tennessee,death,2020-01-24,0
@@ -103507,6 +104878,9 @@ US - Tennessee,death,2020-08-31,1754
 US - Tennessee,death,2020-09-01,1781
 US - Tennessee,death,2020-09-02,1797
 US - Tennessee,death,2020-09-03,1815
+US - Tennessee,death,2020-09-04,1837
+US - Tennessee,death,2020-09-05,1862
+US - Tennessee,death,2020-09-06,1865
 US - Texas,case,2020-01-22,0
 US - Texas,case,2020-01-23,0
 US - Texas,case,2020-01-24,0
@@ -103733,6 +105107,9 @@ US - Texas,case,2020-08-31,632739
 US - Texas,case,2020-09-01,637721
 US - Texas,case,2020-09-02,641855
 US - Texas,case,2020-09-03,645422
+US - Texas,case,2020-09-04,651350
+US - Texas,case,2020-09-05,655815
+US - Texas,case,2020-09-06,658202
 US - Texas,death,2020-01-22,0
 US - Texas,death,2020-01-23,0
 US - Texas,death,2020-01-24,0
@@ -103959,6 +105336,9 @@ US - Texas,death,2020-08-31,12779
 US - Texas,death,2020-09-01,12919
 US - Texas,death,2020-09-02,13104
 US - Texas,death,2020-09-03,13296
+US - Texas,death,2020-09-04,13426
+US - Texas,death,2020-09-05,13576
+US - Texas,death,2020-09-06,13654
 US - Utah,case,2020-01-22,0
 US - Utah,case,2020-01-23,0
 US - Utah,case,2020-01-24,0
@@ -104185,6 +105565,9 @@ US - Utah,case,2020-08-31,52107
 US - Utah,case,2020-09-01,52403
 US - Utah,case,2020-09-02,52822
 US - Utah,case,2020-09-03,53326
+US - Utah,case,2020-09-04,53839
+US - Utah,case,2020-09-05,54272
+US - Utah,case,2020-09-06,54660
 US - Utah,death,2020-01-22,0
 US - Utah,death,2020-01-23,0
 US - Utah,death,2020-01-24,0
@@ -104411,6 +105794,9 @@ US - Utah,death,2020-08-31,407
 US - Utah,death,2020-09-01,409
 US - Utah,death,2020-09-02,410
 US - Utah,death,2020-09-03,414
+US - Utah,death,2020-09-04,419
+US - Utah,death,2020-09-05,420
+US - Utah,death,2020-09-06,422
 US - Vermont,case,2020-01-22,0
 US - Vermont,case,2020-01-23,0
 US - Vermont,case,2020-01-24,0
@@ -104637,6 +106023,9 @@ US - Vermont,case,2020-08-31,1624
 US - Vermont,case,2020-09-01,1635
 US - Vermont,case,2020-09-02,1637
 US - Vermont,case,2020-09-03,1637
+US - Vermont,case,2020-09-04,1642
+US - Vermont,case,2020-09-05,1647
+US - Vermont,case,2020-09-06,1648
 US - Vermont,death,2020-01-22,0
 US - Vermont,death,2020-01-23,0
 US - Vermont,death,2020-01-24,0
@@ -104863,6 +106252,9 @@ US - Vermont,death,2020-08-31,58
 US - Vermont,death,2020-09-01,58
 US - Vermont,death,2020-09-02,58
 US - Vermont,death,2020-09-03,58
+US - Vermont,death,2020-09-04,58
+US - Vermont,death,2020-09-05,58
+US - Vermont,death,2020-09-06,58
 US - Virgin Islands,case,2020-01-22,0
 US - Virgin Islands,case,2020-01-23,0
 US - Virgin Islands,case,2020-01-24,0
@@ -105089,6 +106481,9 @@ US - Virgin Islands,case,2020-08-31,1134
 US - Virgin Islands,case,2020-09-01,1143
 US - Virgin Islands,case,2020-09-02,1144
 US - Virgin Islands,case,2020-09-03,1150
+US - Virgin Islands,case,2020-09-04,1150
+US - Virgin Islands,case,2020-09-05,1167
+US - Virgin Islands,case,2020-09-06,1181
 US - Virgin Islands,death,2020-01-22,0
 US - Virgin Islands,death,2020-01-23,0
 US - Virgin Islands,death,2020-01-24,0
@@ -105315,6 +106710,9 @@ US - Virgin Islands,death,2020-08-31,14
 US - Virgin Islands,death,2020-09-01,15
 US - Virgin Islands,death,2020-09-02,15
 US - Virgin Islands,death,2020-09-03,16
+US - Virgin Islands,death,2020-09-04,16
+US - Virgin Islands,death,2020-09-05,16
+US - Virgin Islands,death,2020-09-06,17
 US - Virginia,case,2020-01-22,0
 US - Virginia,case,2020-01-23,0
 US - Virginia,case,2020-01-24,0
@@ -105541,6 +106939,9 @@ US - Virginia,case,2020-08-31,120575
 US - Virginia,case,2020-09-01,121593
 US - Virginia,case,2020-09-02,122518
 US - Virginia,case,2020-09-03,123637
+US - Virginia,case,2020-09-04,124738
+US - Virginia,case,2020-09-05,125681
+US - Virginia,case,2020-09-06,126877
 US - Virginia,death,2020-01-22,0
 US - Virginia,death,2020-01-23,0
 US - Virginia,death,2020-01-24,0
@@ -105767,6 +107168,9 @@ US - Virginia,death,2020-08-31,2580
 US - Virginia,death,2020-09-01,2612
 US - Virginia,death,2020-09-02,2641
 US - Virginia,death,2020-09-03,2652
+US - Virginia,death,2020-09-04,2662
+US - Virginia,death,2020-09-05,2677
+US - Virginia,death,2020-09-06,2678
 US - Washington,case,2020-01-22,1
 US - Washington,case,2020-01-23,1
 US - Washington,case,2020-01-24,1
@@ -105993,6 +107397,9 @@ US - Washington,case,2020-08-31,74635
 US - Washington,case,2020-09-01,74939
 US - Washington,case,2020-09-02,75377
 US - Washington,case,2020-09-03,75856
+US - Washington,case,2020-09-04,76335
+US - Washington,case,2020-09-05,76836
+US - Washington,case,2020-09-06,77235
 US - Washington,death,2020-01-22,0
 US - Washington,death,2020-01-23,0
 US - Washington,death,2020-01-24,0
@@ -106219,6 +107626,9 @@ US - Washington,death,2020-08-31,1915
 US - Washington,death,2020-09-01,1931
 US - Washington,death,2020-09-02,1935
 US - Washington,death,2020-09-03,1945
+US - Washington,death,2020-09-04,1953
+US - Washington,death,2020-09-05,1953
+US - Washington,death,2020-09-06,1953
 US - West Virginia,case,2020-01-22,0
 US - West Virginia,case,2020-01-23,0
 US - West Virginia,case,2020-01-24,0
@@ -106445,6 +107855,9 @@ US - West Virginia,case,2020-08-31,10249
 US - West Virginia,case,2020-09-01,10513
 US - West Virginia,case,2020-09-02,10658
 US - West Virginia,case,2020-09-03,10855
+US - West Virginia,case,2020-09-04,11042
+US - West Virginia,case,2020-09-05,11293
+US - West Virginia,case,2020-09-06,11418
 US - West Virginia,death,2020-01-22,0
 US - West Virginia,death,2020-01-23,0
 US - West Virginia,death,2020-01-24,0
@@ -106671,6 +108084,9 @@ US - West Virginia,death,2020-08-31,215
 US - West Virginia,death,2020-09-01,224
 US - West Virginia,death,2020-09-02,233
 US - West Virginia,death,2020-09-03,240
+US - West Virginia,death,2020-09-04,245
+US - West Virginia,death,2020-09-05,246
+US - West Virginia,death,2020-09-06,249
 US - Wisconsin,case,2020-01-22,0
 US - Wisconsin,case,2020-01-23,0
 US - Wisconsin,case,2020-01-24,0
@@ -106897,6 +108313,9 @@ US - Wisconsin,case,2020-08-31,75603
 US - Wisconsin,case,2020-09-01,76584
 US - Wisconsin,case,2020-09-02,77129
 US - Wisconsin,case,2020-09-03,77856
+US - Wisconsin,case,2020-09-04,79354
+US - Wisconsin,case,2020-09-05,80300
+US - Wisconsin,case,2020-09-06,81193
 US - Wisconsin,death,2020-01-22,0
 US - Wisconsin,death,2020-01-23,0
 US - Wisconsin,death,2020-01-24,0
@@ -107123,6 +108542,9 @@ US - Wisconsin,death,2020-08-31,1122
 US - Wisconsin,death,2020-09-01,1130
 US - Wisconsin,death,2020-09-02,1142
 US - Wisconsin,death,2020-09-03,1146
+US - Wisconsin,death,2020-09-04,1153
+US - Wisconsin,death,2020-09-05,1168
+US - Wisconsin,death,2020-09-06,1168
 US - Wyoming,case,2020-01-22,0
 US - Wyoming,case,2020-01-23,0
 US - Wyoming,case,2020-01-24,0
@@ -107349,6 +108771,9 @@ US - Wyoming,case,2020-08-31,3850
 US - Wyoming,case,2020-09-01,3874
 US - Wyoming,case,2020-09-02,3911
 US - Wyoming,case,2020-09-03,3941
+US - Wyoming,case,2020-09-04,3990
+US - Wyoming,case,2020-09-05,3990
+US - Wyoming,case,2020-09-06,4032
 US - Wyoming,death,2020-01-22,0
 US - Wyoming,death,2020-01-23,0
 US - Wyoming,death,2020-01-24,0
@@ -107575,6 +109000,9 @@ US - Wyoming,death,2020-08-31,37
 US - Wyoming,death,2020-09-01,37
 US - Wyoming,death,2020-09-02,41
 US - Wyoming,death,2020-09-03,41
+US - Wyoming,death,2020-09-04,42
+US - Wyoming,death,2020-09-05,42
+US - Wyoming,death,2020-09-06,42
 Uzbekistan,case,2020-01-22,0
 Uzbekistan,case,2020-01-23,0
 Uzbekistan,case,2020-01-24,0
@@ -107801,6 +109229,9 @@ Uzbekistan,case,2020-08-31,41893
 Uzbekistan,case,2020-09-01,42127
 Uzbekistan,case,2020-09-02,42437
 Uzbekistan,case,2020-09-03,42688
+Uzbekistan,case,2020-09-04,42998
+Uzbekistan,case,2020-09-05,43293
+Uzbekistan,case,2020-09-06,43587
 Uzbekistan,death,2020-01-22,0
 Uzbekistan,death,2020-01-23,0
 Uzbekistan,death,2020-01-24,0
@@ -108027,6 +109458,9 @@ Uzbekistan,death,2020-08-31,320
 Uzbekistan,death,2020-09-01,323
 Uzbekistan,death,2020-09-02,327
 Uzbekistan,death,2020-09-03,331
+Uzbekistan,death,2020-09-04,338
+Uzbekistan,death,2020-09-05,343
+Uzbekistan,death,2020-09-06,347
 Venezuela,case,2020-01-22,0
 Venezuela,case,2020-01-23,0
 Venezuela,case,2020-01-24,0
@@ -108253,6 +109687,9 @@ Venezuela,case,2020-08-31,46728
 Venezuela,case,2020-09-01,47756
 Venezuela,case,2020-09-02,48883
 Venezuela,case,2020-09-03,49877
+Venezuela,case,2020-09-04,50973
+Venezuela,case,2020-09-05,52165
+Venezuela,case,2020-09-06,53289
 Venezuela,death,2020-01-22,0
 Venezuela,death,2020-01-23,0
 Venezuela,death,2020-01-24,0
@@ -108479,6 +109916,9 @@ Venezuela,death,2020-08-31,386
 Venezuela,death,2020-09-01,391
 Venezuela,death,2020-09-02,398
 Venezuela,death,2020-09-03,402
+Venezuela,death,2020-09-04,412
+Venezuela,death,2020-09-05,420
+Venezuela,death,2020-09-06,428
 Vietnam,case,2020-01-22,0
 Vietnam,case,2020-01-23,2
 Vietnam,case,2020-01-24,2
@@ -108705,6 +110145,9 @@ Vietnam,case,2020-08-31,1044
 Vietnam,case,2020-09-01,1044
 Vietnam,case,2020-09-02,1046
 Vietnam,case,2020-09-03,1046
+Vietnam,case,2020-09-04,1049
+Vietnam,case,2020-09-05,1049
+Vietnam,case,2020-09-06,1049
 Vietnam,death,2020-01-22,0
 Vietnam,death,2020-01-23,0
 Vietnam,death,2020-01-24,0
@@ -108931,6 +110374,9 @@ Vietnam,death,2020-08-31,34
 Vietnam,death,2020-09-01,34
 Vietnam,death,2020-09-02,34
 Vietnam,death,2020-09-03,35
+Vietnam,death,2020-09-04,35
+Vietnam,death,2020-09-05,35
+Vietnam,death,2020-09-06,35
 West Bank and Gaza,case,2020-01-22,0
 West Bank and Gaza,case,2020-01-23,0
 West Bank and Gaza,case,2020-01-24,0
@@ -109157,6 +110603,9 @@ West Bank and Gaza,case,2020-08-31,22729
 West Bank and Gaza,case,2020-09-01,23281
 West Bank and Gaza,case,2020-09-02,23875
 West Bank and Gaza,case,2020-09-03,24471
+West Bank and Gaza,case,2020-09-04,25142
+West Bank and Gaza,case,2020-09-05,25575
+West Bank and Gaza,case,2020-09-06,26127
 West Bank and Gaza,death,2020-01-22,0
 West Bank and Gaza,death,2020-01-23,0
 West Bank and Gaza,death,2020-01-24,0
@@ -109383,6 +110832,9 @@ West Bank and Gaza,death,2020-08-31,152
 West Bank and Gaza,death,2020-09-01,159
 West Bank and Gaza,death,2020-09-02,162
 West Bank and Gaza,death,2020-09-03,167
+West Bank and Gaza,death,2020-09-04,170
+West Bank and Gaza,death,2020-09-05,177
+West Bank and Gaza,death,2020-09-06,181
 Western Sahara,case,2020-01-22,0
 Western Sahara,case,2020-01-23,0
 Western Sahara,case,2020-01-24,0
@@ -109609,6 +111061,9 @@ Western Sahara,case,2020-08-31,10
 Western Sahara,case,2020-09-01,10
 Western Sahara,case,2020-09-02,10
 Western Sahara,case,2020-09-03,10
+Western Sahara,case,2020-09-04,10
+Western Sahara,case,2020-09-05,10
+Western Sahara,case,2020-09-06,10
 Western Sahara,death,2020-01-22,0
 Western Sahara,death,2020-01-23,0
 Western Sahara,death,2020-01-24,0
@@ -109835,6 +111290,9 @@ Western Sahara,death,2020-08-31,1
 Western Sahara,death,2020-09-01,1
 Western Sahara,death,2020-09-02,1
 Western Sahara,death,2020-09-03,1
+Western Sahara,death,2020-09-04,1
+Western Sahara,death,2020-09-05,1
+Western Sahara,death,2020-09-06,1
 Yemen,case,2020-01-22,0
 Yemen,case,2020-01-23,0
 Yemen,case,2020-01-24,0
@@ -110061,6 +111519,9 @@ Yemen,case,2020-08-31,1958
 Yemen,case,2020-09-01,1962
 Yemen,case,2020-09-02,1976
 Yemen,case,2020-09-03,1979
+Yemen,case,2020-09-04,1983
+Yemen,case,2020-09-05,1983
+Yemen,case,2020-09-06,1987
 Yemen,death,2020-01-22,0
 Yemen,death,2020-01-23,0
 Yemen,death,2020-01-24,0
@@ -110287,6 +111748,9 @@ Yemen,death,2020-08-31,566
 Yemen,death,2020-09-01,570
 Yemen,death,2020-09-02,571
 Yemen,death,2020-09-03,571
+Yemen,death,2020-09-04,572
+Yemen,death,2020-09-05,572
+Yemen,death,2020-09-06,572
 Zambia,case,2020-01-22,0
 Zambia,case,2020-01-23,0
 Zambia,case,2020-01-24,0
@@ -110513,6 +111977,9 @@ Zambia,case,2020-08-31,12097
 Zambia,case,2020-09-01,12381
 Zambia,case,2020-09-02,12415
 Zambia,case,2020-09-03,12523
+Zambia,case,2020-09-04,12639
+Zambia,case,2020-09-05,12709
+Zambia,case,2020-09-06,12776
 Zambia,death,2020-01-22,0
 Zambia,death,2020-01-23,0
 Zambia,death,2020-01-24,0
@@ -110739,6 +112206,9 @@ Zambia,death,2020-08-31,288
 Zambia,death,2020-09-01,290
 Zambia,death,2020-09-02,292
 Zambia,death,2020-09-03,292
+Zambia,death,2020-09-04,292
+Zambia,death,2020-09-05,292
+Zambia,death,2020-09-06,295
 Zimbabwe,case,2020-01-22,0
 Zimbabwe,case,2020-01-23,0
 Zimbabwe,case,2020-01-24,0
@@ -110965,6 +112435,9 @@ Zimbabwe,case,2020-08-31,6497
 Zimbabwe,case,2020-09-01,6559
 Zimbabwe,case,2020-09-02,6638
 Zimbabwe,case,2020-09-03,6678
+Zimbabwe,case,2020-09-04,6837
+Zimbabwe,case,2020-09-05,6837
+Zimbabwe,case,2020-09-06,6837
 Zimbabwe,death,2020-01-22,0
 Zimbabwe,death,2020-01-23,0
 Zimbabwe,death,2020-01-24,0
@@ -111191,3 +112664,6 @@ Zimbabwe,death,2020-08-31,202
 Zimbabwe,death,2020-09-01,203
 Zimbabwe,death,2020-09-02,206
 Zimbabwe,death,2020-09-03,206
+Zimbabwe,death,2020-09-04,206
+Zimbabwe,death,2020-09-05,206
+Zimbabwe,death,2020-09-06,206
