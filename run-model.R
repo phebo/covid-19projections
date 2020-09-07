@@ -77,6 +77,7 @@ dfE <- dfJh %>% filter(geo %in% vGeo, date %in% vDate) %>%
   left_join(dfEcon) %>%
   mutate_at(vars(case:deathExp), ~ ifelse(is.na(.), -1, .)) # Set missing values to -1
 mCase <- xtabs(case ~ geo + date, dfE)
+mCase[mCase < 0] <- 0
 mDeathRep <- xtabs(death ~ geo + date, dfE)
 mDeathRep[mDeathRep < 0] <- 0
 mDeathTot <- xtabs(deathTot ~ geo + date, dfE)
