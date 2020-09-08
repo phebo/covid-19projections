@@ -109,7 +109,7 @@ clean.data <- function(
                mCase = mCase, mDeathRep = mDeathRep, mDeathTot = mDeathTot, mDeathExp = mDeathExp,
                outlCase = outlCase, outlDeath = outlDeath, pOutl = pOutl, idgSig = idgSig)
 
-  list(dfE = dfE, dfP = dfP, dfPCor = dfPCor, lData = lData,
+  list(dfE = dfE, dfP = dfP, dfPCor = dfPCor, dfTest = dfTest, lData = lData,
        p = list(vDate = vDate, vGeo = vGeo, vPol = vPol, minPop = minPop, polG1 = polG1, polExcl = polExcl,
                 holidays = holidays, mortMu = mortMu, mortSig = mortSig, pOutl = pOutl, idgSig = idgSig))
 }

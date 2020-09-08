@@ -80,6 +80,7 @@ transformed parameters{
   vector[lagDeathMax] lpLagDeath;
   real<lower=0,upper=1> idgLam2;
   real idgPhi[2];
+  real eps[nGeo, nT-3];
 
   lpLagCase = log(pLagCase);
   lpLagDeath = log(pLagDeath);
@@ -118,6 +119,7 @@ transformed parameters{
       if(mDeathExp[i, t + lagDeathMax] != -1) lDeathTotEst[i, t] = log(mDeathExp[i, t + lagDeathMax] + deathAdj[i] + exp(lDeath));
         else lDeathTotEst[i,t] = 0;
     }
+    for(t in 3:(nT-1)) eps[i, t - 2] = idg[i, t] - idgPhi[1] * idg[i, t-1] + idgPhi[2] * idg[i, t-2];
   }
 }
 
@@ -132,7 +134,7 @@ model {
   }
   
   // AR(2) model for idiosyncratic growth rate
-  for(i in 1:nGeo) for(t in 3:(nT-1)) idg[i, t] ~ normal(idgPhi[1] * idg[i, t-1] + idgPhi[2] * idg[i, t-2], idgSig);
+  for(i in 1:nGeo) for(t in 1:(nT-3)) eps[i, t] ~ normal(0, idgSig);
 
   // Likelihood for observations
   for(i in 1:nGeo) {

@@ -93,6 +93,10 @@ print(dfOutRaw %>% filter(name %in% c("g0", "g1", "idg")) %>% group_by(iter, nam
         group_by(name) %>% summarize(estimate = median(value), low = quantile(value, probs=0.025), high = quantile(value, probs=0.975))) %>%
   mutate(daily = expm1(estimate / 7))
 
+maxLag <- 10
+eps <- t(cbind(matrix(sim$eps, ncol = length(p$vDate) - 3), matrix(nrow = nIter * length(vGeo), ncol = maxLag)))
+stopifnot(eps[1:(length(p$vDate)-3)] == sim$eps[1,1,])
+
 #### Make charts ####
 
 fGPol <- dfOut %>% filter(name == "dgCum") %>%
@@ -175,7 +179,7 @@ fPol <- dfP %>% separate(pol, c("polCode", "polName", "level"), sep = " - ") %>%
 
 dfPCorSum <- l$dfPCor %>% group_by(pol1) %>% summarise(value = sum(cor)) %>% arrange(-value) %>% mutate(pol = pol1) %>%
   separate(pol, c("polCode", "polName", "level"), sep = " - ") %>% mutate(pol2 = paste(polCode, level, sep = " - "))
-fPolCor <- dfPCor %>% separate(pol2, c("polCode", "polName", "level"), sep = " - ") %>%
+fPolCor <- l$dfPCor %>% separate(pol2, c("polCode", "polName", "level"), sep = " - ") %>%
   mutate(pol2 = paste(polCode, level, sep = " - ")) %>%
   ggplot(aes(x = factor(pol2, levels = dfPCorSum$pol2), y = fct_rev(factor(pol1, levels = dfPCorSum$pol1)), fill = cor)) + geom_raster() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + xlab(element_blank()) + ylab(element_blank()) +
@@ -187,7 +191,7 @@ fGAll <- dfOut %>% filter(name == "g") %>%
   ggtitle("Weekly growth rate estimates")
 
 fFrac <- dfOut %>% filter(substr(name, 1, 4) == "frac") %>% select(-c(date, pol)) %>% 
-  left_join(dfTest %>% filter(date == max(date)) %>% select(geo, level) %>% mutate(current = T)) %>%
+  left_join(l$dfTest %>% filter(date == max(date)) %>% select(geo, level) %>% mutate(current = T)) %>%
   mutate(name = paste(name, level), current = ifelse(is.na(current), F, current)) %>%
   ggplot(aes(x = fct_rev(geo), y = estimate, ymin = low, ymax = high, color = fct_rev(factor(current)))) + geom_pointrange(size = 0.3) +
   facet_grid(~name) + coord_flip()  + xlab(element_blank()) + ylab(element_blank()) +
@@ -211,4 +215,7 @@ pdf(paste0("output/charts-sup-", time.now, ".pdf"), width=10, height=10, onefile
   print(fGAll)
   print(fFrac)
   print(fPars)
+  par(mfrow=c(2,1))
+  acf(as.vector(eps), na.action = na.pass, lag.max = maxLag)
+  pacf(as.vector(eps), na.action = na.pass, lag.max = maxLag)
 dev.off()
