@@ -251,6 +251,7 @@ Aruba,ABW,2020-03-19,H3,Contact tracing,1,NA
 Australia,AUS,2020-01-01,C1,School closing,0,NA
 Australia,AUS,2020-03-24,C1,School closing,3,0
 Australia,AUS,2020-04-18,C1,School closing,2,0
+Australia,AUS,2020-08-28,C1,School closing,3,1
 Australia,AUS,2020-01-01,C2,Workplace closing,0,NA
 Australia,AUS,2020-03-23,C2,Workplace closing,2,0
 Australia,AUS,2020-05-15,C2,Workplace closing,1,1
@@ -1672,6 +1673,7 @@ El Salvador,SLV,2020-01-01,C2,Workplace closing,0,NA
 El Salvador,SLV,2020-03-16,C2,Workplace closing,2,1
 El Salvador,SLV,2020-03-21,C2,Workplace closing,3,1
 El Salvador,SLV,2020-06-16,C2,Workplace closing,2,0
+El Salvador,SLV,2020-08-24,C2,Workplace closing,1,1
 El Salvador,SLV,2020-01-01,C3,Cancel public events,0,NA
 El Salvador,SLV,2020-03-11,C3,Cancel public events,1,1
 El Salvador,SLV,2020-03-21,C3,Cancel public events,2,1
@@ -2971,7 +2973,7 @@ Kuwait,KWT,2020-01-01,H3,Contact tracing,0,NA
 Kuwait,KWT,2020-03-07,H3,Contact tracing,2,NA
 Kyrgyz Republic,KGZ,2020-01-01,C1,School closing,0,NA
 Kyrgyz Republic,KGZ,2020-03-16,C1,School closing,3,1
-Kyrgyz Republic,KGZ,2020-08-14,C1,School closing,2,1
+Kyrgyz Republic,KGZ,2020-09-01,C1,School closing,2,1
 Kyrgyz Republic,KGZ,2020-01-01,C2,Workplace closing,0,NA
 Kyrgyz Republic,KGZ,2020-03-17,C2,Workplace closing,2,1
 Kyrgyz Republic,KGZ,2020-03-25,C2,Workplace closing,3,0
@@ -3038,6 +3040,7 @@ Laos,LAO,2020-03-30,H1,Public information campaigns,2,1
 Laos,LAO,2020-07-26,H1,Public information campaigns,1,1
 Laos,LAO,2020-01-01,H2,Testing policy,0,NA
 Laos,LAO,2020-03-17,H2,Testing policy,1,NA
+Laos,LAO,2020-08-25,H2,Testing policy,2,NA
 Laos,LAO,2020-01-01,H3,Contact tracing,0,NA
 Laos,LAO,2020-04-06,H3,Contact tracing,2,NA
 Latvia,LVA,2020-01-01,C1,School closing,0,NA
@@ -3051,7 +3054,7 @@ Latvia,LVA,2020-05-12,C3,Cancel public events,1,1
 Latvia,LVA,2020-01-01,C4,Restrictions on gatherings,0,NA
 Latvia,LVA,2020-03-13,C4,Restrictions on gatherings,2,1
 Latvia,LVA,2020-03-14,C4,Restrictions on gatherings,3,1
-Latvia,LVA,2020-08-17,C4,Restrictions on gatherings,1,1
+Latvia,LVA,2020-08-01,C4,Restrictions on gatherings,1,1
 Latvia,LVA,2020-01-01,C5,Close public transport,0,NA
 Latvia,LVA,2020-03-27,C5,Close public transport,1,1
 Latvia,LVA,2020-01-01,C6,Stay at home requirements,0,NA
@@ -3170,6 +3173,7 @@ Liberia,LBR,2020-01-01,H3,Contact tracing,0,NA
 Liberia,LBR,2020-03-16,H3,Contact tracing,1,NA
 Libya,LBY,2020-01-01,C1,School closing,0,NA
 Libya,LBY,2020-03-15,C1,School closing,3,1
+Libya,LBY,2020-09-01,C1,School closing,2,1
 Libya,LBY,2020-01-01,C2,Workplace closing,0,NA
 Libya,LBY,2020-03-14,C2,Workplace closing,1,1
 Libya,LBY,2020-04-16,C2,Workplace closing,3,1
@@ -3485,6 +3489,7 @@ Mexico,MEX,2020-01-01,H3,Contact tracing,0,NA
 Mexico,MEX,2020-02-28,H3,Contact tracing,1,NA
 Moldova,MDA,2020-01-01,C1,School closing,0,NA
 Moldova,MDA,2020-03-11,C1,School closing,3,1
+Moldova,MDA,2020-09-01,C1,School closing,2,1
 Moldova,MDA,2020-01-01,C2,Workplace closing,0,NA
 Moldova,MDA,2020-03-11,C2,Workplace closing,2,1
 Moldova,MDA,2020-01-01,C3,Cancel public events,0,NA
@@ -4196,6 +4201,7 @@ Philippines,PHL,2020-05-29,C7,Restrictions on internal movement,1,1
 Philippines,PHL,2020-01-01,C8,International travel controls,0,NA
 Philippines,PHL,2020-01-31,C8,International travel controls,3,NA
 Philippines,PHL,2020-03-22,C8,International travel controls,4,NA
+Philippines,PHL,2020-08-25,C8,International travel controls,2,NA
 Philippines,PHL,2020-01-01,H1,Public information campaigns,0,NA
 Philippines,PHL,2020-01-24,H1,Public information campaigns,2,1
 Philippines,PHL,2020-01-01,H2,Testing policy,0,NA
@@ -5205,6 +5211,7 @@ Tanzania,TZA,2020-01-01,C8,International travel controls,0,NA
 Tanzania,TZA,2020-01-30,C8,International travel controls,1,NA
 Tanzania,TZA,2020-03-15,C8,International travel controls,3,NA
 Tanzania,TZA,2020-04-12,C8,International travel controls,4,NA
+Tanzania,TZA,2020-08-27,C8,International travel controls,2,NA
 Tanzania,TZA,2020-01-01,H1,Public information campaigns,0,NA
 Tanzania,TZA,2020-03-26,H1,Public information campaigns,2,0
 Tanzania,TZA,2020-03-27,H1,Public information campaigns,2,1
@@ -7109,6 +7116,7 @@ US - South Carolina,US_SC,2020-05-11,H3,Contact tracing,2,NA
 US - South Dakota,US_SD,2020-01-01,C1,School closing,0,NA
 US - South Dakota,US_SD,2020-03-12,C1,School closing,2,1
 US - South Dakota,US_SD,2020-03-16,C1,School closing,3,1
+US - South Dakota,US_SD,2020-08-27,C1,School closing,2,0
 US - South Dakota,US_SD,2020-01-01,C2,Workplace closing,0,NA
 US - South Dakota,US_SD,2020-03-12,C2,Workplace closing,1,1
 US - South Dakota,US_SD,2020-03-15,C2,Workplace closing,2,1
