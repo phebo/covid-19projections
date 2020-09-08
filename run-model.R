@@ -94,7 +94,7 @@ print(dfOutRaw %>% filter(name %in% c("g0", "g1", "idg")) %>% group_by(iter, nam
   mutate(daily = expm1(estimate / 7))
 
 maxLag <- 10
-eps <- t(cbind(matrix(sim$eps, ncol = length(p$vDate) - 3), matrix(nrow = nIter * length(vGeo), ncol = maxLag)))
+eps <- t(cbind(matrix(sim$eps, ncol = length(p$vDate) - 3), matrix(nrow = nIter * length(p$vGeo), ncol = maxLag)))
 stopifnot(eps[1:(length(p$vDate)-3)] == sim$eps[1,1,])
 
 #### Make charts ####
