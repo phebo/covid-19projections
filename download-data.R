@@ -18,6 +18,7 @@
 # The updated data are written to the input/ directory
 
 library(tidyverse)
+outlExDeath <- 0.2 # Threshold for removing data points with very low recorded total deaths compared to expected deaths
 
 dfOxG <- read_csv("https://github.com/OxCGRT/covid-policy-tracker/blob/master/data/OxCGRT_latest.csv?raw=true",
                   col_types = list(RegionName = col_character(), RegionCode = col_character()))
@@ -56,7 +57,8 @@ dfEcon <- dfEconEd %>%
 stopifnot(all(dfEcon$year == 2020))
 dfPop <- dfEcon %>% filter(year == 2020, week == 1) %>% select(geo, population)
 dfEcon <- dfEcon %>%
-  select(geo, date, deathTot = total_deaths, deathExp = expected_deaths)
+  select(geo, date, deathTot = total_deaths, deathExp = expected_deaths) %>%
+  filter(deathTot > deathExp * (1-outlExDeath))
 write_csv(dfEcon, "input/econ-database.csv")
 write_csv(dfPop, "input/econ-population.csv")
 
