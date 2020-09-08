@@ -66,7 +66,7 @@ clean.data <- function(
     group_by(geo, pol) %>% fill(value) %>% ungroup() %>% filter(date %in% vDate) %>%
     mutate(pol2 = pol) %>% separate(pol2, c("polCode", "polName", "level"), sep = " - ") %>%
     mutate(polS = paste(polCode, level, sep = " - "),
-           value = ifelse(polCode == "C1" & date >= holidays[1] & date <= holidays[2], 1, value),
+           value = if(is.null(holidays)) value else ifelse(polCode == "C1" & date >= holidays[1] & date <= holidays[2], 1, value),
            value = ifelse(is.na(value), 0, value))
   dfPCor <- expand_grid(pol1 = vPolAll, pol2 = vPolAll) %>%
     mutate(cor = as.vector(cor(as.matrix(dfP %>% select(geo, pol, date, value) %>% pivot_wider(names_from = pol) %>% select(-c(geo, date))))))
@@ -113,3 +113,37 @@ clean.data <- function(
        p = list(vDate = vDate, vGeo = vGeo, vPol = vPol, minPop = minPop, polG1 = polG1, polExcl = polExcl,
                 holidays = holidays, mortMu = mortMu, mortSig = mortSig, pOutl = pOutl, idgSig = idgSig))
 }
+
+make.chains <- function(models){
+  # Makes a list of chains from a list of model specifications
+  # Requires model$chains with #of chains for that model
+  chains <- list()
+  n <- 1
+  for(model in models){
+    for(i in 1:model$chains){
+      new.chain <- model
+      new.chain$chain.id <- i
+      new.chain$model.id <- n
+      chains <- c(chains, list(new.chain))
+    }
+    n <- n + 1
+  }
+  chains
+}
+
+do.chain <- function(chain){
+  sampling(chain$m, pars=chain$pars, data=chain$data, 
+       chains=1, chain_id = chain$chain.id, seed=99743, iter=chain$iter, warmup=chain$warmup, thin=chain$thin)
+  
+}
+
+cons.fits <- function(fits.chain, chains){
+  # Consolidates multiple chains by fit into model fits
+  model.ids <- sapply(chains, function(chain) chain$model.id)
+  fits <- list()
+  for(i in unique(model.ids)){
+    fits[[i]] <- sflist2stanfit(fits.chain[model.ids == i])
+  }
+  fits
+}
+
