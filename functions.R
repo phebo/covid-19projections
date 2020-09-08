@@ -132,6 +132,7 @@ make.chains <- function(models){
 }
 
 do.chain <- function(chain){
+  require(rstan)
   sampling(chain$m, pars=chain$pars, data=chain$data, 
        chains=1, chain_id = chain$chain.id, seed=99743, iter=chain$iter, warmup=chain$warmup, thin=chain$thin)
   
