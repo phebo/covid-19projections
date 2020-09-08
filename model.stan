@@ -122,8 +122,10 @@ transformed parameters{
 }
 
 model {
-  // Priors
+  // Hyperprior for mortality
   lmortality ~ normal(log(mortMu), mortSig);
+  
+  // Hierarchical priors for fraction 
   for(i in 1:nGeo) {
     fracCase[i] ~ normal(fracCaseMu, fracCaseSig);
     fracDeath[i] ~ normal(fracDeathMu, fracDeathSig);
