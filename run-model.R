@@ -44,8 +44,7 @@ dfOx <- read_csv("input/oxford-policy.csv")
 
 dfGeoAdd <- read_csv("input/geo-add.csv")
 
-l <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd,
-                minPop = 2E7)
+l <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd)
 dfP <- l$dfP; dfE <- l$dfE; lData <- l$lData; p <- l$p
 #### Fit model ####
 
