@@ -34,7 +34,7 @@ dfGeoAdd <- read_csv("input/geo-add.csv")
 
 l <- list(
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, minPop = 1e7),
-  clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, addGeo = T),
+  clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, addGeo = F),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, holidays = NULL),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, pOutl = 1e-2),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, pOutl = 1e-4),
