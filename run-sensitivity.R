@@ -33,11 +33,12 @@ dfOx <- read_csv("input/oxford-policy.csv")
 
 l <- list(
   clean.data(dfJh, dfEcon, dfPop, dfOx, minPop = 1e7),
-  clean.data(dfJh, dfEcon, dfPop, dfOx, holidays = NULL),
+  clean.data(dfJh, dfEcon, dfPop, dfOx, minPop = 3e6),
   clean.data(dfJh, dfEcon, dfPop, dfOx, pOutl = 1e-2),
   clean.data(dfJh, dfEcon, dfPop, dfOx, pOutl = 1e-4),
   clean.data(dfJh, dfEcon, dfPop, dfOx, idgSig = 0.01),
-  clean.data(dfJh, dfEcon, dfPop, dfOx, idgSig = 0.05)
+  clean.data(dfJh, dfEcon, dfPop, dfOx, idgSig = 0.05),
+  clean.data(dfJh, dfEcon, dfPop, dfOx, holidays = NULL)
 )
 
 m <- stan_model("model.stan")
