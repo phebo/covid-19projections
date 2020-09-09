@@ -198,13 +198,15 @@ fFrac <- dfOut %>% filter(substr(name, 1, 4) == "frac") %>% select(-c(date, pol)
   scale_color_brewer(type = "qual", name = "Current testing\npolicy") +
   ggtitle("Fraction of identified cases by testing regime (H2 policy) and identified deaths")
 
+
+options(width = 100)
 text <- paste("minPop =",p$minPop,"\npolG1 =", paste(p$polG1, collapse = ", "),"\npolExcl =", paste(p$polExcl, collapse = ", "),
               "\nholidays =", paste(p$holidays, collapse = ", "),
               "\nmortMu =", p$mortMu, "\nmortSig =", p$mortSig, "\npOutl =", p$pOutl, "\nidgSig =", p$idgSig,"\n\n",
               paste(capture.output(print(fit, pars = c("pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1",
                                                        "idgLam2", "lmortality","fracCaseMu", "fracCaseSig", "fracDeathMu",
                                                        "fracDeathSig"))), collapse = "\n"))
-fPars <- ggplot() + annotate("text", x = 0, y = 0, size=3.5, label = text, family = "mono") + theme_void()
+fPars <- ggplot() + annotate("text", x = 0, y = 0, size=4, label = text, family = "mono") + theme_void()
 
 pdf(paste0("output/charts-sup-", time.now, ".pdf"), width=10, height=10, onefile=T)
   print(fNew)
