@@ -52,10 +52,6 @@ parameters {
   real<lower=0, upper=2> dg[nPol];
   simplex[nTest + 1] caseP[nGeo];
   simplex[nTest + 1] deathP[nGeo];
-  real<lower=0,upper=1> fracDeathMu[nTest];
-  real<lower=0,upper=1> fracCaseMu[nTest];
-  real<lower=0> fracCaseSig[nTest];
-  real<lower=0> fracDeathSig[nTest];
   real<upper=0> lmortality;
   real deathAdj[nGeo]; // Baseline death rate adjustment vs. historical trends
   real<lower=0> phiCase;
@@ -126,12 +122,6 @@ transformed parameters{
 model {
   // Hyperprior for mortality
   lmortality ~ normal(log(mortMu), mortSig);
-  
-  // Hierarchical priors for fraction 
-  for(i in 1:nGeo) {
-    fracCase[i] ~ normal(fracCaseMu, fracCaseSig);
-    fracDeath[i] ~ normal(fracDeathMu, fracDeathSig);
-  }
   
   // AR(2) model for idiosyncratic growth rate
   for(i in 1:nGeo) for(t in 1:(nT-3)) eps[i, t] ~ normal(0, idgSig);

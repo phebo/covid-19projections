@@ -42,19 +42,17 @@ dfEcon <- read_csv("input/econ-database.csv")
 dfPop <- read_csv("input/econ-population.csv")
 dfOx <- read_csv("input/oxford-policy.csv")
 
-dfGeoAdd <- read_csv("input/geo-add.csv")
-
-l <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd)
+l <- clean.data(dfJh, dfEcon, dfPop, dfOx)
 dfP <- l$dfP; dfE <- l$dfE; lData <- l$lData; p <- l$p
 #### Fit model ####
 
 m <- stan_model("model.stan")
 
-fit <- sampling(m, data = lData, chains = 4, iter = 1400, warmup = 1000, thin = 2, control = list(max_treedepth = 12, adapt_delta = 0.9), seed = 99743)
+fit <- sampling(m, data = lData, chains = 4, iter = 700, warmup = 500, thin = 2, control = list(max_treedepth = 12, adapt_delta = 0.9), seed = 99743)
 #fit <- sampling(m, data = lData, chains = 2, iter = 300)
 save(list = ls(), file = paste0("output/image-", time.now, ".RData"))
 print(fit, pars = c("deathAdj", "pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2", 
-                    "lmortality", "fracCaseMu", "fracCaseSig", "fracDeathMu", "fracDeathSig"))
+                    "lmortality"))
 
 
 #### Process model output ####
@@ -204,8 +202,7 @@ text <- paste("minPop =",p$minPop,"\npolG1 =", paste(p$polG1, collapse = ", "),"
               "\nholidays =", paste(p$holidays, collapse = ", "),
               "\nmortMu =", p$mortMu, "\nmortSig =", p$mortSig, "\npOutl =", p$pOutl, "\nidgSig =", p$idgSig,"\n\n",
               paste(capture.output(print(fit, pars = c("pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1",
-                                                       "idgLam2", "lmortality","fracCaseMu", "fracCaseSig", "fracDeathMu",
-                                                       "fracDeathSig"))), collapse = "\n"))
+                                                       "idgLam2", "lmortality"))), collapse = "\n"))
 fPars <- ggplot() + annotate("text", x = 0, y = 0, size=4, label = text, family = "mono") + theme_void()
 
 pdf(paste0("output/charts-sup-", time.now, ".pdf"), width=10, height=10, onefile=T)

@@ -15,8 +15,8 @@
 
 
 clean.data <- function(
-  dfJh, dfEcon, dfPop, dfOx, dfGeoAdd,
-  minPop = 5e6, addGeo = T, geoExclude = c("Chile", "South Africa"), dates = c(as.Date("2020-02-01"), Inf),
+  dfJh, dfEcon, dfPop, dfOx,
+  minPop = 5e6, geoExclude = c("Chile", "South Africa"), dates = c(as.Date("2020-02-01"), Inf),
   polG1 = c("C1 - 1", "C2 - 1", "C3 - 1", "C7 - 1"),
   polExcl = c("C4 - 1", "C6 - 3", "C8 - 2", "H2 - 1", "H3 - 1"),
   holidays = as.Date(c("2020-06-20", "2020-08-28")), lagCaseMax = 2, lagDeathMax = 4,
@@ -24,9 +24,8 @@ clean.data <- function(
   pOutl = 1e-3, # Probability of outlier (lower probability attaches more weight to extreme data points)
   idgSig = 0.02 # s.d. of change in idiosyncratic growth rate (AR(2) process)
 ) {
-  dfPop2 <- if(addGeo) bind_rows(dfPop, dfGeoAdd %>% select(-geoJh)) else dfPop
-  
-  vGeo <- sort(dfPop2 %>% filter(population >= minPop, geo != "US - New York City") %>% pull(geo))
+
+  vGeo <- sort(dfPop %>% filter(population >= minPop, geo != "US - New York City") %>% pull(geo))
   vGeo <- vGeo[!vGeo %in% geoExclude]
   
   vDate <- sort(unique(dfJh$date))
@@ -35,8 +34,6 @@ clean.data <- function(
   stopifnot(as.numeric(vDate - lag(vDate))[-1] == 7)
   
   # Epidemiology data
-  dfJh <- dfJh %>% left_join(dfGeoAdd %>% select(geo = geoJh, geoNew = geo)) %>%
-    mutate(geo = ifelse(is.na(geoNew), geo, geoNew)) %>% select(-geoNew)
   dfE <- dfJh %>% filter(geo %in% vGeo, date %in% vDate) %>%
     arrange(geo, var, date) %>%
     group_by(geo, var) %>% mutate(new = cum - lag(cum, default = 0)) %>% ungroup() %>%
