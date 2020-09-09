@@ -30,15 +30,14 @@ dfJh <- read_csv("input/jh-database.csv")
 dfEcon <- read_csv("input/econ-database.csv")
 dfPop <- read_csv("input/econ-population.csv")
 dfOx <- read_csv("input/oxford-policy.csv")
-dfGeoAdd <- read_csv("input/geo-add.csv")
 
 l <- list(
-  clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, minPop = 1e7),
-  clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, holidays = NULL),
-  clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, pOutl = 1e-2),
-  clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, pOutl = 1e-4),
-  clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, idgSig = 0.01),
-  clean.data(dfJh, dfEcon, dfPop, dfOx, dfGeoAdd, idgSig = 0.05)
+  clean.data(dfJh, dfEcon, dfPop, dfOx, minPop = 1e7),
+  clean.data(dfJh, dfEcon, dfPop, dfOx, holidays = NULL),
+  clean.data(dfJh, dfEcon, dfPop, dfOx, pOutl = 1e-2),
+  clean.data(dfJh, dfEcon, dfPop, dfOx, pOutl = 1e-4),
+  clean.data(dfJh, dfEcon, dfPop, dfOx, idgSig = 0.01),
+  clean.data(dfJh, dfEcon, dfPop, dfOx, idgSig = 0.05)
 )
 
 m <- stan_model("model.stan")
