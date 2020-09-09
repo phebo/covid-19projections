@@ -115,7 +115,7 @@ transformed parameters{
       if(mDeathExp[i, t + lagDeathMax] != -1) lDeathTotEst[i, t] = log(mDeathExp[i, t + lagDeathMax] + deathAdj[i] + exp(lDeath));
         else lDeathTotEst[i,t] = 0;
     }
-    for(t in 3:(nT-1)) eps[i, t - 2] = idg[i, t] - idgPhi[1] * idg[i, t-1] + idgPhi[2] * idg[i, t-2];
+    for(t in 3:(nT-1)) eps[i, t - 2] = idg[i, t] - idgPhi[1] * idg[i, t-1] - idgPhi[2] * idg[i, t-2];
   }
 }
 
