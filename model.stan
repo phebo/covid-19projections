@@ -27,6 +27,7 @@ data {
   int<lower=1> lagDeathMax;
   int<lower=1> nGeo;
   int<lower=1> nT;
+  int<lower=0> nTPred;
   int<lower=1> nPol;
   int<lower=1> nTest;
   int<lower=0, upper=1> mPol[nGeo, nT, nPol];
@@ -59,24 +60,24 @@ parameters {
   real<lower=0> phiDeathTot;
   simplex[lagCaseMax] pLagCase;
   simplex[lagDeathMax] pLagDeath;
-  real<lower=-1,upper=1> idg[nGeo, nT-1];
+  real<lower=-1,upper=1> idg[nGeo, nT+nTPred-1];
   real<lower=0,upper=1> idgLam1;
   real<lower=0,upper=1> idgLam2f; // Defining idgLam2 as fraction of idgLam1, ensuring idgLam2 <= idgLam1
 }
 
 transformed parameters{
-  real logy[nGeo, nT];  // log infection rate
+  real logy[nGeo, nT+nTPred];  // log infection rate
   real<lower=0,upper=1> fracCase[nGeo, nTest]; // Fraction of infections reported 
   real<lower=0,upper=1> fracDeath[nGeo, nTest]; // Fraction of deaths reported 
-  real g[nGeo, nT-1];
-  real lCaseEst[nGeo, nT - lagCaseMax];
-  real lDeathEst[nGeo, nT - lagDeathMax];
-  real lDeathTotEst[nGeo, nT - lagDeathMax];
+  real g[nGeo, nT+nTPred-1];
+  real lCaseEst[nGeo, nT + nTPred - lagCaseMax];
+  real lDeathEst[nGeo, nT + nTPred - lagDeathMax];
+  real lDeathTotEst[nGeo, nT + lagDeathMax];
   vector[lagCaseMax] lpLagCase;
   vector[lagDeathMax] lpLagDeath;
   real<lower=0,upper=1> idgLam2;
   real idgPhi[2];
-  real eps[nGeo, nT-3];
+  real eps[nGeo, nT+nTPred-3];
 
   lpLagCase = log(pLagCase);
   lpLagDeath = log(pLagDeath);
@@ -97,6 +98,10 @@ transformed parameters{
       g[i, t] += dgTot + idg[i, t];
       logy[i, t + 1] = logy[i, t] + g[i, t];
     }
+    for(t in nT:(nT + nTPred - 1)) {
+      g[i, t] = g1[i] + dgTot + idg[i, t];
+      logy[i, t + 1] = logy[i, t] + g[i, t];
+    }
 
     // Fractions of infections reported from unit simplex (ensuring that fracCase[i, l-1] < fracCase[i, l])
     for(l in 1:nTest) {
@@ -108,14 +113,18 @@ transformed parameters{
       }
     }
 
-    for(t in 1:(nT-lagCaseMax)) lCaseEst[i, t] = log(fracCase[i, mTest[i, t + lagCaseMax]]) + fLag(logy[i], lpLagCase, t + lagCaseMax);
-    for(t in 1:(nT-lagDeathMax)) {
-      real lDeath = fLag(logy[i], lpLagDeath, t + lagDeathMax) + lmortality;
-      lDeathEst[i, t] = log(fracDeath[i, mTest[i, t + lagCaseMax]]) + lDeath;
-      if(mDeathExp[i, t + lagDeathMax] != -1) lDeathTotEst[i, t] = log(mDeathExp[i, t + lagDeathMax] + deathAdj[i] + exp(lDeath));
-        else lDeathTotEst[i,t] = 0;
+    for(t in 1:(nT+nTPred-lagCaseMax)) {
+      lCaseEst[i, t] = log(fracCase[i, mTest[i, min(nT, t + lagCaseMax)]]) + fLag(logy[i], lpLagCase, t + lagCaseMax);
     }
-    for(t in 3:(nT-1)) eps[i, t - 2] = idg[i, t] - idgPhi[1] * idg[i, t-1] - idgPhi[2] * idg[i, t-2];
+    for(t in 1:(nT+nTPred-lagDeathMax)) {
+      real lDeath = fLag(logy[i], lpLagDeath, t + lagDeathMax) + lmortality;
+      lDeathEst[i, t] = log(fracDeath[i, mTest[i, min(nT, t + lagDeathMax)]]) + lDeath;
+      if(t + lagDeathMax <= nT) {
+        if(mDeathExp[i, t + lagDeathMax] != -1) lDeathTotEst[i, t] = log(mDeathExp[i, t + lagDeathMax] + deathAdj[i] + exp(lDeath));
+          else lDeathTotEst[i,t] = 0;
+      }
+    }
+    for(t in 3:(nT+nTPred-1)) eps[i, t - 2] = idg[i, t] - idgPhi[1] * idg[i, t-1] - idgPhi[2] * idg[i, t-2];
   }
 }
 
@@ -124,7 +133,7 @@ model {
   lmortality ~ normal(log(mortMu), mortSig);
   
   // AR(2) model for idiosyncratic growth rate
-  for(i in 1:nGeo) for(t in 1:(nT-3)) eps[i, t] ~ normal(0, idgSig);
+  for(i in 1:nGeo) for(t in 1:(nT+nTPred-3)) eps[i, t] ~ normal(0, idgSig);
 
   // Likelihood for observations
   for(i in 1:nGeo) {
@@ -138,6 +147,18 @@ model {
       if(mDeathTot[i, t] != -1 && mDeathExp[i, t] != -1) {
         mDeathTot[i, t] ~ neg_binomial_2_log(lDeathTotEst[i, t - lagDeathMax], phiDeathTot);
       }
+    }
+  }
+}
+
+generated quantities{
+  int<lower=0> predCase[nGeo, nTPred];
+  int<lower=0> predDeath[nGeo, nTPred];
+  
+  for(i in 1:nGeo) {
+    for(t in 1:nTPred) {
+      predCase[i, t] = neg_binomial_2_log_rng(lCaseEst[i, t + nT - lagCaseMax], phiCase);
+      predDeath[i, t] = neg_binomial_2_log_rng(lDeathEst[i, t + nT - lagDeathMax], phiDeathRep);
     }
   }
 }

@@ -16,7 +16,8 @@
 
 clean.data <- function(
   dfJh, dfEcon, dfPop, dfOx,
-  minPop = 5e6, geoExclude = c("Chile", "South Africa"), dates = c(as.Date("2020-02-01"), Inf),
+  minPop = 5e6, geoExclude = c("Chile", "South Africa"),
+  dates = c(as.Date("2020-02-01"), Inf), nTPred = 0,
   polG1 = c("C1 - 1", "C2 - 1", "C3 - 1", "C7 - 1"),
   polExcl = c("C4 - 1", "C6 - 3", "C8 - 2", "H2 - 1", "H3 - 1"),
   holidays = as.Date(c("2020-06-20", "2020-08-28")), lagCaseMax = 2, lagDeathMax = 4,
@@ -101,7 +102,7 @@ clean.data <- function(
   outlDeath <- exp(coef(fit))
   
   lData = list(mortMu = mortMu, mortSig = mortSig, lagDeathMax = lagDeathMax, lagCaseMax = lagCaseMax,
-               nGeo = length(vGeo), nT = length(vDate), nPol = length(vPol), nTest = max(mTest),
+               nGeo = length(vGeo), nT = length(vDate), nTPred = nTPred, nPol = length(vPol), nTest = max(mTest),
                mPol = mPol, mPolChange = mPolChange, mPolG1 = mPolG1, mTest = mTest,
                mCase = mCase, mDeathRep = mDeathRep, mDeathTot = mDeathTot, mDeathExp = mDeathExp,
                outlCase = outlCase, outlDeath = outlDeath, pOutl = pOutl, idgSig = idgSig)
