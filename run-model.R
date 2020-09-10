@@ -49,7 +49,8 @@ dfP <- l$dfP; dfE <- l$dfE; lData <- l$lData; p <- l$p
 
 m <- stan_model("model.stan")
 
-fit <- sampling(m, data = lData, chains = 4, iter = 1200, warmup = 1000, thin = 2, control = list(adapt_delta = 0.9), seed = 99743)
+#fit <- sampling(m, data = lData, chains = 4, iter = 1200, warmup = 1000, thin = 2, control = list(adapt_delta = 0.9), seed = 99743)
+fit <- sampling(m, data = lData, chains = 4, iter = 500, warmup = 400)
 #fit <- sampling(m, data = lData, chains = 2, iter = 300)
 save(list = ls(), file = paste0("output/image-", time.now, ".RData"))
 print(fit, pars = c("deathAdj", "pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2", 
@@ -133,7 +134,7 @@ fGBase <- dfOut %>% filter(name == "g1+idg") %>%
   ggplot(aes(x = date, y = estimate, ymin = low, ymax = high)) + geom_ribbon(fill="grey70") + geom_line() +
   facet_wrap( ~ geo, ncol = 5) + xlab(element_blank()) + ylab(element_blank()) +
   labs(title = "Weekly base growth rate: variation in policy effectivenss",
-       subtitle = "Effect of just recommended (level 1) policies for schools (C1),\nworkplaces (C2), events (C3), and internal movement (C7)") +
+       subtitle = "Effect of level 1 policies for workplaces (C2) and gatherings (C4)") +
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1), strip.text = element_text(size = 7))
 
 pdf(paste0("output/charts-main-", time.now, ".pdf"), width=5.5, height=7, onefile=T)

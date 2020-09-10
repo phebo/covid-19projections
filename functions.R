@@ -15,11 +15,11 @@
 
 
 clean.data <- function(
-  dfJh, dfEcon, dfPop, dfOx,
+  dfJh, dfEcon, dfPop, dfOx, dfHol,
   minPop = 5e6, geoExclude = c("Chile", "South Africa"),
   dates = c(as.Date("2020-02-01"), Inf), nTPred = 0,
-  polG1 = c("C1 - 1", "C2 - 1", "C3 - 1", "C7 - 1"),
-  polExcl = c("C4 - 1", "C6 - 3", "C8 - 2", "H2 - 1", "H3 - 1"),
+  polG1 = c("C2 - 1"),
+  polExcl = NULL,
   lagCaseMax = 2, lagDeathMax = 4,
   mortMu = 0.01, mortSig = 0.5, # Parameters for log-normal distribution; mortSig = 0.5 means 95% interval of */exp(1.96*0.5)=2.6
   pOutl = 1e-3, # Probability of outlier (lower probability attaches more weight to extreme data points)
@@ -79,16 +79,19 @@ clean.data <- function(
     mutate(cor = as.vector(cor(as.matrix(dfP %>% select(geo, pol, date, value) %>% pivot_wider(names_from = pol) %>% select(-c(geo, date))))))
   stopifnot(nrow(dfP) == length(vGeo) * length(vDate) * length(vPolAll), !is.na(dfP$value))
   
-  mPol <- dfP %>% filter(!polS %in% c(polExcl, polG1)) %>%
+  mPol <- dfP %>% filter(!polS %in% c(polExcl)) %>%
     mutate(date = factor(date, levels = as.character(vDate))) %>%
     xtabs(value ~ geo + date + pol, .)
   vPol <- dimnames(mPol)$pol
   stopifnot(dimnames(mPol)$date == vDate, dimnames(mPol)$geo == vGeo,
-            length(vPolAll) == length(vPol) + length(polExcl) + length(polG1))
+            length(vPolAll) == length(vPol) + length(polExcl))
   mPolChange <- matrix(as.numeric(cbind(rep(TRUE, length(vGeo)), apply(mPol[,-length(vDate),] != mPol[,-1,], c(1,2), any))), nrow=length(vGeo))
   
-  mPolG1 <- dfP %>% filter(polS %in% polG1) %>% group_by(geo, date) %>% summarize(value = sum(value)) %>%
-    mutate(value = ifelse(value > 1, 1, 0)) %>%
+  mPolG1 <- dfP %>% filter(polS %in% polG1) %>%
+    group_by(geo, date) %>% summarize(value = sum(value)) %>% ungroup() %>%
+    mutate(value = ifelse(value >= 1, 1, NA)) %>%
+    group_by(geo) %>% fill(value) %>% ungroup() %>%
+    mutate(value = ifelse(is.na(value), 0, 1)) %>%
     xtabs(value ~ geo + date, .)
   stopifnot(rownames(mPolG1) == vGeo, colnames(mPolG1) == vDate, apply(mPolG1[,-1] - mPolG1[,-ncol(mPolG1)], 1, FUN = min) == 0)
 
@@ -118,7 +121,7 @@ clean.data <- function(
 
   list(dfE = dfE, dfP = dfP, dfPCor = dfPCor, dfTest = dfTest, lData = lData,
        p = list(vDate = vDate, vGeo = vGeo, vPol = vPol, minPop = minPop, polG1 = polG1, polExcl = polExcl,
-                holidays = holidays, mortMu = mortMu, mortSig = mortSig, pOutl = pOutl, idgSig = idgSig))
+                mortMu = mortMu, mortSig = mortSig, pOutl = pOutl, idgSig = idgSig))
 }
 
 make.chains <- function(models){
