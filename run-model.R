@@ -41,8 +41,9 @@ dfJh <- read_csv("input/jh-database.csv")
 dfEcon <- read_csv("input/econ-database.csv")
 dfPop <- read_csv("input/econ-population.csv")
 dfOx <- read_csv("input/oxford-policy.csv")
+dfHol <- read_csv("input/holidays.csv") %>% select(-source)
 
-l <- clean.data(dfJh, dfEcon, dfPop, dfOx)
+l <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol)
 dfP <- l$dfP; dfE <- l$dfE; lData <- l$lData; p <- l$p
 #### Fit model ####
 
@@ -224,21 +225,17 @@ fPol2 <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(v
   summarize(level = max(level)) %>%
   ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
   facet_grid(~ pol, labeller = label_wrap_gen(8)) +
-  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ggtitle("With holidays") +
   ylab(element_blank()) + xlab(element_blank())
-
-pdf(paste0("output/chart-pol.pdf"), width=12, height=8)
-print(fPol2)
-dev.off()
-
-dfP <- clean.data(dfJh, dfEcon, dfPop, dfOx, holidays = NULL)$dfP
-fPol2 <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1) %>% group_by(geo, pol, date) %>%
+fPol2nh <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(valueOx == 1) %>% group_by(geo, pol, date) %>%
   summarize(level = max(level)) %>%
   ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
   facet_grid(~ pol, labeller = label_wrap_gen(8)) +
-  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ggtitle("No holidays") +
   ylab(element_blank()) + xlab(element_blank())
 
-pdf(paste0("output/chart-pol-no-holidays.pdf"), width=12, height=8)
+pdf(paste0("output/chart-pol.pdf"), width=12, height=8, onefile=T)
   print(fPol2)
+  print(fPol2nh)
 dev.off()
+

@@ -20,7 +20,7 @@ clean.data <- function(
   dates = c(as.Date("2020-02-01"), Inf), nTPred = 0,
   polG1 = c("C1 - 1", "C2 - 1", "C3 - 1", "C7 - 1"),
   polExcl = c("C4 - 1", "C6 - 3", "C8 - 2", "H2 - 1", "H3 - 1"),
-  holidays = as.Date(c("2020-06-20", "2020-08-28")), lagCaseMax = 2, lagDeathMax = 4,
+  lagCaseMax = 2, lagDeathMax = 4,
   mortMu = 0.01, mortSig = 0.5, # Parameters for log-normal distribution; mortSig = 0.5 means 95% interval of */exp(1.96*0.5)=2.6
   pOutl = 1e-3, # Probability of outlier (lower probability attaches more weight to extreme data points)
   idgSig = 0.02 # s.d. of change in idiosyncratic growth rate (AR(2) process)
@@ -64,8 +64,17 @@ clean.data <- function(
     group_by(geo, pol) %>% fill(value) %>% ungroup() %>% filter(date %in% vDate) %>%
     mutate(pol2 = pol) %>% separate(pol2, c("polCode", "polName", "level"), sep = " - ") %>%
     mutate(polS = paste(polCode, level, sep = " - "),
-           value = if(is.null(holidays)) value else ifelse(polCode == "C1" & date >= holidays[1] & date <= holidays[2], 1, value),
            value = ifelse(is.na(value), 0, value))
+  dfPHol <-
+    bind_rows(
+      dfHol %>% mutate(valueHol = ifelse(level >= 2, 1, 0), level = 2),
+      dfHol %>% mutate(valueHol = ifelse(level == 3, 1, 0), level = 3)) %>%
+    full_join(expand_grid(geo = vGeo, level = c(2,3), date = vDate)) %>%
+    arrange(geo, level, date) %>% group_by(geo, level) %>% fill(valueHol) %>% ungroup() %>%
+    mutate(polCode = "C1", level = as.character(level))
+  dfP <- left_join(dfP, dfPHol) %>%
+    mutate(valueOx = value, value = ifelse(is.na(valueHol), valueOx, pmax(valueHol, valueOx)))
+  
   dfPCor <- expand_grid(pol1 = vPolAll, pol2 = vPolAll) %>%
     mutate(cor = as.vector(cor(as.matrix(dfP %>% select(geo, pol, date, value) %>% pivot_wider(names_from = pol) %>% select(-c(geo, date))))))
   stopifnot(nrow(dfP) == length(vGeo) * length(vDate) * length(vPolAll), !is.na(dfP$value))
