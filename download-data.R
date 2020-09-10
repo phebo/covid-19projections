@@ -78,7 +78,10 @@ dfOx <-
     dfOx %>% select(geo:date, ends_with("Flag")) %>%
       pivot_longer(-(geo:date), names_to = "polCode", values_to = "flag") %>%
       mutate(polCode = substr(polCode, 1, 2))) %>%
-  filter(!is.na(level)) %>%
-  arrange(geo, polCode, date) %>% distinct(geo, polCode, level, flag, .keep_all = T)  %>%
-  mutate(date = as.Date(as.character(date), format = "%Y%m%d"))
+  filter(!is.na(level)) %>% mutate(flag = ifelse(is.na(flag), -1, flag)) %>%
+  arrange(geo, polCode, date) %>% 
+  group_by(geo, polCode) %>% filter(is.na(lag(level)) | level != lag(level) | flag != lag(flag)) %>% ungroup() %>%
+  #distinct(geo, polCode, level, flag, .keep_all = T)  %>%
+  mutate(date = as.Date(as.character(date), format = "%Y%m%d"),
+         flag = ifelse(flag == -1, NA, flag))
 write_csv(dfOx, "input/oxford-policy.csv")
