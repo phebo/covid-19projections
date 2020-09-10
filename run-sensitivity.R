@@ -30,6 +30,7 @@ dfJh <- read_csv("input/jh-database.csv")
 dfEcon <- read_csv("input/econ-database.csv")
 dfPop <- read_csv("input/econ-population.csv")
 dfOx <- read_csv("input/oxford-policy.csv")
+dfHol <- read_csv("input/holidays.csv") %>% select(-source)
 
 l <- list(
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, minPop = 1e7),
@@ -38,6 +39,7 @@ l <- list(
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, pOutl = 1e-4),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, idgSig = 0.01),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, idgSig = 0.05),
+  clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, geoExclude = c("Chile", "South Africa"))
 )
 
 m <- stan_model("model.stan")
