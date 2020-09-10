@@ -102,7 +102,7 @@ fGPol <- dfOut %>% filter(name == "dgCum") %>%
   left_join(dfOut %>% filter(name == "dgCum") %>% group_by(pol) %>% summarize(levelMax = max(level))) %>%
   mutate(low = ifelse(level == levelMax, low, NA), high = ifelse(level == levelMax, high, NA)) %>%
   ggplot(aes(x = fct_rev(pol), y = estimate, ymin = low, ymax = high, fill = fct_rev(factor(level)))) + geom_col() + geom_errorbar() + coord_flip()  +
-  scale_fill_brewer(palette = "RdBu", name="Policy\nlevel") +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") +
   xlab(element_blank()) + ylab(element_blank()) + theme(axis.text.y = element_text(hjust=0)) +
   labs(title = "Reduction of weekly growth rate",
        subtitle = "Bar = estimate; Line = 95% interval")
@@ -111,7 +111,7 @@ fPolSum <- dfP %>% group_by(polCode, polName, level, date) %>% summarize(frac = 
   mutate(pol = paste(polCode, polName, sep = " - ")) %>%
   group_by(pol, date) %>% mutate(frac = frac - c(frac[-1], 0)) %>%
   ggplot(aes(x = date, y = frac, fill = level)) + geom_area() + facet_wrap(~ pol, ncol = 2)  + xlab(element_blank()) + ylab(element_blank()) +
-  scale_fill_brewer(palette = "RdBu", name="Policy\nlevel", direction = -1) +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel", direction = -1) +
   scale_y_continuous(labels = function(x) scales::percent(x, accuracy=1)) +
   labs(title = "Percentage of jurisdictions with a given policy level in place",
        subtitle = "Source: Oxford coronavirus government response tracker") +
@@ -219,13 +219,26 @@ pdf(paste0("output/charts-sup-", time.now, ".pdf"), width=10, height=10, onefile
   pacf(as.vector(eps), na.action = na.pass, lag.max = maxLag)
 dev.off()
 
+
 fPol2 <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1) %>% group_by(geo, pol, date) %>%
   summarize(level = max(level)) %>%
   ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
   facet_grid(~ pol, labeller = label_wrap_gen(8)) +
-  scale_fill_brewer(palette = "OrRd", name="Policy\nlevel") +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") +
   ylab(element_blank()) + xlab(element_blank())
 
 pdf(paste0("output/chart-pol.pdf"), width=12, height=8)
+print(fPol2)
+dev.off()
+
+dfP <- clean.data(dfJh, dfEcon, dfPop, dfOx, holidays = NULL)$dfP
+fPol2 <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1) %>% group_by(geo, pol, date) %>%
+  summarize(level = max(level)) %>%
+  ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
+  facet_grid(~ pol, labeller = label_wrap_gen(8)) +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") +
+  ylab(element_blank()) + xlab(element_blank())
+
+pdf(paste0("output/chart-pol-no-holidays.pdf"), width=12, height=8)
   print(fPol2)
 dev.off()
