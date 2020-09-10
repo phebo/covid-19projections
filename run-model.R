@@ -102,7 +102,7 @@ fGPol <- dfOut %>% filter(name == "dgCum") %>%
   left_join(dfOut %>% filter(name == "dgCum") %>% group_by(pol) %>% summarize(levelMax = max(level))) %>%
   mutate(low = ifelse(level == levelMax, low, NA), high = ifelse(level == levelMax, high, NA)) %>%
   ggplot(aes(x = fct_rev(pol), y = estimate, ymin = low, ymax = high, fill = fct_rev(factor(level)))) + geom_col() + geom_errorbar() + coord_flip()  +
-  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel", direction = -1) +
   xlab(element_blank()) + ylab(element_blank()) + theme(axis.text.y = element_text(hjust=0)) +
   labs(title = "Reduction of weekly growth rate",
        subtitle = "Bar = estimate; Line = 95% interval")
@@ -111,7 +111,7 @@ fPolSum <- dfP %>% group_by(polCode, polName, level, date) %>% summarize(frac = 
   mutate(pol = paste(polCode, polName, sep = " - ")) %>%
   group_by(pol, date) %>% mutate(frac = frac - c(frac[-1], 0)) %>%
   ggplot(aes(x = date, y = frac, fill = level)) + geom_area() + facet_wrap(~ pol, ncol = 2)  + xlab(element_blank()) + ylab(element_blank()) +
-  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel", direction = -1) +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") +
   scale_y_continuous(labels = function(x) scales::percent(x, accuracy=1)) +
   labs(title = "Percentage of jurisdictions with a given policy level in place",
        subtitle = "Source: Oxford coronavirus government response tracker") +
