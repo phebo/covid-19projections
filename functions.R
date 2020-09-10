@@ -81,8 +81,8 @@ clean.data <- function(
   mPolG1 <- dfP %>% filter(polS %in% polG1) %>% group_by(geo, date) %>% summarize(value = sum(value)) %>%
     mutate(value = ifelse(value > 1, 1, 0)) %>%
     xtabs(value ~ geo + date, .)
-  stopifnot(rownames(mPolG1) == vGeo, colnames(mPolG1) == vDate)
-  
+  stopifnot(rownames(mPolG1) == vGeo, colnames(mPolG1) == vDate, apply(mPolG1[,-1] - mPolG1[,-ncol(mPolG1)], 1, FUN = min) == 0)
+
   dfTest <- dfOxSub %>% filter(polCode == "H2") %>%
     full_join(expand_grid(geo = vGeo, date = vDate)) %>% arrange(geo, date) %>%
     group_by(geo) %>% fill(level) %>% ungroup() %>% filter(date %in% vDate)
