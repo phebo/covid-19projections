@@ -167,7 +167,7 @@ fNewDeath <- dfOutEPop %>% filter(name %in% c("death", "deathTot")) %>%
   labs(subtitle = "Dot = reported; Line = model estimate; Dashed = 95% interval") +
   ggtitle("New Covid and total deaths per week per 10,000 people")
 
-fPol <- dfP %>% separate(pol, c("polCode", "polName", "level"), sep = " - ") %>% mutate(pol = paste(polCode, polName)) %>%
+fPol <- dfP %>% mutate(pol = paste(polCode, polName)) %>%
   ggplot(aes(x = date, y = value, fill = pol)) + geom_col(width = 7) + facet_wrap(~ geo) +
   scale_x_date(date_breaks = "1 month", labels = function(x) format(x, format="%b")) +
   theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
@@ -217,4 +217,15 @@ pdf(paste0("output/charts-sup-", time.now, ".pdf"), width=10, height=10, onefile
   par(mfrow=c(2,1))
   acf(as.vector(eps), na.action = na.pass, lag.max = maxLag)
   pacf(as.vector(eps), na.action = na.pass, lag.max = maxLag)
+dev.off()
+
+fPol2 <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1) %>% group_by(geo, pol, date) %>%
+  summarize(level = max(level)) %>%
+  ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
+  facet_grid(~ pol, labeller = label_wrap_gen(8)) +
+  scale_fill_brewer(palette = "RdBu", name="Policy\nlevel", direction = -1) +
+  ylab(element_blank()) + xlab(element_blank())
+
+pdf(paste0("output/chart-pol.pdf"), width=12, height=8)
+  print(fPol2)
 dev.off()
