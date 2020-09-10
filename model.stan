@@ -72,7 +72,7 @@ transformed parameters{
   real g[nGeo, nT+nTPred-1];
   real lCaseEst[nGeo, nT + nTPred - lagCaseMax];
   real lDeathEst[nGeo, nT + nTPred - lagDeathMax];
-  real lDeathTotEst[nGeo, nT + lagDeathMax];
+  real lDeathTotEst[nGeo, nT - lagDeathMax];
   vector[lagCaseMax] lpLagCase;
   vector[lagDeathMax] lpLagDeath;
   real<lower=0,upper=1> idgLam2;
