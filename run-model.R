@@ -223,7 +223,7 @@ fPol2 <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(v
   summarize(level = max(level)) %>%
   ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
   facet_grid(~ pol, labeller = label_wrap_gen(8)) +
-  scale_fill_brewer(palette = "RdBu", name="Policy\nlevel", direction = -1) +
+  scale_fill_brewer(palette = "OrRd", name="Policy\nlevel") +
   ylab(element_blank()) + xlab(element_blank())
 
 pdf(paste0("output/chart-pol.pdf"), width=12, height=8)
