@@ -33,6 +33,7 @@ dfOx <- read_csv("input/oxford-policy.csv")
 dfHol <- read_csv("input/holidays.csv") %>% select(-source)
 
 l <- list(
+  clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, minPop = 1e7),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, minPop = 3e6),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, pOutl = 1e-2),
@@ -41,6 +42,8 @@ l <- list(
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, idgSig = 0.05),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, geoExclude = c("Chile", "South Africa"))
 )
+specs <- c("Base", "Population > 10M", "Population > 3M", "P(outlier) = 0.01", "P(outlier) = 0.0001",
+           "Stdev = 0.01", "Stdev = 0.05", "Excl Chile/S-Africa")
 
 m <- stan_model("model.stan")
 specs <- map(l, ~ list(m = m, data = .$lData, pars = "dg", iter = 700, warmup = 500, chains = 2, thin = 2))
@@ -49,9 +52,14 @@ fits.chain <- future_map(chains, ~ do.chain(.))
 fits <- cons.fits(fits.chain, chains)
 save(fits, file = paste0("output/image-sens-", time.now, ".RData"))
 dgs <- map(fits, ~ extract(.)$dg)
+names(dgs) <- specs
 dfRaw <- map2_dfr(dgs, l, ~ expand_grid(pol = .y$p$vPol, iter = 1:nrow(.x)) %>% mutate(value = as.vector(.x)), .id = "spec")
 df <- dfRaw %>% group_by(spec, pol) %>%
-  summarize(estimate = median(value), low = quantile(value, probs=0.025), high = quantile(value, probs=0.975)) %>% ungroup()
-xt <- df %>% select(-estimate) %>% pivot_longer(c(low, high)) %>% pivot_wider(names_from = spec) %>% xtable()
+  summarize(estimate = median(value), low = quantile(value, probs=0.025), high = quantile(value, probs=0.975)) %>% ungroup() %>%
+  mutate(spec = factor(spec, levels = specs))
+fSens <- df %>% ggplot(aes(x = fct_rev(spec), y = estimate, ymin = low, ymax = high)) + geom_pointrange() +
+  facet_wrap(~ pol, ncol = 4) + coord_flip()  + xlab(element_blank()) + ylab(element_blank()) + theme(axis.text.y = element_text(hjust=0))
 
-print(xt, type = "html", include.rownames = F, include.colnames = F, file = paste0("output/table-sens-", time.now, ".html"))
+pdf(paste0("output/chart-sens-", time.now, ".pdf"), width=12, height=8, onefile=T)
+  print(fSens)
+dev.off()
