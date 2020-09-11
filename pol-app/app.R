@@ -13,8 +13,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-library(shiny)
 library(tidyverse)
+library(shiny)
 
 #setwd("pol-app")
 dfDg <- read_csv("dg-data.csv")
@@ -34,12 +34,10 @@ dfPol2 <- dfPol %>% select(pol, polCode, polDesc) %>%
     selectInput(polCode, pol, choices = data$polDesc, selected = "0. No/limited policies") ))
 
 ui <- fluidPage(
-  titlePanel("Covid spread"),
+  titlePanel("Policy combinations to limit Covid spread"),
   sidebarLayout(
-    sidebarPanel(dfPol2$buttons),
-    mainPanel(
-      plotOutput("plot", height = 800))
-  )
+    sidebarPanel(dfPol2$buttons, width = 5),
+    mainPanel(plotOutput("plot", height = 800), width = 7))
 )
 
 server <- function(input, output) {
@@ -59,7 +57,8 @@ server <- function(input, output) {
     dfG %>% ggplot(aes(x = base, y = estimate, ymin = low, ymax = high,
                        fill = ifelse(estimate > 0, "red", "green"))) +
       geom_col() + geom_errorbar(size=1) + ylim(c(-1.2,1.8)) + scale_fill_manual(values = c(red = "red3", green = "green4")) +
-      xlab("Geography-specific policy effectiveness") + ylab("Weekly growth rate of infections (estimate and 95% interval)") +
+      xlab("Geography-specific policy effectiveness") + ylab(element_blank()) +
+      labs(title = "Weekly growth rate of infections", subtitle = "Estimate and 95% interval") +
       theme(text = element_text(size=20), legend.position = "none")
   })}
 
