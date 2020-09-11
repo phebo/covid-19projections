@@ -45,12 +45,16 @@ dfHol <- read_csv("input/holidays.csv") %>% select(-source)
 
 l <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol)
 dfP <- l$dfP; dfE <- l$dfE; lData <- l$lData; p <- l$p
+
+print(l$dfPCor %>% filter(cor < 1 & cor > 0.85) %>% arrange(-cor))
+print(dfP %>% group_by(polCode, polName, level) %>% summarize(frac = sum(value) / n()) %>% group_by(polCode) %>%
+        mutate(frac = frac - c(frac[-1], 0)) %>% filter(frac < 0.05))
+
 #### Fit model ####
 
 m <- stan_model("model.stan")
 
-#fit <- sampling(m, data = lData, chains = 4, iter = 1200, warmup = 1000, thin = 2, control = list(adapt_delta = 0.9), seed = 99743)
-fit <- sampling(m, data = lData, chains = 4, iter = 500, warmup = 400)
+fit <- sampling(m, data = lData, chains = 4, iter = 700, warmup = 500, thin = 2, control = list(adapt_delta = 0.9, max_treedepth = 12), seed = 99743)
 #fit <- sampling(m, data = lData, chains = 2, iter = 300)
 save(list = ls(), file = paste0("output/image-", time.now, ".RData"))
 print(fit, pars = c("deathAdj", "pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2", 
