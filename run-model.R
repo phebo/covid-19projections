@@ -34,6 +34,7 @@ time.now <- format(Sys.time(), format='%y%m%d-%H%M%S')
 print(time.now)
 suppressWarnings(dir.create(file.path("output")))
 
+saveAppData <- F
 
 #### Read and clean data ####
 
@@ -100,6 +101,14 @@ print(dfOutRaw %>% filter(name %in% c("g0", "g1", "idg")) %>% group_by(iter, nam
 maxLag <- 10
 eps <- t(cbind(matrix(sim$eps, ncol = length(p$vDate) - 3), matrix(nrow = nIter * length(p$vGeo), ncol = maxLag)))
 stopifnot(eps[1:(length(p$vDate)-3)] == sim$eps[1,1,])
+
+if(saveAppData) {
+  write_csv(dfOutRaw %>% filter(name %in% c("dg")) %>% select(iter, pol, level, value), "pol-app/dg-data.csv")
+  write_csv(dfOutRaw %>% filter(name %in% c("g1+idg")) %>% group_by(iter) %>%
+              summarize(low = quantile(value, probs = 0.1), medium = quantile(value, probs = 0.5), high = quantile(value, probs = 0.9)) %>%
+              pivot_longer(low:high),
+            "pol-app/gbase-data.csv")
+}
 
 #### Make charts ####
 

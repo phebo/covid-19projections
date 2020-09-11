@@ -1,0 +1,34 @@
+polCode,level,polDesc
+C1,1,Recommended closure
+C1,2,Partial required closure
+C1,3,Full closure
+C2,1,Recommended closure
+C2,2,Partial required closure
+C2,3,All-but-essential closure
+C3,1,Recommended cancellation
+C3,2,Required cancelletation
+C4,1,Limit 1000+
+C4,2,Limit 101-1000
+C4,3,Limit 11-100
+C4,4,Limit below 10
+C5,1,Significant reduction
+C5,2,Required closure
+C6,1,Recommended
+C6,2,Required with exceptions
+C6,3,"Required, minimal exceptions"
+C7,1,Discouraged
+C7,2,Restricted
+C8,1,Screening arrivals
+C8,2,Quarantined arrivals
+C8,3,Partial ban
+C8,4,Border closure
+H1,1,Public officials
+H1,2,Coordinated campaign
+H2,1,Selected groups
+H2,2,Anyone with symptoms
+H2,3,Open for anyone
+H3,1,Limited
+H3,2,Comprehensive
+H4,1,Recommended
+H4,2,Sometimes required
+H4,3,Broadly required
