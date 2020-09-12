@@ -104,7 +104,7 @@ stopifnot(eps[1:(length(p$vDate)-3)] == sim$eps[1,1,])
 
 if(saveAppData) {
   write_csv(dfOutRaw %>% filter(name %in% c("dg")) %>% select(iter, pol, level, value), "pol-app/dg-data.csv")
-  write_csv(dfOutRaw %>% filter(name %in% c("g1+idg")) %>% group_by(iter) %>%
+  write_csv(dfOutRaw %>% filter(name %in% c("g1+idg"), date == max(p$vDate)) %>% group_by(iter) %>%
               summarize(low = quantile(value, probs = 0.1), medium = quantile(value, probs = 0.5), high = quantile(value, probs = 0.9)) %>%
               pivot_longer(low:high),
             "pol-app/gbase-data.csv")
