@@ -146,7 +146,7 @@ fDash <- bind_rows(dfOut %>% filter(name == "g", date == max(date, na.rm = T)),
 fGBase <- dfOut %>% filter(name == "g1+idg") %>%
   ggplot(aes(x = date, y = estimate, ymin = low, ymax = high)) + geom_ribbon(fill="grey70") + geom_line() +
   facet_wrap( ~ geo, ncol = 5) + xlab(element_blank()) + ylab(element_blank()) +
-  labs(title = "Weekly base growth rate: variation in policy effectivenss",
+  labs(title = "Weekly base growth rate: variation in policy effectiveness",
        subtitle = "Effect of level 1 policies for C1-C4") +
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1), strip.text = element_text(size = 7))
 
