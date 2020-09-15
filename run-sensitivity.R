@@ -60,6 +60,6 @@ df <- dfRaw %>% group_by(spec, pol) %>%
 fSens <- df %>% ggplot(aes(x = fct_rev(spec), y = estimate, ymin = low, ymax = high)) + geom_pointrange() +
   facet_wrap(~ pol, ncol = 4) + coord_flip()  + xlab(element_blank()) + ylab(element_blank()) + theme(axis.text.y = element_text(hjust=0))
 
-pdf(paste0("output/chart-sens-", time.now, ".pdf"), width=12, height=8, onefile=T)
+pdf(paste0("output/chart-sens-", time.now, ".pdf"), width=12, height=8)
   print(fSens)
 dev.off()
