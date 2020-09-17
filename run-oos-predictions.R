@@ -36,8 +36,8 @@ lFull <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol)
 p <- lFull$p
 dfP <- lFull$dfP
 dfE <- lFull$dfE
-vDate1 <- p$vDate[p$vDate <= max(dfE$date) - nTPred*7] #!! Check !!
-vDate2 <- p$vDate[p$vDate > max(dfE$date) - nTPred*7] #!! Check !!
+vDate1 <- p$vDate[p$vDate <= max(dfE$date) - nTPred*7]
+vDate2 <- p$vDate[p$vDate > max(dfE$date) - nTPred*7]
 lData <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol,
                     dates = c(as.Date("2020-02-01"), max(dfE$date) - nTPred*7), nTPred = nTPred)$lData
 
