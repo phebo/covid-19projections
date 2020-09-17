@@ -87,6 +87,6 @@ pdf(paste0("output/charts-oos-", time.now, ".pdf"), width=10, height=10, onefile
   print(fPerc)
 dev.off()
 
-tabOut <- dfOutE %>% group_by(date) %>% summarize(nRange = sum(reported >= low & reported <= high), n = n()) %>% ungroup() %>%
-  mutate(week = format(date, "%b-%d"), fRange = nRange/n) %>% select(week, fRange) %>% xtable()
+tabOut <- dfOutE %>% group_by(name, date) %>% summarize(nRange = sum(reported >= low & reported <= high), n = n()) %>% ungroup() %>%
+  mutate(week = format(date, "%b-%d"), fRange = nRange/n) %>% select(name, week, fRange) %>% xtable()
 print(tabOut, type = "html", file = paste0("output/tab-oos-", time.now, ".html"))
