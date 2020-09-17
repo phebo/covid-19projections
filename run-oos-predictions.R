@@ -32,14 +32,14 @@ dfPop <- read_csv("input/econ-population.csv")
 dfOx <- read_csv("input/oxford-policy.csv")
 dfHol <- read_csv("input/holidays.csv")
 
-lFull <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, minPop = 2e7)
+lFull <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol)
 p <- lFull$p
 dfP <- lFull$dfP
 dfE <- lFull$dfE
 vDate1 <- p$vDate[p$vDate <= max(dfE$date) - nTPred*7] #!! Check !!
 vDate2 <- p$vDate[p$vDate > max(dfE$date) - nTPred*7] #!! Check !!
 lData <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol,
-                    dates = c(as.Date("2020-02-01"), max(dfE$date) - nTPred*7), nTPred = nTPred, minPop = 2e7)$lData
+                    dates = c(as.Date("2020-02-01"), max(dfE$date) - nTPred*7), nTPred = nTPred)$lData
 
 m <- stan_model("model.stan")
 
