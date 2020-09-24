@@ -37,6 +37,7 @@ rsconnect/
 .Rproj.user
 
 output/
+figures/
 *.rds
 *.Rproj
 model-out.csv

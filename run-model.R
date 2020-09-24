@@ -33,8 +33,10 @@ rstan_options(auto_write = TRUE)
 time.now <- format(Sys.time(), format='%y%m%d-%H%M%S')
 print(time.now)
 suppressWarnings(dir.create(file.path("output")))
+suppressWarnings(dir.create(file.path("figures")))
 
 saveAppData <- F
+writeFigures <- T
 
 #### Read and clean data ####
 
@@ -116,11 +118,11 @@ fGPol <- dfOut %>% filter(name == "dgCum") %>%
   group_by(pol) %>% mutate(estimate = estimate - c(0, estimate[-length(estimate)])) %>%
   left_join(dfOut %>% filter(name == "dgCum") %>% group_by(pol) %>% summarize(levelMax = max(level))) %>%
   mutate(low = ifelse(level == levelMax, low, NA), high = ifelse(level == levelMax, high, NA)) %>%
-  ggplot(aes(x = fct_rev(pol), y = estimate, ymin = low, ymax = high, fill = fct_rev(factor(level)))) + geom_col() + geom_errorbar() + coord_flip()  +
-  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel", direction = -1) +
-  xlab(element_blank()) + ylab(element_blank()) + theme(axis.text.y = element_text(hjust=0)) +
-  labs(title = "Reduction of weekly growth rate",
-       subtitle = "Bar = estimate; Line = 95% interval")
+  ggplot(aes(x = fct_rev(pol), y = estimate, ymin = low, ymax = high, fill = fct_rev(factor(level)))) +
+  geom_col(width = 0.8) + geom_errorbar(width = 0.8) + coord_flip()  +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel", direction = -1, guide = guide_legend(reverse = TRUE)) +
+  xlab(element_blank()) + ylab(element_blank()) + theme(axis.text.y = element_text(hjust=0))
+if(writeFigures) ggsave(paste0("figures/fig-gpol.png"), height = 4, width = 5)
 
 fPolSum <- dfP %>% group_by(polCode, polName, level, date) %>% summarize(frac = sum(value) / n()) %>%
   mutate(pol = paste(polCode, polName, sep = " - ")) %>%
@@ -139,23 +141,19 @@ fDash <- bind_rows(dfOut %>% filter(name == "g", date == max(date, na.rm = T)),
   ggplot(aes(x = fct_rev(geo), y = estimate, ymin = low, ymax = high)) + 
   geom_hline(yintercept = 0, color = "grey60", linetype=2) + geom_pointrange() +
   facet_grid(~ name, scales = "free") + coord_flip()  + xlab(element_blank()) + ylab(element_blank()) +
-  labs(title = paste0("Current status (weekly rates as of ", format(max(dfOut$date, na.rm = T), "%d %b"),")"),
-       subtitle = "Dot = median estimate; Line = 95% interval") +
+  #labs(title = paste0("Current status (weekly rates as of ", format(max(dfOut$date, na.rm = T), "%d %b"),")"),
+  #     subtitle = "Dot = median estimate; Line = 95% interval") +
   theme(axis.text.y = element_text(hjust=0))
+if(writeFigures) ggsave(paste0("figures/fig-status.png"), height = 9, width = 6.5)
 
 fGBase <- dfOut %>% filter(name == "g1+idg") %>%
   ggplot(aes(x = date, y = estimate, ymin = low, ymax = high)) + geom_ribbon(fill="grey70") + geom_line() +
   facet_wrap( ~ geo, ncol = 5) + xlab(element_blank()) + ylab(element_blank()) +
-  labs(title = "Weekly base growth rate: variation in policy effectiveness",
-       subtitle = "Effect of level 1 policies for C1-C4") +
-  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1), strip.text = element_text(size = 7))
-
-pdf(paste0("output/charts-main-", time.now, ".pdf"), width=5.5, height=7, onefile=T)
-  print(fGPol)
-  print(fPolSum)
-  print(fDash)
-  print(fGBase)
-dev.off()
+  #labs(title = "Weekly base growth rate: variation in policy effectiveness",
+  #     subtitle = "Effect of level 1 policies for C1-C4") +
+  scale_x_date(breaks = as.Date(c("2020-05-01", "2020-08-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
+  theme(strip.text = element_text(size = 8.5))
+if(writeFigures) ggsave(paste0("figures/fig-gbase.png"), height = 9, width = 6.5)
 
 fNew <- dfOutE %>%
   ggplot(aes(x = date, color = name)) +
@@ -219,6 +217,43 @@ text <- paste("minPop =",p$minPop,"\npolG1 =", paste(p$polG1, collapse = ", "),"
                                                        "idgLam2", "lmortality"))), collapse = "\n"))
 fPars <- ggplot() + annotate("text", x = 0, y = 0, size=4, label = text, family = "mono") + theme_void()
 
+fPol2 <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1) %>% group_by(geo, pol, date) %>%
+  summarize(level = max(level)) %>%
+  ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
+  facet_grid(~ pol, labeller = label_wrap_gen(8)) +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ggtitle("With holidays") +
+  ylab(element_blank()) + xlab(element_blank())
+fPol2nh <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(valueOx == 1) %>% group_by(geo, pol, date) %>%
+  summarize(level = max(level)) %>%
+  ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
+  facet_grid(~ pol, labeller = label_wrap_gen(8)) +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ggtitle("No holidays") +
+  ylab(element_blank()) + xlab(element_blank())
+
+fPol2a <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1, polCode %in% c("C1","C2","C3","C4","C5","C6")) %>%
+  group_by(geo, pol, date) %>% summarize(level = max(level)) %>%
+  ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
+  facet_grid(~ pol, labeller = label_wrap_gen(8)) +
+  scale_x_date(breaks = as.Date(c("2020-03-01", "2020-08-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ylab(element_blank()) + xlab(element_blank()) +
+  theme(legend.position = "none")
+if(writeFigures) ggsave(paste0("figures/fig-pol-a.png"), height = 9, width = 6.5)
+
+fPol2b <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1, !polCode %in% c("C1","C2","C3","C4","C5","C6")) %>%
+  group_by(geo, pol, date) %>% summarize(level = max(level)) %>%
+  ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
+  scale_x_date(breaks = as.Date(c("2020-03-01", "2020-08-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
+  facet_grid(~ pol, labeller = label_wrap_gen(8)) +
+  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ylab(element_blank()) + xlab(element_blank())
+if(writeFigures) ggsave(paste0("figures/fig-pol-b.png"), height = 9, width = 6.5)
+
+pdf(paste0("output/charts-main-", time.now, ".pdf"), width=5.5, height=7, onefile=T)
+  print(fGPol)
+  print(fPolSum)
+  print(fDash)
+  print(fGBase)
+dev.off()
+
 pdf(paste0("output/charts-sup-", time.now, ".pdf"), width=10, height=10, onefile=T)
   print(fNew)
   print(fNewCase)
@@ -233,22 +268,9 @@ pdf(paste0("output/charts-sup-", time.now, ".pdf"), width=10, height=10, onefile
   pacf(as.vector(eps), na.action = na.pass, lag.max = maxLag)
 dev.off()
 
-
-fPol2 <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1) %>% group_by(geo, pol, date) %>%
-  summarize(level = max(level)) %>%
-  ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
-  facet_grid(~ pol, labeller = label_wrap_gen(8)) +
-  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ggtitle("With holidays") +
-  ylab(element_blank()) + xlab(element_blank())
-fPol2nh <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(valueOx == 1) %>% group_by(geo, pol, date) %>%
-  summarize(level = max(level)) %>%
-  ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
-  facet_grid(~ pol, labeller = label_wrap_gen(8)) +
-  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ggtitle("No holidays") +
-  ylab(element_blank()) + xlab(element_blank())
-
 pdf(paste0("output/chart-pol.pdf"), width=12, height=8, onefile=T)
   print(fPol2)
   print(fPol2nh)
 dev.off()
+
 
