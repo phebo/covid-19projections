@@ -57,12 +57,13 @@ print(dfP %>% group_by(polCode, polName, level) %>% summarize(frac = sum(value) 
 
 m <- stan_model("model.stan")
 
-fit <- sampling(m, data = lData, chains = 4, iter = 1250, warmup = 1000, thin = 1, control = list(adapt_delta = 0.9, max_treedepth = 12), seed = 99743)
+fit <- sampling(m, data = lData, chains = 4, iter = 700, warmup = 500, thin = 2, control = list(adapt_delta = 0.9, max_treedepth = 12), seed = 99743)
 #fit <- sampling(m, data = lData, chains = 2, iter = 300)
 save(list = ls(), file = paste0("output/image-", time.now, ".RData"))
 print(fit, pars = c("deathAdj", "pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2", 
                     "lmortality"))
-
+print(xtable(summary(fit, pars=c("pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
+                          digits=c(0,3,3,3,0,2)), type="html", file=paste0("figures/table.html"))
 
 #### Process model output ####
 sim <- rstan::extract(fit)
@@ -155,14 +156,18 @@ fGBase <- dfOut %>% filter(name == "g1+idg") %>%
   theme(strip.text = element_text(size = 8.5))
 if(writeFigures) ggsave(paste0("figures/fig-gbase.png"), height = 9, width = 6.5)
 
-fNew <- dfOutE %>%
+fNew <- dfOutE %>% mutate(reported = ifelse(reported == 0, NA, reported)) %>%
   ggplot(aes(x = date, color = name)) +
   geom_point(aes(y = reported), size = 0.4) + geom_line(aes(y=estimate)) +
   geom_line(aes(y=low), lty=2) + geom_line(aes(y=high), lty=2) +
-  facet_wrap(~ geo) + ggtitle("New events per week (log scale)") + 
-  labs(subtitle = "Dot = reported; Line = model estimate; Dashed = 95% interval") +
+  facet_wrap(~ geo, ncol = 5) +
+  #ggtitle("New events per week (log scale)") + 
+  #labs(subtitle = "Dot = reported; Line = model estimate; Dashed = 95% interval") +
   xlab(element_blank()) + ylab(element_blank()) + 
-  scale_y_continuous(labels = scales::comma, trans="log10", limits = c(10, 1e6))
+  scale_y_continuous(labels = scales::comma, trans="log10", limits = c(1, 1e6)) +
+  scale_color_brewer(palette = "Dark2") +
+  theme(legend.position="top", legend.title = element_blank())
+if(writeFigures) ggsave(paste0("figures/fig-new.png"), height = 9, width = 6.5)
 
 fNewCase <- dfOutEPop %>% filter(name %in% c("infection", "case")) %>%
   ggplot(aes(x = date, color = name)) +
