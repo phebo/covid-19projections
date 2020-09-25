@@ -96,6 +96,8 @@ dfOutE <- dfOut %>% filter(name %in% c("infection", "case", "death", "deathTot")
   full_join(dfE %>% select(c(geo:deathTot)) %>% pivot_longer(case:deathTot, values_to = "reported")) %>%
   filter(name != "deathTot" | reported > 0) %>% select(-c(pol, level))
 dfOutEPop <- left_join(dfOutE, dfPop) %>% mutate_at(vars(estimate:reported), ~ . / population * 1e4)
+print(dfOutEPop %>% filter(name == "infection") %>% group_by(geo) %>%
+        summarise_at(vars(estimate:high), ~ sum(.) / 1e4) %>% arrange(-estimate), n=100)
 
 print(dfOutRaw %>% filter(name %in% c("g0", "g1", "idg")) %>% group_by(iter, name) %>% summarize(value = mean(value)) %>%
         group_by(name) %>% summarize(estimate = median(value), low = quantile(value, probs=0.025), high = quantile(value, probs=0.975))) %>%
