@@ -37,6 +37,7 @@ suppressWarnings(dir.create(file.path("figures")))
 
 saveAppData <- F
 writeFigures <- T
+selSc <- c("C1 - 1", "C2 - 1", "C3 - 2", "C4 - 3", "C5 - 0", "C6 - 1", "C7 - 1", "C8 - 3", "H1 - 2", "H2 - 2", "H3 - 2")
 
 #### Read and clean data ####
 
@@ -115,7 +116,37 @@ if(saveAppData) {
             "pol-app/gbase-data.csv")
 }
 
+dfOutSc <- left_join(
+  dfOutRaw %>% filter(name %in% c("g1+idg"), date == max(p$vDate)) %>% group_by(iter) %>%
+    summarize(`Best 10%` = quantile(value, probs = 0.1), `Median` = quantile(value, probs = 0.5), `Worst 10%` = quantile(value, probs = 0.9)) %>%
+    pivot_longer(`Best 10%`:`Worst 10%`) %>% rename(gBase = value),
+  dfOutRaw %>% filter(name == "dgCum") %>% mutate(pol = paste(substr(pol, 1, 2), "-", level)) %>%
+    filter(pol %in% selSc) %>% group_by(iter) %>% summarize(dgCum = sum(value)) %>% ungroup()
+) %>% mutate(g = gBase - dgCum) %>%
+  select(iter, group = name, gBase, g) %>% pivot_longer(gBase:g) %>%
+  group_by(group, name) %>%
+  summarize(estimate = median(value), low = quantile(value, probs=0.025), high = quantile(value, probs=0.975)) %>%
+  ungroup()
+
 #### Make charts ####
+
+ylabels <- dfOutSc %>% filter(group == "Worst 10%") %>% pull(estimate)
+ylabels <- c(ylabels, mean(ylabels)-0.2)
+
+ggplot(dfOutSc) + geom_point(aes(x = group, y = estimate)) +
+  geom_errorbar(aes(x = group, ymin = low, ymax = high), width = 0.7) +
+  geom_segment(aes(x = group, xend = group, y = gBase - 0.25, yend = g + 0.25),
+               data = (~ .x %>% select(group:estimate) %>% pivot_wider(values_from = estimate)),
+               arrow = arrow()) +
+  geom_text(aes(x = 3.8, y = ylabels,
+                label = c("italic(g)", "italic(g)^(base)", "'Average\neffect of\nbasic\npolicies'")),
+            data = tibble(),
+            parse = T) +
+  geom_blank(aes(x= 4.5, y = 1)) +
+  geom_hline(yintercept = 0) +
+  xlab(element_blank()) + ylab(element_blank())
+if(writeFigures) ggsave(paste0("figures/fig-scenarios.png"), height = 4, width = 3.5)
+
 
 fGPol <- dfOut %>% filter(name == "dgCum") %>%
   group_by(pol) %>% mutate(estimate = estimate - c(0, estimate[-length(estimate)])) %>%
