@@ -22,6 +22,7 @@
 
 # It takes several hours to estimate the model on a regular PC
 
+library(xtable)
 library(RColorBrewer)
 library(stats4)
 library(tidyverse)
@@ -63,8 +64,9 @@ fit <- sampling(m, data = lData, chains = 4, iter = 700, warmup = 500, thin = 2,
 save(list = ls(), file = paste0("output/image-", time.now, ".RData"))
 print(fit, pars = c("deathAdj", "pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2", 
                     "lmortality"))
-print(xtable(summary(fit, pars=c("pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
-                          digits=c(0,3,3,3,0,2)), type="html", file=paste0("figures/table.html"))
+if(writeFigures) print(xtable(
+  summary(fit, pars=c("pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
+  digits=c(0,3,3,3,0,2)), type="html", file=paste0("figures/table.html"))
 
 #### Process model output ####
 sim <- rstan::extract(fit)
