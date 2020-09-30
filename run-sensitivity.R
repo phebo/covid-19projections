@@ -42,7 +42,7 @@ l <- list(
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, idgSig = 0.05),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, geoExclude = c("Chile", "South Africa"))
 )
-specs <- c("Base", "Population > 10M", "Population > 3M", "P(outlier) = 0.01", "P(outlier) = 0.0001",
+specNames <- c("Base", "Population > 10M", "Population > 3M", "P(outlier) = 0.01", "P(outlier) = 0.0001",
            "Stdev = 0.01", "Stdev = 0.05", "Excl Chile/S-Africa")
 
 m <- stan_model("model.stan")
@@ -52,11 +52,11 @@ fits.chain <- future_map(chains, ~ do.chain(.))
 fits <- cons.fits(fits.chain, chains)
 save(list = ls(), file = paste0("output/image-sens-", time.now, ".RData"))
 dgs <- map(fits, ~ extract(.)$dg)
-names(dgs) <- specs
+names(dgs) <- specNames
 dfRaw <- map2_dfr(dgs, l, ~ expand_grid(pol = .y$p$vPol, iter = 1:nrow(.x)) %>% mutate(value = as.vector(.x)), .id = "spec")
 df <- dfRaw %>% group_by(spec, pol) %>%
   summarize(estimate = median(value), low = quantile(value, probs=0.025), high = quantile(value, probs=0.975)) %>% ungroup() %>%
-  mutate(spec = factor(spec, levels = specs))
+  mutate(spec = factor(spec, levels = specNames))
 fSens <- df %>% ggplot(aes(x = fct_rev(spec), y = estimate, ymin = low, ymax = high)) + geom_pointrange() +
   facet_wrap(~ pol, ncol = 4, labeller = label_wrap_gen(25)) + coord_flip() +
   xlab(element_blank()) + ylab(element_blank()) +
