@@ -2,11 +2,13 @@ geo,geoCode,date,polCode,polName,level,flag
 Afghanistan,AFG,2020-01-01,C1,School closing,0,NA
 Afghanistan,AFG,2020-03-14,C1,School closing,3,1
 Afghanistan,AFG,2020-08-05,C1,School closing,2,1
+Afghanistan,AFG,2020-10-03,C1,School closing,1,1
 Afghanistan,AFG,2020-01-01,C2,Workplace closing,0,NA
 Afghanistan,AFG,2020-03-24,C2,Workplace closing,3,0
 Afghanistan,AFG,2020-08-04,C2,Workplace closing,2,0
 Afghanistan,AFG,2020-08-18,C2,Workplace closing,2,1
 Afghanistan,AFG,2020-08-26,C2,Workplace closing,0,NA
+Afghanistan,AFG,2020-09-22,C2,Workplace closing,2,1
 Afghanistan,AFG,2020-01-01,C3,Cancel public events,0,NA
 Afghanistan,AFG,2020-03-01,C3,Cancel public events,2,0
 Afghanistan,AFG,2020-03-18,C3,Cancel public events,2,1
@@ -158,6 +160,7 @@ Andorra,AND,2020-03-27,H3,Contact tracing,1,NA
 Andorra,AND,2020-07-29,H3,Contact tracing,2,NA
 Angola,AGO,2020-01-01,C1,School closing,0,NA
 Angola,AGO,2020-03-24,C1,School closing,3,1
+Angola,AGO,2020-10-05,C1,School closing,2,1
 Angola,AGO,2020-01-01,C2,Workplace closing,0,NA
 Angola,AGO,2020-03-27,C2,Workplace closing,3,1
 Angola,AGO,2020-04-23,C2,Workplace closing,2,1
@@ -269,6 +272,7 @@ Argentina,ARG,2020-01-01,H1,Public information campaigns,0,NA
 Argentina,ARG,2020-01-23,H1,Public information campaigns,2,1
 Argentina,ARG,2020-01-01,H2,Testing policy,0,NA
 Argentina,ARG,2020-03-04,H2,Testing policy,1,NA
+Argentina,ARG,2020-10-01,H2,Testing policy,2,NA
 Argentina,ARG,2020-01-01,H3,Contact tracing,0,NA
 Argentina,ARG,2020-03-04,H3,Contact tracing,2,NA
 Aruba,ABW,2020-01-01,C1,School closing,0,NA
@@ -396,6 +400,7 @@ Austria,AUT,2020-05-11,C5,Close public transport,0,NA
 Austria,AUT,2020-01-01,C6,Stay at home requirements,0,NA
 Austria,AUT,2020-03-16,C6,Stay at home requirements,2,1
 Austria,AUT,2020-05-01,C6,Stay at home requirements,0,NA
+Austria,AUT,2020-09-29,C6,Stay at home requirements,1,1
 Austria,AUT,2020-01-01,C7,Restrictions on internal movement,0,NA
 Austria,AUT,2020-03-13,C7,Restrictions on internal movement,2,0
 Austria,AUT,2020-04-23,C7,Restrictions on internal movement,1,1
@@ -429,6 +434,7 @@ Azerbaijan,AZE,2020-03-14,C3,Cancel public events,2,1
 Azerbaijan,AZE,2020-09-18,C3,Cancel public events,2,0
 Azerbaijan,AZE,2020-01-01,C4,Restrictions on gatherings,0,NA
 Azerbaijan,AZE,2020-03-14,C4,Restrictions on gatherings,4,1
+Azerbaijan,AZE,2020-09-29,C4,Restrictions on gatherings,4,0
 Azerbaijan,AZE,2020-01-01,C5,Close public transport,0,NA
 Azerbaijan,AZE,2020-03-31,C5,Close public transport,1,0
 Azerbaijan,AZE,2020-05-09,C5,Close public transport,0,NA
@@ -609,9 +615,11 @@ Belgium,BEL,2020-03-18,C2,Workplace closing,3,1
 Belgium,BEL,2020-05-11,C2,Workplace closing,2,1
 Belgium,BEL,2020-07-29,C2,Workplace closing,3,0
 Belgium,BEL,2020-08-12,C2,Workplace closing,2,1
+Belgium,BEL,2020-10-09,C2,Workplace closing,2,0
 Belgium,BEL,2020-01-01,C3,Cancel public events,0,NA
 Belgium,BEL,2020-03-10,C3,Cancel public events,1,1
 Belgium,BEL,2020-03-14,C3,Cancel public events,2,1
+Belgium,BEL,2020-09-30,C3,Cancel public events,1,1
 Belgium,BEL,2020-01-01,C4,Restrictions on gatherings,0,NA
 Belgium,BEL,2020-03-18,C4,Restrictions on gatherings,4,1
 Belgium,BEL,2020-06-08,C4,Restrictions on gatherings,3,1
@@ -679,6 +687,7 @@ Belize,BLZ,2020-03-13,C8,International travel controls,2,NA
 Belize,BLZ,2020-03-15,C8,International travel controls,3,NA
 Belize,BLZ,2020-03-20,C8,International travel controls,4,NA
 Belize,BLZ,2020-09-02,C8,International travel controls,3,NA
+Belize,BLZ,2020-10-01,C8,International travel controls,2,NA
 Belize,BLZ,2020-01-01,H1,Public information campaigns,0,NA
 Belize,BLZ,2020-02-18,H1,Public information campaigns,1,1
 Belize,BLZ,2020-02-28,H1,Public information campaigns,2,1
@@ -723,7 +732,7 @@ Benin,BEN,2020-03-07,H3,Contact tracing,2,NA
 Bermuda,BMU,2020-01-01,C1,School closing,0,NA
 Bermuda,BMU,2020-03-20,C1,School closing,3,1
 Bermuda,BMU,2020-07-01,C1,School closing,1,1
-Bermuda,BMU,2020-08-23,C1,School closing,0,NA
+Bermuda,BMU,2020-09-14,C1,School closing,0,NA
 Bermuda,BMU,2020-01-01,C2,Workplace closing,0,NA
 Bermuda,BMU,2020-03-20,C2,Workplace closing,1,1
 Bermuda,BMU,2020-03-26,C2,Workplace closing,2,1
@@ -744,7 +753,7 @@ Bermuda,BMU,2020-01-01,C6,Stay at home requirements,0,NA
 Bermuda,BMU,2020-04-04,C6,Stay at home requirements,2,1
 Bermuda,BMU,2020-05-02,C6,Stay at home requirements,1,1
 Bermuda,BMU,2020-06-11,C6,Stay at home requirements,2,1
-Bermuda,BMU,2020-09-05,C6,Stay at home requirements,0,NA
+Bermuda,BMU,2020-07-20,C6,Stay at home requirements,0,NA
 Bermuda,BMU,2020-01-01,C7,Restrictions on internal movement,0,NA
 Bermuda,BMU,2020-04-04,C7,Restrictions on internal movement,2,1
 Bermuda,BMU,2020-05-02,C7,Restrictions on internal movement,1,1
@@ -920,6 +929,7 @@ Botswana,BWA,2020-01-01,C7,Restrictions on internal movement,0,NA
 Botswana,BWA,2020-03-16,C7,Restrictions on internal movement,1,1
 Botswana,BWA,2020-04-02,C7,Restrictions on internal movement,2,0
 Botswana,BWA,2020-08-14,C7,Restrictions on internal movement,1,1
+Botswana,BWA,2020-09-25,C7,Restrictions on internal movement,2,1
 Botswana,BWA,2020-01-01,C8,International travel controls,0,NA
 Botswana,BWA,2020-01-28,C8,International travel controls,1,NA
 Botswana,BWA,2020-03-16,C8,International travel controls,3,NA
@@ -1440,7 +1450,6 @@ China,CHN,2020-01-01,C7,Restrictions on internal movement,0,NA
 China,CHN,2020-01-23,C7,Restrictions on internal movement,2,0
 China,CHN,2020-04-08,C7,Restrictions on internal movement,1,0
 China,CHN,2020-05-10,C7,Restrictions on internal movement,2,0
-China,CHN,2020-09-21,C7,Restrictions on internal movement,0,NA
 China,CHN,2020-01-01,C8,International travel controls,0,NA
 China,CHN,2020-02-25,C8,International travel controls,2,NA
 China,CHN,2020-03-26,C8,International travel controls,3,NA
@@ -1528,6 +1537,7 @@ Congo,COG,2020-01-01,H1,Public information campaigns,0,NA
 Congo,COG,2020-03-15,H1,Public information campaigns,1,1
 Congo,COG,2020-03-30,H1,Public information campaigns,2,1
 Congo,COG,2020-08-25,H1,Public information campaigns,0,NA
+Congo,COG,2020-09-22,H1,Public information campaigns,2,1
 Congo,COG,2020-01-01,H2,Testing policy,0,NA
 Congo,COG,2020-03-19,H2,Testing policy,1,NA
 Congo,COG,2020-09-20,H2,Testing policy,0,NA
@@ -1544,6 +1554,7 @@ Costa Rica,CRI,2020-05-01,C2,Workplace closing,2,1
 Costa Rica,CRI,2020-08-01,C2,Workplace closing,1,1
 Costa Rica,CRI,2020-08-10,C2,Workplace closing,2,1
 Costa Rica,CRI,2020-09-14,C2,Workplace closing,3,0
+Costa Rica,CRI,2020-10-05,C2,Workplace closing,2,1
 Costa Rica,CRI,2020-01-01,C3,Cancel public events,0,NA
 Costa Rica,CRI,2020-03-10,C3,Cancel public events,2,1
 Costa Rica,CRI,2020-01-01,C4,Restrictions on gatherings,0,NA
@@ -1769,12 +1780,14 @@ Czech Republic,CZE,2020-01-01,C1,School closing,0,NA
 Czech Republic,CZE,2020-03-11,C1,School closing,3,1
 Czech Republic,CZE,2020-04-20,C1,School closing,2,1
 Czech Republic,CZE,2020-06-21,C1,School closing,1,1
+Czech Republic,CZE,2020-10-05,C1,School closing,2,0
 Czech Republic,CZE,2020-01-01,C2,Workplace closing,0,NA
 Czech Republic,CZE,2020-03-13,C2,Workplace closing,2,1
 Czech Republic,CZE,2020-03-14,C2,Workplace closing,3,1
 Czech Republic,CZE,2020-04-20,C2,Workplace closing,2,1
 Czech Republic,CZE,2020-05-25,C2,Workplace closing,1,1
 Czech Republic,CZE,2020-06-30,C2,Workplace closing,1,0
+Czech Republic,CZE,2020-10-05,C2,Workplace closing,1,1
 Czech Republic,CZE,2020-01-01,C3,Cancel public events,0,NA
 Czech Republic,CZE,2020-03-11,C3,Cancel public events,2,1
 Czech Republic,CZE,2020-05-25,C3,Cancel public events,1,1
@@ -1790,6 +1803,7 @@ Czech Republic,CZE,2020-07-04,C4,Restrictions on gatherings,1,0
 Czech Republic,CZE,2020-07-18,C4,Restrictions on gatherings,2,0
 Czech Republic,CZE,2020-07-27,C4,Restrictions on gatherings,1,1
 Czech Republic,CZE,2020-09-08,C4,Restrictions on gatherings,2,1
+Czech Republic,CZE,2020-10-05,C4,Restrictions on gatherings,4,1
 Czech Republic,CZE,2020-01-01,C5,Close public transport,0,NA
 Czech Republic,CZE,2020-01-01,C6,Stay at home requirements,0,NA
 Czech Republic,CZE,2020-03-15,C6,Stay at home requirements,2,1
@@ -2007,7 +2021,7 @@ Ecuador,ECU,2020-03-13,C3,Cancel public events,2,1
 Ecuador,ECU,2020-01-01,C4,Restrictions on gatherings,0,NA
 Ecuador,ECU,2020-03-17,C4,Restrictions on gatherings,3,1
 Ecuador,ECU,2020-07-23,C4,Restrictions on gatherings,4,0
-Ecuador,ECU,2020-09-14,C4,Restrictions on gatherings,3,1
+Ecuador,ECU,2020-09-14,C4,Restrictions on gatherings,3,0
 Ecuador,ECU,2020-01-01,C5,Close public transport,0,NA
 Ecuador,ECU,2020-03-15,C5,Close public transport,2,1
 Ecuador,ECU,2020-05-04,C5,Close public transport,2,0
@@ -2020,7 +2034,7 @@ Ecuador,ECU,2020-09-14,C6,Stay at home requirements,0,NA
 Ecuador,ECU,2020-01-01,C7,Restrictions on internal movement,0,NA
 Ecuador,ECU,2020-03-17,C7,Restrictions on internal movement,2,1
 Ecuador,ECU,2020-05-04,C7,Restrictions on internal movement,2,0
-Ecuador,ECU,2020-09-14,C7,Restrictions on internal movement,1,1
+Ecuador,ECU,2020-09-14,C7,Restrictions on internal movement,0,NA
 Ecuador,ECU,2020-01-01,C8,International travel controls,0,NA
 Ecuador,ECU,2020-03-02,C8,International travel controls,1,NA
 Ecuador,ECU,2020-03-15,C8,International travel controls,4,NA
@@ -2081,6 +2095,7 @@ El Salvador,SLV,2020-01-01,C5,Close public transport,0,NA
 El Salvador,SLV,2020-03-18,C5,Close public transport,1,1
 El Salvador,SLV,2020-05-07,C5,Close public transport,2,1
 El Salvador,SLV,2020-08-24,C5,Close public transport,1,1
+El Salvador,SLV,2020-09-30,C5,Close public transport,0,NA
 El Salvador,SLV,2020-01-01,C6,Stay at home requirements,0,NA
 El Salvador,SLV,2020-03-21,C6,Stay at home requirements,3,1
 El Salvador,SLV,2020-06-16,C6,Stay at home requirements,2,1
@@ -2088,6 +2103,7 @@ El Salvador,SLV,2020-01-01,C7,Restrictions on internal movement,0,NA
 El Salvador,SLV,2020-03-18,C7,Restrictions on internal movement,2,0
 El Salvador,SLV,2020-03-21,C7,Restrictions on internal movement,2,1
 El Salvador,SLV,2020-09-19,C7,Restrictions on internal movement,1,1
+El Salvador,SLV,2020-09-30,C7,Restrictions on internal movement,1,0
 El Salvador,SLV,2020-01-01,C8,International travel controls,0,NA
 El Salvador,SLV,2020-01-31,C8,International travel controls,3,NA
 El Salvador,SLV,2020-03-12,C8,International travel controls,4,NA
@@ -2105,6 +2121,7 @@ Eritrea,ERI,2020-09-18,C1,School closing,2,1
 Eritrea,ERI,2020-01-01,C2,Workplace closing,0,NA
 Eritrea,ERI,2020-03-31,C2,Workplace closing,2,1
 Eritrea,ERI,2020-04-01,C2,Workplace closing,3,1
+Eritrea,ERI,2020-09-29,C2,Workplace closing,2,1
 Eritrea,ERI,2020-01-01,C3,Cancel public events,0,NA
 Eritrea,ERI,2020-03-23,C3,Cancel public events,2,1
 Eritrea,ERI,2020-01-01,C4,Restrictions on gatherings,0,NA
@@ -2170,7 +2187,6 @@ Estonia,EST,2020-08-20,H3,Contact tracing,1,NA
 Eswatini,SWZ,2020-01-01,C1,School closing,0,NA
 Eswatini,SWZ,2020-03-17,C1,School closing,3,1
 Eswatini,SWZ,2020-07-08,C1,School closing,2,1
-Eswatini,SWZ,2020-09-10,C1,School closing,2,0
 Eswatini,SWZ,2020-01-01,C2,Workplace closing,0,NA
 Eswatini,SWZ,2020-03-27,C2,Workplace closing,1,1
 Eswatini,SWZ,2020-04-03,C2,Workplace closing,2,1
@@ -2195,6 +2211,7 @@ Eswatini,SWZ,2020-01-01,C8,International travel controls,0,NA
 Eswatini,SWZ,2020-01-29,C8,International travel controls,1,NA
 Eswatini,SWZ,2020-03-17,C8,International travel controls,3,NA
 Eswatini,SWZ,2020-03-27,C8,International travel controls,4,NA
+Eswatini,SWZ,2020-10-02,C8,International travel controls,2,NA
 Eswatini,SWZ,2020-01-01,H1,Public information campaigns,0,NA
 Eswatini,SWZ,2020-02-15,H1,Public information campaigns,1,1
 Eswatini,SWZ,2020-02-29,H1,Public information campaigns,2,1
@@ -2292,6 +2309,7 @@ Fiji,FJI,2020-07-17,C7,Restrictions on internal movement,0,NA
 Fiji,FJI,2020-01-01,C8,International travel controls,0,NA
 Fiji,FJI,2020-02-03,C8,International travel controls,3,NA
 Fiji,FJI,2020-03-29,C8,International travel controls,4,NA
+Fiji,FJI,2020-10-02,C8,International travel controls,3,NA
 Fiji,FJI,2020-01-01,H1,Public information campaigns,0,NA
 Fiji,FJI,2020-01-22,H1,Public information campaigns,2,1
 Fiji,FJI,2020-01-01,H2,Testing policy,0,NA
@@ -2312,8 +2330,8 @@ Finland,FIN,2020-06-15,C3,Cancel public events,1,1
 Finland,FIN,2020-07-09,C3,Cancel public events,2,1
 Finland,FIN,2020-07-17,C3,Cancel public events,1,1
 Finland,FIN,2020-01-01,C4,Restrictions on gatherings,0,NA
-Finland,FIN,2020-07-09,C4,Restrictions on gatherings,2,1
-Finland,FIN,2020-09-01,C4,Restrictions on gatherings,0,NA
+Finland,FIN,2020-03-12,C4,Restrictions on gatherings,1,1
+Finland,FIN,2020-08-14,C4,Restrictions on gatherings,0,NA
 Finland,FIN,2020-01-01,C5,Close public transport,0,NA
 Finland,FIN,2020-01-01,C6,Stay at home requirements,0,NA
 Finland,FIN,2020-03-16,C6,Stay at home requirements,1,1
@@ -2353,11 +2371,13 @@ France,FRA,2020-02-29,C3,Cancel public events,2,1
 France,FRA,2020-06-09,C3,Cancel public events,2,0
 France,FRA,2020-07-11,C3,Cancel public events,1,1
 France,FRA,2020-09-26,C3,Cancel public events,2,0
+France,FRA,2020-09-28,C3,Cancel public events,1,1
 France,FRA,2020-01-01,C4,Restrictions on gatherings,0,NA
 France,FRA,2020-02-29,C4,Restrictions on gatherings,4,0
 France,FRA,2020-03-17,C4,Restrictions on gatherings,4,1
 France,FRA,2020-05-11,C4,Restrictions on gatherings,3,1
 France,FRA,2020-06-13,C4,Restrictions on gatherings,3,0
+France,FRA,2020-09-28,C4,Restrictions on gatherings,4,0
 France,FRA,2020-01-01,C5,Close public transport,0,NA
 France,FRA,2020-03-16,C5,Close public transport,1,1
 France,FRA,2020-06-22,C5,Close public transport,0,NA
@@ -2471,6 +2491,7 @@ Gambia,GMB,2020-06-09,H3,Contact tracing,2,NA
 Georgia,GEO,2020-01-01,C1,School closing,0,NA
 Georgia,GEO,2020-03-02,C1,School closing,3,1
 Georgia,GEO,2020-09-15,C1,School closing,2,1
+Georgia,GEO,2020-10-01,C1,School closing,3,0
 Georgia,GEO,2020-01-01,C2,Workplace closing,0,NA
 Georgia,GEO,2020-03-14,C2,Workplace closing,2,1
 Georgia,GEO,2020-03-19,C2,Workplace closing,3,1
@@ -2482,6 +2503,7 @@ Georgia,GEO,2020-03-01,C3,Cancel public events,2,1
 Georgia,GEO,2020-06-19,C3,Cancel public events,2,0
 Georgia,GEO,2020-07-10,C3,Cancel public events,1,1
 Georgia,GEO,2020-09-04,C3,Cancel public events,2,1
+Georgia,GEO,2020-10-01,C3,Cancel public events,1,1
 Georgia,GEO,2020-01-01,C4,Restrictions on gatherings,0,NA
 Georgia,GEO,2020-03-21,C4,Restrictions on gatherings,4,1
 Georgia,GEO,2020-05-23,C4,Restrictions on gatherings,3,1
@@ -2561,6 +2583,7 @@ Germany,DEU,2020-02-28,C8,International travel controls,1,NA
 Germany,DEU,2020-03-16,C8,International travel controls,3,NA
 Germany,DEU,2020-03-18,C8,International travel controls,4,NA
 Germany,DEU,2020-05-16,C8,International travel controls,3,NA
+Germany,DEU,2020-10-01,C8,International travel controls,2,NA
 Germany,DEU,2020-01-01,H1,Public information campaigns,0,NA
 Germany,DEU,2020-01-24,H1,Public information campaigns,1,1
 Germany,DEU,2020-02-12,H1,Public information campaigns,2,1
@@ -2651,6 +2674,7 @@ Greece,GRC,2020-01-01,C2,Workplace closing,0,NA
 Greece,GRC,2020-03-12,C2,Workplace closing,2,1
 Greece,GRC,2020-05-05,C2,Workplace closing,1,1
 Greece,GRC,2020-06-01,C2,Workplace closing,0,NA
+Greece,GRC,2020-09-29,C2,Workplace closing,1,0
 Greece,GRC,2020-01-01,C3,Cancel public events,0,NA
 Greece,GRC,2020-02-29,C3,Cancel public events,2,0
 Greece,GRC,2020-03-09,C3,Cancel public events,2,1
@@ -2659,16 +2683,20 @@ Greece,GRC,2020-06-15,C3,Cancel public events,0,NA
 Greece,GRC,2020-07-13,C3,Cancel public events,2,1
 Greece,GRC,2020-08-01,C3,Cancel public events,0,NA
 Greece,GRC,2020-08-13,C3,Cancel public events,2,1
+Greece,GRC,2020-09-29,C3,Cancel public events,2,0
 Greece,GRC,2020-01-01,C4,Restrictions on gatherings,0,NA
 Greece,GRC,2020-03-18,C4,Restrictions on gatherings,4,1
 Greece,GRC,2020-05-05,C4,Restrictions on gatherings,3,1
 Greece,GRC,2020-08-17,C4,Restrictions on gatherings,3,0
 Greece,GRC,2020-09-08,C4,Restrictions on gatherings,3,1
+Greece,GRC,2020-09-29,C4,Restrictions on gatherings,4,0
 Greece,GRC,2020-01-01,C5,Close public transport,0,NA
 Greece,GRC,2020-03-14,C5,Close public transport,1,1
+Greece,GRC,2020-09-29,C5,Close public transport,1,0
 Greece,GRC,2020-01-01,C6,Stay at home requirements,0,NA
 Greece,GRC,2020-03-23,C6,Stay at home requirements,2,1
 Greece,GRC,2020-05-30,C6,Stay at home requirements,1,1
+Greece,GRC,2020-09-29,C6,Stay at home requirements,1,0
 Greece,GRC,2020-01-01,C7,Restrictions on internal movement,0,NA
 Greece,GRC,2020-03-21,C7,Restrictions on internal movement,2,0
 Greece,GRC,2020-03-23,C7,Restrictions on internal movement,2,1
@@ -2717,6 +2745,7 @@ Greenland,GRL,2020-06-15,C8,International travel controls,2,NA
 Greenland,GRL,2020-07-31,C8,International travel controls,1,NA
 Greenland,GRL,2020-08-06,C8,International travel controls,2,NA
 Greenland,GRL,2020-09-11,C8,International travel controls,3,NA
+Greenland,GRL,2020-09-29,C8,International travel controls,2,NA
 Greenland,GRL,2020-01-01,H1,Public information campaigns,0,NA
 Greenland,GRL,2020-03-02,H1,Public information campaigns,1,1
 Greenland,GRL,2020-03-26,H1,Public information campaigns,2,1
@@ -3057,6 +3086,7 @@ Iceland,ISL,2020-03-15,C4,Restrictions on gatherings,3,1
 Iceland,ISL,2020-05-25,C4,Restrictions on gatherings,2,1
 Iceland,ISL,2020-07-31,C4,Restrictions on gatherings,3,1
 Iceland,ISL,2020-09-07,C4,Restrictions on gatherings,2,1
+Iceland,ISL,2020-10-05,C4,Restrictions on gatherings,3,1
 Iceland,ISL,2020-01-01,C5,Close public transport,0,NA
 Iceland,ISL,2020-01-01,C6,Stay at home requirements,0,NA
 Iceland,ISL,2020-01-01,C7,Restrictions on internal movement,0,NA
@@ -3216,11 +3246,11 @@ Iran,IRN,2020-03-19,C6,Stay at home requirements,1,1
 Iran,IRN,2020-01-01,C7,Restrictions on internal movement,0,NA
 Iran,IRN,2020-03-05,C7,Restrictions on internal movement,2,1
 Iran,IRN,2020-04-11,C7,Restrictions on internal movement,2,0
+Iran,IRN,2020-10-03,C7,Restrictions on internal movement,2,1
 Iran,IRN,2020-01-01,C8,International travel controls,0,NA
 Iran,IRN,2020-07-11,C8,International travel controls,3,NA
 Iran,IRN,2020-01-01,H1,Public information campaigns,0,NA
 Iran,IRN,2020-02-26,H1,Public information campaigns,1,1
-Iran,IRN,2020-05-17,H1,Public information campaigns,2,1
 Iran,IRN,2020-01-01,H2,Testing policy,0,NA
 Iran,IRN,2020-05-17,H2,Testing policy,2,NA
 Iran,IRN,2020-01-01,H3,Contact tracing,0,NA
@@ -3573,6 +3603,7 @@ Kazakhstan,KAZ,2020-03-30,C2,Workplace closing,3,0
 Kazakhstan,KAZ,2020-05-11,C2,Workplace closing,2,0
 Kazakhstan,KAZ,2020-05-18,C2,Workplace closing,2,1
 Kazakhstan,KAZ,2020-09-05,C2,Workplace closing,3,0
+Kazakhstan,KAZ,2020-09-14,C2,Workplace closing,2,1
 Kazakhstan,KAZ,2020-01-01,C3,Cancel public events,0,NA
 Kazakhstan,KAZ,2020-03-12,C3,Cancel public events,2,1
 Kazakhstan,KAZ,2020-01-01,C4,Restrictions on gatherings,0,NA
@@ -3605,8 +3636,10 @@ Kazakhstan,KAZ,2020-03-16,H1,Public information campaigns,2,1
 Kazakhstan,KAZ,2020-01-01,H2,Testing policy,0,NA
 Kazakhstan,KAZ,2020-01-31,H2,Testing policy,1,NA
 Kazakhstan,KAZ,2020-05-01,H2,Testing policy,3,NA
+Kazakhstan,KAZ,2020-09-29,H2,Testing policy,1,NA
 Kazakhstan,KAZ,2020-01-01,H3,Contact tracing,0,NA
 Kazakhstan,KAZ,2020-03-24,H3,Contact tracing,2,NA
+Kazakhstan,KAZ,2020-09-25,H3,Contact tracing,1,NA
 Kenya,KEN,2020-01-01,C1,School closing,0,NA
 Kenya,KEN,2020-03-15,C1,School closing,3,1
 Kenya,KEN,2020-09-01,C1,School closing,2,1
@@ -3947,6 +3980,7 @@ Lesotho,LSO,2020-01-01,C3,Cancel public events,0,NA
 Lesotho,LSO,2020-03-18,C3,Cancel public events,2,1
 Lesotho,LSO,2020-05-06,C3,Cancel public events,1,1
 Lesotho,LSO,2020-07-19,C3,Cancel public events,2,1
+Lesotho,LSO,2020-10-02,C3,Cancel public events,1,1
 Lesotho,LSO,2020-01-01,C4,Restrictions on gatherings,0,NA
 Lesotho,LSO,2020-03-18,C4,Restrictions on gatherings,4,1
 Lesotho,LSO,2020-05-06,C4,Restrictions on gatherings,3,1
@@ -4016,6 +4050,8 @@ Libya,LBY,2020-01-01,C2,Workplace closing,0,NA
 Libya,LBY,2020-03-14,C2,Workplace closing,1,1
 Libya,LBY,2020-04-16,C2,Workplace closing,3,1
 Libya,LBY,2020-07-07,C2,Workplace closing,2,1
+Libya,LBY,2020-10-04,C2,Workplace closing,3,0
+Libya,LBY,2020-10-08,C2,Workplace closing,2,1
 Libya,LBY,2020-01-01,C3,Cancel public events,0,NA
 Libya,LBY,2020-03-14,C3,Cancel public events,2,1
 Libya,LBY,2020-01-01,C4,Restrictions on gatherings,0,NA
@@ -4033,6 +4069,7 @@ Libya,LBY,2020-06-27,C6,Stay at home requirements,2,0
 Libya,LBY,2020-08-26,C6,Stay at home requirements,2,1
 Libya,LBY,2020-01-01,C7,Restrictions on internal movement,0,NA
 Libya,LBY,2020-03-22,C7,Restrictions on internal movement,2,1
+Libya,LBY,2020-10-04,C7,Restrictions on internal movement,2,0
 Libya,LBY,2020-01-01,C8,International travel controls,0,NA
 Libya,LBY,2020-02-10,C8,International travel controls,2,NA
 Libya,LBY,2020-03-16,C8,International travel controls,4,NA
@@ -4047,23 +4084,29 @@ Lithuania,LTU,2020-01-01,C1,School closing,0,NA
 Lithuania,LTU,2020-03-13,C1,School closing,3,1
 Lithuania,LTU,2020-05-18,C1,School closing,2,1
 Lithuania,LTU,2020-05-30,C1,School closing,0,NA
+Lithuania,LTU,2020-10-09,C1,School closing,3,0
 Lithuania,LTU,2020-01-01,C2,Workplace closing,0,NA
 Lithuania,LTU,2020-03-16,C2,Workplace closing,3,1
 Lithuania,LTU,2020-04-27,C2,Workplace closing,2,1
 Lithuania,LTU,2020-06-17,C2,Workplace closing,0,NA
+Lithuania,LTU,2020-10-09,C2,Workplace closing,1,0
 Lithuania,LTU,2020-01-01,C3,Cancel public events,0,NA
 Lithuania,LTU,2020-03-12,C3,Cancel public events,2,1
 Lithuania,LTU,2020-06-01,C3,Cancel public events,1,1
 Lithuania,LTU,2020-06-17,C3,Cancel public events,0,NA
+Lithuania,LTU,2020-10-09,C3,Cancel public events,2,0
 Lithuania,LTU,2020-01-01,C4,Restrictions on gatherings,0,NA
 Lithuania,LTU,2020-03-12,C4,Restrictions on gatherings,3,1
 Lithuania,LTU,2020-03-16,C4,Restrictions on gatherings,4,1
 Lithuania,LTU,2020-06-01,C4,Restrictions on gatherings,2,1
 Lithuania,LTU,2020-07-27,C4,Restrictions on gatherings,3,1
 Lithuania,LTU,2020-08-07,C4,Restrictions on gatherings,1,1
+Lithuania,LTU,2020-10-01,C4,Restrictions on gatherings,2,1
+Lithuania,LTU,2020-10-09,C4,Restrictions on gatherings,4,0
 Lithuania,LTU,2020-01-01,C5,Close public transport,0,NA
 Lithuania,LTU,2020-03-16,C5,Close public transport,1,1
 Lithuania,LTU,2020-08-07,C5,Close public transport,0,NA
+Lithuania,LTU,2020-10-09,C5,Close public transport,1,0
 Lithuania,LTU,2020-01-01,C6,Stay at home requirements,0,NA
 Lithuania,LTU,2020-03-16,C6,Stay at home requirements,1,1
 Lithuania,LTU,2020-06-17,C6,Stay at home requirements,0,NA
@@ -4109,6 +4152,7 @@ Luxembourg,LUX,2020-06-26,C4,Restrictions on gatherings,0,NA
 Luxembourg,LUX,2020-07-19,C4,Restrictions on gatherings,3,1
 Luxembourg,LUX,2020-07-28,C4,Restrictions on gatherings,4,1
 Luxembourg,LUX,2020-09-13,C4,Restrictions on gatherings,3,1
+Luxembourg,LUX,2020-09-26,C4,Restrictions on gatherings,4,1
 Luxembourg,LUX,2020-01-01,C5,Close public transport,0,NA
 Luxembourg,LUX,2020-03-12,C5,Close public transport,1,1
 Luxembourg,LUX,2020-06-11,C5,Close public transport,0,NA
@@ -4236,6 +4280,7 @@ Malaysia,MYS,2020-06-24,C1,School closing,2,1
 Malaysia,MYS,2020-07-22,C1,School closing,0,NA
 Malaysia,MYS,2020-08-03,C1,School closing,2,0
 Malaysia,MYS,2020-09-11,C1,School closing,0,NA
+Malaysia,MYS,2020-10-09,C1,School closing,3,0
 Malaysia,MYS,2020-01-01,C2,Workplace closing,0,NA
 Malaysia,MYS,2020-03-18,C2,Workplace closing,3,1
 Malaysia,MYS,2020-05-04,C2,Workplace closing,2,1
@@ -4320,11 +4365,13 @@ Mauritania,MRT,2020-07-10,C7,Restrictions on internal movement,0,NA
 Mauritania,MRT,2020-01-01,C8,International travel controls,0,NA
 Mauritania,MRT,2020-02-05,C8,International travel controls,2,NA
 Mauritania,MRT,2020-03-23,C8,International travel controls,4,NA
+Mauritania,MRT,2020-09-10,C8,International travel controls,1,NA
 Mauritania,MRT,2020-01-01,H1,Public information campaigns,0,NA
 Mauritania,MRT,2020-03-13,H1,Public information campaigns,2,1
 Mauritania,MRT,2020-01-01,H2,Testing policy,0,NA
 Mauritania,MRT,2020-05-19,H2,Testing policy,1,NA
 Mauritania,MRT,2020-09-14,H2,Testing policy,2,NA
+Mauritania,MRT,2020-09-25,H2,Testing policy,1,NA
 Mauritania,MRT,2020-01-01,H3,Contact tracing,0,NA
 Mauritania,MRT,2020-03-13,H3,Contact tracing,2,NA
 Mauritius,MUS,2020-01-01,C1,School closing,0,NA
@@ -4445,7 +4492,7 @@ Moldova,MDA,2020-04-30,H3,Contact tracing,2,NA
 Mongolia,MNG,2020-01-01,C1,School closing,0,NA
 Mongolia,MNG,2020-01-27,C1,School closing,3,1
 Mongolia,MNG,2020-09-01,C1,School closing,2,0
-Mongolia,MNG,2020-09-30,C1,School closing,0,NA
+Mongolia,MNG,2020-09-30,C1,School closing,1,1
 Mongolia,MNG,2020-01-01,C2,Workplace closing,0,NA
 Mongolia,MNG,2020-01-27,C2,Workplace closing,2,1
 Mongolia,MNG,2020-05-05,C2,Workplace closing,3,0
@@ -4453,7 +4500,6 @@ Mongolia,MNG,2020-05-08,C2,Workplace closing,2,1
 Mongolia,MNG,2020-09-16,C2,Workplace closing,2,0
 Mongolia,MNG,2020-01-01,C3,Cancel public events,0,NA
 Mongolia,MNG,2020-01-27,C3,Cancel public events,2,1
-Mongolia,MNG,2020-08-04,C3,Cancel public events,0,NA
 Mongolia,MNG,2020-01-01,C4,Restrictions on gatherings,0,NA
 Mongolia,MNG,2020-03-23,C4,Restrictions on gatherings,4,1
 Mongolia,MNG,2020-07-03,C4,Restrictions on gatherings,0,NA
@@ -4515,6 +4561,7 @@ Montserrat,MSR,2020-01-01,H3,Contact tracing,0,NA
 Montserrat,MSR,2020-03-17,H3,Contact tracing,2,NA
 Morocco,MAR,2020-01-01,C1,School closing,0,NA
 Morocco,MAR,2020-03-16,C1,School closing,3,1
+Morocco,MAR,2020-09-08,C1,School closing,3,0
 Morocco,MAR,2020-01-01,C2,Workplace closing,0,NA
 Morocco,MAR,2020-03-20,C2,Workplace closing,3,1
 Morocco,MAR,2020-06-11,C2,Workplace closing,2,1
@@ -4605,27 +4652,34 @@ Myanmar,MMR,2020-04-12,C2,Workplace closing,3,1
 Myanmar,MMR,2020-05-03,C2,Workplace closing,3,0
 Myanmar,MMR,2020-05-14,C2,Workplace closing,2,0
 Myanmar,MMR,2020-08-18,C2,Workplace closing,2,1
+Myanmar,MMR,2020-09-26,C2,Workplace closing,3,0
 Myanmar,MMR,2020-01-01,C3,Cancel public events,0,NA
 Myanmar,MMR,2020-03-13,C3,Cancel public events,2,1
+Myanmar,MMR,2020-09-26,C3,Cancel public events,2,0
 Myanmar,MMR,2020-01-01,C4,Restrictions on gatherings,0,NA
 Myanmar,MMR,2020-03-13,C4,Restrictions on gatherings,3,1
 Myanmar,MMR,2020-04-17,C4,Restrictions on gatherings,4,1
 Myanmar,MMR,2020-08-01,C4,Restrictions on gatherings,3,1
+Myanmar,MMR,2020-09-26,C4,Restrictions on gatherings,4,0
 Myanmar,MMR,2020-01-01,C5,Close public transport,0,NA
 Myanmar,MMR,2020-04-07,C5,Close public transport,2,0
 Myanmar,MMR,2020-08-18,C5,Close public transport,1,1
+Myanmar,MMR,2020-09-26,C5,Close public transport,1,0
 Myanmar,MMR,2020-01-01,C6,Stay at home requirements,0,NA
 Myanmar,MMR,2020-04-04,C6,Stay at home requirements,1,1
 Myanmar,MMR,2020-04-14,C6,Stay at home requirements,2,0
 Myanmar,MMR,2020-08-18,C6,Stay at home requirements,2,1
+Myanmar,MMR,2020-09-26,C6,Stay at home requirements,3,0
 Myanmar,MMR,2020-01-01,C7,Restrictions on internal movement,0,NA
 Myanmar,MMR,2020-04-01,C7,Restrictions on internal movement,2,0
 Myanmar,MMR,2020-08-18,C7,Restrictions on internal movement,2,1
+Myanmar,MMR,2020-09-26,C7,Restrictions on internal movement,2,0
 Myanmar,MMR,2020-01-01,C8,International travel controls,0,NA
 Myanmar,MMR,2020-02-01,C8,International travel controls,1,NA
 Myanmar,MMR,2020-03-15,C8,International travel controls,2,NA
 Myanmar,MMR,2020-03-30,C8,International travel controls,3,NA
 Myanmar,MMR,2020-09-10,C8,International travel controls,2,NA
+Myanmar,MMR,2020-09-26,C8,International travel controls,4,NA
 Myanmar,MMR,2020-01-01,H1,Public information campaigns,0,NA
 Myanmar,MMR,2020-03-09,H1,Public information campaigns,2,1
 Myanmar,MMR,2020-01-01,H2,Testing policy,0,NA
@@ -4747,6 +4801,7 @@ Netherlands,NLD,2020-03-12,C3,Cancel public events,2,1
 Netherlands,NLD,2020-07-01,C3,Cancel public events,0,NA
 Netherlands,NLD,2020-08-18,C3,Cancel public events,1,1
 Netherlands,NLD,2020-09-20,C3,Cancel public events,1,0
+Netherlands,NLD,2020-09-29,C3,Cancel public events,2,1
 Netherlands,NLD,2020-01-01,C4,Restrictions on gatherings,0,NA
 Netherlands,NLD,2020-03-12,C4,Restrictions on gatherings,3,1
 Netherlands,NLD,2020-07-01,C4,Restrictions on gatherings,2,1
@@ -4762,6 +4817,7 @@ Netherlands,NLD,2020-05-11,C6,Stay at home requirements,1,1
 Netherlands,NLD,2020-01-01,C7,Restrictions on internal movement,0,NA
 Netherlands,NLD,2020-03-15,C7,Restrictions on internal movement,1,1
 Netherlands,NLD,2020-07-01,C7,Restrictions on internal movement,0,NA
+Netherlands,NLD,2020-09-29,C7,Restrictions on internal movement,1,1
 Netherlands,NLD,2020-01-01,C8,International travel controls,0,NA
 Netherlands,NLD,2020-03-19,C8,International travel controls,3,NA
 Netherlands,NLD,2020-01-01,H1,Public information campaigns,0,NA
@@ -4865,6 +4921,7 @@ Niger,NER,2020-03-19,C4,Restrictions on gatherings,3,1
 Niger,NER,2020-05-13,C4,Restrictions on gatherings,0,NA
 Niger,NER,2020-01-01,C5,Close public transport,0,NA
 Niger,NER,2020-01-01,C6,Stay at home requirements,0,NA
+Niger,NER,2020-10-03,C6,Stay at home requirements,1,1
 Niger,NER,2020-01-01,C7,Restrictions on internal movement,0,NA
 Niger,NER,2020-03-28,C7,Restrictions on internal movement,2,0
 Niger,NER,2020-05-13,C7,Restrictions on internal movement,0,NA
@@ -4874,8 +4931,10 @@ Niger,NER,2020-08-08,C8,International travel controls,1,NA
 Niger,NER,2020-09-06,C8,International travel controls,0,NA
 Niger,NER,2020-01-01,H1,Public information campaigns,0,NA
 Niger,NER,2020-03-17,H1,Public information campaigns,2,1
+Niger,NER,2020-10-07,H1,Public information campaigns,1,1
 Niger,NER,2020-01-01,H2,Testing policy,0,NA
 Niger,NER,2020-03-19,H2,Testing policy,1,NA
+Niger,NER,2020-10-07,H2,Testing policy,2,NA
 Niger,NER,2020-01-01,H3,Contact tracing,0,NA
 Niger,NER,2020-03-27,H3,Contact tracing,1,NA
 Nigeria,NGA,2020-01-01,C1,School closing,0,NA
@@ -5008,6 +5067,7 @@ Pakistan,PAK,2020-01-01,C1,School closing,0,NA
 Pakistan,PAK,2020-02-27,C1,School closing,3,0
 Pakistan,PAK,2020-03-13,C1,School closing,3,1
 Pakistan,PAK,2020-09-15,C1,School closing,2,1
+Pakistan,PAK,2020-09-30,C1,School closing,1,1
 Pakistan,PAK,2020-01-01,C2,Workplace closing,0,NA
 Pakistan,PAK,2020-03-23,C2,Workplace closing,3,1
 Pakistan,PAK,2020-04-15,C2,Workplace closing,2,1
@@ -5048,6 +5108,7 @@ Pakistan,PAK,2020-05-21,C8,International travel controls,3,NA
 Pakistan,PAK,2020-06-20,C8,International travel controls,2,NA
 Pakistan,PAK,2020-01-01,H1,Public information campaigns,0,NA
 Pakistan,PAK,2020-02-12,H1,Public information campaigns,2,1
+Pakistan,PAK,2020-09-29,H1,Public information campaigns,2,0
 Pakistan,PAK,2020-01-01,H2,Testing policy,0,NA
 Pakistan,PAK,2020-02-25,H2,Testing policy,1,NA
 Pakistan,PAK,2020-04-11,H2,Testing policy,2,NA
@@ -5058,10 +5119,12 @@ Pakistan,PAK,2020-05-21,H3,Contact tracing,1,NA
 Pakistan,PAK,2020-08-13,H3,Contact tracing,2,NA
 Palestine,PSE,2020-01-01,C1,School closing,0,NA
 Palestine,PSE,2020-03-06,C1,School closing,3,1
+Palestine,PSE,2020-09-20,C1,School closing,3,0
 Palestine,PSE,2020-01-01,C2,Workplace closing,0,NA
 Palestine,PSE,2020-03-06,C2,Workplace closing,2,1
 Palestine,PSE,2020-03-22,C2,Workplace closing,3,1
 Palestine,PSE,2020-05-26,C2,Workplace closing,2,0
+Palestine,PSE,2020-09-18,C2,Workplace closing,3,0
 Palestine,PSE,2020-01-01,C3,Cancel public events,0,NA
 Palestine,PSE,2020-03-05,C3,Cancel public events,2,1
 Palestine,PSE,2020-01-01,C4,Restrictions on gatherings,0,NA
@@ -5079,9 +5142,11 @@ Palestine,PSE,2020-01-01,C7,Restrictions on internal movement,0,NA
 Palestine,PSE,2020-03-05,C7,Restrictions on internal movement,2,1
 Palestine,PSE,2020-05-26,C7,Restrictions on internal movement,2,0
 Palestine,PSE,2020-07-02,C7,Restrictions on internal movement,2,1
+Palestine,PSE,2020-09-28,C7,Restrictions on internal movement,2,0
 Palestine,PSE,2020-01-01,C8,International travel controls,0,NA
 Palestine,PSE,2020-03-05,C8,International travel controls,4,NA
 Palestine,PSE,2020-07-28,C8,International travel controls,2,NA
+Palestine,PSE,2020-07-29,C8,International travel controls,4,NA
 Palestine,PSE,2020-01-01,H1,Public information campaigns,0,NA
 Palestine,PSE,2020-02-22,H1,Public information campaigns,1,1
 Palestine,PSE,2020-03-05,H1,Public information campaigns,2,1
@@ -5140,10 +5205,12 @@ Papua New Guinea,PNG,2020-06-23,C2,Workplace closing,1,1
 Papua New Guinea,PNG,2020-08-04,C2,Workplace closing,2,1
 Papua New Guinea,PNG,2020-08-07,C2,Workplace closing,3,0
 Papua New Guinea,PNG,2020-08-12,C2,Workplace closing,2,1
+Papua New Guinea,PNG,2020-09-25,C2,Workplace closing,0,NA
 Papua New Guinea,PNG,2020-01-01,C3,Cancel public events,0,NA
 Papua New Guinea,PNG,2020-03-24,C3,Cancel public events,2,1
 Papua New Guinea,PNG,2020-08-04,C3,Cancel public events,1,0
 Papua New Guinea,PNG,2020-08-07,C3,Cancel public events,1,1
+Papua New Guinea,PNG,2020-09-25,C3,Cancel public events,0,NA
 Papua New Guinea,PNG,2020-01-01,C4,Restrictions on gatherings,0,NA
 Papua New Guinea,PNG,2020-03-20,C4,Restrictions on gatherings,2,1
 Papua New Guinea,PNG,2020-04-16,C4,Restrictions on gatherings,4,0
@@ -5160,6 +5227,7 @@ Papua New Guinea,PNG,2020-05-01,C5,Close public transport,1,1
 Papua New Guinea,PNG,2020-08-07,C5,Close public transport,2,0
 Papua New Guinea,PNG,2020-08-12,C5,Close public transport,0,NA
 Papua New Guinea,PNG,2020-08-13,C5,Close public transport,1,0
+Papua New Guinea,PNG,2020-09-25,C5,Close public transport,0,NA
 Papua New Guinea,PNG,2020-01-01,C6,Stay at home requirements,0,NA
 Papua New Guinea,PNG,2020-04-08,C6,Stay at home requirements,2,0
 Papua New Guinea,PNG,2020-04-27,C6,Stay at home requirements,1,0
@@ -5178,6 +5246,7 @@ Papua New Guinea,PNG,2020-01-29,C8,International travel controls,3,NA
 Papua New Guinea,PNG,2020-03-21,C8,International travel controls,4,NA
 Papua New Guinea,PNG,2020-04-25,C8,International travel controls,2,NA
 Papua New Guinea,PNG,2020-08-04,C8,International travel controls,3,NA
+Papua New Guinea,PNG,2020-09-25,C8,International travel controls,2,NA
 Papua New Guinea,PNG,2020-01-01,H1,Public information campaigns,0,NA
 Papua New Guinea,PNG,2020-01-27,H1,Public information campaigns,1,1
 Papua New Guinea,PNG,2020-04-08,H1,Public information campaigns,2,1
@@ -5266,6 +5335,7 @@ Peru,PER,2020-01-01,C8,International travel controls,0,NA
 Peru,PER,2020-03-06,C8,International travel controls,1,NA
 Peru,PER,2020-03-11,C8,International travel controls,2,NA
 Peru,PER,2020-03-16,C8,International travel controls,4,NA
+Peru,PER,2020-10-01,C8,International travel controls,3,NA
 Peru,PER,2020-01-01,H1,Public information campaigns,0,NA
 Peru,PER,2020-03-05,H1,Public information campaigns,2,1
 Peru,PER,2020-01-01,H2,Testing policy,0,NA
@@ -5515,6 +5585,7 @@ Romania,ROU,2020-09-14,C1,School closing,2,0
 Romania,ROU,2020-01-01,C2,Workplace closing,0,NA
 Romania,ROU,2020-03-12,C2,Workplace closing,2,1
 Romania,ROU,2020-06-17,C2,Workplace closing,1,1
+Romania,ROU,2020-10-07,C2,Workplace closing,2,0
 Romania,ROU,2020-01-01,C3,Cancel public events,0,NA
 Romania,ROU,2020-03-08,C3,Cancel public events,2,1
 Romania,ROU,2020-06-17,C3,Cancel public events,1,1
@@ -5828,11 +5899,10 @@ Seychelles,SYC,2020-09-22,C3,Cancel public events,1,1
 Seychelles,SYC,2020-01-01,C4,Restrictions on gatherings,0,NA
 Seychelles,SYC,2020-03-30,C4,Restrictions on gatherings,4,1
 Seychelles,SYC,2020-06-01,C4,Restrictions on gatherings,0,NA
-Seychelles,SYC,2020-09-22,C4,Restrictions on gatherings,2,1
+Seychelles,SYC,2020-08-10,C4,Restrictions on gatherings,4,1
 Seychelles,SYC,2020-01-01,C5,Close public transport,0,NA
 Seychelles,SYC,2020-04-09,C5,Close public transport,2,1
 Seychelles,SYC,2020-05-04,C5,Close public transport,0,NA
-Seychelles,SYC,2020-09-22,C5,Close public transport,1,1
 Seychelles,SYC,2020-01-01,C6,Stay at home requirements,0,NA
 Seychelles,SYC,2020-04-08,C6,Stay at home requirements,2,1
 Seychelles,SYC,2020-05-04,C6,Stay at home requirements,1,1
@@ -6081,6 +6151,7 @@ Somalia,SOM,2020-03-14,C8,International travel controls,3,NA
 Somalia,SOM,2020-03-18,C8,International travel controls,4,NA
 Somalia,SOM,2020-08-03,C8,International travel controls,1,NA
 Somalia,SOM,2020-08-30,C8,International travel controls,2,NA
+Somalia,SOM,2020-09-25,C8,International travel controls,3,NA
 Somalia,SOM,2020-01-01,H1,Public information campaigns,0,NA
 Somalia,SOM,2020-03-19,H1,Public information campaigns,2,1
 Somalia,SOM,2020-01-01,H2,Testing policy,0,NA
@@ -6091,6 +6162,7 @@ South Africa,ZAF,2020-01-01,C1,School closing,0,NA
 South Africa,ZAF,2020-03-18,C1,School closing,3,1
 South Africa,ZAF,2020-06-08,C1,School closing,2,1
 South Africa,ZAF,2020-08-24,C1,School closing,1,0
+South Africa,ZAF,2020-10-01,C1,School closing,0,NA
 South Africa,ZAF,2020-01-01,C2,Workplace closing,0,NA
 South Africa,ZAF,2020-03-26,C2,Workplace closing,3,1
 South Africa,ZAF,2020-05-01,C2,Workplace closing,2,1
@@ -6118,7 +6190,7 @@ South Africa,ZAF,2020-01-01,C8,International travel controls,0,NA
 South Africa,ZAF,2020-01-23,C8,International travel controls,1,NA
 South Africa,ZAF,2020-03-18,C8,International travel controls,3,NA
 South Africa,ZAF,2020-03-26,C8,International travel controls,4,NA
-South Africa,ZAF,2020-09-20,C8,International travel controls,3,NA
+South Africa,ZAF,2020-10-01,C8,International travel controls,3,NA
 South Africa,ZAF,2020-01-01,H1,Public information campaigns,0,NA
 South Africa,ZAF,2020-03-05,H1,Public information campaigns,2,1
 South Africa,ZAF,2020-01-01,H2,Testing policy,0,NA
@@ -6183,13 +6255,16 @@ South Korea,KOR,2020-01-29,H3,Contact tracing,1,NA
 South Korea,KOR,2020-02-11,H3,Contact tracing,2,NA
 South Sudan,SSD,2020-01-01,C1,School closing,0,NA
 South Sudan,SSD,2020-03-20,C1,School closing,3,1
+South Sudan,SSD,2020-10-01,C1,School closing,2,1
 South Sudan,SSD,2020-01-01,C2,Workplace closing,0,NA
 South Sudan,SSD,2020-03-25,C2,Workplace closing,1,1
 South Sudan,SSD,2020-03-28,C2,Workplace closing,3,1
 South Sudan,SSD,2020-05-08,C2,Workplace closing,2,1
 South Sudan,SSD,2020-08-19,C2,Workplace closing,1,1
+South Sudan,SSD,2020-09-22,C2,Workplace closing,0,NA
 South Sudan,SSD,2020-01-01,C3,Cancel public events,0,NA
 South Sudan,SSD,2020-03-16,C3,Cancel public events,2,1
+South Sudan,SSD,2020-09-22,C3,Cancel public events,1,1
 South Sudan,SSD,2020-01-01,C4,Restrictions on gatherings,0,NA
 South Sudan,SSD,2020-03-16,C4,Restrictions on gatherings,3,1
 South Sudan,SSD,2020-01-01,C5,Close public transport,0,NA
@@ -6198,6 +6273,7 @@ South Sudan,SSD,2020-05-07,C5,Close public transport,0,NA
 South Sudan,SSD,2020-05-29,C5,Close public transport,2,0
 South Sudan,SSD,2020-07-08,C5,Close public transport,2,1
 South Sudan,SSD,2020-09-10,C5,Close public transport,1,1
+South Sudan,SSD,2020-09-22,C5,Close public transport,0,NA
 South Sudan,SSD,2020-01-01,C6,Stay at home requirements,0,NA
 South Sudan,SSD,2020-03-24,C6,Stay at home requirements,1,1
 South Sudan,SSD,2020-04-18,C6,Stay at home requirements,2,0
@@ -6205,9 +6281,11 @@ South Sudan,SSD,2020-05-07,C6,Stay at home requirements,2,1
 South Sudan,SSD,2020-05-29,C6,Stay at home requirements,2,0
 South Sudan,SSD,2020-07-08,C6,Stay at home requirements,1,1
 South Sudan,SSD,2020-08-06,C6,Stay at home requirements,2,1
+South Sudan,SSD,2020-09-22,C6,Stay at home requirements,0,NA
 South Sudan,SSD,2020-01-01,C7,Restrictions on internal movement,0,NA
 South Sudan,SSD,2020-04-12,C7,Restrictions on internal movement,2,1
 South Sudan,SSD,2020-07-08,C7,Restrictions on internal movement,1,1
+South Sudan,SSD,2020-09-22,C7,Restrictions on internal movement,0,NA
 South Sudan,SSD,2020-01-01,C8,International travel controls,0,NA
 South Sudan,SSD,2020-02-24,C8,International travel controls,2,NA
 South Sudan,SSD,2020-03-13,C8,International travel controls,3,NA
@@ -6215,6 +6293,7 @@ South Sudan,SSD,2020-03-24,C8,International travel controls,4,NA
 South Sudan,SSD,2020-05-12,C8,International travel controls,2,NA
 South Sudan,SSD,2020-05-29,C8,International travel controls,4,NA
 South Sudan,SSD,2020-08-06,C8,International travel controls,3,NA
+South Sudan,SSD,2020-09-22,C8,International travel controls,1,NA
 South Sudan,SSD,2020-01-01,H1,Public information campaigns,0,NA
 South Sudan,SSD,2020-03-16,H1,Public information campaigns,2,1
 South Sudan,SSD,2020-01-01,H2,Testing policy,0,NA
@@ -6267,6 +6346,7 @@ Spain,ESP,2020-03-09,C7,Restrictions on internal movement,1,0
 Spain,ESP,2020-03-14,C7,Restrictions on internal movement,1,1
 Spain,ESP,2020-06-21,C7,Restrictions on internal movement,0,NA
 Spain,ESP,2020-07-04,C7,Restrictions on internal movement,2,0
+Spain,ESP,2020-09-30,C7,Restrictions on internal movement,2,1
 Spain,ESP,2020-01-01,C8,International travel controls,0,NA
 Spain,ESP,2020-03-10,C8,International travel controls,3,NA
 Spain,ESP,2020-03-17,C8,International travel controls,4,NA
@@ -6342,6 +6422,7 @@ Sudan,SDN,2020-01-01,C2,Workplace closing,0,NA
 Sudan,SDN,2020-03-14,C2,Workplace closing,1,1
 Sudan,SDN,2020-04-18,C2,Workplace closing,3,0
 Sudan,SDN,2020-07-08,C2,Workplace closing,2,0
+Sudan,SDN,2020-09-25,C2,Workplace closing,2,1
 Sudan,SDN,2020-01-01,C3,Cancel public events,0,NA
 Sudan,SDN,2020-03-14,C3,Cancel public events,2,1
 Sudan,SDN,2020-01-01,C4,Restrictions on gatherings,0,NA
@@ -6362,6 +6443,7 @@ Sudan,SDN,2020-06-12,C6,Stay at home requirements,2,0
 Sudan,SDN,2020-07-08,C6,Stay at home requirements,1,0
 Sudan,SDN,2020-09-08,C6,Stay at home requirements,2,1
 Sudan,SDN,2020-09-19,C6,Stay at home requirements,1,0
+Sudan,SDN,2020-09-26,C6,Stay at home requirements,0,NA
 Sudan,SDN,2020-01-01,C7,Restrictions on internal movement,0,NA
 Sudan,SDN,2020-03-23,C7,Restrictions on internal movement,1,1
 Sudan,SDN,2020-04-13,C7,Restrictions on internal movement,2,0
@@ -6375,6 +6457,7 @@ Sudan,SDN,2020-07-13,C8,International travel controls,3,NA
 Sudan,SDN,2020-01-01,H1,Public information campaigns,0,NA
 Sudan,SDN,2020-01-28,H1,Public information campaigns,1,1
 Sudan,SDN,2020-03-13,H1,Public information campaigns,2,1
+Sudan,SDN,2020-09-25,H1,Public information campaigns,1,1
 Sudan,SDN,2020-01-01,H2,Testing policy,0,NA
 Sudan,SDN,2020-03-13,H2,Testing policy,2,NA
 Sudan,SDN,2020-01-01,H3,Contact tracing,0,NA
@@ -6383,6 +6466,7 @@ Suriname,SUR,2020-01-01,C1,School closing,0,NA
 Suriname,SUR,2020-03-16,C1,School closing,3,1
 Suriname,SUR,2020-07-06,C1,School closing,3,0
 Suriname,SUR,2020-08-28,C1,School closing,3,1
+Suriname,SUR,2020-10-01,C1,School closing,2,1
 Suriname,SUR,2020-01-01,C2,Workplace closing,0,NA
 Suriname,SUR,2020-06-04,C2,Workplace closing,3,1
 Suriname,SUR,2020-06-21,C2,Workplace closing,2,1
@@ -6425,6 +6509,7 @@ Suriname,SUR,2020-01-01,C8,International travel controls,0,NA
 Suriname,SUR,2020-03-14,C8,International travel controls,4,NA
 Suriname,SUR,2020-07-27,C8,International travel controls,2,NA
 Suriname,SUR,2020-08-11,C8,International travel controls,4,NA
+Suriname,SUR,2020-09-28,C8,International travel controls,3,NA
 Suriname,SUR,2020-01-01,H1,Public information campaigns,0,NA
 Suriname,SUR,2020-03-14,H1,Public information campaigns,2,1
 Suriname,SUR,2020-01-01,H2,Testing policy,0,NA
@@ -6504,6 +6589,7 @@ Syria,SYR,2020-03-14,C1,School closing,3,1
 Syria,SYR,2020-08-11,C1,School closing,2,1
 Syria,SYR,2020-08-31,C1,School closing,3,1
 Syria,SYR,2020-09-13,C1,School closing,1,1
+Syria,SYR,2020-10-03,C1,School closing,2,0
 Syria,SYR,2020-01-01,C2,Workplace closing,0,NA
 Syria,SYR,2020-03-13,C2,Workplace closing,1,1
 Syria,SYR,2020-03-22,C2,Workplace closing,3,1
@@ -6511,14 +6597,17 @@ Syria,SYR,2020-04-23,C2,Workplace closing,2,1
 Syria,SYR,2020-01-01,C3,Cancel public events,0,NA
 Syria,SYR,2020-03-15,C3,Cancel public events,1,1
 Syria,SYR,2020-03-22,C3,Cancel public events,2,1
+Syria,SYR,2020-10-03,C3,Cancel public events,1,1
 Syria,SYR,2020-01-01,C4,Restrictions on gatherings,0,NA
 Syria,SYR,2020-03-16,C4,Restrictions on gatherings,3,1
+Syria,SYR,2020-10-03,C4,Restrictions on gatherings,2,0
 Syria,SYR,2020-01-01,C5,Close public transport,0,NA
 Syria,SYR,2020-03-23,C5,Close public transport,2,1
 Syria,SYR,2020-05-25,C5,Close public transport,0,NA
 Syria,SYR,2020-01-01,C6,Stay at home requirements,0,NA
 Syria,SYR,2020-04-17,C6,Stay at home requirements,2,0
 Syria,SYR,2020-05-25,C6,Stay at home requirements,1,1
+Syria,SYR,2020-10-03,C6,Stay at home requirements,0,NA
 Syria,SYR,2020-01-01,C7,Restrictions on internal movement,0,NA
 Syria,SYR,2020-03-20,C7,Restrictions on internal movement,1,1
 Syria,SYR,2020-03-25,C7,Restrictions on internal movement,2,0
@@ -6660,6 +6749,7 @@ Thailand,THA,2020-01-01,C7,Restrictions on internal movement,0,NA
 Thailand,THA,2020-03-26,C7,Restrictions on internal movement,2,0
 Thailand,THA,2020-08-14,C7,Restrictions on internal movement,1,1
 Thailand,THA,2020-09-07,C7,Restrictions on internal movement,1,0
+Thailand,THA,2020-09-22,C7,Restrictions on internal movement,1,1
 Thailand,THA,2020-01-01,C8,International travel controls,0,NA
 Thailand,THA,2020-03-06,C8,International travel controls,2,NA
 Thailand,THA,2020-03-25,C8,International travel controls,4,NA
@@ -6817,12 +6907,14 @@ Tunisia,TUN,2020-03-16,C8,International travel controls,4,NA
 Tunisia,TUN,2020-06-27,C8,International travel controls,3,NA
 Tunisia,TUN,2020-08-07,C8,International travel controls,2,NA
 Tunisia,TUN,2020-08-29,C8,International travel controls,3,NA
+Tunisia,TUN,2020-09-26,C8,International travel controls,2,NA
 Tunisia,TUN,2020-01-01,H1,Public information campaigns,0,NA
 Tunisia,TUN,2020-03-04,H1,Public information campaigns,1,1
 Tunisia,TUN,2020-03-18,H1,Public information campaigns,2,1
 Tunisia,TUN,2020-01-01,H2,Testing policy,0,NA
 Tunisia,TUN,2020-03-02,H2,Testing policy,1,NA
 Tunisia,TUN,2020-08-29,H2,Testing policy,2,NA
+Tunisia,TUN,2020-09-26,H2,Testing policy,1,NA
 Tunisia,TUN,2020-01-01,H3,Contact tracing,0,NA
 Tunisia,TUN,2020-03-02,H3,Contact tracing,1,NA
 Tunisia,TUN,2020-05-07,H3,Contact tracing,2,NA
@@ -6959,6 +7051,7 @@ Uganda,UGA,2020-01-01,C5,Close public transport,0,NA
 Uganda,UGA,2020-03-25,C5,Close public transport,2,1
 Uganda,UGA,2020-05-26,C5,Close public transport,2,0
 Uganda,UGA,2020-07-27,C5,Close public transport,1,1
+Uganda,UGA,2020-09-26,C5,Close public transport,0,NA
 Uganda,UGA,2020-01-01,C6,Stay at home requirements,0,NA
 Uganda,UGA,2020-03-30,C6,Stay at home requirements,2,1
 Uganda,UGA,2020-05-18,C6,Stay at home requirements,1,1
@@ -6985,6 +7078,7 @@ Uganda,UGA,2020-01-01,H3,Contact tracing,0,NA
 Uganda,UGA,2020-03-25,H3,Contact tracing,1,NA
 Uganda,UGA,2020-08-10,H3,Contact tracing,2,NA
 Uganda,UGA,2020-09-13,H3,Contact tracing,1,NA
+Uganda,UGA,2020-09-26,H3,Contact tracing,2,NA
 Ukraine,UKR,2020-01-01,C1,School closing,0,NA
 Ukraine,UKR,2020-03-12,C1,School closing,3,1
 Ukraine,UKR,2020-05-25,C1,School closing,2,1
@@ -7099,7 +7193,6 @@ United Kingdom,GBR,2020-03-22,C6,Stay at home requirements,2,0
 United Kingdom,GBR,2020-03-23,C6,Stay at home requirements,2,1
 United Kingdom,GBR,2020-05-13,C6,Stay at home requirements,1,1
 United Kingdom,GBR,2020-06-15,C6,Stay at home requirements,1,0
-United Kingdom,GBR,2020-08-01,C6,Stay at home requirements,0,NA
 United Kingdom,GBR,2020-09-24,C6,Stay at home requirements,1,1
 United Kingdom,GBR,2020-01-01,C7,Restrictions on internal movement,0,NA
 United Kingdom,GBR,2020-03-22,C7,Restrictions on internal movement,2,0
@@ -7121,6 +7214,8 @@ United Kingdom,GBR,2020-01-31,H3,Contact tracing,2,NA
 United Kingdom,GBR,2020-03-12,H3,Contact tracing,0,NA
 United Kingdom,GBR,2020-05-27,H3,Contact tracing,1,NA
 United Kingdom,GBR,2020-06-01,H3,Contact tracing,2,NA
+United Kingdom,GBR,2020-08-30,H3,Contact tracing,1,NA
+United States Virgin Islands,VIR,2020-09-21,C1,School closing,3,1
 Uruguay,URY,2020-01-01,C1,School closing,0,NA
 Uruguay,URY,2020-03-14,C1,School closing,3,1
 Uruguay,URY,2020-04-22,C1,School closing,3,0
@@ -7296,6 +7391,7 @@ US - Arizona,US_AZ,2020-01-01,C5,Close public transport,0,NA
 US - Arizona,US_AZ,2020-03-31,C5,Close public transport,1,1
 US - Arizona,US_AZ,2020-05-16,C5,Close public transport,0,NA
 US - Arizona,US_AZ,2020-08-03,C5,Close public transport,1,1
+US - Arizona,US_AZ,2020-10-01,C5,Close public transport,0,NA
 US - Arizona,US_AZ,2020-01-01,C6,Stay at home requirements,0,NA
 US - Arizona,US_AZ,2020-03-31,C6,Stay at home requirements,2,1
 US - Arizona,US_AZ,2020-05-16,C6,Stay at home requirements,1,1
@@ -7411,6 +7507,7 @@ US - Colorado,US_CO,2020-03-15,C2,Workplace closing,2,1
 US - Colorado,US_CO,2020-03-24,C2,Workplace closing,3,0
 US - Colorado,US_CO,2020-03-26,C2,Workplace closing,3,1
 US - Colorado,US_CO,2020-04-27,C2,Workplace closing,2,1
+US - Colorado,US_CO,2020-09-21,C2,Workplace closing,2,0
 US - Colorado,US_CO,2020-01-01,C3,Cancel public events,0,NA
 US - Colorado,US_CO,2020-03-12,C3,Cancel public events,1,0
 US - Colorado,US_CO,2020-03-15,C3,Cancel public events,1,1
@@ -7419,6 +7516,7 @@ US - Colorado,US_CO,2020-06-18,C3,Cancel public events,1,1
 US - Colorado,US_CO,2020-01-01,C4,Restrictions on gatherings,0,NA
 US - Colorado,US_CO,2020-03-12,C4,Restrictions on gatherings,3,0
 US - Colorado,US_CO,2020-03-19,C4,Restrictions on gatherings,4,1
+US - Colorado,US_CO,2020-09-21,C4,Restrictions on gatherings,4,0
 US - Colorado,US_CO,2020-01-01,C5,Close public transport,0,NA
 US - Colorado,US_CO,2020-03-16,C5,Close public transport,1,0
 US - Colorado,US_CO,2020-03-29,C5,Close public transport,1,1
@@ -7428,6 +7526,7 @@ US - Colorado,US_CO,2020-03-24,C6,Stay at home requirements,2,0
 US - Colorado,US_CO,2020-03-26,C6,Stay at home requirements,2,1
 US - Colorado,US_CO,2020-04-27,C6,Stay at home requirements,2,0
 US - Colorado,US_CO,2020-05-09,C6,Stay at home requirements,1,1
+US - Colorado,US_CO,2020-09-21,C6,Stay at home requirements,1,0
 US - Colorado,US_CO,2020-01-01,C7,Restrictions on internal movement,0,NA
 US - Colorado,US_CO,2020-03-16,C7,Restrictions on internal movement,1,1
 US - Colorado,US_CO,2020-03-24,C7,Restrictions on internal movement,2,0
@@ -7971,6 +8070,7 @@ US - Maine,US_ME,2020-05-31,C4,Restrictions on gatherings,3,1
 US - Maine,US_ME,2020-01-01,C5,Close public transport,0,NA
 US - Maine,US_ME,2020-03-25,C5,Close public transport,2,0
 US - Maine,US_ME,2020-04-02,C5,Close public transport,2,1
+US - Maine,US_ME,2020-09-01,C5,Close public transport,1,1
 US - Maine,US_ME,2020-01-01,C6,Stay at home requirements,0,NA
 US - Maine,US_ME,2020-03-25,C6,Stay at home requirements,2,0
 US - Maine,US_ME,2020-04-02,C6,Stay at home requirements,2,1
@@ -8061,7 +8161,6 @@ US - Massachusetts,US_MA,2020-03-24,C4,Restrictions on gatherings,4,1
 US - Massachusetts,US_MA,2020-05-18,C4,Restrictions on gatherings,3,1
 US - Massachusetts,US_MA,2020-01-01,C5,Close public transport,0,NA
 US - Massachusetts,US_MA,2020-03-27,C5,Close public transport,1,0
-US - Massachusetts,US_MA,2020-09-21,C5,Close public transport,1,1
 US - Massachusetts,US_MA,2020-01-01,C6,Stay at home requirements,0,NA
 US - Massachusetts,US_MA,2020-03-24,C6,Stay at home requirements,1,1
 US - Massachusetts,US_MA,2020-01-01,C7,Restrictions on internal movement,0,NA
@@ -8077,6 +8176,7 @@ US - Massachusetts,US_MA,2020-01-21,H2,Testing policy,1,NA
 US - Massachusetts,US_MA,2020-04-02,H2,Testing policy,2,NA
 US - Massachusetts,US_MA,2020-07-10,H2,Testing policy,3,NA
 US - Massachusetts,US_MA,2020-09-21,H2,Testing policy,2,NA
+US - Massachusetts,US_MA,2020-09-23,H2,Testing policy,3,NA
 US - Massachusetts,US_MA,2020-01-01,H3,Contact tracing,0,NA
 US - Massachusetts,US_MA,2020-01-21,H3,Contact tracing,1,NA
 US - Massachusetts,US_MA,2020-04-12,H3,Contact tracing,2,NA
@@ -8085,7 +8185,6 @@ US - Michigan,US_MI,2020-03-13,C1,School closing,1,1
 US - Michigan,US_MI,2020-03-16,C1,School closing,3,1
 US - Michigan,US_MI,2020-08-31,C1,School closing,2,1
 US - Michigan,US_MI,2020-09-01,C1,School closing,2,0
-US - Michigan,US_MI,2020-09-21,C1,School closing,1,1
 US - Michigan,US_MI,2020-01-01,C2,Workplace closing,0,NA
 US - Michigan,US_MI,2020-03-12,C2,Workplace closing,1,1
 US - Michigan,US_MI,2020-03-16,C2,Workplace closing,2,1
@@ -8094,13 +8193,16 @@ US - Michigan,US_MI,2020-04-24,C2,Workplace closing,2,1
 US - Michigan,US_MI,2020-06-05,C2,Workplace closing,1,1
 US - Michigan,US_MI,2020-07-01,C2,Workplace closing,2,0
 US - Michigan,US_MI,2020-07-31,C2,Workplace closing,2,1
+US - Michigan,US_MI,2020-09-25,C2,Workplace closing,1,0
 US - Michigan,US_MI,2020-01-01,C3,Cancel public events,0,NA
 US - Michigan,US_MI,2020-03-11,C3,Cancel public events,1,1
 US - Michigan,US_MI,2020-03-16,C3,Cancel public events,2,1
 US - Michigan,US_MI,2020-06-05,C3,Cancel public events,1,1
 US - Michigan,US_MI,2020-08-03,C3,Cancel public events,2,0
+US - Michigan,US_MI,2020-09-25,C3,Cancel public events,1,0
 US - Michigan,US_MI,2020-01-01,C4,Restrictions on gatherings,1,0
 US - Michigan,US_MI,2020-09-21,C4,Restrictions on gatherings,1,1
+US - Michigan,US_MI,2020-09-25,C4,Restrictions on gatherings,3,0
 US - Michigan,US_MI,2020-01-01,C5,Close public transport,0,NA
 US - Michigan,US_MI,2020-03-17,C5,Close public transport,1,0
 US - Michigan,US_MI,2020-01-01,C6,Stay at home requirements,0,NA
@@ -8108,13 +8210,10 @@ US - Michigan,US_MI,2020-03-11,C6,Stay at home requirements,1,1
 US - Michigan,US_MI,2020-03-24,C6,Stay at home requirements,2,1
 US - Michigan,US_MI,2020-05-18,C6,Stay at home requirements,2,0
 US - Michigan,US_MI,2020-05-21,C6,Stay at home requirements,1,1
-US - Michigan,US_MI,2020-09-03,C6,Stay at home requirements,2,1
 US - Michigan,US_MI,2020-01-01,C7,Restrictions on internal movement,0,NA
 US - Michigan,US_MI,2020-03-16,C7,Restrictions on internal movement,1,1
 US - Michigan,US_MI,2020-03-24,C7,Restrictions on internal movement,2,1
 US - Michigan,US_MI,2020-06-01,C7,Restrictions on internal movement,1,1
-US - Michigan,US_MI,2020-08-21,C7,Restrictions on internal movement,1,0
-US - Michigan,US_MI,2020-09-21,C7,Restrictions on internal movement,2,0
 US - Michigan,US_MI,2020-01-01,C8,International travel controls,0,NA
 US - Michigan,US_MI,2020-01-28,C8,International travel controls,1,NA
 US - Michigan,US_MI,2020-02-02,C8,International travel controls,2,NA
@@ -8351,6 +8450,7 @@ US - Nebraska,US_NE,2020-05-12,H2,Testing policy,2,NA
 US - Nebraska,US_NE,2020-06-01,H2,Testing policy,3,NA
 US - Nebraska,US_NE,2020-01-01,H3,Contact tracing,0,NA
 US - Nebraska,US_NE,2020-01-21,H3,Contact tracing,1,NA
+US - Nebraska,US_NE,2020-07-17,H3,Contact tracing,2,NA
 US - Nevada,US_NV,2020-01-01,C1,School closing,0,NA
 US - Nevada,US_NV,2020-03-13,C1,School closing,1,1
 US - Nevada,US_NV,2020-03-16,C1,School closing,2,1
@@ -8615,6 +8715,7 @@ US - North Dakota,US_ND,2020-01-01,C3,Cancel public events,0,NA
 US - North Dakota,US_ND,2020-03-12,C3,Cancel public events,1,1
 US - North Dakota,US_ND,2020-09-04,C3,Cancel public events,1,0
 US - North Dakota,US_ND,2020-01-01,C4,Restrictions on gatherings,0,NA
+US - North Dakota,US_ND,2020-09-30,C4,Restrictions on gatherings,2,0
 US - North Dakota,US_ND,2020-01-01,C5,Close public transport,0,NA
 US - North Dakota,US_ND,2020-03-20,C5,Close public transport,1,0
 US - North Dakota,US_ND,2020-05-11,C5,Close public transport,0,NA
@@ -8820,6 +8921,7 @@ US - Pennsylvania,US_PA,2020-06-03,H2,Testing policy,2,NA
 US - Pennsylvania,US_PA,2020-08-21,H2,Testing policy,3,NA
 US - Pennsylvania,US_PA,2020-01-01,H3,Contact tracing,0,NA
 US - Pennsylvania,US_PA,2020-01-21,H3,Contact tracing,1,NA
+US - Pennsylvania,US_PA,2020-09-22,H3,Contact tracing,2,NA
 US - Rhode Island,US_RI,2020-01-01,C1,School closing,0,NA
 US - Rhode Island,US_RI,2020-03-13,C1,School closing,1,1
 US - Rhode Island,US_RI,2020-03-16,C1,School closing,3,1
@@ -8885,6 +8987,7 @@ US - South Carolina,US_SC,2020-06-11,C4,Restrictions on gatherings,0,NA
 US - South Carolina,US_SC,2020-08-02,C4,Restrictions on gatherings,4,1
 US - South Carolina,US_SC,2020-01-01,C5,Close public transport,0,NA
 US - South Carolina,US_SC,2020-03-19,C5,Close public transport,1,0
+US - South Carolina,US_SC,2020-05-30,C5,Close public transport,0,NA
 US - South Carolina,US_SC,2020-01-01,C6,Stay at home requirements,0,NA
 US - South Carolina,US_SC,2020-03-26,C6,Stay at home requirements,2,0
 US - South Carolina,US_SC,2020-04-07,C6,Stay at home requirements,2,1
@@ -9088,7 +9191,6 @@ US - Vermont,US_VT,2020-04-20,C2,Workplace closing,2,1
 US - Vermont,US_VT,2020-06-15,C2,Workplace closing,1,1
 US - Vermont,US_VT,2020-01-01,C3,Cancel public events,0,NA
 US - Vermont,US_VT,2020-03-13,C3,Cancel public events,2,1
-US - Vermont,US_VT,2020-09-30,C3,Cancel public events,1,1
 US - Vermont,US_VT,2020-01-01,C4,Restrictions on gatherings,0,NA
 US - Vermont,US_VT,2020-03-13,C4,Restrictions on gatherings,2,1
 US - Vermont,US_VT,2020-03-16,C4,Restrictions on gatherings,3,1
@@ -9520,17 +9622,20 @@ Vietnam,VNM,2020-04-15,C1,School closing,3,0
 Vietnam,VNM,2020-05-04,C1,School closing,0,NA
 Vietnam,VNM,2020-07-27,C1,School closing,3,0
 Vietnam,VNM,2020-08-18,C1,School closing,2,0
+Vietnam,VNM,2020-09-26,C1,School closing,0,NA
 Vietnam,VNM,2020-01-01,C2,Workplace closing,0,NA
 Vietnam,VNM,2020-03-25,C2,Workplace closing,2,0
 Vietnam,VNM,2020-03-27,C2,Workplace closing,3,1
 Vietnam,VNM,2020-04-15,C2,Workplace closing,3,0
 Vietnam,VNM,2020-04-22,C2,Workplace closing,2,1
 Vietnam,VNM,2020-07-30,C2,Workplace closing,3,0
+Vietnam,VNM,2020-09-26,C2,Workplace closing,2,1
 Vietnam,VNM,2020-01-01,C3,Cancel public events,0,NA
 Vietnam,VNM,2020-02-08,C3,Cancel public events,2,0
 Vietnam,VNM,2020-03-28,C3,Cancel public events,2,1
 Vietnam,VNM,2020-06-16,C3,Cancel public events,1,1
 Vietnam,VNM,2020-07-27,C3,Cancel public events,2,0
+Vietnam,VNM,2020-09-26,C3,Cancel public events,0,NA
 Vietnam,VNM,2020-01-01,C4,Restrictions on gatherings,0,NA
 Vietnam,VNM,2020-03-26,C4,Restrictions on gatherings,2,1
 Vietnam,VNM,2020-04-01,C4,Restrictions on gatherings,4,1
@@ -9538,6 +9643,7 @@ Vietnam,VNM,2020-04-15,C4,Restrictions on gatherings,4,0
 Vietnam,VNM,2020-04-22,C4,Restrictions on gatherings,3,1
 Vietnam,VNM,2020-07-30,C4,Restrictions on gatherings,3,0
 Vietnam,VNM,2020-08-12,C4,Restrictions on gatherings,4,0
+Vietnam,VNM,2020-09-26,C4,Restrictions on gatherings,3,1
 Vietnam,VNM,2020-01-01,C5,Close public transport,0,NA
 Vietnam,VNM,2020-03-28,C5,Close public transport,2,1
 Vietnam,VNM,2020-04-25,C5,Close public transport,1,1
@@ -9554,6 +9660,7 @@ Vietnam,VNM,2020-04-15,C7,Restrictions on internal movement,2,0
 Vietnam,VNM,2020-04-26,C7,Restrictions on internal movement,2,1
 Vietnam,VNM,2020-06-16,C7,Restrictions on internal movement,1,1
 Vietnam,VNM,2020-07-28,C7,Restrictions on internal movement,2,0
+Vietnam,VNM,2020-09-26,C7,Restrictions on internal movement,1,0
 Vietnam,VNM,2020-01-01,C8,International travel controls,0,NA
 Vietnam,VNM,2020-01-25,C8,International travel controls,1,NA
 Vietnam,VNM,2020-01-30,C8,International travel controls,2,NA

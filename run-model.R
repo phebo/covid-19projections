@@ -37,7 +37,7 @@ suppressWarnings(dir.create(file.path("output")))
 suppressWarnings(dir.create(file.path("figures")))
 
 saveAppData <- F
-writeFigures <- F
+writeFigures <- T
 selSc <- c("C1 - 1", "C2 - 1", "C3 - 2", "C4 - 3", "C5 - 0", "C6 - 1", "C7 - 1", "C8 - 3", "H1 - 2", "H2 - 2", "H3 - 2")
 
 #### Read and clean data ####
