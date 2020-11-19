@@ -44,13 +44,15 @@ data {
   real<lower=0> mortSig;
   real<lower=0, upper=1> pOutl; // probability of outlier for cases
   real<lower=0> idgSig;
+  real<lower=0> dgSig[2]; // prior standard deviation on dg, (uninformative, "zero")
+  real<upper=0> dgMin;
 }
 
 parameters {
   real logy0[nGeo]; // log infection rate at t=1
   real<lower=0,upper=3> g0[nGeo];  // Base weekly growth rate by geography (with continuous compounding)
   real<lower=-1,upper=2> g1[nGeo];  
-  real<lower=0, upper=2> dg[nPol];
+  real<lower=dgMin,upper=2> dg[nPol];
   simplex[nTest + 1] caseP[nGeo];
   simplex[nTest + 1] deathP[nGeo];
   real<upper=0> lmortality;
@@ -63,6 +65,7 @@ parameters {
   real<lower=-1,upper=1> idg[nGeo, nT+nTPred-1];
   real<lower=0,upper=1> idgLam1;
   real<lower=0,upper=1> idgLam2f; // Defining idgLam2 as fraction of idgLam1, ensuring idgLam2 <= idgLam1
+  real<lower=0,upper=1> pDgZero; // Probability that dg is (very close to) zero
 }
 
 transformed parameters{
@@ -132,17 +135,22 @@ model {
   // Hyperprior for mortality
   lmortality ~ normal(log(mortMu), mortSig);
   
+  // Prior for dg, "spike-and-slab", with probability pDgZero that dg is very close to zero (i.e. with sd dgSig[2])
+  if(dgSig[1] != 0 && dgSig[2] != 0)
+    for(p in 1:nPol) target += log_sum_exp(log1m(pDgZero) + normal_lpdf(dg[p] | 0, dgSig[1]),
+                                           log(pDgZero)   + normal_lpdf(dg[p] | 0, dgSig[2]) );
+  
   // AR(2) model for idiosyncratic growth rate
   for(i in 1:nGeo) for(t in 1:(nT+nTPred-3)) eps[i, t] ~ normal(0, idgSig);
 
   // Likelihood for observations
   for(i in 1:nGeo) {
     for(t in (lagCaseMax + 1):nT) {
-      target += log_sum_exp(log(1-pOutl) + neg_binomial_2_log_lpmf(mCase[i, t] | lCaseEst[i,t - lagCaseMax], phiCase),
+      target += log_sum_exp(log1m(pOutl) + neg_binomial_2_log_lpmf(mCase[i, t] | lCaseEst[i,t - lagCaseMax], phiCase),
                             log(pOutl) + neg_binomial_2_lpmf(mCase[i, t] | outlCase[1], outlCase[2]));
     }
     for(t in (lagDeathMax + 1):nT) {
-      target += log_sum_exp(log(1-pOutl) + neg_binomial_2_log_lpmf(mDeathRep[i, t] | lDeathEst[i,t - lagDeathMax], phiDeathRep),
+      target += log_sum_exp(log1m(pOutl) + neg_binomial_2_log_lpmf(mDeathRep[i, t] | lDeathEst[i,t - lagDeathMax], phiDeathRep),
                             log(pOutl) + neg_binomial_2_lpmf(mDeathRep[i, t] | outlDeath[1], outlDeath[2]));
       if(mDeathTot[i, t] != -1 && mDeathExp[i, t] != -1) {
         mDeathTot[i, t] ~ neg_binomial_2_log(lDeathTotEst[i, t - lagDeathMax], phiDeathTot);
@@ -154,11 +162,33 @@ model {
 generated quantities{
   int<lower=0> predCase[nGeo, nTPred];
   int<lower=0> predDeath[nGeo, nTPred];
-  
+  real<lower=0, upper=1> pCaseOutl[nGeo, nT - lagCaseMax];
+  real<lower=0, upper=1> pDeathOutl[nGeo, nT - lagDeathMax];
+  // real<lower=0, upper=1> pDg0Post[nPol];
+
   for(i in 1:nGeo) {
     for(t in 1:nTPred) {
       predCase[i, t] = neg_binomial_2_log_rng(lCaseEst[i, t + nT - lagCaseMax], phiCase);
       predDeath[i, t] = neg_binomial_2_log_rng(lDeathEst[i, t + nT - lagDeathMax], phiDeathRep);
     }
   }
+  
+  for(i in 1:nGeo) {
+    for(t in (lagCaseMax + 1):nT) {
+      real lNonOutl = log1m(pOutl) + neg_binomial_2_log_lpmf(mCase[i, t] | lCaseEst[i,t - lagCaseMax], phiCase);
+      real lOutl = log(pOutl) + neg_binomial_2_log_lpmf(mCase[i, t] | outlCase[1], outlCase[2]);
+      pCaseOutl[i, t - lagCaseMax] = exp(lOutl - log_sum_exp(lOutl, lNonOutl));
+    }
+    for(t in (lagDeathMax + 1):nT) {
+      real lNonOutl = log1m(pOutl) + neg_binomial_2_log_lpmf(mDeathRep[i, t] | lDeathEst[i,t - lagDeathMax], phiDeathRep);
+      real lOutl = log(pOutl) + neg_binomial_2_log_lpmf(mDeathRep[i, t] | outlDeath[1], outlDeath[2]);
+      pDeathOutl[i, t - lagDeathMax] = exp(lOutl - log_sum_exp(lOutl, lNonOutl));
+    }
+  }
+
+  // for(p in 1:nPol){
+  //   real lDgNonZero = log1m(pDgZero) + normal_lpdf(dg[p] | 0, dgSig[1]);
+  //   real lDgZero = log(pDgZero) + normal_lpdf(dg[p] | 0, dgSig[2]);
+  //   pDg0Post[p] = exp(lDgZero - log_sum_exp(lDgZero, lDgNonZero));
+  // }
 }

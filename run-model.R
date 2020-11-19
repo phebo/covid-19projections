@@ -37,7 +37,7 @@ suppressWarnings(dir.create(file.path("output")))
 suppressWarnings(dir.create(file.path("figures")))
 
 saveAppData <- F
-writeFigures <- T
+writeFigures <- F
 selSc <- c("C1 - 1", "C2 - 1", "C3 - 2", "C4 - 3", "C5 - 0", "C6 - 1", "C7 - 1", "C8 - 3", "H1 - 2", "H2 - 2", "H3 - 2")
 
 #### Read and clean data ####
@@ -49,6 +49,7 @@ dfOx <- read_csv("input/oxford-policy.csv")
 dfHol <- read_csv("input/holidays.csv") %>% select(-source)
 
 l <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol)
+#l <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, minPop = 2e7)
 dfP <- l$dfP; dfE <- l$dfE; lData <- l$lData; p <- l$p
 
 print(l$dfPCor %>% filter(cor < 1 & cor > 0.85) %>% arrange(-cor))
@@ -59,11 +60,11 @@ print(dfP %>% group_by(polCode, polName, level) %>% summarize(frac = sum(value) 
 
 m <- stan_model("model.stan")
 
-fit <- sampling(m, data = lData, chains = 4, iter = 700, warmup = 500, thin = 2, control = list(adapt_delta = 0.9, max_treedepth = 12), seed = 99743)
+fit <- sampling(m, data = lData, chains = 4, iter = 1000, warmup = 700, thin = 2, control = list(adapt_delta = 0.9, max_treedepth = 12), seed = 99743)
 #fit <- sampling(m, data = lData, chains = 2, iter = 300)
 save(list = ls(), file = paste0("output/image-", time.now, ".RData"))
 print(fit, pars = c("deathAdj", "pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2", 
-                    "lmortality"))
+                    "lmortality", "pDgZero"))
 if(writeFigures) print(xtable(
   summary(fit, pars=c("pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
   digits=c(0,3,3,3,0,2)), type="html", file=paste0("figures/table.html"))
@@ -245,7 +246,7 @@ options(width = 100)
 text <- paste("minPop =",p$minPop,"\npolG1 =", paste(p$polG1, collapse = ", "),"\npolExcl =", paste(p$polExcl, collapse = ", "),
               "\nmortMu =", p$mortMu, "\nmortSig =", p$mortSig, "\npOutl =", p$pOutl, "\nidgSig =", p$idgSig,"\n\n",
               paste(capture.output(print(fit, pars = c("pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1",
-                                                       "idgLam2", "lmortality"))), collapse = "\n"))
+                                                       "idgLam2", "lmortality", "pDgZero"))), collapse = "\n"))
 fPars <- ggplot() + annotate("text", x = 0, y = 0, size=4, label = text, family = "mono") + theme_void()
 
 fPol2 <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1) %>% group_by(geo, pol, date) %>%
