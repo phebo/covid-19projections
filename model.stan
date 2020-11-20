@@ -44,6 +44,7 @@ data {
   real<lower=0> mortSig;
   real<lower=0, upper=1> pOutl; // probability of outlier for cases
   real<lower=0> idgSig;
+  real<lower=0, upper=1> idgLam[2];
   real<lower=0> dgSig[2]; // prior standard deviation on dg, (uninformative, "zero")
   real<upper=0> dgMin;
 }
@@ -63,8 +64,8 @@ parameters {
   simplex[lagCaseMax] pLagCase;
   simplex[lagDeathMax] pLagDeath;
   real<lower=-1,upper=1> idg[nGeo, nT+nTPred-1];
-  real<lower=0,upper=1> idgLam1;
-  real<lower=0,upper=1> idgLam2f; // Defining idgLam2 as fraction of idgLam1, ensuring idgLam2 <= idgLam1
+  // real<lower=0,upper=1> idgLam1;
+  // real<lower=0,upper=1> idgLam2f; // Defining idgLam2 as fraction of idgLam1, ensuring idgLam2 <= idgLam1
   real<lower=0,upper=1> pDgZero; // Probability that dg is (very close to) zero
 }
 
@@ -78,15 +79,15 @@ transformed parameters{
   real lDeathTotEst[nGeo, nT - lagDeathMax];
   vector[lagCaseMax] lpLagCase;
   vector[lagDeathMax] lpLagDeath;
-  real<lower=0,upper=1> idgLam2;
+  // real<lower=0,upper=1> idgLam2;
   real idgPhi[2];
   real eps[nGeo, nT+nTPred-3];
 
   lpLagCase = log(pLagCase);
   lpLagDeath = log(pLagDeath);
-  idgLam2 = idgLam2f * idgLam1;
-  idgPhi[1] = idgLam1 + idgLam2;
-  idgPhi[2] = -idgLam1 * idgLam2;
+  // idgLam2 = idgLam2f * idgLam1;
+  idgPhi[1] = idgLam[1] + idgLam[2];
+  idgPhi[2] = -idgLam[1] * idgLam[2];
 
   for(i in 1:nGeo) {
     real dgTot;

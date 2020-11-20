@@ -60,7 +60,7 @@ print(dfP %>% group_by(polCode, polName, level) %>% summarize(frac = sum(value) 
 
 m <- stan_model("model.stan")
 
-fit <- sampling(m, data = lData, chains = 4, iter = 1000, warmup = 700, thin = 2, control = list(adapt_delta = 0.9, max_treedepth = 12), seed = 99743)
+fit <- sampling(m, data = lData, chains = 4, iter = 1000, warmup = 500, thin = 2, control = list(adapt_delta = 0.9, max_treedepth = 12), seed = 99743)
 #fit <- sampling(m, data = lData, chains = 2, iter = 300)
 save(list = ls(), file = paste0("output/image-", time.now, ".RData"))
 print(fit, pars = c("deathAdj", "pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2", 
@@ -72,6 +72,9 @@ if(writeFigures) print(xtable(
 #### Process model output ####
 sim <- rstan::extract(fit)
 nIter <- length(sim$phiCase)
+
+dfRaw <- expand_grid(chain=1:4, iter=1:(nIter/4)) %>% mutate(lam1 = sim$idgLam1, lam2 = sim$idgLam2)
+dfRaw %>% ggplot(aes(x=lam1, y=lam2, color=factor(chain))) + geom_point() # + geom_path() 
 
 dfOutRaw <- bind_rows(
   expand_grid(date = p$vDate, geo = p$vGeo, iter = 1:nIter) %>%  mutate(name = "infection", value = exp(as.vector(sim$logy))),

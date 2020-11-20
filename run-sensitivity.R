@@ -42,10 +42,11 @@ l <- list(
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, idgSig = 0.05),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, geoExclude = c("Chile", "South Africa")),
   # clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, dgSig = c(1,1e-4)),
+  clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, idgLam = c(0.85, 0.8)),
   clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol, dgMin = -0.05)
 )
 specNames <- c("Base", "Population > 10M", "Population > 3M", "P(outlier) = 0.01", "P(outlier) = 0.0001",
-               "Stdev = 0.01", "Stdev = 0.05", "Excl Chile/S-Africa", "Spike & slab", "Negative Delta-g")
+               "Stdev = 0.01", "Stdev = 0.05", "Excl Chile/S-Africa", "Lower lambda", "Negative Delta-g")
 
 m <- stan_model("model.stan")
 specs <- map(l, ~ list(m = m, data = .$lData, pars = "dg", iter = 700, warmup = 500, chains = 2, thin = 2))

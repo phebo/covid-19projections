@@ -24,6 +24,7 @@ clean.data <- function(
   mortMu = 0.01, mortSig = 0.5, # Parameters for log-normal distribution; mortSig = 0.5 means 95% interval of */exp(1.96*0.5)=2.6
   pOutl = 1e-3, # Probability of outlier (lower probability attaches more weight to extreme data points)
   idgSig = 0.02, # s.d. of change in idiosyncratic growth rate (AR(2) process)
+  idgLam = c(0.9, 0.9),
   dgSig = c(0, 0), # If non-zero: use spike-and-slab-like prior standard deviations on dg (uninformative, "zero")
   dgMin = 0
 ) {
@@ -120,12 +121,12 @@ clean.data <- function(
   lData = list(mortMu = mortMu, mortSig = mortSig, lagDeathMax = lagDeathMax, lagCaseMax = lagCaseMax,
                nGeo = length(vGeo), nT = length(vDate), nTPred = nTPred, nPol = length(vPol), nTest = max(mTest),
                mPol = mPol, mPolChange = mPolChange, mPolG1 = mPolG1, mTest = mTest,
-               mCase = mCase, mDeathRep = mDeathRep, mDeathTot = mDeathTot, mDeathExp = mDeathExp,
-               outlCase = outlCase, outlDeath = outlDeath, pOutl = pOutl, idgSig = idgSig, dgSig = dgSig, dgMin = dgMin)
+               mCase = mCase, mDeathRep = mDeathRep, mDeathTot = mDeathTot, mDeathExp = mDeathExp, outlCase = outlCase, 
+               outlDeath = outlDeath, pOutl = pOutl, idgSig = idgSig, idgLam = idgLam, dgSig = dgSig, dgMin = dgMin)
 
   list(dfE = dfE, dfP = dfP, dfPCor = dfPCor, dfTest = dfTest, lData = lData,
        p = list(vDate = vDate, vGeo = vGeo, vPol = vPol, minPop = minPop, polG1 = polG1, polExcl = polExcl,
-                mortMu = mortMu, mortSig = mortSig, pOutl = pOutl, idgSig = idgSig, dgSig = dgSig, dgMin = dgMin))
+                mortMu = mortMu, mortSig = mortSig, pOutl = pOutl, idgSig = idgSig, idgLam = idgLam, dgSig = dgSig, dgMin = dgMin))
 }
 
 make.chains <- function(models){
