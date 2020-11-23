@@ -47,7 +47,7 @@ m <- stan_model("model.stan")
 fit <- sampling(m, data = lData, chains = 4, iter = 700, warmup = 500, thin = 2, control = list(adapt_delta = 0.9), seed = 99743)
 #fit <- sampling(m, data = lData, chains = 2, iter = 300)
 save(list = ls(), file = paste0("output/image-oos-", time.now, ".RData"))
-print(fit, pars = c("deathAdj", "pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "idgLam1", "idgLam2", "lmortality"))
+print(fit, pars = c("deathAdj", "pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "lmortality"))
 
 sim <- rstan::extract(fit)
 nIter <- length(sim$phiCase)
