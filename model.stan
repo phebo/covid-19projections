@@ -177,13 +177,13 @@ generated quantities{
   for(i in 1:nGeo) {
     for(t in (lagCaseMax + 1):nT) {
       real lNonOutl = log1m(pOutl) + neg_binomial_2_log_lpmf(mCase[i, t] | lCaseEst[i,t - lagCaseMax], phiCase);
-      real lOutl = log(pOutl) + neg_binomial_2_log_lpmf(mCase[i, t] | outlCase[1], outlCase[2]);
-      pCaseOutl[i, t - lagCaseMax] = exp(lOutl - log_sum_exp(lOutl, lNonOutl));
+      real lOutl = log(pOutl) + neg_binomial_2_lpmf(mCase[i, t] | outlCase[1], outlCase[2]);
+      pCaseOutl[i, t - lagCaseMax] = 1 / (1 + exp(lNonOutl - lOutl));
     }
     for(t in (lagDeathMax + 1):nT) {
       real lNonOutl = log1m(pOutl) + neg_binomial_2_log_lpmf(mDeathRep[i, t] | lDeathEst[i,t - lagDeathMax], phiDeathRep);
-      real lOutl = log(pOutl) + neg_binomial_2_log_lpmf(mDeathRep[i, t] | outlDeath[1], outlDeath[2]);
-      pDeathOutl[i, t - lagDeathMax] = exp(lOutl - log_sum_exp(lOutl, lNonOutl));
+      real lOutl = log(pOutl) + neg_binomial_2_lpmf(mDeathRep[i, t] | outlDeath[1], outlDeath[2]);
+      pDeathOutl[i, t - lagDeathMax] = 1 / (1 + exp(lNonOutl - lOutl));
     }
   }
 

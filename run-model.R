@@ -88,7 +88,10 @@ dfOutRaw <- bind_rows(
   expand_grid(geo = p$vGeo, iter = 1:nIter) %>% mutate(name = "g0", value = as.vector(sim$g0)),
   expand_grid(geo = p$vGeo, iter = 1:nIter) %>% mutate(name = "g1", value = as.vector(sim$g1)),
   expand_grid(date = p$vDate[-1], geo = p$vGeo, iter = 1:nIter) %>% mutate(name = "idg", value = as.vector(sim$idg)),
-  expand_grid(date = p$vDate[-1], geo = p$vGeo, iter = 1:nIter) %>% mutate(name = "g", value = as.vector(sim$g)))
+  expand_grid(date = p$vDate[-1], geo = p$vGeo, iter = 1:nIter) %>% mutate(name = "g", value = as.vector(sim$g)),
+  expand_grid(date = p$vDate[-(1:lData$lagCaseMax)], geo = p$vGeo, iter = 1:nIter) %>%  mutate(name = "pCaseOutl", value = as.vector(sim$pCaseOutl)),
+  expand_grid(date = p$vDate[-(1:lData$lagDeathMax)], geo = p$vGeo, iter = 1:nIter) %>%  mutate(name = "pDeathOutl", value = as.vector(sim$pDeathOutl))
+)
 dfOutRaw <- dfOutRaw %>% bind_rows(
   dfOutRaw %>% filter(name == "dg") %>% mutate(name = "dgCum") %>%
     group_by(iter, pol) %>% mutate(value = cumsum(value)) %>% ungroup(),
@@ -100,14 +103,18 @@ dfOut <- dfOutRaw %>% group_by(name, geo, date, pol, level) %>%
 
 dfOutE <- dfOut %>% filter(name %in% c("infection", "case", "death", "deathTot"), date %in% p$vDate) %>%
   full_join(dfE %>% select(c(geo:deathTot)) %>% pivot_longer(case:deathTot, values_to = "reported")) %>%
+  left_join(dfOut %>% filter(name %in% c("pCaseOutl", "pDeathOutl"), date %in% p$vDate) %>%
+              mutate(name = ifelse(name == "pCaseOutl", "case", "death")) %>% select(name, geo, date, pOutl = estimate)) %>%
   filter(name != "deathTot" | reported > 0) %>% select(-c(pol, level))
 dfOutEPop <- left_join(dfOutE, dfPop) %>% mutate_at(vars(estimate:reported), ~ . / population * 1e4)
+
 print(dfOutEPop %>% filter(name == "infection") %>% group_by(geo) %>%
         summarise_at(vars(estimate:high), ~ sum(.) / 1e4) %>% arrange(-estimate), n=100)
-
 print(dfOutRaw %>% filter(name %in% c("g0", "g1", "idg")) %>% group_by(iter, name) %>% summarize(value = mean(value)) %>%
         group_by(name) %>% summarize(estimate = median(value), low = quantile(value, probs=0.025), high = quantile(value, probs=0.975))) %>%
   mutate(daily = expm1(estimate / 7))
+outliers <- dfOutE$pOutl; outliers <- outliers[!is.na(outliers)];
+print(c(sum(outliers > 0.5), length(outliers), sum(outliers > 0.5) / length(outliers)))
 
 maxLag <- 10
 eps <- t(cbind(matrix(sim$eps, ncol = length(p$vDate) - 3), matrix(nrow = nIter * length(p$vGeo), ncol = maxLag)))
@@ -187,9 +194,10 @@ if(writeFigures) ggsave(paste0("figures/fig-gbase.png"), height = 9, width = 6.5
 
 fNew <- dfOutE %>% mutate(reported = ifelse(reported == 0, NA, reported)) %>%
   ggplot(aes(x = date, color = name)) +
-  geom_point(aes(y = reported), size = 0.4) + geom_line(aes(y=estimate)) +
+  geom_point(aes(y = reported, shape = (pOutl > 0.5)), size = 0.6) + geom_line(aes(y=estimate)) +
   geom_line(aes(y=low), lty=2) + geom_line(aes(y=high), lty=2) +
   facet_wrap(~ geo, ncol = 5) +
+  scale_shape_manual(values=c(16, 4), guide = FALSE) + 
   #ggtitle("New events per week (log scale)") + 
   #labs(subtitle = "Dot = reported; Line = model estimate; Dashed = 95% interval") +
   xlab(element_blank()) + ylab(element_blank()) + 
