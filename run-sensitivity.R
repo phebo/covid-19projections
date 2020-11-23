@@ -60,9 +60,13 @@ dfRaw <- map2_dfr(dgs, l, ~ expand_grid(pol = .y$p$vPol, iter = 1:nrow(.x)) %>% 
 df <- dfRaw %>% group_by(spec, pol) %>%
   summarize(estimate = median(value), low = quantile(value, probs=0.025), high = quantile(value, probs=0.975)) %>% ungroup() %>%
   mutate(spec = factor(spec, levels = specNames))
-fSens <- df %>% ggplot(aes(x = fct_rev(spec), y = estimate, ymin = low, ymax = high)) + geom_pointrange() +
+df <- df %>% left_join(df %>% filter(spec == "Base") %>% select(pol, baseEst = estimate)) %>%
+  mutate(outside = baseEst < low | baseEst > high)
+fSens <- df %>% ggplot(aes(x = fct_rev(spec), y = estimate, ymin = low, ymax = high, color = outside)) + geom_pointrange() +
+  geom_hline(yintercept = 0, linetype = 2) + 
   facet_wrap(~ pol, ncol = 4, labeller = label_wrap_gen(25)) + coord_flip() +
-  xlab(element_blank()) + ylab(element_blank()) +
-  theme(axis.text.y = element_text(hjust=0), strip.text = element_text(size = 8))
+  xlab(element_blank()) + ylab(element_blank()) + scale_color_manual(values = c("black", "red"), guide = FALSE) +
+  theme(axis.text.y = element_text(hjust=0), strip.text = element_text(size = 8)) 
+  
 ggsave(paste0("figures/fig-sens.png"), height = 9, width = 6.5)
-ggsave(paste0("output/chart-sens-", time.now, ".pdf"), width=12, height=8)
+ggsave(paste0("output/chart-sens-", time.now, ".pdf"), height=12, width=8)
