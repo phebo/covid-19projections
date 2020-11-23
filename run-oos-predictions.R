@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-nTPred <- 4
+nTPred <- 6
 
 library(stats4)
 library(xtable)
@@ -41,6 +41,10 @@ vDate1 <- p$vDate[p$vDate <= max(dfE$date) - nTPred*7]
 vDate2 <- p$vDate[p$vDate > max(dfE$date) - nTPred*7]
 lData <- clean.data(dfJh, dfEcon, dfPop, dfOx, dfHol,
                     dates = c(as.Date("2020-02-01"), max(dfE$date) - nTPred*7), nTPred = nTPred)$lData
+lData$mPol <- lFull$lData$mPol
+lData$mPolChange <- lFull$lData$mPolChange
+lData$mPolG1 <- lFull$lData$mPolG1
+lData$mTest <- lFull$lData$mTest
 
 m <- stan_model("model.stan")
 
@@ -69,11 +73,14 @@ fPred <- dfOutE %>%
   ggplot(aes(x = date, color = name)) +
   geom_point(aes(y = reported)) + geom_line(aes(y=estimate)) +
   geom_line(aes(y=low), lty=2) + geom_line(aes(y=high), lty=2) +
-  facet_wrap(~ geo) + ggtitle("New events per week (log scale)") + 
+  facet_wrap(~ geo, ncol = 5) + ggtitle("New events per week (out of sample predictions; log scale)") + 
   labs(subtitle = "Dot = reported; Line = model prediction; Dashed = 95% interval") +
   scale_color_manual(values = c(case = "blue3", death = "red3")) +
-  scale_y_continuous(labels = scales::comma, trans="log10", limits = c(1, 1e6)) + 
-  xlab(element_blank()) + ylab(element_blank())
+  scale_x_date(breaks = as.Date(c(vDate2[1], vDate2[4])), date_labels = "%b %e", date_minor_breaks = "1 week") +
+  scale_y_continuous(labels = scales::comma, trans="log10", limits = c(1, 1e7)) + 
+  xlab(element_blank()) + ylab(element_blank()) +
+  theme(legend.position="top", legend.title = element_blank())
+ggsave(paste0("figures/fig-oos-full.png"), height = 9, width = 6.5)
 
 fPerc <- dfOutE %>% group_by(name, date) %>% summarize(nRange = sum(reported >= low & reported <= high), n = n()) %>% ungroup() %>%
   mutate(fRange = nRange/n) %>%

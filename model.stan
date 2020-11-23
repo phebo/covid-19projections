@@ -30,10 +30,10 @@ data {
   int<lower=0> nTPred;
   int<lower=1> nPol;
   int<lower=1> nTest;
-  int<lower=0, upper=1> mPol[nGeo, nT, nPol];
-  int<lower=0, upper=1> mPolChange[nGeo, nT]; // did policy change vs. previous period?
-  int<lower=0, upper=1> mPolG1[nGeo, nT];
-  int<lower=1, upper=nTest> mTest[nGeo, nT];
+  int<lower=0, upper=1> mPol[nGeo, nT+nTPred, nPol];
+  int<lower=0, upper=1> mPolChange[nGeo, nT+nTPred]; // did policy change vs. previous period?
+  int<lower=0, upper=1> mPolG1[nGeo, nT+nTPred];
+  int<lower=1, upper=nTest> mTest[nGeo, nT+nTPred];
   int<lower=0> mCase[nGeo,nT];
   int<lower=0> mDeathRep[nGeo,nT];
   int<lower=-1> mDeathTot[nGeo,nT];
@@ -92,7 +92,7 @@ transformed parameters{
   for(i in 1:nGeo) {
     real dgTot;
     logy[i, 1] = logy0[i];
-    for(t in 1:(nT-1)){
+    for(t in 1:(nT+nTPred-1)){
       if(mPolChange[i, t]  == 1) {
         dgTot = 0;
         for(p in 1:nPol) if(mPol[i, t, p] == 1) dgTot -= dg[p];
@@ -100,10 +100,6 @@ transformed parameters{
       if(mPolG1[i, t] == 0) g[i, t] = g0[i];
         else g[i, t] = g1[i];
       g[i, t] += dgTot + idg[i, t];
-      logy[i, t + 1] = logy[i, t] + g[i, t];
-    }
-    for(t in nT:(nT + nTPred - 1)) {
-      g[i, t] = g1[i] + dgTot + idg[i, t];
       logy[i, t + 1] = logy[i, t] + g[i, t];
     }
 
@@ -118,11 +114,11 @@ transformed parameters{
     }
 
     for(t in 1:(nT+nTPred-lagCaseMax)) {
-      lCaseEst[i, t] = log(fracCase[i, mTest[i, min(nT, t + lagCaseMax)]]) + fLag(logy[i], lpLagCase, t + lagCaseMax);
+      lCaseEst[i, t] = log(fracCase[i, mTest[i, t + lagCaseMax]]) + fLag(logy[i], lpLagCase, t + lagCaseMax);
     }
     for(t in 1:(nT+nTPred-lagDeathMax)) {
       real lDeath = fLag(logy[i], lpLagDeath, t + lagDeathMax) + lmortality;
-      lDeathEst[i, t] = log(fracDeath[i, mTest[i, min(nT, t + lagDeathMax)]]) + lDeath;
+      lDeathEst[i, t] = log(fracDeath[i, mTest[i, t + lagDeathMax]]) + lDeath;
       if(t + lagDeathMax <= nT) {
         if(mDeathExp[i, t + lagDeathMax] != -1) lDeathTotEst[i, t] = log(mDeathExp[i, t + lagDeathMax] + deathAdj[i] + exp(lDeath));
           else lDeathTotEst[i,t] = 0;
