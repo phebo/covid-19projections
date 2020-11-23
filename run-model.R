@@ -22,6 +22,7 @@
 
 # It takes several hours to estimate the model on a regular PC
 
+library(car, include.only = "vif")
 library(xtable)
 library(RColorBrewer)
 library(stats4)
@@ -55,6 +56,8 @@ dfP <- l$dfP; dfE <- l$dfE; lData <- l$lData; p <- l$p
 print(l$dfPCor %>% filter(cor < 1 & cor > 0.85) %>% arrange(-cor))
 print(dfP %>% group_by(polCode, polName, level) %>% summarize(frac = sum(value) / n()) %>% group_by(polCode) %>%
         mutate(frac = frac - c(frac[-1], 0)) %>% filter(frac < 0.05))
+dfVif <- as_tibble(apply(lData$mPol, 3, c)) %>% mutate(y = runif(n()))
+print(vif(lm(y~., data = dfVif)))
 
 #### Fit model ####
 
