@@ -19,7 +19,7 @@ clean.data <- function(
   minPop = 5e6, geoExclude = NULL,
   dates = c(as.Date("2020-02-01"), Inf), nTPred = 0,
   polG1 = c("C1 - 1", "C2 - 1", "C3 - 1", "C4 - 1"),
-  polExcl = c("C1 - 1", "C2 - 1", "C3 - 1", "C4 - 1", "C5 - 2", "C6 - 3", "C8 - 1", "H1 - 1", "H1 - 2"),
+  polExcl = c("C1 - 1", "C2 - 1", "C3 - 1", "C4 - 1", "C5 - 2", "C6 - 3", "C8 - 1"),
   lagCaseMax = 2, lagDeathMax = 4,
   mortMu = 0.01, mortSig = 0.5, # Parameters for log-normal distribution; mortSig = 0.5 means 95% interval of */exp(1.96*0.5)=2.6
   pOutl = 1e-3, # Probability of outlier (lower probability attaches more weight to extreme data points)
