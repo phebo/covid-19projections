@@ -58,7 +58,12 @@ print(l$dfPCor %>% filter(cor < 1 & cor > 0.85) %>% arrange(-cor))
 print(dfP %>% group_by(polCode, polName, level) %>% summarize(frac = sum(value) / n()) %>% group_by(polCode) %>%
         mutate(frac = frac - c(frac[-1], 0)) %>% filter(frac < 0.05))
 dfVif <- as_tibble(apply(lData$mPol, 3, c)) %>% mutate(y = runif(n()))
-print(vif(lm(y~., data = dfVif)))
+  # lm needs a y-variable, but its values are irrelevant for calculating the variance inflation factors (VIFs)
+vVif <- vif(lm(y~., data = dfVif)); names(vVif) <- gsub("`", "", names(vVif))
+print(vVif)
+if(writeFigures) print(xtable(as.matrix(vVif)), type="html", file=paste0("figures/tab-vif.html"))
+
+gsub("`", "", xtable(as.matrix(vVif) ))
 
 #### Fit model ####
 
@@ -70,7 +75,7 @@ save(list = ls(), file = paste0("output/image-", time.now, ".RData"))
 print(fit, pars = c("deathAdj", "pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot", "lmortality", "pDgZero"))
 if(writeFigures) print(xtable(
   summary(fit, pars=c("pLagCase", "pLagDeath", "phiCase", "phiDeathRep","phiDeathTot"))$summary[,c('50%','2.5%','97.5%','n_eff','Rhat')],
-  digits=c(0,3,3,3,0,2)), type="html", file=paste0("figures/table.html"))
+  digits=c(0,3,3,3,0,2)), type="html", file=paste0("figures/tab-fit.html"))
 
 #### Process model output ####
 sim <- rstan::extract(fit)
@@ -116,6 +121,7 @@ print(dfOutRaw %>% filter(name %in% c("g0", "g1", "idg")) %>% group_by(iter, nam
   mutate(daily = expm1(estimate / 7))
 outliers <- dfOutE$pOutl; outliers <- outliers[!is.na(outliers)];
 print(c(sum(outliers > 0.5), length(outliers), sum(outliers > 0.5) / length(outliers)))
+print(dfOutE %>% filter(pOutl>0.5))
 
 maxLag <- 10
 eps <- t(cbind(matrix(sim$eps, ncol = length(p$vDate) - 3), matrix(nrow = nIter * length(p$vGeo), ncol = maxLag)))
