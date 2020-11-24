@@ -73,10 +73,10 @@ fPred <- dfOutE %>%
   ggplot(aes(x = date, color = name)) +
   geom_point(aes(y = reported)) + geom_line(aes(y=estimate)) +
   geom_line(aes(y=low), lty=2) + geom_line(aes(y=high), lty=2) +
-  facet_wrap(~ geo, ncol = 5) + ggtitle("New events per week (out of sample predictions; log scale)") + 
-  labs(subtitle = "Dot = reported; Line = model prediction; Dashed = 95% interval") +
-  scale_color_manual(values = c(case = "blue3", death = "red3")) +
-  scale_x_date(breaks = as.Date(c(vDate2[1], vDate2[4])), date_labels = "%b %e", date_minor_breaks = "1 week") +
+  facet_wrap(~ geo, ncol = 5) + # ggtitle("New events per week (out of sample predictions; log scale)") + 
+  # labs(subtitle = "Dot = reported; Line = model prediction; Dashed = 95% interval") +
+  scale_color_manual(values = brewer.pal(4, "Set1")[c(2,1,4,3)]) +
+  scale_x_date(breaks = as.Date(c(vDate2[1], vDate2[4])), date_labels = "%b %e", minor_breaks = vDate2) +
   scale_y_continuous(labels = scales::comma, trans="log10", limits = c(1, 1e7)) + 
   xlab(element_blank()) + ylab(element_blank()) +
   theme(legend.position="top", legend.title = element_blank())

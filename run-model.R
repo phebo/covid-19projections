@@ -23,6 +23,7 @@
 # It takes several hours to estimate the model on a regular PC
 
 library(car, include.only = "vif")
+library(RColorBrewer)
 library(xtable)
 library(RColorBrewer)
 library(stats4)
@@ -38,7 +39,7 @@ suppressWarnings(dir.create(file.path("output")))
 suppressWarnings(dir.create(file.path("figures")))
 
 saveAppData <- F
-writeFigures <- F
+writeFigures <- T
 selSc <- c("C1 - 1", "C2 - 1", "C3 - 2", "C4 - 3", "C5 - 0", "C6 - 1", "C7 - 1", "C8 - 3", "H1 - 2", "H2 - 2", "H3 - 2")
 
 #### Read and clean data ####
@@ -180,7 +181,7 @@ fDash <- bind_rows(dfOut %>% filter(name == "g", date == max(date, na.rm = T)),
   facet_grid(~ name, scales = "free") + coord_flip()  + xlab(element_blank()) + ylab(element_blank()) +
   #labs(title = paste0("Current status (weekly rates as of ", format(max(dfOut$date, na.rm = T), "%d %b"),")"),
   #     subtitle = "Dot = median estimate; Line = 95% interval") +
-  theme(axis.text.y = element_text(hjust=0))
+  theme(axis.text.y = element_text(hjust=0), panel.spacing = unit(1, "lines"))
 if(writeFigures) ggsave(paste0("figures/fig-status.png"), height = 9, width = 6.5)
 
 fGBase <- dfOut %>% filter(name == "g1+idg") %>%
@@ -188,7 +189,7 @@ fGBase <- dfOut %>% filter(name == "g1+idg") %>%
   facet_wrap( ~ geo, ncol = 5) + xlab(element_blank()) + ylab(element_blank()) +
   #labs(title = "Weekly base growth rate: variation in policy effectiveness",
   #     subtitle = "Effect of level 1 policies for C1-C4") +
-  scale_x_date(breaks = as.Date(c("2020-05-01", "2020-08-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
+  scale_x_date(breaks = as.Date(c("2020-05-01", "2020-09-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
   theme(strip.text = element_text(size = 8.5))
 if(writeFigures) ggsave(paste0("figures/fig-gbase.png"), height = 9, width = 6.5)
 
@@ -202,7 +203,7 @@ fNew <- dfOutE %>% mutate(reported = ifelse(reported == 0, NA, reported)) %>%
   #labs(subtitle = "Dot = reported; Line = model estimate; Dashed = 95% interval") +
   xlab(element_blank()) + ylab(element_blank()) + 
   scale_y_continuous(labels = scales::comma, trans="log10", limits = c(1, 1e6)) +
-  scale_color_brewer(palette = "Dark2") +
+  scale_color_manual(values = brewer.pal(4, "Set1")[c(2,1,4,3)]) +
   theme(legend.position="top", legend.title = element_blank())
 if(writeFigures) ggsave(paste0("figures/fig-new.png"), height = 9, width = 6.5)
 
@@ -226,7 +227,7 @@ fPol <- dfP %>% mutate(pol = paste(polCode, polName)) %>%
   ggplot(aes(x = date, y = value, fill = pol)) + geom_col(width = 7) + facet_wrap(~ geo) +
   scale_x_date(date_breaks = "1 month", labels = function(x) format(x, format="%b")) +
   theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
-  scale_fill_manual(name = element_blank(), values = brewer.pal(12,"Set3"), guide = guide_legend(nrow = 3)) +
+  scale_fill_manual(name = element_blank(), guide = guide_legend(nrow = 3), palette = "Set3") +
   theme(legend.title=element_blank(), legend.position="top") +
   xlab(element_blank()) + ggtitle("Policy levels recorded in Oxford database")
 
@@ -276,7 +277,7 @@ fPol2a <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(
   group_by(geo, pol, date) %>% summarize(level = max(level)) %>%
   ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
   facet_grid(~ pol, labeller = label_wrap_gen(8)) +
-  scale_x_date(breaks = as.Date(c("2020-03-01", "2020-08-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
+  scale_x_date(breaks = as.Date(c("2020-03-01", "2020-09-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
   scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ylab(element_blank()) + xlab(element_blank()) +
   theme(legend.position = "none")
 if(writeFigures) ggsave(paste0("figures/fig-pol-a.png"), height = 9, width = 6.5)
@@ -284,7 +285,7 @@ if(writeFigures) ggsave(paste0("figures/fig-pol-a.png"), height = 9, width = 6.5
 fPol2b <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1, !polCode %in% c("C1","C2","C3","C4","C5","C6")) %>%
   group_by(geo, pol, date) %>% summarize(level = max(level)) %>%
   ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
-  scale_x_date(breaks = as.Date(c("2020-03-01", "2020-08-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
+  scale_x_date(breaks = as.Date(c("2020-03-01", "2020-09-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
   facet_grid(~ pol, labeller = label_wrap_gen(8)) +
   scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ylab(element_blank()) + xlab(element_blank())
 if(writeFigures) ggsave(paste0("figures/fig-pol-b.png"), height = 9, width = 6.5)
