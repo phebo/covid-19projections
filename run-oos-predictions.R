@@ -89,8 +89,8 @@ fPerc <- dfOutE %>% group_by(name, date) %>% summarize(nRange = sum(reported >= 
   ggtitle("Percentage of predictions within range") +
   xlab(element_blank()) + ylab(element_blank())
 
-fPerc2 <- dfOutE %>% group_by(name, date) %>% summarize(nRange = sum(reported >= low & reported <= high), n = n()) %>% ungroup() %>%
-  mutate(fRange = nRange/n) %>% filter(name == "case") %>%
+fPerc2 <- dfOutE %>% group_by(date) %>% summarize(nRange = sum(reported >= low & reported <= high), n = n()) %>% ungroup() %>%
+  mutate(fRange = nRange/n) %>% # filter(name == "case") %>%
   ggplot(aes(x = date, y = fRange)) + geom_col() +
   scale_y_continuous(labels = function(x) scales::percent(x, accuracy=1)) +
   geom_hline(yintercept = 0.95, linetype = "dashed") +
