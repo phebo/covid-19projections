@@ -157,6 +157,7 @@ ggplot(dfOutSc, aes(x = group, y = estimate, color = name)) + geom_point() +
                      guide = guide_legend(reverse = TRUE), name = "Growth rate") +
   theme(axis.title.x = element_text(vjust = -0.5))
 if(writeFigures) ggsave(paste0("figures/fig-scenarios.png"), height = 4, width = 4)
+if(writeFigures) ggsave(paste0("figures/Fig6.eps"), height = 4, width = 4)
 
 fGPol <- dfOut %>% filter(name == "dgCum") %>%
   group_by(pol) %>% mutate(estimate = estimate - c(0, estimate[-length(estimate)])) %>%
@@ -167,6 +168,7 @@ fGPol <- dfOut %>% filter(name == "dgCum") %>%
   scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel", direction = -1, guide = guide_legend(reverse = TRUE)) +
   xlab(element_blank()) + ylab(element_blank()) + theme(axis.text.y = element_text(hjust=0))
 if(writeFigures) ggsave(paste0("figures/fig-gpol.png"), height = 4, width = 5)
+if(writeFigures) ggsave(paste0("figures/Fig3.eps"), height = 4, width = 5)
 
 fPolSum <- dfP %>% group_by(polCode, polName, level, date) %>% summarize(frac = sum(value) / n()) %>%
   mutate(pol = paste(polCode, polName, sep = " - ")) %>%
@@ -189,6 +191,7 @@ fDash <- bind_rows(dfOut %>% filter(name == "g", date == max(date, na.rm = T)),
   #     subtitle = "Dot = median estimate; Line = 95% interval") +
   theme(axis.text.y = element_text(hjust=0), panel.spacing = unit(1, "lines"))
 if(writeFigures) ggsave(paste0("figures/fig-status.png"), height = 9, width = 6.5)
+if(writeFigures) ggsave(paste0("figures/Fig4.eps"), height = 8.5, width = 6.5)
 
 fGBase <- dfOut %>% filter(name == "g1+idg") %>%
   ggplot(aes(x = date, y = estimate, ymin = low, ymax = high)) + geom_ribbon(fill="grey70") + geom_line() +
@@ -198,6 +201,7 @@ fGBase <- dfOut %>% filter(name == "g1+idg") %>%
   scale_x_date(breaks = as.Date(c("2020-05-01", "2020-09-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
   theme(strip.text = element_text(size = 8.5))
 if(writeFigures) ggsave(paste0("figures/fig-gbase.png"), height = 9, width = 6.5)
+if(writeFigures) ggsave(paste0("figures/Fig5.eps"), height = 8.5, width = 6.5)
 
 fNew <- dfOutE %>% mutate(reported = ifelse(reported == 0, NA, reported)) %>%
   ggplot(aes(x = date, color = name)) +
@@ -284,17 +288,20 @@ fPol2a <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(
   ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
   facet_grid(~ pol, labeller = label_wrap_gen(8)) +
   scale_x_date(breaks = as.Date(c("2020-03-01", "2020-09-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
-  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ylab(element_blank()) + xlab(element_blank()) +
-  theme(legend.position = "none")
+  scale_fill_brewer(palette = "YlOrRd", name="Policy level") + ylab(element_blank()) + xlab(element_blank()) +
+  theme(legend.position = "bottom")
 if(writeFigures) ggsave(paste0("figures/fig-pol-a.png"), height = 9, width = 6.5)
+if(writeFigures) ggsave(paste0("figures/Fig1.eps"), height = 8.5, width = 6.5)
 
 fPol2b <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1, !polCode %in% c("C1","C2","C3","C4","C5","C6")) %>%
   group_by(geo, pol, date) %>% summarize(level = max(level)) %>%
   ggplot(aes(x = date, y = fct_rev(geo), fill = level)) + geom_tile(height=0.8) +
   scale_x_date(breaks = as.Date(c("2020-03-01", "2020-09-01")), date_labels = "%b%e", date_minor_breaks = "1 month") +
   facet_grid(~ pol, labeller = label_wrap_gen(8)) +
-  scale_fill_brewer(palette = "YlOrRd", name="Policy\nlevel") + ylab(element_blank()) + xlab(element_blank())
+  scale_fill_brewer(palette = "YlOrRd", name="Policy level") + ylab(element_blank()) + xlab(element_blank()) +
+  theme(legend.position = "bottom")
 if(writeFigures) ggsave(paste0("figures/fig-pol-b.png"), height = 9, width = 6.5)
+if(writeFigures) ggsave(paste0("figures/Fig2.eps"), height = 8.5, width = 5.7)
 
 pdf(paste0("output/charts-main-", time.now, ".pdf"), width=5.5, height=7, onefile=T)
   print(fGPol)
