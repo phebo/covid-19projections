@@ -23,7 +23,6 @@
 # It takes several hours to estimate the model on a regular PC
 
 library(car, include.only = "vif")
-library(RColorBrewer)
 library(xtable)
 library(RColorBrewer)
 library(stats4)
@@ -37,9 +36,10 @@ time.now <- format(Sys.time(), format='%y%m%d-%H%M%S')
 print(time.now)
 suppressWarnings(dir.create(file.path("output")))
 suppressWarnings(dir.create(file.path("figures")))
+suppressWarnings(dir.create(file.path("fig-github")))
 
 saveAppData <- F
-writeFigures <- T
+writeFigures <- F
 selSc <- c("C1 - 1", "C2 - 1", "C3 - 2", "C4 - 3", "C5 - 0", "C6 - 1", "C7 - 1", "C8 - 3", "H1 - 2", "H2 - 2", "H3 - 2")
 
 #### Read and clean data ####
@@ -158,6 +158,7 @@ ggplot(dfOutSc, aes(x = group, y = estimate, color = name)) + geom_point() +
   theme(axis.title.x = element_text(vjust = -0.5))
 if(writeFigures) ggsave(paste0("figures/fig-scenarios.png"), height = 4, width = 4)
 if(writeFigures) ggsave(paste0("figures/Fig6.eps"), height = 4, width = 4)
+ggsave(paste0("fig-github/fig6.svg"), height = 4, width = 4)
 
 fGPol <- dfOut %>% filter(name == "dgCum") %>%
   group_by(pol) %>% mutate(estimate = estimate - c(0, estimate[-length(estimate)])) %>%
@@ -169,6 +170,7 @@ fGPol <- dfOut %>% filter(name == "dgCum") %>%
   xlab(element_blank()) + ylab(element_blank()) + theme(axis.text.y = element_text(hjust=0))
 if(writeFigures) ggsave(paste0("figures/fig-gpol.png"), height = 4, width = 5)
 if(writeFigures) ggsave(paste0("figures/Fig3.eps"), height = 4, width = 5)
+ggsave(paste0("fig-github/fig3.svg"), height = 4, width = 5)
 
 fPolSum <- dfP %>% group_by(polCode, polName, level, date) %>% summarize(frac = sum(value) / n()) %>%
   mutate(pol = paste(polCode, polName, sep = " - ")) %>%
@@ -192,6 +194,7 @@ fDash <- bind_rows(dfOut %>% filter(name == "g", date == max(date, na.rm = T)),
   theme(axis.text.y = element_text(hjust=0), panel.spacing = unit(1, "lines"))
 if(writeFigures) ggsave(paste0("figures/fig-status.png"), height = 9, width = 6.5)
 if(writeFigures) ggsave(paste0("figures/Fig4.eps"), height = 8.5, width = 6.5)
+ggsave(paste0("fig-github/fig4.svg"), height = 8.5, width = 6.5)
 
 fGBase <- dfOut %>% filter(name == "g1+idg") %>%
   ggplot(aes(x = date, y = estimate, ymin = low, ymax = high)) + geom_ribbon(fill="grey70") + geom_line() +
@@ -202,8 +205,9 @@ fGBase <- dfOut %>% filter(name == "g1+idg") %>%
   theme(strip.text = element_text(size = 8.5))
 if(writeFigures) ggsave(paste0("figures/fig-gbase.png"), height = 9, width = 6.5)
 if(writeFigures) ggsave(paste0("figures/Fig5.eps"), height = 8.5, width = 6.5)
+ggsave(paste0("fig-github/fig5.svg"), height = 8.5, width = 6.5)
 
-fNew <- dfOutE %>% mutate(reported = ifelse(reported == 0, NA, reported)) %>%
+fNew <- dfOutE %>% mutate(reported = ifelse(reported == 0, NA, reported), pOutl = ifelse(is.na(pOutl), 0, pOutl)) %>%
   ggplot(aes(x = date, color = name)) +
   geom_point(aes(y = reported, shape = (pOutl > 0.5)), size = 0.6) + geom_line(aes(y=estimate)) +
   geom_line(aes(y=low), lty=2) + geom_line(aes(y=high), lty=2) +
@@ -212,10 +216,12 @@ fNew <- dfOutE %>% mutate(reported = ifelse(reported == 0, NA, reported)) %>%
   #ggtitle("New events per week (log scale)") + 
   #labs(subtitle = "Dot = reported; Line = model estimate; Dashed = 95% interval") +
   xlab(element_blank()) + ylab(element_blank()) + 
-  scale_y_continuous(labels = scales::comma, trans="log10", limits = c(1, 1e6)) +
+  scale_y_continuous(labels = scales::comma, trans="log10") +
   scale_color_manual(values = brewer.pal(4, "Set1")[c(2,1,4,3)]) +
-  theme(legend.position="top", legend.title = element_blank())
+  theme(legend.position="top", legend.title = element_blank()) +
+  coord_cartesian(ylim = c(1, 1e6))
 if(writeFigures) ggsave(paste0("figures/fig-new.png"), height = 9, width = 6.5)
+ggsave(paste0("fig-github/fig-S1.svg"), height = 8.5, width = 6.5)
 
 fNewCase <- dfOutEPop %>% filter(name %in% c("infection", "case")) %>%
   ggplot(aes(x = date, color = name)) +
@@ -232,14 +238,6 @@ fNewDeath <- dfOutEPop %>% filter(name %in% c("death", "deathTot")) %>%
   facet_wrap(~ geo) + xlab(element_blank()) + ylab(element_blank()) + 
   labs(subtitle = "Dot = reported; Line = model estimate; Dashed = 95% interval") +
   ggtitle("New Covid and total deaths per week per 10,000 people")
-
-fPol <- dfP %>% mutate(pol = paste(polCode, polName)) %>%
-  ggplot(aes(x = date, y = value, fill = pol)) + geom_col(width = 7) + facet_wrap(~ geo) +
-  scale_x_date(date_breaks = "1 month", labels = function(x) format(x, format="%b")) +
-  theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
-  scale_fill_manual(name = element_blank(), guide = guide_legend(nrow = 3), palette = "Set3") +
-  theme(legend.title=element_blank(), legend.position="top") +
-  xlab(element_blank()) + ggtitle("Policy levels recorded in Oxford database")
 
 dfPCorSum <- l$dfPCor %>% group_by(pol1) %>% summarise(value = sum(cor)) %>% arrange(-value) %>% mutate(pol = pol1) %>%
   separate(pol, c("polCode", "polName", "level"), sep = " - ") %>% mutate(pol2 = paste(polCode, level, sep = " - "))
@@ -292,6 +290,7 @@ fPol2a <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(
   theme(legend.position = "bottom")
 if(writeFigures) ggsave(paste0("figures/fig-pol-a.png"), height = 9, width = 6.5)
 if(writeFigures) ggsave(paste0("figures/Fig1.eps"), height = 8.5, width = 6.5)
+ggsave(paste0("fig-github/fig1.svg"), height = 8.5, width = 6.5)
 
 fPol2b <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(value == 1, !polCode %in% c("C1","C2","C3","C4","C5","C6")) %>%
   group_by(geo, pol, date) %>% summarize(level = max(level)) %>%
@@ -302,6 +301,7 @@ fPol2b <- dfP %>% mutate(pol = paste(polCode, polName, sep = " - ")) %>% filter(
   theme(legend.position = "bottom")
 if(writeFigures) ggsave(paste0("figures/fig-pol-b.png"), height = 9, width = 6.5)
 if(writeFigures) ggsave(paste0("figures/Fig2.eps"), height = 8.5, width = 5.7)
+ggsave(paste0("fig-github/fig2.svg"), height = 8.5, width = 6.5)
 
 pdf(paste0("output/charts-main-", time.now, ".pdf"), width=5.5, height=7, onefile=T)
   print(fGPol)
@@ -314,7 +314,6 @@ pdf(paste0("output/charts-sup-", time.now, ".pdf"), width=10, height=10, onefile
   print(fNew)
   print(fNewCase)
   print(fNewDeath)
-  print(fPol)
   print(fPolCor)
   print(fGAll)
   print(fFrac)
