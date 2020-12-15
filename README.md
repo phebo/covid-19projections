@@ -7,10 +7,10 @@ Please use the release tagged `published` for an exact replication of the charts
 Below are the latest updates of key figures in the paper.
 These charts can be replicated using the `run-model.R` script in the latest commit.
 
-**Fig 1. COVID policy levels by week based on OxCGRT database.** Policies C1-C6; continued in Fig 2.
+**Fig 1. COVID policy levels by week based on [OxCGRT database](https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/codebook.md).** Policies C1-C6; continued in Fig 2.
 ![Fig 1](fig-github/fig1.svg)
 
-**Fig 2. COVID policy levels by week based on OxCGRT database.** Policies C7, C8, H1-H3; continued from Fig 1.
+**Fig 2. COVID policy levels by week based on [OxCGRT database](https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/codebook.md).** Policies C7, C8, H1-H3; continued from Fig 1.
 ![Fig 2](fig-github/fig2.svg)
 
 **Fig 3. Marginal effect sizes of policy measures on reducing weekly growth rates.**
