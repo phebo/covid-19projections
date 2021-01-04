@@ -1,6 +1,6 @@
 # covid-19projections
 Bayesian model to project policy impact of Covid 19 infections.
-This repository contains the code to replicate and update the analyses in the paper "Which COVID policies are most effective? A Bayesian analysis of COVID-19 by jurisdiction" by Phebo D. Wibbens, Wesley W. Koo, and Anita M. McGahan, published in PLOS ONE, [https://doi.org/10.1371/journal.pone.0244177].
+This repository contains the code to replicate and update the analyses in the paper "Which COVID policies are most effective? A Bayesian analysis of COVID-19 by jurisdiction" by Phebo D. Wibbens, Wesley W. Koo, and Anita M. McGahan, published in PLOS ONE, https://doi.org/10.1371/journal.pone.0244177.
 Please use the release tagged `published` for an exact replication of the charts in the paper.
 
 Below are the latest updates of key figures in the paper.
