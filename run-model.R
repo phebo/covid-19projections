@@ -218,7 +218,7 @@ fNew <- dfOutE %>% mutate(reported = ifelse(reported == 0, NA, reported), pOutl 
   xlab(element_blank()) + ylab(element_blank()) + 
   scale_y_continuous(labels = scales::comma, trans="log10") +
   scale_color_manual(values = brewer.pal(4, "Set1")[c(2,1,4,3)]) +
-  theme(legend.position="top", legend.title = element_blank()) +
+  theme(legend.position="top", legend.title = element_blank(), axis.text.x = element_text(angle = 45, hjust = 0.9)) +
   coord_cartesian(ylim = c(1, 1e6))
 if(writeFigures) ggsave(paste0("figures/fig-new.png"), height = 9, width = 6.5)
 ggsave(paste0("fig-github/fig-S1.svg"), height = 8.5, width = 6.5)
