@@ -65,10 +65,10 @@ write_csv(dfPop, "input/econ-population.csv")
 # Reformat Oxford policy data
 dfOx <- bind_rows(
   dfOxG %>% filter(is.na(RegionName)) %>%
-    select(geo = CountryName, geoCode = CountryCode, date = Date, matches("^C\\d_"), matches("^H[1-3]_")) %>%
+    select(geo = CountryName, geoCode = CountryCode, date = Date, matches("^C\\d_"), matches("^H[1236]_")) %>%
     filter(geo != "United States"),
   dfOxG %>% filter(CountryName == "United States", !is.na(RegionName)) %>%
-    select(geo = RegionName, geoCode = RegionCode, date = Date, matches("^C\\d_"), matches("^H[1-3]_")) %>%
+    select(geo = RegionName, geoCode = RegionCode, date = Date, matches("^C\\d_"), matches("^H[1236]_")) %>%
     mutate(geo = paste("US", geo, sep = " - "), C5_Flag = as.numeric(C5_Flag)))
 dfOx <-
   left_join(
